@@ -3,6 +3,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
         <script src="assets/js/script.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.3/css/simple-line-icons.css">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
@@ -28,16 +29,20 @@
             </div>
 
             <div id="content" class="col s10">
-                <div id="slideshow">
-                    <img class="active slide" src="assets/images/sponsors/boeing.png" />
-                    <img class="slide" src="assets/images/sponsors/bTAlumn.png" />
-                    <img class="slide" src="assets/images/sponsors/ConEd.jpg" />
-                    <img class="slide" src="assets/images/sponsors/LiquidPlanner.jpg" />
-                </div>
-                <ul id="pagination" class="pagination">
-                    <li class="active">1</li>
-                    <li class="waves-effect">2</li>
+                <ul class="tabs" id="tabs">
+                    <li class="tab cols3"><a href="#pic1">1</a></li>
+                    <li class="tab cols3"><a href="#pic2">2</a></li>
+                    <li class="tab cols3"><a href="#pic3">3</a></li>
+                    <li class="tab cols3"><a href="#pic4">4</a></li>
+                    <li class="tab cols3"><a href="#pic5">5</a></li>
                 </ul>
+                <div id="slideshow" class="col s10">
+                    <img class="active slide" src="assets/images/slides/1.jpg" />
+                    <img class="slide" src="assets/images/slides/2.jpg" />
+                    <img class="slide" src="assets/images/slides/3.jpg" />
+                    <img class="slide" src="assets/images/slides/4.jpg" />
+                    <img class="slide" src="assets/images/slides/5.jpg" />
+                </div>
             </div>
         </div>
 
