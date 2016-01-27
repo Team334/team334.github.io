@@ -5,10 +5,10 @@
 <style type="text/css">
 	.st0{display:none;}
 	.st1{display:inline;fill:#1976D2;}
-	.st2{fill:#0D47A1;}
-	.st3{fill:#1A237E;}
-	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#1A237E;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#0D47A1;}
+	.st2{fill:#1A237E;}
+	.st3{fill:#EEEEEE;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#EEEEEE;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#1A237E;}
 </style>
 <g id="Layer_6" class="st0">
 	<rect class="st1" width="971" height="603"/>
