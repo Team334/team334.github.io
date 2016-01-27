@@ -1,0 +1,27 @@
+#sidebar {
+    height: 100vh;
+}
+
+#content {
+    background-color: #eee;
+    height: 100vh;
+}
+
+.divider {
+    background-color: #cfd8dc !important;
+}
+
+.oitem {
+    font-color: white;
+    background-color: #1e88e5 !important;
+}
+
+.social {
+    font-size: 25px;
+}
+
+.hoverable:hover {
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+
