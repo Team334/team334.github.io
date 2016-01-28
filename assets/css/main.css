@@ -70,6 +70,7 @@
     color: #039be5 !important;
 }
 
+<<<<<<< HEAD
 #bread {
     position: fixed;
     z-index: 8;
@@ -89,4 +90,12 @@
 #teampic {
     overflow: auto;
     width: 100%;
+=======
+#preview {
+    z-index: 5; 
+}
+
+#preview.card-content.card-title {
+    color: black !important;
+>>>>>>> origin/master
 }
