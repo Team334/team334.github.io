@@ -7,7 +7,7 @@ $(document).ready(function() {
         var slides = $(".slide");
         var currSlide = $(".active.slide"); 
         index = next(index);
-        var nextSlide = $(slides[next(index)]); 
+        var nextSlide = $(slides[index]); 
 
         nextSlide.css("z-index", 2);
         currSlide.fadeOut(200, function() {
@@ -29,7 +29,7 @@ $(document).ready(function() {
     function resetInterval() {
         clearInterval(interval);
         interval = setInterval(function() {
-            $("ul.tabs").tabs("select_tab", "pic" + (next(index) + 1));
+            $("ul.tabs").tabs("select_tab", "pic" + index);
         }, 2000);
     }
     resetInterval();
