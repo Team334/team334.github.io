@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var slideshow = $("#slideshow");
-    var index = 0;
+    var index = 1;
     var max_index = 5;
 
     function cycleImage() {
@@ -21,7 +21,7 @@ $(document).ready(function() {
     }
 
     function prev(i) {
-        return i - 1 == -1 ? 4 : i - 1;
+        return i - 1 == -1 ? max_index - 1 : i - 1;
     }
 
     var interval;
@@ -29,6 +29,7 @@ $(document).ready(function() {
     function resetInterval() {
         clearInterval(interval);
         interval = setInterval(function() {
+            console.log(index);
             $("ul.tabs").tabs("select_tab", "pic" + index);
         }, 2000);
     }
