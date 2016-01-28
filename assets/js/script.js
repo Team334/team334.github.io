@@ -1,13 +1,12 @@
 $(document).ready(function() {
     var slideshow = $("#slideshow");
-    var index = 1;
+    var index = 0;
     var max_index = 5;
 
-    function cycleImage() {
+    function cycleImage(i) {
         var slides = $(".slide");
         var currSlide = $(".active.slide"); 
-        index = next(index);
-        var nextSlide = $(slides[index]); 
+        var nextSlide = $(slides[next(i)]); 
 
         nextSlide.css("z-index", 2);
         currSlide.fadeOut(200, function() {
@@ -20,29 +19,20 @@ $(document).ready(function() {
         return i + 1 == max_index ? 0 : i + 1;
     }
 
-    function prev(i) {
-        return i - 1 == -1 ? max_index - 1 : i - 1;
-    }
-
     var interval;
-
     function resetInterval() {
-        clearInterval(interval);
         interval = setInterval(function() {
-            console.log(index);
-            $("ul.tabs").tabs("select_tab", "pic" + index);
+            $("ul.tabs").tabs("select_tab", "pic" + next(index));
         }, 2000);
     }
     resetInterval();
 
     $("li.tab.cols3 > a").click(function() {
-        if (parseInt(this.innerHTML) != index) {
-            index = prev(parseInt(this.innerHTML));
-            cycleImage();
+        if (index != parseInt(this.innerHTML) - 1) {
+            cycleImage(parseInt(this.innerHTML) - 1);
+            index = parseInt(this.innerHTML) - 1;
         }
-        resetInterval();
     });
 
     $("ul.tabs").tabs();
-    $('.parallax').parallax();
 });
