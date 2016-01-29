@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<link href="assets/css/home.css" rel="stylesheet">
+<ul class="tabs" id="tabs">
+    <li class="tab cols3"><a href="#pic0">1</a></li>
+    <li class="tab cols3"><a href="#pic1">2</a></li>
+    <li class="tab cols3"><a href="#pic2">3</a></li>
+    <li class="tab cols3"><a href="#pic3">4</a></li>
+    <li class="tab cols3"><a href="#pic4">5</a></li>
+</ul>
+<div id="slideshow" class="col s10">
+    {% assign active = false %}
+    {% for post in site.posts limit:5 %}
+        {% if active %}
+            <img class="slide" src="assets/images/slides/{{ post.image }}">
+            <div class="preview card blue">
+        {% else %}
+            <img class="slide active" src="assets/images/slides/{{ post.image }}">
+            {% assign active = true %}
+            <div class="preview active card blue">
+        {% endif %}
+         <div class="card-content white-text">
+                <span class="card-title">{{ post.title }}</span>
+                <p class="card-text">{{ post.content }}</p>
+            </div>
+            <div class="card-action">
+                <a href="#">Read more...</a>
+            </div>
+        </div>
+    {% endfor %}}
+</div>
