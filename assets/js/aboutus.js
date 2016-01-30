@@ -2,7 +2,7 @@ function attach(crumb) {
         var crumbs = $(".nav");
         crumb = "<a href=\"#!\" class=\"breadcrumb\">" + crumb + "</a>";
         crumbs.append(crumb);
-    }
+}
 
 function detach() {
     var crumbs = $(".nav");
