@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
+<script src="assets/js/slideshow.js"></script>
 <link href="assets/css/home.css" rel="stylesheet">
+<div class="progress">
+      <div class="determinate" style="width: 100%"></div>
+</div>
 <ul class="tabs" id="tabs">
     <li class="tab cols3"><a href="#pic0">1</a></li>
     <li class="tab cols3"><a href="#pic1">2</a></li>
@@ -9,6 +13,7 @@ layout: default
     <li class="tab cols3"><a href="#pic3">4</a></li>
     <li class="tab cols3"><a href="#pic4">5</a></li>
 </ul>
+
 <div id="slideshow" class="col s10">
     {% assign active = false %}
     {% for post in site.posts limit:5 %}

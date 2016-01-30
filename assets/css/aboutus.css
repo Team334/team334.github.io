@@ -1,0 +1,11 @@
+nav {
+    background-color: #1E88E5 !important;
+}
+
+.section {
+    padding-bottom: 0 !important;
+}
+
+div[name=""] {
+    display: none;
+}
