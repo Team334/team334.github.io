@@ -26,7 +26,7 @@ $(document).ready(function() {
         });        
     });
 
-    $(".section").click(function(event) {
+    $("nav.section").click(function(event) {
         event.preventDefault();
         $("html, body").animate({
             scrollTop: $("div[id=" + $(this).attr("name").toLowerCase() + "]").position().top 

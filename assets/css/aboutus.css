@@ -2,10 +2,42 @@ nav {
     background-color: #1E88E5 !important;
 }
 
+nav.main {
+     background-color: #1976D2 !important;
+}
+
 .section {
+    padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
 
 div[name=""] {
     display: none;
 }
+
+.card-panel {
+    margin: 0 !important;
+}
+
+span.egg-text {
+    padding-left: 2em;
+    color: #eee;
+}
+
+ul.collapsible {
+    margin: 0 !important;
+}
+
+.collapsible p {
+    padding: 0 !important;
+}
+
+.name {
+    color: #009688 !important;
+    font-weight: bold;
+}
+
+.row {
+    margin-bottom: 0 !important;
+}
+
