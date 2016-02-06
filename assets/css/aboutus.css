@@ -28,7 +28,15 @@ ul.collapsible {
     margin: 0 !important;
 }
 
-.collapsible p {
+.title {
+    padding: 5px !important;
+    background-color: #0d47a1;
+    color: #eee !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-content p {
     padding: 0 !important;
 }
 
@@ -41,3 +49,17 @@ ul.collapsible {
     margin-bottom: 0 !important;
 }
 
+.collapsible {
+    border-top: 0 !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+}
+
+.collapsible-header.active {
+    background-color: #1976D2;
+    color: #eee;
+}
+
+.card-content {
+    padding-top: 10px !important;
+}
