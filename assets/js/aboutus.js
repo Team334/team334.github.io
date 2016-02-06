@@ -38,7 +38,6 @@ $(document).ready(function() {
                             height = $(this).height();
                         }
                     });
-                    height -= 5;
                     $(this).find(".card").each(function() {
                         $(this).height(height);
                     });
