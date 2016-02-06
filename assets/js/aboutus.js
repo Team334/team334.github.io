@@ -26,6 +26,27 @@ $(document).ready(function() {
         });        
     });
 
+    $(".collapsible-header").click(function() {
+        var shadow = this;
+        setTimeout(function() {
+            console.log($(shadow).attr("class"));
+            if ($(shadow).hasClass("active")) {
+                $(shadow).next().find(".row").each(function() {
+                    var height = 0;
+                    $(this).find(".card").each(function() {
+                        if ($(this).height() > height) {
+                            height = $(this).height();
+                        }
+                    });
+                    height -= 5;
+                    $(this).find(".card").each(function() {
+                        $(this).height(height);
+                    });
+                });
+            }
+        }, 1)
+    });
+
     $("nav.section").click(function(event) {
         event.preventDefault();
         $("html, body").animate({
