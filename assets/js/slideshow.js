@@ -41,7 +41,10 @@ $(document).ready(function() {
         if (index != parseInt(this.innerHTML) - 1) {
             cycleImage(parseInt(this.innerHTML) - 1);
             index = parseInt(this.innerHTML) - 1;
-        } 
+        } else {
+            clearInterval(interval);
+            setTimeout(resetInterval, 3000);
+        }
     });
 
     $("ul.tabs").tabs();
