@@ -13,11 +13,18 @@ function detach() {
 
 $(document).ready(function() {
 
+    $("nav.section").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({
+            scrollTop: $("div[id=" + $(this).attr("name").toLowerCase() + "]").position().top 
+        }, 750);
+    });
+
     $(document).scroll(function() {
         var loc = $(this).scrollTop()
         $(".section").each(function() {
 
-            if (loc >= $(this).position().top && $(this).attr("name") != "") {
+            if (loc >= ($(this).position().top - 5) && $(this).attr("name") != "") {
                 detach();
                 attach($(this).attr("name"));
             } else if ($(this).attr("name") == "") {
@@ -44,13 +51,6 @@ $(document).ready(function() {
                 });
             }
         }, 1)
-    });
-
-    $("nav.section").click(function(event) {
-        event.preventDefault();
-        $("html, body").animate({
-            scrollTop: $("div[id=" + $(this).attr("name").toLowerCase() + "]").position().top 
-        }, 750);
     });
 
     $(document).on("mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function() {

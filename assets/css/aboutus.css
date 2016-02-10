@@ -34,6 +34,11 @@ ul.collapsible {
     color: #eee !important;
     text-align: center;
     font-weight: bold;
+    margin: 0;
+}
+
+p.mentor {
+    background-color: #1e88e5 !important;
 }
 
 .card-content p {
@@ -62,4 +67,8 @@ ul.collapsible {
 
 .card-content {
     padding-top: 10px !important;
+}
+
+.mentors {
+    background-color: #e3f2fd !important;
 }
