@@ -21,7 +21,9 @@ $(document).ready(function() {
         next.css("z-index", min_z + 1);
         prev.fadeOut(200, function() {
             prev.css("z-index", min_z).show().removeClass("active");
+            prev.css("display", "none");
             next.css("z-index", min_z + 2).addClass("active");
+            next.css("display", "block");
         }); 
     }
 
@@ -29,11 +31,11 @@ $(document).ready(function() {
         return i + 1 == max_index ? 0 : i + 1;
     }
 
-    var interval;
+    var interval, timeout;
     function resetInterval() {
         interval = setInterval(function() {
             $("ul.tabs").tabs("select_tab", "pic" + next(index));
-        }, 2500);
+        }, 3000);
     }
     resetInterval();
 
@@ -43,7 +45,8 @@ $(document).ready(function() {
             index = parseInt(this.innerHTML) - 1;
         } else {
             clearInterval(interval);
-            setTimeout(resetInterval, 3000);
+            clearTimeout(timeout);
+            timeout = setTimeout(resetInterval, 3000);
         }
     });
 

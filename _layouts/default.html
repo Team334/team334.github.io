@@ -3,7 +3,7 @@
         <title> Team 334 Robotics </title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.3/css/simple-line-icons.css">
-        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -14,35 +14,35 @@
         <div class="row">
             <div id="sidebar" class="col s2 blue darken-2 z-depth-1">
                 <div id="sidebar-content">
-                    <img id="logo" class="responsive-img" src="assets/images/logo.svg">
+                    <img id="logo" class="responsive-img" src="/assets/images/logo.svg">
                 </div>
                 <div class="divider"></div>
                 <div class="collection hoverable">
-                    <a href="index.html" class="oitem btn waves-effect collection-item active hoverable">Home</a>
+                    <a href="/index.html" class="oitem btn waves-effect collection-item active hoverable">Home</a>
                 </div>
                 <div class="collection hoverable">
-                    <a href="robots.html" class="oitem btn waves-effect collection-item active hoverable">Robots</a>
+                    <a href="/robots/" class="oitem btn waves-effect collection-item active hoverable">Robots</a>
                 </div>
 
                 <div class="collection hoverable">
-                    <a href="aboutus.html" class="oitem btn waves-effect collection-item active hoverable">About us</a>
+                    <a href="/about/" class="oitem btn waves-effect collection-item active hoverable">About us</a>
                 </div>
                 <div class="collection hoverable">
-                    <a href="#!" class="oitem btn waves-effect collection-item active hoverable">Blog</a>
+                    <a href="/blog/" class="oitem btn waves-effect collection-item active hoverable">Blog</a>
                 </div>
                 <div class="divider"></div>
                 <div class="social row">
                     <div class="col s2 offset-s2">
-                        <a href="#!"><p class="flow-text"><i class="fa fa-facebook-square"></i></p></a>
+                        <a href="{{ site.data.settings.social.facebook }}"><p class="flow-text"><i class="fa fa-facebook-square"></i></p></a>
                     </div>
                     <div class="col s2">
-                        <a href="#!"><p class="flow-text"><i class="fa fa-twitter-square"></p></i></a>
+                        <a href="{{ site.data.settings.social.twitter }}"><p class="flow-text"><i class="fa fa-twitter-square"></p></i></a>
                     </div>
                     <div class="col s2">
-                        <a href="#!"><p class="flow-text"><i class="fa fa-instagram"></p></i></a>
+                        <a href="{{ site.data.settings.social.instagram }}"><p class="flow-text"><i class="fa fa-instagram"></p></i></a>
                     </div>
                     <div class="col s2">
-                        <a href="#!"><p class="flow-text"><i class="fa fa-github-square"></p></i></a>
+                        <a href="{{ site.data.settings.social.github }}"><p class="flow-text"><i class="fa fa-github-square"></p></i></a>
                     </div>
                 </div>
             </div>

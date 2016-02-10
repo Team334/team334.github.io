@@ -18,10 +18,10 @@ layout: default
     {% assign active = false %}
     {% for post in site.posts limit:5 %}
         {% if active %}
-            <img class="slide" src="assets/images/slides/{{ post.image }}">
+            <img class="slide" src="{{ post.images[0] }}">
             <div class="preview card blue">
         {% else %}
-            <img class="slide active" src="assets/images/slides/{{ post.image }}">
+            <img class="slide active" src="{{ post.images[0] }}">
             {% assign active = true %}
             <div class="preview active card blue">
         {% endif %}
@@ -29,8 +29,9 @@ layout: default
                 <span class="card-title">{{ post.title }}</span>
                 <p class="card-text">{{ post.content }}</p>
             </div>
+            <div class="divider"></div>
             <div class="card-action">
-                <a href="#">Read more...</a>
+                <a href="{{ post.url }}">Read more...</a>
             </div>
         </div>
     {% endfor %}}

@@ -45,15 +45,34 @@
 
 .preview {
     position: absolute;
+    display: none;
     top: 100px;
     width: 300px;
+    opacity: 0.99;
     z-index: 6; 
 }
 
 .preview.active {
+    display: block;
     z-index: 8;
 }
 
 .preview.card-content.card-title {
     color: black !important;
+}
+
+.card-title {
+    font-weight: 500 !important;
+    color: #eee !important;
+}
+
+.card-action {
+    padding-right: 5px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 20px !important;
+}
+
+.card-action > a {
+    color: #eee !important;
 }
