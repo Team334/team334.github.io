@@ -1,0 +1,49 @@
+.container {
+
+}
+
+.post {
+    border-radius: 10px !important;
+    padding: 0px !important;
+}
+
+.fa {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.post .chip {
+    margin-left: 15px;
+}
+
+.post .indicators {
+    bottom: 17px !important;
+}
+
+.post-title {
+    color: #389dc1 !important;
+    margin-top: 0 !important;
+    padding: 15px 15px 0px 15px;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.post-date {
+    padding: 0px 15px 15px 0px;
+}
+
+.progress.determinate {
+    background-color: #1976D2 !important;
+}
+
+.progress.start {
+    top: 10px !important;
+}
+
+.progress.end {
+    bottom: 10px !important;
+}
+
+.container.content {
+    padding-bottom: 10px;
+}

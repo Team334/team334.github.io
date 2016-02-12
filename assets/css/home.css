@@ -62,8 +62,11 @@
 }
 
 .card-title {
+    display: block;
     font-weight: 500 !important;
     color: #eee !important;
+    line-height: 1 !important;
+    margin-bottom: 10px !important;
 }
 
 .card-action {
