@@ -46,7 +46,7 @@ $(document).ready(function() {
                         }
                     });
                     $(this).find(".card").each(function() {
-                        $(this).height(height);
+                        $(this).css("min-height", height);
                     });
                 });
             }

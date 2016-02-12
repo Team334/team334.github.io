@@ -32,7 +32,7 @@
     padding: 0px 15px 15px 0px;
 }
 
-.progress.determinate {
+.progress .determinate {
     background-color: #1976D2 !important;
 }
 
@@ -46,4 +46,8 @@
 
 .container.content {
     padding-bottom: 10px;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #1976D2 !important;
 }
