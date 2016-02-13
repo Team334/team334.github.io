@@ -51,3 +51,11 @@
 .slider .indicators .indicator-item.active {
     background-color: #1976D2 !important;
 }
+
+.pagination {
+    margin-top: 0 !important;
+}
+
+.pagination > .active {
+    background-color: #1976D2 !important;
+}
