@@ -35,7 +35,7 @@ $(document).ready(function() {
     function resetInterval() {
         interval = setInterval(function() {
             $("ul.tabs").tabs("select_tab", "pic" + next(index));
-        }, 3000);
+        }, 5000);
     }
     resetInterval();
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
         } else {
             clearInterval(interval);
             clearTimeout(timeout);
-            timeout = setTimeout(resetInterval, 3000);
+            timeout = setTimeout(resetInterval, 5000);
         }
     });
 

@@ -1,5 +1,43 @@
 ---
 layout: default
 ---
+<script src="/assets/js/blog.js"></script>
+<link href="/assets/css/blog.css" rel="stylesheet">
 
+{% for post in paginator.posts %}
+<div class="container">
+    <div class="card-panel post">
+        <div class="progress start">
+            <div class="determinate" style="width: 100%"></div>
+        </div>
 
+        <h4 class="post-title flow-text">{{ post.title }}</h4>
+            <div class="chip">
+                <img src="{{ site.data.members.media[post.author].image }}">
+                {{ post.author }}
+            </div>
+        <span class="post-date"><i class="fa fa-calendar"></i>{{ post.date | date: '%B %d, %Y' }}</span>
+        <br /><br />
+        <div class="slider">
+            <ul class="slides">
+                {% for img in post.images %}
+                    <li>
+                        <img src="{{ img }}" />
+                    </li> 
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="progress end">
+            <div class="determinate" style="width: 100%"></div>
+        </div>
+        <div class="container content">
+            <p class="flow-text">
+                {{ post.text }}
+            </p>
+        </div>
+    </div>
+    <br />
+    <div class="divider"></div>
+    <br />
+</div>
+{% endfor %}
