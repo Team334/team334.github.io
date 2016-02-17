@@ -1,6 +1,7 @@
 #sidebar {
     position: fixed;
     height: 100vh;
+    background-color: #0D47A1 !important;
     z-index: 9;
 }
 
@@ -23,7 +24,7 @@
 
 .oitem {
     font-color: white;
-    background-color: #1e88e5 !important;
+    background-color: #1976D2 !important;
     padding: 8 !important;
 }
 
@@ -49,4 +50,32 @@
 .social .fa:hover {
     background-color: #eee !important;
     color: #1976D2 !important;
+}
+
+p.sponsor {
+    color: #eee;
+    font-weight: 315;
+    margin-bottom: 0px;
+}
+
+div.sponsor {
+    opacity: 0.95;
+    padding: 5px;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: #eee;
+}
+
+div.sponsor img {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.sponsor .row {
+    margin-bottom: 10px !important;
+} 
+
+.sponsor .row .col {
+    padding-right: 0.30rem !important;
+    padding-left: 0.30rem !important;
 }
