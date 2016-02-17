@@ -64,4 +64,19 @@ $(document).ready(function() {
         }, 750);
     });
 
+    (function() {
+        var height = 0;
+        $(".mentors > .row").find(".card.mentor").each(function() {
+            console.log($(this).height());
+            if ($(this).height() > height) {
+                height = $(this).height();
+            }
+        });
+        console.log(height);
+
+        $(".mentors > .row").find(".card.mentor").each(function() {
+            $(this).css("min-height", height);
+        });
+    })();
+
 });
