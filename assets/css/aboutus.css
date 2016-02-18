@@ -1,9 +1,9 @@
 nav {
-    background-color: #1E88E5 !important;
+    background-color: #1976D2 !important;
 }
 
 nav.main {
-     background-color: #0D47A1 !important;
+    background-color: #0D47A1 !important;
 }
 
 .section {
@@ -61,7 +61,7 @@ ul.collapsible {
 }
 
 .collapsible-header.active {
-    background-color: #1976D2;
+    background-color: #1E88E5;
     color: #eee;
 }
 
