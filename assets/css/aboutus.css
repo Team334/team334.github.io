@@ -36,9 +36,17 @@ ul.collapsible {
     font-weight: bold;
 }
 
-.title.mentor {
-    margin: 0;
-    background-color: #1e88e5 !important;
+.mentors .col {
+    padding: 0 !important;
+}
+
+.mentors .card {
+    box-shadow: initial !important;
+    border-radius: 0 !important;
+}
+
+.mentors img {
+    border-radius: 0 !important;
 }
 
 .card-content p {
@@ -70,5 +78,26 @@ ul.collapsible {
 }
 
 .mentors {
-    background-color: #e3f2fd !important;
+    background-color: #eee !important;
+}
+
+.mentors .title {
+    margin: 0 !important;
+}
+
+.mentors .card {
+    margin: 0 !important;
+    background-color: #eee;
+}
+
+.mentors .card-content {
+    background-color: #eee !important;
+    padding-left: 10px !important;
+}
+
+.mentors .mid .card-content {
+    border-right-style: solid;
+    border-right-color: #fff !important;
+    border-left-style: solid;
+    border-left-color: #fff !important;
 }
