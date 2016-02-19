@@ -79,3 +79,9 @@ div.sponsor img {
     padding-right: 0.30rem !important;
     padding-left: 0.30rem !important;
 }
+
+.sponsors {
+    position: absolute;
+    bottom: 10px;
+    padding-right: 10px;
+}

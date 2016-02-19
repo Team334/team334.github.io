@@ -67,6 +67,8 @@
     color: #eee !important;
     line-height: 1 !important;
     margin-bottom: 10px !important;
+    padding-top: 15px;
+    padding-left: 10px;
 }
 
 .card-action {
@@ -78,4 +80,18 @@
 
 .card-action > a {
     color: #eee !important;
+}
+
+.preview .card-content {
+    padding: 0 !important;
+}
+
+.card-text {
+    padding: 10px;
+}
+
+.tabs .fa {
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 3px;
 }

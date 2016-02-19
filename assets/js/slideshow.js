@@ -31,7 +31,7 @@ $(document).ready(function() {
         return i + 1 == max_index ? 0 : i + 1;
     }
 
-    var interval, timeout;
+    var interval;
     function resetInterval() {
         interval = setInterval(function() {
             $("ul.tabs").tabs("select_tab", "pic" + next(index));
@@ -43,10 +43,16 @@ $(document).ready(function() {
         if (index != parseInt(this.innerHTML) - 1) {
             cycleImage(parseInt(this.innerHTML) - 1);
             index = parseInt(this.innerHTML) - 1;
-        } else {
+        }
+    });
+
+    $(".fa").click(function() {
+        if ($(this).attr("class") == "fa fa-pause-circle") {
+            $(this).attr("class", "fa fa-play-circle");
             clearInterval(interval);
-            clearTimeout(timeout);
-            timeout = setTimeout(resetInterval, 5000);
+        } else if ($(this).attr("class") == "fa fa-play-circle") {
+            $(this).attr("class", "fa fa-pause-circle");
+            resetInterval();
         }
     });
 
