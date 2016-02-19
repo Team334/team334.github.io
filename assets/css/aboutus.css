@@ -78,7 +78,7 @@ ul.collapsible {
 }
 
 .mentors {
-    background-color: #eee !important;
+    background-color: #fff !important;
 }
 
 .mentors .title {
@@ -87,17 +87,17 @@ ul.collapsible {
 
 .mentors .card {
     margin: 0 !important;
-    background-color: #eee;
+    background-color: #fff;
 }
 
 .mentors .card-content {
-    background-color: #eee !important;
+    background-color: #fff !important;
     padding-left: 10px !important;
 }
 
 .mentors .mid .card-content {
     border-right-style: solid;
-    border-right-color: #fff !important;
+    border-right-color: #eee !important;
     border-left-style: solid;
-    border-left-color: #fff !important;
+    border-left-color: #eee !important;
 }
