@@ -3,175 +3,128 @@
         "August Trollback": {
             "image": "/assets/images/members/AugustTrol.jpg",
             "quote": "Programming ethusiast interested in Ruby, JVM languages, and web development.",
-            "title": "Programming Lead",
-            "visible": true
+            "title": "Programming Lead"
         },
         "Benjamin Spiegel": {
             "image": "/assets/images/members/BenjaminSpi.jpg",
             "quote": "I am passionate about data analysis and algorithms. I also have a strong background in CAD.",
-            "title": "Technical Strategist",
-            "visible": true
+            "title": "Technical Strategist"
         },
         "Kevin Zheng": {
             "image": "/assets/images/members/KevinZhe.jpg",
             "quote": "",
-            "title": "Webmaster",
-            "visible": true
+            "title": "Webmaster"
         },
         "August Seiple": {
             "image": "/assets/images/members/AugustSei.jpg",
-            "quote": "I enjoy the intricacy of programming.",
-            "title": "",
-            "visible": true
+            "quote": "I enjoy the intricacy of programming."
         },
         "Zakaria Elkatani": {
             "image": "/assets/images/members/ZakariaElk.jpg",
-            "quote": "Robotics is fun.",
-            "title": "",
-            "visible": true
+            "quote": "Robotics is fun."
         },
         "Dan Shafman": {
             "image": "/assets/images/members/DanSha.jpg",
-            "quote": "I received a book about Java for my birthday, and it led me to pursue programming.",
-            "title": "",
-            "visible": true
+            "quote": "I received a book about Java for my birthday, and it led me to pursue programming."
         },
         "Eric Jiang": {
             "image": "/assets/images/members/EricJia.jpg",
-            "quote": "You gotta risk it to get the biscuit.",
-            "title": "",
-            "visible": true
-
+            "quote": "You gotta risk it to get the biscuit."
         },
         "Joseph Babbitt": {
             "image": "/assets/images/members/JosephBab.jpg",
-            "quote": "Lorem ipsum dolor sit amet is the bible of the programmer.",
-            "title": "",
-            "visible": true 
+            "quote": "Lorem ipsum dolor sit amet is the bible of the programmer."
         }
     },
     "Electrical": {
         "Cory Burda": {
             "image": "/assets/images/members/CoryBur.jpg",
             "quote": "Robotics gives me an electrical sensation :)",
-            "title": "Electrical Lead",
-            "visible": true 
+            "title": "Electrical Lead"
         },
         "Justin Woo": {
             "image": "/assets/images/members/JustinWoo.jpg",
-            "quote": "I love robotics.",
-            "title": "",
-            "visible": true 
+            "quote": "I love robotics."
         },
         "Jack Dai": {
             "image": "/assets/images/members/JackDai.jpg",
-            "quote": "Words cannot explain what this bio has to say!!",
-            "title": "",
-            "visible": true 
+            "quote": "Words cannot explain what this bio has to say!!"
         },
         "Jason Huang": {
             "image": "/assets/images/members/JasonHua.jpg",
-            "quote": "My life is defined by what I do",
-            "title": "",
-            "visible": true
+            "quote": "My life is defined by what I do"
         }
     },
     "Mechanical": {
         "Forest Shostak": {
             "image": "/assets/images/members/ForestShos.jpg",
             "quote": "I joined the team because it's awesome. I see myself utilizing these skills in my future",
-            "title": "Mechanical Lead",
-            "visible": true
+            "title": "Mechanical Lead"
         },
         "Tiarnan Rice": {
             "image": "/assets/images/members/TiarnanRic.jpg",
             "quote": "I've been into technology since I was 10 and plan on becoming an engineer in the future.",
-            "title": "Design Lead",
-            "visible": true
+            "title": "Design Lead"
         },
         "Daniel Alhadef": {
             "image": "/assets/images/members/DanielAlh.jpg",
             "quote": "Can I please just go back to building the robot?",
-            "title": "Project Manager",
-            "visible": true
+            "title": "Project Manager"
         },
         "Dominic Yong": {
             "image": "/assets/images/members/DominicYon.jpg",
-            "quote": "I've always wanted to become an engineer. If all else fails, I will become a comedian. Just kidding.",
-            "title": "",
-            "visible": true
+            "quote": "I've always wanted to become an engineer. If all else fails, I will become a comedian. Just kidding."
         },
         "Brandon Wood": {
             "image": "/assets/images/members/BrandonWoo.jpg",
-            "quote": "Sleep is optional, coffee is not.",
-            "title": "",
-            "visible": true
+            "quote": "Sleep is optional, coffee is not."
         },
         "Alberto Perez": {
             "image": "/assets/images/members/AlbertoPer.jpg",
-            "quote": "I'm a newborn... there isn't much else to say.",
-            "title": "",
-            "visible": true 
+            "quote": "I'm a newborn... there isn't much else to say."
         },
         "Michelle Zhang": {
             "image": "/assets/images/members/MichelleZha.jpg",
-            "quote": "I was inspired to join by the complexity of Team 334's robots. I'm determined to learn more everyday as a part of the team",
-            "title": "",
-            "visible": true
+            "quote": "I was inspired to join by the complexity of Team 334's robots. I'm determined to learn more everyday as a part of the team"
         },
         "Irene Gomes": {
             "image": "/assets/images/members/IreneGom.jpg",
-            "quote": "I do three things: <br /> 1. 3D Print stuff. <br /> 2. Yell at people <br /> 3. Break stuff.",
-            "title": "",
-            "visible": true
+            "quote": "I do three things: <br /> 1. 3D Print stuff. <br /> 2. Yell at people <br /> 3. Break stuff."
         },
         "Sayed Anada": {
             "image": "/assets/images/members/SayedAna.jpg",
-            "quote": "The best way to enjoy life is by making bad puns.",
-            "title": "",
-            "visible": true
+            "quote": "The best way to enjoy life is by making bad puns."
         },
         "Sophia Qiu": {
             "image": "/assets/images/members/SophiaQiu.jpg",
-            "quote": "Learning new things excite me.",
-            "title": "",
-            "visible": true
+            "quote": "Learning new things excite me."
         },
         "Thivya Srikumar": {
             "image": "/assets/images/members/ThivyaSri.jpg",
-            "quote": "I'm excited to be on the team this season",
-            "title": "",
-            "visible": true
+            "quote": "I'm excited to be on the team this season"
         },
         "Brian Ly": {
             "image": "/assets/images/members/BrianLy.jpg",
-            "quote": "Don't forget to be awesome",
-            "title": "",
-            "visible": true
+            "quote": "Don't forget to be awesome"
         },
         "Tao Yang": {
             "image": "/assets/images/members/TaoYan.jpg",
-            "quote": "One does not simply wing life, but I do.",
-            "title": "",
-            "visible": true
+            "quote": "One does not simply wing life, but I do."
         }
     },
     "Media": { 
         "Mymuna Begum": {
             "image": "/assets/images/members/MymunaBeg.jpg",
             "quote": "Hello...",
-            "title": "Media Lead",
-            "visible": true
+            "title": "Media Lead"
         },
         "Alexandra Gostev": {
             "image": "/assets/images/members/AlexandraGos.jpg",
-            "quote": "... it's me. | Creativity is allowing oneself to make mistakes. Art is knowing which ones to keep.",
-            "title": "",
-            "visible": true
+            "quote": "... it's me. | Creativity is allowing oneself to make mistakes. Art is knowing which ones to keep."
         },
         "Mary Karoqe": {
             "image": "/assets/images/members/MaryKar.jpg",
-            "visible": false
+            "hidden": true
         }
     }
 }

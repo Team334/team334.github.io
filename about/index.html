@@ -62,13 +62,13 @@ redirect_from:
             <div class="collapsible-body">
                 <div class="row">
                     {% for member in site.data.members.Programming %}
-                        {% if member[1].visible %}
+                        {% if member[1].hidden == null %}
                             <div class="col l2 m3 s6">
                                 <div class="card">
                                     <div class="card-image">
                                         <img src="{{ member[1].image }}">
                                     </div>
-                                    {% if member[1].title != "" %}
+                                    {% if member[1].title %}
                                     <p class="title">{{ member[1].title }}</p>
                                     {% endif %}
                                     <div class="card-content">
@@ -87,13 +87,13 @@ redirect_from:
             <div class="collapsible-body">
                 <div class="row">
                     {% for member in site.data.members.Electrical %}
-                        {% if member[1].visible %}
+                        {% if member[1].hidden == null %}
                             <div class="col l2 m3 s6">
                                 <div class="card">
                                     <div class="card-image">
                                         <img src="{{ member[1].image }}">
                                     </div>
-                                    {% if member[1].title != "" %}
+                                    {% if member[1].title %}
                                     <p class="title">{{ member[1].title }}</p>
                                     {% endif %}
                                     <div class="card-content">
@@ -112,13 +112,13 @@ redirect_from:
             <div class="collapsible-body">
                 <div class="row">
                     {% for member in site.data.members.Mechanical %}
-                        {% if member[1].visible %}
+                        {% if member[1].hidden == null %}
                             <div class="col l2 m3 s6">
                                 <div class="card">
                                     <div class="card-image">
                                         <img src="{{ member[1].image }}">
                                     </div>
-                                    {% if member[1].title != "" %}
+                                    {% if member[1].title %}
                                     <p class="title">{{ member[1].title }}</p>
                                     {% endif %}
                                     <div class="card-content">
@@ -137,13 +137,13 @@ redirect_from:
             <div class="collapsible-body">
                 <div class="row">
                     {% for member in site.data.members.Media %}
-                        {% if member[1].visible %}
+                        {% if member[1].hidden == null %}
                             <div class="col l2 m3 s6">
                                 <div class="card">
                                     <div class="card-image">
                                         <img src="{{ member[1].image }}">
                                     </div>
-                                    {% if member[1].title != "" %}
+                                    {% if member[1].title %}
                                     <p class="title">{{ member[1].title }}</p>
                                     {% endif %}
                                     <div class="card-content">
