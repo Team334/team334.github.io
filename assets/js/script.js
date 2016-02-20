@@ -7,7 +7,7 @@ $(document).ready(function() {
     });
 
     $("#content").click(function(event) {
-        if ($(".fa.fa-bars").css("display") == "inline" && $("#sidebar").css("display") == "block") {
+        if ($(".fa.fa-bars").css("display") == "block" && $("#sidebar").css("display") == "block") {
             $("#sidebar").hide();
         }
     });
