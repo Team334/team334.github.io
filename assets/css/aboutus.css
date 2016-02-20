@@ -58,6 +58,15 @@ ul.collapsible {
     font-weight: bold;
 }
 
+.section[name=divisions] .info {
+    background-color: #0D47A1;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #eee;
+}
+
 .row {
     margin-bottom: 0 !important;
 }
@@ -70,6 +79,7 @@ ul.collapsible {
 
 .collapsible-header.active {
     background-color: #1E88E5;
+    border-bottom: initial !important;
     color: #eee;
 }
 

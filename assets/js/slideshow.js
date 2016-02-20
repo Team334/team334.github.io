@@ -53,6 +53,7 @@ $(document).ready(function() {
         } else if ($(this).attr("class") == "fa fa-play-circle") {
             $(this).attr("class", "fa fa-pause-circle");
             resetInterval();
+            $("ul.tabs").tabs("select_tab", "pic" + next(index));
         }
     });
 
