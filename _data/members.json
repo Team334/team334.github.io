@@ -110,6 +110,10 @@
         "Tao Yang": {
             "image": "/assets/images/members/TaoYan.jpg",
             "quote": "One does not simply wing life, but I do."
+        },
+        "Nikolas Burzynski": {
+            "image": "/assets/images/members/NikolasBur.jpg",
+            "quote": "I joined robotics because my brother was on a robotics team, and I like to make things."
         }
     },
     "Media": { 

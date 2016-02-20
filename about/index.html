@@ -13,7 +13,7 @@ redirect_from:
     <nav class="main">
         <div class=nav-wrapper">
             <div class="nav breadcrumbs col s12">
-                <a href="#aboutus" class="breadcrumb">About Us</a>
+                <a href="#aboutus" class="breadcrumb"><i class="fa fa-bars"></i>About Us</a>
             </div>
         </div>
     </nav>
@@ -42,7 +42,7 @@ redirect_from:
                     Since its founding, the Brooklyn TechKnights have competed each year, gaining a vast collection of knowledge and experience. The team continues to refine its technique by fostering the growth of successive generations of engineers, ones who will not only dominate in competition, but will become leaders in their respective fields.
                 </span>
             </div>
-            <div class="col s4">
+            <div class="col s4 us">
                 <img src="/assets/images/us.jpg" class="responsive-img" />
             </div>
         </div>
@@ -66,7 +66,7 @@ redirect_from:
                     </div>
                     {% for member in site.data.members.Programming %}
                         {% if member[1].hidden == null %}
-                            <div class="col l2 m3 s6">
+                            <div class="col l3 m3 s6">
                                 <div class="card">
                                     <div class="card-image">
                                         <img src="{{ member[1].image }}">
@@ -94,7 +94,7 @@ redirect_from:
                     </div>
                     {% for member in site.data.members.Electrical %}
                         {% if member[1].hidden == null %}
-                            <div class="col l2 m3 s6">
+                            <div class="col l3 m3 s6">
                                 <div class="card">
                                     <div class="card-image">
                                         <img src="{{ member[1].image }}">
@@ -122,7 +122,7 @@ redirect_from:
                     </div>
                     {% for member in site.data.members.Mechanical %}
                         {% if member[1].hidden == null %}
-                            <div class="col l2 m3 s6">
+                            <div class="col l3 m3 s6">
                                 <div class="card">
                                     <div class="card-image">
                                         <img src="{{ member[1].image }}">
@@ -150,7 +150,7 @@ redirect_from:
                     </div>
                     {% for member in site.data.members.Media %}
                         {% if member[1].hidden == null %}
-                            <div class="col l2 m3 s6">
+                            <div class="col l3 m3 s6">
                                 <div class="card">
                                     <div class="card-image">
                                         <img src="{{ member[1].image }}">
@@ -181,7 +181,7 @@ redirect_from:
     </nav>
     <div class="mentors">
         <div class="row">
-            <div class="col s4">
+            <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="/assets/images/members/mrsdoherty.jpg" />
@@ -195,12 +195,12 @@ redirect_from:
                     </div>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s12 m4 l4">
                 <div class="card mid">
                     <div class="card-image">
                         <img src="/assets/images/members/mrharb.jpg" />
                     </div>
-                    <p class="title mid">Mechanical/Electrical Coach</p>
+                    <p class="title">Mechanical/Electrical Coach</p>
                     <div class="card-content">
                         <p class="name">Ali Harb</p>
                         <p>
@@ -209,7 +209,7 @@ redirect_from:
                     </div>
                 </div>
             </div>
-            <div class="col s4">
+            <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
                         <img src="/assets/images/members/mrlevin.jpg" />
@@ -226,3 +226,10 @@ redirect_from:
         </div>
     </div>
 </div>
+<footer class="page-footer">
+    <div class="container">
+    </div>
+    <div class="footer-copyright">
+        <span> © 2016 Team 334 - Tech Knights </span>
+    </div>
+</footer>

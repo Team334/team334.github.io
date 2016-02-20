@@ -17,6 +17,7 @@ div[name=""] {
 
 .card-panel {
     margin: 0 !important;
+    border-radius: 0 !important;
 }
 
 span.egg-text {
@@ -111,3 +112,20 @@ ul.collapsible {
     border-left-style: solid;
     border-left-color: #eee !important;
 }
+
+.page-footer {
+    background-color: #1976D2 !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.footer-copyright span {
+    color: #eee !important;
+    padding-left: 10px;
+}
+
+.fa.fa-bars {
+    line-height: inherit !important;
+    padding-right: 0.5em;
+}
+
