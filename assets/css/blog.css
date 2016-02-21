@@ -62,3 +62,10 @@
 .pagination > .active {
     background-color: #1976D2 !important;
 }
+
+@media all
+and (max-width: 992px) {
+    #sidebar {
+        display: none;
+    }    
+}

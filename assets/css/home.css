@@ -95,3 +95,14 @@
     margin-top: 2px;
     margin-left: 3px;
 }
+
+@media all
+and (max-width : 992px) {
+    #sidebar {
+        width: 100% !important;
+    }
+
+    #content {
+        display: none;
+    }
+}
