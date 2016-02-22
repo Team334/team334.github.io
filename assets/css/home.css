@@ -105,4 +105,10 @@ and (max-width : 992px) {
     #content {
         display: none;
     }
+
+    .sponsors {
+        position: relative;
+        padding-right: 0px;
+    }
+
 }
