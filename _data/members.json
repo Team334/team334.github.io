@@ -19,13 +19,13 @@
             "image": "/assets/images/members/AugustSei.jpg",
             "quote": "I enjoy the intricacy of programming."
         },
-        "Zakaria Elkatani": {
-            "image": "/assets/images/members/ZakariaElk.jpg",
-            "quote": "Robotics is fun."
-        },
         "Dan Shafman": {
             "image": "/assets/images/members/DanSha.jpg",
             "quote": "I received a book about Java for my birthday, and it led me to pursue programming."
+        },
+        "Zakaria Elkatani": {
+            "image": "/assets/images/members/ZakariaElk.jpg",
+            "quote": "Robotics is fun."
         },
         "Eric Jiang": {
             "image": "/assets/images/members/EricJia.jpg",
