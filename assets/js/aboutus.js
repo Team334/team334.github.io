@@ -36,7 +36,6 @@ $(document).ready(function() {
     $(".collapsible-header").click(function() {
         var shadow = this;
         setTimeout(function() {
-            console.log($(shadow).attr("class"));
             if ($(shadow).hasClass("active")) {
                 $(shadow).next().find(".row").each(function() {
                     var height = 0;

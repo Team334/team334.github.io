@@ -129,10 +129,29 @@ ul.collapsible {
     padding-right: 0.5em;
 }
 
+.mobile {
+    display: none;
+}
+
 @media all
 and (max-width: 600px) {
     #sidebar {
         display: none;
     }    
 
+}
+
+@media all
+and (max-width: 700px) {
+    .mobile.us {
+        display: inline;
+    }
+
+    .s4.us {
+        display: none;
+    }
+
+    div[name=introduction] .col {
+        width: 100% !important;
+    }
 }
