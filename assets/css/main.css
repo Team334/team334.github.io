@@ -32,6 +32,8 @@
 
 .social {
     font-size: 25px;
+    margin-top: 10px !important;
+    text-align: center;
 }
 
 .hoverable:hover {
@@ -89,16 +91,15 @@ div.sponsor img {
     display: none;
 } 
 
-
 @media all 
-and (max-width : 992px) {
+and (max-width : 600px) {
     .fa.fa-bars {
         display: inline;
     }
 }
 
 @media all
-and (max-height: 610px)
+and (max-height: 700px)
  {
     .sponsors {
         position: relative;

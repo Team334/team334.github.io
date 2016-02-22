@@ -97,7 +97,7 @@
 }
 
 @media all
-and (max-width : 992px) {
+and (max-width : 600px) {
     #sidebar {
         width: 100% !important;
     }
@@ -110,5 +110,4 @@ and (max-width : 992px) {
         position: relative;
         padding-right: 0px;
     }
-
 }

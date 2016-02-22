@@ -130,7 +130,7 @@ ul.collapsible {
 }
 
 @media all
-and (max-width: 992px) {
+and (max-width: 600px) {
     #sidebar {
         display: none;
     }    
