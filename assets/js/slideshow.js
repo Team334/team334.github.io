@@ -5,57 +5,42 @@ $(document).ready(function() {
 
     function cycleImage(i) {
         var slides = $(".slide");
-        var currSlide = $(".active.slide"); 
+        var currSlide = $(".slide.active"); 
         var nextSlide = $(slides[next(i)]); 
 
-        transition(currSlide, nextSlide, 1);
+        currSlide.removeClass("active");
+        nextSlide.addClass("active");
 
-        var cards = $(".preview");
-        var currCard = $(".preview.active");
-        var nextCard = $(cards[next(i)]);
+        var tabs = $(".row.index .col.s1"); 
+        var currTab = $(".active.col.s1");
+        var nextTab = $(tabs[next(i)]);
 
-        transition(currCard, nextCard, 6);
-    }
-
-    function transition(prev, next, min_z) {
-        next.css("z-index", min_z + 1);
-        prev.fadeOut(200, function() {
-            prev.css("z-index", min_z).show().removeClass("active");
-            prev.css("display", "none");
-            next.css("z-index", min_z + 2).addClass("active");
-            next.css("display", "block");
-        }); 
+        currTab.removeClass("active");
+        nextTab.addClass("active");
     }
 
     function next(i) {
         return i + 1 == max_index ? 0 : i + 1;
     }
 
-    var interval;
+    var interval, timeout;
     function resetInterval() {
         interval = setInterval(function() {
-            $("ul.tabs").tabs("select_tab", "pic" + next(index));
-        }, 5000);
+            cycleImage(index);
+            index = next(index);
+        }, 4000);
     }
     resetInterval();
 
-    $("li.tab.cols3 > a").click(function() {
-        if (index != parseInt(this.innerHTML) - 1) {
-            cycleImage(parseInt(this.innerHTML) - 1);
-            index = parseInt(this.innerHTML) - 1;
-        }
-    });
+    $(".row.index .col.s1").click(function() {
+        var selected = parseInt(this.children[0].innerHTML) - 2;
+        cycleImage(selected);
 
-    $(".fa").click(function() {
-        if ($(this).attr("class") == "fa fa-pause-circle") {
-            $(this).attr("class", "fa fa-play-circle");
-            clearInterval(interval);
-        } else if ($(this).attr("class") == "fa fa-play-circle") {
-            $(this).attr("class", "fa fa-pause-circle");
+        clearInterval(interval);
+        clearTimeout(timeout);
+
+        timeout = setTimeout(function() {
             resetInterval();
-            $("ul.tabs").tabs("select_tab", "pic" + next(index));
-        }
+        }, 10000);
     });
-
-    $("ul.tabs").tabs();
 });

@@ -4,64 +4,39 @@
 }
 
 .progress .determinate {
-    background-color: #1976D2 !important;
+    background-color: #0D47A1 !important;
 }
 
 #slideshow {
     height: 100vh;
 }
 
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
 #slideshow img {
+    position: absolute;
+
     width: 100%;
     height: 100vh;
     right: 0;
     object-fit: cover;
 } 
 
-#slideshow img.slide {
-    position: absolute;
-    z-index: 1;    
-}
-
-#slideshow img.active.slide {
-    z-index: 3;
-}
-
-#tabs {
-    position: absolute;
-    width: 100%;
-    z-index: 4; 
-    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
-    overflow: hidden;
-}
-
-.tabs .indicator {
-    background-color: #1976D2 !important;
-}
-
-.tab > a {
-    color: #039be5 !important;
-}
-
 .preview {
     position: absolute;
-    display: none;
+
     top: 100px;
     width: 300px;
     opacity: 0.99;
-    z-index: 6; 
 }
 
-.preview.active {
-    display: block;
-    z-index: 8;
-}
-
-.preview.card-content.card-title {
-    color: black !important;
-}
-
-.card-title {
+.preview .card-title {
     display: block;
     font-weight: 500 !important;
     color: #eee !important;
@@ -71,14 +46,14 @@
     padding-left: 10px;
 }
 
-.card-action {
+.preview .card-action {
     padding-right: 5px !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
     padding-left: 20px !important;
 }
 
-.card-action > a {
+.preview .card-action > a {
     color: #eee !important;
 }
 
@@ -86,7 +61,7 @@
     padding: 0 !important;
 }
 
-.card-text {
+.preview .card-text {
     padding: 10px;
 }
 
@@ -94,6 +69,29 @@
     position: absolute;
     margin-top: 2px;
     margin-left: 3px;
+}
+
+.row.index {
+    width: 100%;
+    position: absolute;
+    height: 48px !important;
+    z-index: 4;
+    margin-bottom: 0px !important;
+    background-color: #fff !important;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+.row.index .col {
+    width: 20% !important;
+    text-align: center;
+    position: relative;
+    top: 13px;
+}
+
+.row.index .col.active {
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid  #1976D2;
 }
 
 @media all
@@ -108,6 +106,7 @@ and (max-width : 600px) {
 
     .sponsors {
         position: relative;
+        margin-bottom: 10px;
         padding-right: 0px;
     }
 }

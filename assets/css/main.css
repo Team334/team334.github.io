@@ -4,7 +4,7 @@
     background-color: #0D47A1 !important;
     z-index: 9;
 
-    overflow: scroll;
+    overflow: hidden;
 }
 
 #content {
@@ -87,6 +87,14 @@ div.sponsor img {
     padding-right: 10px;
 }
 
+@-moz-document url-prefix() { 
+    .sponsors {
+        position: absolute;
+        right: 0;
+        left: 10px;
+    }
+}
+
 .fa.fa-bars {
     display: none;
 } 
@@ -96,13 +104,28 @@ and (max-width : 600px) {
     .fa.fa-bars {
         display: inline;
     }
+
+    #sidebar {
+        overflow-y: scroll;
+    }
+
+    .sponsors {
+        position: relative;
+        padding-right: 0px;
+        left: 0;
+    }
 }
 
 @media all
 and (max-height: 700px)
- {
+{
+    #sidebar {
+        overflow-y: scroll;
+    }
+
     .sponsors {
         position: relative;
         padding-right: 0px;
+        left: 0;
     }
 }

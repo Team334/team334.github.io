@@ -10,36 +10,46 @@ redirect_from:
 <div class="progress">
       <div class="determinate" style="width: 100%"></div>
 </div>
-<ul class="tabs" id="tabs">
-    <i class="fa fa-pause-circle"></i>
-    <li class="tab cols3"><a href="#pic0">1</a></li>
-    <li class="tab cols3"><a href="#pic1">2</a></li>
-    <li class="tab cols3"><a href="#pic2">3</a></li>
-    <li class="tab cols3"><a href="#pic3">4</a></li>
-    <li class="tab cols3"><a href="#pic4">5</a></li>
-</ul>
+
+<div class="row index">
+    <div class="active col s1">
+        <a>1</a>
+    </div>
+    <div class="col s1">
+        <a>2</a>
+    </div>
+    <div class="col s1">
+        <a>3</a>
+    </div>
+    <div class="col s1">
+        <a>4</a>
+    </div>
+    <div class="col s1">
+        <a>5</a>
+    </div>
+</div>
 
 <div id="slideshow" class="col s10">
-    <i class="fa fa-play-circle"></i>
     {% assign active = false %}
     {% for post in site.posts limit:5 %}
         {% if active %}
-            <img class="slide" src="{{ post.images[0] }}">
-            <div class="preview card blue">
+            <div class="slide">
         {% else %}
-            <img class="slide active" src="{{ post.images[0] }}">
+            <div class="slide active">
             {% assign active = true %}
-            <div class="preview active card blue">
         {% endif %}
-            <a href="{{ post.url }}"><span class="card-title">{{ post.title }}</span></a>
-            <div class="divider"></div>
-            <div class="card-content white-text">
-                <p class="card-text">{{ post.text }}</p>
-            </div>
-            <div class="divider"></div>
-            <div class="card-action">
-                <a href="{{ post.url }}">Read more...</a>
+            <img src="{{ post.images[0] }}">
+            <div class="preview card blue">
+                <a href="{{ post.url }}"><span class="card-title">{{ post.title }}</span></a>
+                <div class="divider"></div>
+                <div class="card-content white-text">
+                    <p class="card-text">{{ post.text }}</p>
+                </div>
+                <div class="divider"></div>
+                <div class="card-action">
+                    <a href="{{ post.url }}">Read more...</a>
+                </div>
             </div>
         </div>
-    {% endfor %}}
+    {% endfor %}
 </div>
