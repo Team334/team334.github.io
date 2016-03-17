@@ -85,7 +85,9 @@
     width: 20% !important;
     text-align: center;
     position: relative;
-    top: 13px;
+
+    padding-top: 13px;
+    height: 100%;
 }
 
 .row.index .col.active {
