@@ -82,6 +82,8 @@
 }
 
 .row.index .col {
+    cursor: pointer;
+
     width: 20% !important;
     text-align: center;
     position: relative;
