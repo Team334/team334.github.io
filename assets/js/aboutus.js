@@ -44,8 +44,9 @@ $(document).ready(function() {
                             height = $(this).height();
                         }
                     });
+
                     $(this).find(".card").each(function() {
-                        $(this).css("min-height", height);
+                        $(this).css("height", height);
                     });
                 });
             }
