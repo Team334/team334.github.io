@@ -104,6 +104,10 @@
         "Alexandra Gostev": {
             "image": "/assets/images/members/AlexandraGos.jpg",
             "quote": "... it's me. | Creativity is allowing oneself to make mistakes. Art is knowing which ones to keep."
+        },
+        "Mary Karoqe": {
+            "image": "/assets/images/members/MaryKar.jpg",
+            "hidden": true
         }
     }
 }
