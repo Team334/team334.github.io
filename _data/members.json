@@ -13,7 +13,7 @@
         "Kevin Zheng": {
             "image": "/assets/images/members/KevinZhe.jpg",
             "quote": "",
-            "title": "Webmaster"
+            "title": "Website Manager"
         },
         "August Seiple": {
             "image": "/assets/images/members/AugustSei.jpg",
@@ -66,11 +66,6 @@
             "quote": "I've been into technology since I was 10 and plan on becoming an engineer in the future.",
             "title": "Design Lead"
         },
-        "Daniel Alhadef": {
-            "image": "/assets/images/members/DanielAlh.jpg",
-            "quote": "Can I please just go back to building the robot?",
-            "title": "Project Manager"
-        },
         "Dominic Yong": {
             "image": "/assets/images/members/DominicYon.jpg",
             "quote": "I've always wanted to become an engineer. If all else fails, I will become a comedian. Just kidding."
@@ -83,18 +78,6 @@
             "image": "/assets/images/members/AlbertoPer.jpg",
             "quote": "I'm a newborn... there isn't much else to say."
         },
-        "Michelle Zhang": {
-            "image": "/assets/images/members/MichelleZha.jpg",
-            "quote": "I was inspired to join by the complexity of Team 334's robots. I'm determined to learn more everyday as a part of the team"
-        },
-        "Irene Gomes": {
-            "image": "/assets/images/members/IreneGom.jpg",
-            "quote": "I do three things: <br /> 1. 3D Print stuff. <br /> 2. Yell at people <br /> 3. Break stuff."
-        },
-        "Sayed Anada": {
-            "image": "/assets/images/members/SayedAna.jpg",
-            "quote": "The best way to enjoy life is by making bad puns."
-        },
         "Sophia Qiu": {
             "image": "/assets/images/members/SophiaQiu.jpg",
             "quote": "Learning new things excite me."
@@ -106,10 +89,6 @@
         "Brian Ly": {
             "image": "/assets/images/members/BrianLy.jpg",
             "quote": "Don't forget to be awesome"
-        },
-        "Tao Yang": {
-            "image": "/assets/images/members/TaoYan.jpg",
-            "quote": "One does not simply wing life, but I do."
         },
         "Nikolas Burzynski": {
             "image": "/assets/images/members/NikolasBur.jpg",
@@ -125,10 +104,6 @@
         "Alexandra Gostev": {
             "image": "/assets/images/members/AlexandraGos.jpg",
             "quote": "... it's me. | Creativity is allowing oneself to make mistakes. Art is knowing which ones to keep."
-        },
-        "Mary Karoqe": {
-            "image": "/assets/images/members/MaryKar.jpg",
-            "hidden": true
         }
     }
 }
