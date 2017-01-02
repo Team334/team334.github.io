@@ -63,7 +63,7 @@
         },
         "Tiarnan Rice": {
             "image": "/assets/images/members/TiarnanRic.jpg",
-            "quote": "I've been into technology since I was 10 and plan on becoming an engineer in the future.",
+            "quote": "",
             "title": "Design Lead"
         },
         "Dominic Yong": {
@@ -95,7 +95,7 @@
             "quote": "I joined robotics because my brother was on a robotics team, and I like to make things."
         }
     },
-    "Media": { 
+    "Media": {
         "Mymuna Begum": {
             "image": "/assets/images/members/MymunaBeg.jpg",
             "quote": "Hello...",
