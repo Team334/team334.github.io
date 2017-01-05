@@ -6,7 +6,6 @@
 
     overflow: hidden;
 }
-
 #content {
     position: absolute;
     background-color: #eee;
@@ -74,7 +73,7 @@ div.sponsor img {
 
 .sponsor .row {
     margin-bottom: 10px !important;
-} 
+}
 
 .sponsor .row .col {
     padding-right: 0.30rem !important;
@@ -87,7 +86,7 @@ div.sponsor img {
     padding-right: 10px;
 }
 
-@-moz-document url-prefix() { 
+@-moz-document url-prefix() {
     .sponsors {
         position: absolute;
         right: 0;
@@ -97,9 +96,9 @@ div.sponsor img {
 
 .fa.fa-bars {
     display: none;
-} 
+}
 
-@media all 
+@media all
 and (max-width : 600px) {
     .fa.fa-bars {
         display: inline;
