@@ -1,19 +1,41 @@
 {
-    "Programming" : {
-        "August Trollback": {
-            "image": "/assets/images/members/AugustTrol.jpg",
-            "quote": "Programming ethusiast interested in Ruby, JVM languages, and web development.",
-            "title": "Programming Lead"
-        },
-        "Benjamin Spiegel": {
-            "image": "/assets/images/members/BenjaminSpi.jpg",
-            "quote": "I am passionate about data analysis and algorithms. I also have a strong background in CAD.",
-            "title": "Technical Strategist"
-        },
+    "Leads": {
+      "Benjamin Spiegel": {
+          "image": "/assets/images/members/BenjaminSpi.jpg",
+          "quote": "I am passionate about data analysis and algorithms. I also have a strong background in CAD.",
+          "title": "Team Captain"
+      },
+      "Tiarnan Rice": {
+          "image": "/assets/images/members/TiarnanRic.jpg",
+          "quote": "",
+          "title": "Design Lead"
+      },
+      "Forest Shostak": {
+          "image": "/assets/images/members/ForestShos.jpg",
+          "quote": "I joined the team because it's awesome. I see myself utilizing these skills in my future",
+          "title": "Mechanical Lead"
+      },
+      "Cory Burda": {
+          "image": "/assets/images/members/CoryBur.jpg",
+          "quote": "Robotics gives me an electrical sensation :)",
+          "title": "Electrical Lead"
+      },
+      "August Trollback": {
+          "image": "/assets/images/members/AugustTrol.jpg",
+          "quote": "Programming ethusiast interested in Ruby, JVM languages, and web development.",
+          "title": "Programming Lead"
+      },
+      "Alexandra Gostev": {
+          "image": "/assets/images/members/AlexandraGos.jpg",
+          "quote": "... it's me. | Creativity is allowing oneself to make mistakes. Art is knowing which ones to keep.",
+          "title": "Media Captain"
+      }
+    },
+    "Programming": {
         "Kevin Zheng": {
             "image": "/assets/images/members/KevinZhe.jpg",
             "quote": "",
-            "title": "Website Manager"
+            "title": "Scoutmaster"
         },
         "August Seiple": {
             "image": "/assets/images/members/AugustSei.jpg",
@@ -33,15 +55,11 @@
         },
         "Joseph Babbitt": {
             "image": "/assets/images/members/JosephBab.jpg",
-            "quote": "Lorem ipsum dolor sit amet is the bible of the programmer."
+            "quote": "Lorem ipsum dolor sit amet is the bible of the programmer.",
+            "title": "Website Manager"
         }
     },
     "Electrical": {
-        "Cory Burda": {
-            "image": "/assets/images/members/CoryBur.jpg",
-            "quote": "Robotics gives me an electrical sensation :)",
-            "title": "Electrical Lead"
-        },
         "Justin Woo": {
             "image": "/assets/images/members/JustinWoo.jpg",
             "quote": "I love robotics."
@@ -56,16 +74,6 @@
         }
     },
     "Mechanical": {
-        "Forest Shostak": {
-            "image": "/assets/images/members/ForestShos.jpg",
-            "quote": "I joined the team because it's awesome. I see myself utilizing these skills in my future",
-            "title": "Mechanical Lead"
-        },
-        "Tiarnan Rice": {
-            "image": "/assets/images/members/TiarnanRic.jpg",
-            "quote": "",
-            "title": "Design Lead"
-        },
         "Dominic Yong": {
             "image": "/assets/images/members/DominicYon.jpg",
             "quote": "I've always wanted to become an engineer. If all else fails, I will become a comedian. Just kidding."
@@ -99,11 +107,7 @@
         "Mymuna Begum": {
             "image": "/assets/images/members/MymunaBeg.jpg",
             "quote": "Hello...",
-            "title": "Media Lead"
-        },
-        "Alexandra Gostev": {
-            "image": "/assets/images/members/AlexandraGos.jpg",
-            "quote": "... it's me. | Creativity is allowing oneself to make mistakes. Art is knowing which ones to keep."
+            "title": "Media Co-Captain"
         },
         "Mary Karoqe": {
             "image": "/assets/images/members/MaryKar.jpg",

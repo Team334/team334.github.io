@@ -1,7 +1,9 @@
 nav {
     background-color: #1976D2 !important;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 nav.main {
     background-color: #0D47A1 !important;
 }
@@ -37,6 +39,14 @@ ul.collapsible {
     font-weight: bold;
 }
 
+.faded{
+  -webkit-filter: brightness(1.2);
+    filter: brightness(1.2);
+}
+#personmodal{
+  width: 40%;
+  top: 30% !important;
+}
 .mentors .col {
     padding: 0 !important;
 }
@@ -137,7 +147,7 @@ ul.collapsible {
 and (max-width: 600px) {
     #sidebar {
         display: none;
-    }    
+    }
 
 }
 
