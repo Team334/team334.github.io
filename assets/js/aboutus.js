@@ -35,7 +35,7 @@ $(document).ready(function() {
     $('.person').click(function(){
       $('#personmodal').find('h4').text($(this).find('.title').text());
       ($(this).find('.name').text())? $('#personmodal').find('h5').html("<div class=title>"+$(this).find('.name').text()+"</div>") : $('#personmodal').find('h5').html(' ');
-      $('#personmodal').find('p').text($(this).find('.quote').text());
+      $('#personmodal').find('.quote').html($(this).find('.quote').html());
       $('#personmodal').modal('open');
     });
     $(".person").hover(
@@ -57,7 +57,7 @@ $(document).ready(function() {
                             card_height = $(this).height();
                         }
                     });
-
+                    console.log(card_height)
                     $(this).find(".card").each(function() {
                         $(this).css("height", card_height);
                         var text = $(this).find('.card-content');
@@ -65,7 +65,8 @@ $(document).ready(function() {
                         var parent = $(text).parent();
                         var img = $(parent).find('img').height()
                         var title = $(parent).find('.title').height();
-                        $(parent).css('height',img+title)
+                        var title2 = $(parent).find('.title2').height();
+                        $(parent).css('height',img+title+title2)
                     });
                 });
             }

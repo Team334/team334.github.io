@@ -1,6 +1,6 @@
 ---
 layout: default
-redirect_from: 
+redirect_from:
     - /blog-2/
 ---
 <meta name="description" content="The TechKnights are Brooklyn Tech High School's robotics team. We compete as Team 334 in the US FIRST competitions.">
@@ -14,7 +14,7 @@ redirect_from:
 
         <h4 class="post-title flow-text"><a href="{{ post.url }}">{{ post.title }}</a></h4>
             <div class="chip">
-                <img src="{{ site.data.members.Media[post.author].image }}">
+                <img src="{{ site.data.members[post.division][post.author].image }}">
                 {{ post.author }}
             </div>
         <span class="post-date"><i class="fa fa-calendar"></i>{{ post.date | date: '%B %d, %Y' }}</span>
@@ -24,7 +24,7 @@ redirect_from:
                 {% for img in post.images %}
                     <li>
                         <img src="{{ img }}" />
-                    </li> 
+                    </li>
                 {% endfor %}
             </ul>
         </div>
@@ -44,7 +44,7 @@ redirect_from:
 {% endfor %}
 
 <ul class="pagination center">
-    {% if paginator.previous_page %} 
+    {% if paginator.previous_page %}
         <li class="waves-effect"><a href="{{ paginator.previous_page_path }}"><i class="material-icons">chevron_left</i></a></li>
     {% else %}
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>

@@ -72,7 +72,7 @@ redirect_from:
                                   <div class="card-image">
                                       <img src="{{ member[1].image }}">
                                   </div>
-                                  <p class="title">{{ member[1].title }}<br><b style="font-size: .8em">{{ member[0] }}</b></p>
+                                  <p class="title2">{{ member[1].title }}<br></p><p class="title"><b style="font-size: .8em">{{ member[0] }}</b></p>
                                   <div class="card-content">
                                     {% if member[1].title %}
                                       <p class="name">{{ member[1].title }}</p>
@@ -189,7 +189,7 @@ redirect_from:
                                   {% if member[1].title %}
                                     <p class="name">{{ member[1].title }}</p>
                                   {% endif %}
-                                    <p class="quote">{{ member[1].quote }}</p>
+                                    <span class="quote">{{ member[1].quote }}</span>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +204,7 @@ redirect_from:
     <nav class="section" name="Mentors">
         <div class=nav-wrapper" id="mentors">
             <div class="breadcrumbs col s12">
-                <a href="#mentors" class="breadcrumb">Mentors</a>
+                <a href="#mentors" class="breadcrumb">Coaches</a>
             </div>
         </div>
     </nav>
@@ -264,9 +264,9 @@ redirect_from:
 </footer>
 <div id="personmodal" class="modal">
     <div class="modal-content">
-      <h4>Modal Header</h4>
+      <h4></h4>
       <h5></h5>
-      <p>A bunch of text</p>
+      <div class="quote"></div>
     </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
