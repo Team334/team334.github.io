@@ -66,7 +66,7 @@ $(document).ready(function() {
                         var img = $(parent).find('img').height()
                         var title = $(parent).find('.title').height();
                         var title2 = $(parent).find('.title2').height();
-                        $(parent).css('height',img+title+title2)
+                        $(parent).css('height',img+title+title2+10)
                     });
                 });
             }
