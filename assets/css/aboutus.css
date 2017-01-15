@@ -54,18 +54,6 @@ ul.collapsible {
   width: 40%;
   top: 30% !important;
 }
-.mentors .col {
-    padding: 0 !important;
-}
-
-.mentors .card {
-    box-shadow: initial !important;
-    border-radius: 0 !important;
-}
-
-.mentors img {
-    border-radius: 0 !important;
-}
 
 .card-content p {
     padding: 0 !important;
