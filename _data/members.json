@@ -85,6 +85,14 @@
             "image": "/assets/images/members/HalilTur.jpg",
             "quote": "hi i am a robot"
         },
+        "Irene Li": {
+            "image": "/assets/images/members/YawenLi.jpg",
+            "quote": "My relationship status is: in Engineering"
+        },
+        "Christina Nguyen": {
+            "image": "/assets/images/members/ChristinaNgu.jpg",
+            "quote": "Junior in the Electrical Engineering major. Passionate about STEM"
+        },
     },
     "Mechanical": {
         "Serenity Monroe": {
@@ -131,10 +139,6 @@
             "image": "/assets/images/members/WileyMuc.jpg",
             "quote": "Mech & Robotics major. Token tall guy."
         },
-        "Christina Nguyen": {
-            "image": "/assets/images/members/ChristinaNgu.jpg",
-            "quote": "Junior in the Electrical Engineering major. Passionate about STEM"
-        },
         "Siddharth Martis": {
             "image": "/assets/images/members/SiddarthMar.jpg",
             "quote": "Pretend I wrote something deep and affecting."
@@ -155,10 +159,6 @@
             "image": "/assets/images/members/OscarYon.jpg",
             "quote": "I don't know what to do.."
         },
-        "Yawen Li": {
-            "image": "/assets/images/members/YawenLi.jpg",
-            "quote": "My relationship status is: in Engineering"
-        },
         "Ahmad Abdulwadood": {
             "image": "/assets/images/members/AhmadAbd.jpg",
             "quote": "<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet'><marquee style=\"font-family: 'Rock Salt',cursive; color:#00ff00;background-color:black\" scrollamount=\"20\">RANCH ME UP RANCH ME UP RANCH ME UP RANCH ME UP RANCH ME UP RANCH ME UP RANCH ME UP RANCH ME UP RANCH ME UP RANCH ME UP</marquee>"
@@ -175,7 +175,7 @@
     "Media": {
         "Mymuna Begum": {
             "image": "/assets/images/members/MymunaBeg.jpg",
-            "quote": "Hello...",
+            "quote": "I don't talk that much.",
             "title": "Media Co-Captain"
         },
         "Nick Svan": {
