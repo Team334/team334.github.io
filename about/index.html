@@ -7,11 +7,12 @@ redirect_from:
 ---
 <meta name="description" content="Brooklyn Technical High School's Robotics Team has been an integral part of the school community since the team's founding. It encompasses the school's spirit of engineering achievement and innovation, while fostering the development of young leaders. Members are encouraged to take initiative under the guidance of seasoned coaches and mentors.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 <script src="/assets/js/aboutus.js"></script>
 <link href="/assets/css/aboutus.css" rel="stylesheet">
 <div id="aboutus" class="navbar-fixed">
     <nav class="main">
-        <div class=nav-wrapper">
+        <div class="nav-wrapper">
             <div class="nav breadcrumbs col s12">
                 <a href="#aboutus" class="breadcrumb"><i class="fa fa-bars"></i>About Us</a>
             </div>
@@ -19,9 +20,11 @@ redirect_from:
     </nav>
 </div>
 <div class="section" name=""></div>
+
+
 <div class="section" name="introduction">
     <nav class="section" name="Introduction">
-        <div class=nav-wrapper" id="introduction">
+        <div class="nav-wrapper" id="introduction">
             <div class="breadcrumbs col s12">
                 <a href="#introduction" class="breadcrumb">Introduction</a>
             </div>
@@ -31,7 +34,7 @@ redirect_from:
         <img src="/assets/images/us.jpg" class="responsive-img" />
     </div>
     <div class="card-panel blue darken-4">
-        <div class="row">
+        <div class="row valign-wrapper">
             <div class="col s12 m8 l8">
                 <span class="egg-text">
         Brooklyn Technical High School's Robotics Team has been an integral part of the school community since the team's founding. It encompasses the school's spirit of engineering achievement and innovation, while fostering the development of young leaders. Members are encouraged to take initiative under the guidance of seasoned coaches and mentors.
@@ -46,47 +49,9 @@ redirect_from:
                 </span>
             </div>
             <div class="col s4 us">
-                <img src="/assets/images/us.jpg" class="responsive-img" />
+                <img src="/assets/images/us.jpg" class="responsive-img valign" />
             </div>
         </div>
-    </div>
-</div>
-<div class="section" name="Important Info">
-    <nav class="section" name="Important Info">
-        <div class="nav-wrapper" id="importantinfo">
-            <div class="breadcrumbs col s12">
-                <a href="#importantinfo" class="breadcrumb">Important Info</a>
-            </div>
-        </div>
-    </nav>
-    <div class="card-panel blue darken-4" style="padding:0;">
-      <br>
-      <span class="egg-text">
-        Team 334's schedule during the six week season can be rigorous, last year each member spent over <b>275</b> hours in the lab.
-      </span>
-      <br><br>
-      <table class="white">
-        <thead>
-          <tr>
-              <th data-field="id">Date</th>
-              <th data-field="name">Time</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Monday-Friday</td>
-            <td>4:00PM-8:30PM</td>
-          </tr>
-          <tr>
-            <td>Saturday</td>
-            <td>8:00AM-8:30PM</td>
-          </tr>
-          <tr>
-            <td>Sunday</td>
-            <td>No meeting</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
 </div>
 <div class="section" name="divisions">
@@ -98,6 +63,31 @@ redirect_from:
         </div>
     </nav>
     <ul class="collapsible" data-collapsible="expandable">
+      <li>
+          <div class="collapsible-header"><i class="fa fa-wrench"></i>Leads</div>
+          <div class="collapsible-body">
+              <div class="row">
+                  {% for member in site.data.members.Leads %}
+                      {% if member[1].hidden == null %}
+                          <div class="col l2 m2 s3">
+                              <div class="person card">
+                                  <div class="card-image">
+                                      <img src="{{ member[1].image }}">
+                                  </div>
+                                  <p class="title2">{{ member[1].title }}<br></p><p class="title"><b style="font-size: .8em">{{ member[0] }}</b></p>
+                                  <div class="card-content">
+                                    {% if member[1].title %}
+                                      <p class="name">{{ member[1].title }}</p>
+                                    {% endif %}
+                                      <p class="quote">{{ member[1].quote }}</p>
+                                  </div>
+                              </div>
+                          </div>
+                      {% endif %}
+                  {% endfor %}
+              </div>
+          </div>
+      </li>
         <li>
             <div class="collapsible-header"><i class="fa fa-laptop"></i>Programming</div>
             <div class="collapsible-body">
@@ -107,17 +97,17 @@ redirect_from:
                     </div>
                     {% for member in site.data.members.Programming %}
                         {% if member[1].hidden == null %}
-                            <div class="col l3 m3 s6">
-                                <div class="card">
+                            <div class="col l2 m2 s3">
+                                <div class="person card">
                                     <div class="card-image">
                                         <img src="{{ member[1].image }}">
                                     </div>
-                                    {% if member[1].title %}
-                                    <p class="title">{{ member[1].title }}</p>
-                                    {% endif %}
+                                    <p class="title">{{ member[0] }}</p>
                                     <div class="card-content">
-                                        <p class="name">{{ member[0] }}</p>
-                                        <p>{{ member[1].quote }}</p>
+                                      {% if member[1].title %}
+                                        <p class="name">{{ member[1].title }}</p>
+                                      {% endif %}
+                                        <p class="quote">{{ member[1].quote }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -134,22 +124,22 @@ redirect_from:
                         Following the initial prototyping stages, the electrical division analyzes the body of the robot to determine the best way to layout the wiring and components. The members wire everything as neatly and efficiently as possible to ease any troubleshooting that may happen in the future. They work closely with the programming division because the wiring can affect how the code is carried out.
                     </div>
                     {% for member in site.data.members.Electrical %}
-                        {% if member[1].hidden == null %}
-                            <div class="col l3 m3 s6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="{{ member[1].image }}">
-                                    </div>
-                                    {% if member[1].title %}
-                                    <p class="title">{{ member[1].title }}</p>
-                                    {% endif %}
-                                    <div class="card-content">
-                                        <p class="name">{{ member[0] }}</p>
-                                        <p>{{ member[1].quote }}</p>
-                                    </div>
+                    {% if member[1].hidden == null %}
+                        <div class="col l2 m2 s3">
+                            <div class="person card">
+                                <div class="card-image">
+                                    <img src="{{ member[1].image }}">
+                                </div>
+                                <p class="title">{{ member[0] }}</p>
+                                <div class="card-content">
+                                  {% if member[1].title %}
+                                    <p class="name">{{ member[1].title }}</p>
+                                  {% endif %}
+                                    <p class="quote">{{ member[1].quote }}</p>
                                 </div>
                             </div>
-                        {% endif %}
+                        </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
@@ -159,25 +149,25 @@ redirect_from:
             <div class="collapsible-body">
                 <div class="row">
                     <div class="info col s12">
-                        The mechanical division comprises the largest part of the team, with 12 members this year. Immediately after Kickoff, this division develops the basic design for the robot, after which they then utilize the Autodesk Inventor program to digitally model the robot components. Following this, they are able to start building components and prototyping while keeping in mind space, weight, and other various constraints. Most of the body is machined in Brooklyn Tech's own machine shop by the team members.
+                        The mechanical division comprises the largest part of the team, with 21 members this year. Immediately after Kickoff, this division develops the basic design for the robot, after which they then utilize the Autodesk Inventor program to digitally model the robot components. Following this, they are able to start building components and prototyping while keeping in mind space, weight, and other various constraints. Most of the body is machined in Brooklyn Tech's own machine shop by the team members.
                     </div>
                     {% for member in site.data.members.Mechanical %}
-                        {% if member[1].hidden == null %}
-                            <div class="col l3 m3 s6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="{{ member[1].image }}">
-                                    </div>
-                                    {% if member[1].title %}
-                                    <p class="title">{{ member[1].title }}</p>
-                                    {% endif %}
-                                    <div class="card-content">
-                                        <p class="name">{{ member[0] }}</p>
-                                        <p>{{ member[1].quote }}</p>
-                                    </div>
+                    {% if member[1].hidden == null %}
+                        <div class="col l2 m2 s3">
+                            <div class="person card">
+                                <div class="card-image">
+                                    <img src="{{ member[1].image }}">
+                                </div>
+                                <p class="title">{{ member[0] }}</p>
+                                <div class="card-content">
+                                  {% if member[1].title %}
+                                    <p class="name">{{ member[1].title }}</p>
+                                  {% endif %}
+                                    <p class="quote">{{ member[1].quote }}</p>
                                 </div>
                             </div>
-                        {% endif %}
+                        </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
@@ -190,82 +180,60 @@ redirect_from:
                         Our media divison is responsible for documenting our team's endeavors for our website's blog. The medias serve as both our photographers and videographers as they coordinate with our website manager to distribute our content to the world. This division also allows for students who may not be interested in engineering to nevertheless contribute to the robotics team.
                     </div>
                     {% for member in site.data.members.Media %}
-                        {% if member[1].hidden == null %}
-                            <div class="col l3 m3 s6">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <img src="{{ member[1].image }}">
-                                    </div>
-                                    {% if member[1].title %}
-                                    <p class="title">{{ member[1].title }}</p>
-                                    {% endif %}
-                                    <div class="card-content">
-                                        <p class="name">{{ member[0] }}</p>
-                                        <p>{{ member[1].quote }}</p>
-                                    </div>
+                    {% if member[1].hidden == null %}
+                        <div class="col l2 m2 s3">
+                            <div class="person card">
+                                <div class="card-image">
+                                    <img src="{{ member[1].image }}">
+                                </div>
+                                <p class="title">{{ member[0] }}</p>
+                                <div class="card-content">
+                                  {% if member[1].title %}
+                                    <p class="name">{{ member[1].title }}</p>
+                                  {% endif %}
+                                    <span class="quote">{{ member[1].quote }}</span>
                                 </div>
                             </div>
-                        {% endif %}
+                        </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
         </li>
-    </ul>
-</div>
-<div class="section" name="mentors">
-    <nav class="section" name="Mentors">
-        <div class=nav-wrapper" id="mentors">
-            <div class="breadcrumbs col s12">
-                <a href="#mentors" class="breadcrumb">Mentors</a>
-            </div>
-        </div>
-    </nav>
+<li>
+<div class="collapsible-header"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Coaches</div>
+  <div class="collapsible-body">
     <div class="mentors">
-        <div class="row">
-            <div class="col s12 m4 l4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="/assets/images/members/mrsdoherty.jpg" />
-                    </div>
-                    <p class="title">Team Mentor</p>
-                    <div class="card-content">
-                        <p class="name">Shaina Doherty</p>
-                        <p>
-                            Someone help us. We are in the hands of engineers.
-                        </p>
-                    </div>
-                </div>
+        <div class="row"><center class="center-align">
+            <div class="col s12 m2 l3">
+              <div class="person card">
+                  <div class="card-image">
+                      <img src="/assets/images/members/mrsdoherty.jpg" />
+                  </div>
+                  <p class="title">Shaina Doherty</p>
+                  <div class="card-content">
+                      <p class="name">Team Mentor</p>
+                      <span class="quote">Someone help us. We are in the hands of engineers.</span>
+                  </div>
+              </div>
             </div>
-            <div class="col s12 m4 l4">
-                <div class="card mid">
-                    <div class="card-image">
-                        <img src="/assets/images/members/mrharb.jpg" />
-                    </div>
-                    <p class="title">Mechatronics Coach</p>
-                    <div class="card-content">
-                        <p class="name">Ali Harb</p>
-                        <p>
-                            Mr. Harb works tirelessly to ensure that all the mechanics of our robot are functioning seamlessly. He is extrememly patient and understanding, and is always there to help out a student.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l4">
-                <div class="card">
+            <div class="col s12 m2 l3">
+                <div class="person card">
                     <div class="card-image">
                         <img src="/assets/images/members/mrlevin.jpg" />
                     </div>
-                    <p class="title">Programming Mentor</p>
+                    <p class="title">Nathan Levin</p>
                     <div class="card-content">
-                        <p class="name">Nathan Levin</p>
-                        <p>
-                            Robots are like people. 3D printed people. Robots are the future of people.
-                        </p>
+                        <p class="name">Programming Mentor</p>
+                        <span class="quote">Robots are like people. 3D printed people. Robots are the future of people.</span>
                     </div>
                 </div>
-            </div>
+            </center></div>
         </div>
     </div>
+  </div>
+  </li>
+</ul>
 </div>
 <footer class="page-footer">
     <div class="container">
@@ -274,3 +242,13 @@ redirect_from:
         <span> © 2016 Team 334 - Tech Knights </span>
     </div>
 </footer>
+<div id="personmodal" class="modal">
+    <div class="modal-content">
+      <h4></h4>
+      <h5></h5>
+      <div class="quote"></div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close btn-flat">Close</a>
+    </div>
+  </div>

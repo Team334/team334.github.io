@@ -1,7 +1,9 @@
 nav {
     background-color: #1976D2 !important;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 nav.main {
     background-color: #0D47A1 !important;
 }
@@ -36,18 +38,21 @@ ul.collapsible {
     text-align: center;
     font-weight: bold;
 }
-
-.mentors .col {
-    padding: 0 !important;
+.title2 {
+    padding: 5px !important;
+    background-color: #0d47a1;
+    color: #eee !important;
+    text-align: center;
+    font-weight: bold;
 }
 
-.mentors .card {
-    box-shadow: initial !important;
-    border-radius: 0 !important;
+.faded{
+  -webkit-filter: brightness(1.2);
+    filter: brightness(1.2);
 }
-
-.mentors img {
-    border-radius: 0 !important;
+#personmodal{
+  width: 40%;
+  top: 30% !important;
 }
 
 .card-content p {
@@ -137,7 +142,7 @@ ul.collapsible {
 and (max-width: 600px) {
     #sidebar {
         display: none;
-    }    
+    }
 
 }
 
