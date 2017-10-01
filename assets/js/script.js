@@ -7,12 +7,12 @@ $(document).ready(function() {
     else if(getTimeRemaining(buildseasoned).total > 0){
       var nextevent = buildseasoned;
       startcountdown(nextevent);
-      $('.nextevent').text('End Build Season');
+      $('.nextevent').text('End of build season');
     }
     else if(getTimeRemaining(comp).total > 0 ){
       var nextevent = comp;
       startcountdown(nextevent);
-      $('.nextevent').text('New York Regional Competition');
+      $('.nextevent').text('New York Regional competition');
     }
     else{
       $('footer').hide();
@@ -30,9 +30,9 @@ $(document).ready(function() {
     });
 
 });
-var kickoff = 'January 07 2017 10:30:00 GMT-0500';
-var buildseasoned = 'February 21 2017 20:30:00 GMT-0500';
-var comp = 'April 06 2017 10:00:00 GMT-0500';
+var kickoff = 'January 06 2018 10:30:00 GMT-0500';
+var buildseasoned = 'February 17 2018 20:30:00 GMT-0500';
+var comp = 'March 22 2018 10:00:00 GMT-0500';
 function getTimeRemaining(endtime){
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor( (t/1000) % 60 );
