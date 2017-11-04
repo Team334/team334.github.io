@@ -10,15 +10,6 @@ social:
     github: "https://github.com/Team334"
     flickr: "https://www.flickr.com/photos/techknights334/"
 
-# External Plugins & Configs
-plugins:
-    - jekyll-paginate-v2
-
 # Pagination Settings
-pagination:
-    enabled: true
-    per_page: 4
-    permalink: '/:num'
-    title: 'Page :num | Team 334 Robotics'
-    sort_field: 'date'
-    sort_reverse: true
+paginate: 4
+paginate_path: "/blog/:num/"
