@@ -1,0 +1,28 @@
+---
+{
+    "Robo-Swipe: Attendance App": {
+        "image": "/assets/img/work/roboswipe/banner.jpg",
+        "link": "/work/roboswipe"
+    },
+    "Steamworks 2017 Robot": {
+        "image": "/assets/img/work/robot_2017/banner.jpg",
+        "link": "/work/robot_2017"
+    },
+    "Recon: 2017 Scouting App": {
+        "image": "/assets/img/work/recon/banner.jpg",
+        "link": "/work/recon"
+    },
+    "Stronghold 2016 Robot": {
+        "image": "/assets/img/work/robot_2016/banner.jpg",
+        "link": "/work/robot_2016"
+    },
+    "Recycle Rush 2015 Robot": {
+        "image": "/assets/img/work/robot_2015/banner.jpg",
+        "link": "/work/robot_2015"
+    },
+    "Aerial Assist 2014 Robot": {
+        "image": "/assets/img/work/robot_2014/banner.jpg",
+        "link": "/work/robot_2014"
+    }
+}
+---

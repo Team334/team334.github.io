@@ -1,0 +1,156 @@
+<html>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <title>Team 334 Robotics</title>
+
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="/assets/css/layout/default.css">
+        <!-- Link JS -->
+        <script type="text/javascript" src="/assets/js/layout/default.js"></script>
+
+        <link rel="shortcut icon" type="image/png" href="{{ site.url }}/assets/img/favicon.png">
+
+        <!-- Link Fonts  -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Work+Sans:500,600|Pathway+Gothic+One">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+        <div id="navbar" class="nav">
+            <div id="logo">
+                <img src="/assets/img/branding/logo.png" height="11%">
+            </div>
+
+            <div style="width: 12%">
+            </div>
+
+            <div class="nav-item">
+                <a href="{{ site.url }}">Home</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="{{ site.url }}/work">Our Work</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="{{ site.url }}/team">Team</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="{{ site.url }}/facilities">Facilities</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="{{ site.url }}/blog">Blog</a>
+            </div>
+
+            <div class="nav-item">
+                <a href="{{ site.url }}/contact">Contact</a>
+            </div>
+
+            <div id="icon" class="nav-item">
+                <a href="javascript:void(0)" onclick="toggleMenu()">
+                    <i class="fa fa-bars" style="text-decoration: none" style="text-decoration: underline"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <ul id="mobile-nav">
+            <li>
+                <a href="{{ site.url }}">Home</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/work">Our Work</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/team">Team</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/facilities">Facilities</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/blog">Blog</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/contact">Contact</a>
+            </li>
+        </ul>
+
+        <div style="width: 100%">
+            {{ content }}
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <a href="{{ site.url }}">Home</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <a href="{{ site.url }}/work">Work</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <a href="{{ site.url }}/team">Team</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <a href="{{ site.url }}/facilities">Facilities</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <a href="{{ site.url }}/blog">Blog</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <a href="{{ site.url }}/contact">Contact</a>
+                    </div>
+
+                    <div class="footer-col" style="width: 15%">
+                    </div>
+
+                    <div class="social">
+                        <a id="facebook" href="{{ site.social.facebook }}" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="social">
+                        <a id="twitter" href="{{ site.social.twitter }}" target="_blank">
+                            <i class="fa fa-twitter-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="social">
+                        <a id="instagram" href="{{ site.social.instagram }}" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <div class="social">
+                        <a id="github" href="{{ site.social.github }}" target="_blank">
+                            <i class="fa fa-github-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="social">
+                        <a id="flickr" href="{{ site.social.flickr }}" target="_blank">
+                            <i class="fa fa-flickr"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="/assets/css/index.css">
+
+<!-- Work Gallery -->
+<div class="container" style="background-color: #f1f1f1; min-height: 74%">
+    <div class="content">
+        <h2>Our Work</h2>
+        <p>
+        As a team, we strive to always improve our skills through projects, no matter how small or large.
+        </p>
+
+        <div class="photo-gallery">
+            <div class="gallery-row" style="justify-content: flex-start">
+
+                {% for work in site.data.work %}
+                <div class="photo-item">
+                    <a href="{{ site.url }}{{ work[1].link }}">
+                        <div class="overlay">
+                            <p>{{ work[0] }}</p>
+                        </div>
+                        <img src="{{ work[1].image }}">
+                    </a>
+                </div>
+                {% endfor %}
+
+            </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

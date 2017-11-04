@@ -1,0 +1,54 @@
+---
+layout: default
+pagination:
+    enabled: true
+---
+
+<link rel="stylesheet" href="{{site.url}}/assets/css/blog.css">
+
+<div class="container">
+    <div class="content">
+
+        {% for post in paginator.posts %}
+        <div class="card">
+            <div class="img">
+                <img style="object-fit: cover" width="100%" height="100%" src="{{ post.images[0] }}">
+            </div>
+            <div class="overview">
+                <div class="title">
+                    <h4 class="post-title"><a href="{{site.url}}/{{ post.url }}">{{ post.title }}</a></h4>
+                    <div class="author">
+                        <img src="{{ site.url }}{{ site.data.team[post.author].image }}">
+                        {{ post.author }}
+                    </div>
+                    <div class="post-date"><i class="fa fa-calendar"></i><span style="font-size: 15">{{ post.date | date: '%B %d, %Y' }}</span></div>
+                </div>
+                <p class="text"> {{ post.text }} </p>
+                <a class="link" href="{{site.url}}/{{ post.url }}">See more</a>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% if paginator.total_pages > 1 %}
+        <ul class="pager">
+            <!-- Back button -->
+            {% if paginator.previous_page %}
+            <li class="btn">
+                <a href="{{ paginator.previous_page_path | replace: '//', '/' }}">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+            </li>
+            {% endif %}
+            <!-- Forward button -->
+            {% if paginator.next_page %}
+            <li class="btn">
+                <a href="{{ paginator.next_page_path | replace: '//', '/' }}">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+        {% endif %}
+
+    </div>
+</div>

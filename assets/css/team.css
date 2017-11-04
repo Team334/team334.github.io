@@ -1,0 +1,213 @@
+h2 {
+    margin: 0;
+}
+
+/* Content */
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-box-direction: normal;
+
+        -ms-flex-direction: column;
+
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.content {
+    width: 80%;
+    font-size: 19;
+    color: #666666;
+    font-family: 'Open Sans';
+}
+
+/* Team Member Cards */
+
+.card {
+    width: 100%;
+    height: 30%;
+
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1100px) {
+    .card {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+/* Member Info */
+
+.profile {
+    display: flex;
+    width: 25%;
+    text-align: center;
+    background-color: #e8e8e8;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 85%;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-img {
+    height: 120px;
+    border-radius: 60px;
+}
+
+@media (max-width: 1100px) {
+    .profile {
+        width: 100%;
+        height: ;
+    }
+
+    .card-container {
+        height: auto;
+        margin: 2.5%;
+    }
+}
+
+h4 {
+    margin: 2px;
+    margin-top: 6px;
+}
+
+h5 {
+    margin: 1px;
+    font-style: italic;
+}
+
+p {
+    margin: 4px;
+    font-size: 17px;
+}
+
+/* Projects */
+
+.projects {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 1100px) {
+    .projects {
+        width: 100%;
+        height: 30%;
+    }
+}
+
+#project {
+    margin-top: 10px;
+
+    font-family: 'Work Sans';
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    text-align: left;
+    width: 95%;
+}
+
+.scrollable {
+    width: 95%;
+    height: 85%;
+
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.project-container {
+    width: 355px;
+    height: 96%;
+    display: inline-block;
+
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    .project-container {
+        width: 200px;
+        height: 85%;
+    }
+}
+
+.project {
+    max-height: 100%;
+    max-width: 100%;
+
+    background-color: #e8e8e8;
+    position: relative;
+}
+
+.project img {
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    width: 100%;
+    background-color: black;
+    opacity: 0;
+
+    -webkit-transition: opacity 0.5s ease;
+
+    -o-transition: opacity 0.5s ease;
+
+    transition: opacity 0.5s ease;
+
+    -webkit-box-pack: center;
+
+        -ms-flex-pack: center;
+
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    color: white;
+
+}
+
+.project:hover .overlay {
+    opacity: .85;
+}

@@ -1,0 +1,24 @@
+# Site metadata
+title: Team 334 Robotics
+url: http://bthsrobotics.com
+
+# Site social media data
+social:
+    facebook: "https://www.facebook.com/pages/Team-334-TechKnights/116920961670659"
+    twitter: "https://twitter.com/techknights334"
+    instagram: "https://www.instagram.com/team334/"
+    github: "https://github.com/Team334"
+    flickr: "https://www.flickr.com/photos/techknights334/"
+
+# External Plugins & Configs
+plugins:
+    - jekyll-paginate-v2
+
+# Pagination Settings
+pagination:
+    enabled: true
+    per_page: 4
+    permalink: '/:num'
+    title: 'Page :num | Team 334 Robotics'
+    sort_field: 'date'
+    sort_reverse: true

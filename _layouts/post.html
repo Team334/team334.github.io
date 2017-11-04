@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="/assets/css/layout/post.css">
+<link rel="shortcut icon" type="image/png" href="{{ site.url }}/assets/img/favicon.png">
+
+<div class="container">
+    <div class="content">
+
+        <div class="card">
+            <div class="img">
+                <img style="object-fit: cover" width="100%" height="100%" src="{{page.images[0]}}">
+            </div>
+            <div class="overview">
+                <div class="title">
+                    <h4 class="post-title">{{ page.title }}</a></h4>
+                    <div class="author">
+                        <img src="{{ site.url }}{{ site.data.team[page.author].image }}">
+                        {{ page.author }}
+                    </div>
+                    <span class="post-date"><i class="fa fa-calendar"></i><span style="font-size: 15">{{ page.date | date: '%B %d, %Y' }}</span></span>
+                </div>
+                <p class="text"> {{ page.text }} </p>
+            </div>
+
+            <div id="img-gallery">
+                {% for featured-img in page.images offset:1 %}
+                <div class="feature-img">
+                    <img style="object-fit: cover" width="100%" height="100%" src="{{ featured-img }}">
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+</div>
