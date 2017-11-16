@@ -16,7 +16,7 @@
     "Joseph Babbitt": {
         "image": "/assets/img/members/JosephBab.jpg",
         "specialization": "Programming",
-        "link": "https://joebabbitt.com",
+        "link": "http://joebabbitt.com",
         "link-type": "Personal",
         "projects": ["Robo-Swipe: Attendance App", "Steamworks 2017 Robot", "Stronghold 2016 Robot"]
     },
