@@ -259,6 +259,10 @@ body {
     color: #833ab4;
 }
 
+#youtube:hover {
+    color: #ea4335;
+}
+
 #github:hover {
     color: #666666;
 }
