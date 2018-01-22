@@ -283,6 +283,7 @@ h2 {
 }
 
 .sponsor-item img {
+    width: 250px;
     max-width: 100%;
     height: auto;
 }
