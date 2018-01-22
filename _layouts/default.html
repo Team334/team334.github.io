@@ -21,44 +21,45 @@
     <body>
 
         <!-- Navigation -->
-        <div id="navbar" class="nav">
-            <div id="logo">
-                <img src="/assets/img/branding/logo.png" height="11%">
-            </div>
+        <nav>
+            <div id="nav">
+                <div id="logo">
+                    <img src="/assets/img/branding/logo.png" height="100px" width="auto">
+                </div>
 
-            <div style="width: 12%">
-            </div>
+                <div id="nav-links">
+                    <div class="nav-item">
+                        <a href="{{ site.url }}">Home</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="{{ site.url }}">Home</a>
-            </div>
+                    <div class="nav-item">
+                        <a href="{{ site.url }}/work">Our Work</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="{{ site.url }}/work">Our Work</a>
-            </div>
+                    <div class="nav-item">
+                        <a href="{{ site.url }}/team">Team</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="{{ site.url }}/team">Team</a>
-            </div>
+                    <div class="nav-item">
+                        <a href="{{ site.url }}/facilities">Facilities</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="{{ site.url }}/facilities">Facilities</a>
-            </div>
+                    <div class="nav-item">
+                        <a href="{{ site.url }}/blog">Blog</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="{{ site.url }}/blog">Blog</a>
-            </div>
+                    <div class="nav-item">
+                        <a href="{{ site.url }}/contact">Contact</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="{{ site.url }}/contact">Contact</a>
+                    <div id="icon" class="nav-item">
+                        <a href="javascript:void(0)" onclick="toggleMenu()">
+                            <i class="fa fa-bars" style="text-decoration: none" style="text-decoration: underline"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-
-            <div id="icon" class="nav-item">
-                <a href="javascript:void(0)" onclick="toggleMenu()">
-                    <i class="fa fa-bars" style="text-decoration: none" style="text-decoration: underline"></i>
-                </a>
-            </div>
-        </div>
+        </nav>
 
         <!-- Mobile Navigation -->
         <ul id="mobile-nav">
@@ -114,7 +115,7 @@
                         <a href="{{ site.url }}/contact">Contact</a>
                     </div>
 
-                    <div class="footer-col" style="width: 15%">
+                    <div class="footer-col" style="flex: 1">
                     </div>
 
                     <div class="social">

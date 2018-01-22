@@ -21,68 +21,68 @@
     <body>
 
         <!-- Navigation -->
-        <div id="navbar" class="nav">
-            <div id="logo">
-                <img src="/assets/img/branding/logo.png" height="11%">
-            </div>
+        <!-- Navigation -->
+        <nav>
+            <div id="nav">
+                <div id="logo">
+                    <img src="/assets/img/branding/logo.png" height="100px" width="auto">
+                </div>
 
-            <div style="width: 12%">
-            </div>
+                <div id="nav-links">
+                    <div class="nav-item">
+                        <a href="{{ site.url }}">Home</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="../">Home</a>
-            </div>
+                    <div class="nav-item">
+                        <a href="{{ site.url }}/work">Our Work</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="../work">Our Work</a>
-            </div>
+                    <div class="nav-item">
+                        <a href="{{ site.url }}/team">Team</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="../team">Team</a>
-            </div>
+                    <div class="nav-item">
+                        <a href="{{ site.url }}/facilities">Facilities</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="../facilities">Facilities</a>
-            </div>
+                    <div class="nav-item">
+                        <a href="{{ site.url }}/blog">Blog</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="../blog">Blog</a>
-            </div>
+                    <div class="nav-item">
+                        <a href="{{ site.url }}/contact">Contact</a>
+                    </div>
 
-            <div class="nav-item">
-                <a href="../contact">Contact</a>
+                    <div id="icon" class="nav-item">
+                        <a href="javascript:void(0)" onclick="toggleMenu()">
+                            <i class="fa fa-bars" style="text-decoration: none" style="text-decoration: underline"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-
-            <div id="icon" class="nav-item">
-                <a href="javascript:void(0)" onclick="toggleMenu()">
-                    <i class="fa fa-bars" style="text-decoration: none" style="text-decoration: underline"></i>
-                </a>
-            </div>
-        </div>
+        </nav>
 
         <!-- Mobile Navigation -->
-        <div>
-            <ul id="mobile-nav">
-                <li>
-                    <a href="{{ site.url }}">Home</a>
-                </li>
-                <li>
-                    <a href="{{ site.url }}/work">Our Work</a>
-                </li>
-                <li>
-                    <a href="{{ site.url }}/team">Team</a>
-                </li>
-                <li>
-                    <a href="{{ site.url }}/facilities">Facilities</a>
-                </li>
-                <li>
-                    <a href="{{ site.url }}/blog">Blog</a>
-                </li>
-                <li>
-                    <a href="{{ site.url }}/contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+        <ul id="mobile-nav">
+            <li>
+                <a href="{{ site.url }}">Home</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/work">Our Work</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/team">Team</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/facilities">Facilities</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/blog">Blog</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/contact">Contact</a>
+            </li>
+        </ul>
 
         <!-- Project Banner/Photo -->
         <div id="banner">
@@ -134,30 +134,30 @@
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-col">
-                        <a href="index">Home</a>
+                        <a href="{{ site.url }}">Home</a>
                     </div>
 
                     <div class="footer-col">
-                        <a href="work">Work</a>
+                        <a href="{{ site.url }}/work">Work</a>
                     </div>
 
                     <div class="footer-col">
-                        <a href="team">Team</a>
+                        <a href="{{ site.url }}/team">Team</a>
                     </div>
 
                     <div class="footer-col">
-                        <a href="facilities">Facilities</a>
+                        <a href="{{ site.url }}/facilities">Facilities</a>
                     </div>
 
                     <div class="footer-col">
-                        <a href="blog">Blog</a>
+                        <a href="{{ site.url }}/blog">Blog</a>
                     </div>
 
                     <div class="footer-col">
-                        <a href="contact">Contact</a>
+                        <a href="{{ site.url }}/contact">Contact</a>
                     </div>
 
-                    <div class="footer-col" style="width: 15%">
+                    <div class="footer-col" style="flex: 1">
                     </div>
 
                     <div class="social">
@@ -169,6 +169,12 @@
                     <div class="social">
                         <a id="twitter" href="{{ site.social.twitter }}" target="_blank">
                             <i class="fa fa-twitter-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="social">
+                        <a id="youtube" href="{{ site.social.youtube }}" target="_blank">
+                            <i class="fa fa-youtube-square"></i>
                         </a>
                     </div>
 
