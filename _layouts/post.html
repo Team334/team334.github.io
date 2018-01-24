@@ -5,9 +5,10 @@ layout: default
 <link rel="stylesheet" href="/assets/css/layout/post.css">
 <link rel="shortcut icon" type="image/png" href="{{ site.url }}/assets/img/favicon.png">
 
+<!-- <script type="text/javascript" src="http://www.youtube.com/player_api"></script> -->
+{% if page.videos %}<div class="dimmerbox"></div>{% endif %}
 <div class="container">
     <div class="content">
-
         <div class="card">
             <div class="img">
                 <img style="object-fit: cover" width="100%" height="100%" src="{{page.images[0]}}">
@@ -24,6 +25,14 @@ layout: default
                 <p class="text"> {{ page.text }} </p>
             </div>
 
+            <div id="vid-gallery">
+                {% if page.videos %}
+                    {% for video in page.videos %}
+                    <h5>Video: <span id="{{video}}info"></span></h5>
+                    <div id="plyr{{video}}" style="video object-fit: cover" width="100%" height="100%"></div>
+                    {% endfor %}
+                {% endif %}
+            </div>
             <div id="img-gallery">
                 {% for featured-img in page.images offset:1 %}
                 <div class="feature-img">
@@ -31,8 +40,66 @@ layout: default
                 </div>
                 {% endfor %}
             </div>
-
         </div>
-
     </div>
 </div>
+
+{% if page.videos %}
+<!--Youtube Player Stuff-->
+<script>
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+{% for video in page.videos %}
+    var player{{video}};
+{% endfor %}
+    function onYouTubePlayerAPIReady() {
+        {% for video in page.videos %}
+            player{{video}} = new YT.Player('plyr{{video}}', {
+              videoId: '{{video}}?color=white&fs=1&rel=0&showinfo=0&showsearch=0',
+              height: "75%",
+              width: "85%",
+              playerVars:{
+                  widget_referrer: "BTHS Robotics Blog",
+              },
+              events: {
+                'onStateChange': onPlayerStateChange,
+                'onReady': onPlayerReadyv{{video}},
+              }
+            });
+        {% endfor %}
+    }
+    {% for video in page.videos %}
+    function onPlayerReadyv{{video}}(event) {
+         vidata = event.target.getVideoData();
+         vidinfo = document.querySelector("#{{video}}info");
+         vidinfo.innerHTML = vidata.title+"<span style='font-size:.4em;'>     -From the "+vidata.author+" Youtube Channel</span>";
+         console.log(vidata)
+
+    }
+    {% endfor %}
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+            dimmerbox = document.querySelector(".dimmerbox");
+            dimmerbox.style.display = "block";
+            for(opacity=0;opacity<.9;opacity+=.01){
+                setTimeout(function(){dimmerbox.style.opacity=opacity},5);
+        }
+    }
+    if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED || event.data == YT.PlayerState.BUFFERING || event.data == YT.PlayerState.CUED) {
+        dimmerbox = document.querySelector(".dimmerbox");
+        opacity = .9;
+        for(opacity=.9;opacity>=0;opacity-=.01){
+            setTimeout(function(){dimmerbox.style.opacity=opacity;},5);
+        }
+        setTimeout(function(){
+            if(opacity<0.2) dimmerbox.style.display = "none";
+        },1500)
+    }
+    myPlayerState = event.data;
+    }
+</script>
+{% endif %}

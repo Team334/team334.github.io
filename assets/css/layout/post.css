@@ -18,7 +18,17 @@
     padding-top: 40px;
     padding-bottom: 40px;
 }
-
+.dimmerbox{
+    background-color: #000;
+    width: 100%;
+    height: 300%;
+    position: fixed;
+    top: -100%;
+    opacity: 0;
+    display: none;
+    z-index: 3;
+    transition: opacity 2s;
+}
 .content {
     width: 80%;
     font-size: 19;
@@ -128,6 +138,25 @@
 }
 
 #img-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    -webkit-box-pack: center;
+
+        -ms-flex-pack: center;
+
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+#vid-gallery {
+    z-index: 5;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
