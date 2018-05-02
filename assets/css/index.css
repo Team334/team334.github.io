@@ -35,10 +35,7 @@ h2 {
 
 #team-photo {
     text-align: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 4% 20%;
 }
 
 @media (max-width: 675px) {
@@ -277,9 +274,9 @@ h2 {
 }
 
 .sponsor-item {
-    width: 32%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    flex: 1;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .sponsor-item img {

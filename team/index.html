@@ -6,53 +6,34 @@ layout: default
 
 <div class="container">
     <div class="content">
-        <h2>Our Team</h2>
+            <h2>Our Team</h2>
 
-        {% for member in site.data.team %}
-        {% if member[1].alumni == null %}
-        <div class="card">
-            <div class="profile">
-                <div class="card-container">
-                    <img id="profile-img" src="{{ member[1].image }}">
-                    <h4>{{ member[0] }}</h2>
-                    <h5>{{ member[1].specialization }}</h5>
+            <div id="member-list">
+                {% for member in site.data.team %}
+                {% if member[1].alumni == null %}
 
-                    {% if member[1].link != "" %}
-                        <p>
-                            {% if member[1].link-type != "" and member[1].link-type != "bio" %}
-                                <i class="fa fa-link" style="color: #4085ea"></i>
-                                <a href="{{ member[1].link }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">{{ member[1].link-type }}</a>
+                <div class="card">
+                    <div class="profile">
+                        <img id="profile-img" src="{{ member[1].image }}">
+                        <h4>{{ member[0] }}</h2>
+                        <h5>{{ member[1].specialization }}</h5>
 
-                            {% elsif member[1].link-type == "bio" %}
-                                {{ member[1].link }}
-                            {% endif %}
-                        </p>
-                    {% endif %}
+                        {% if member[1].link != "" %}
+                            <p>
+                                {% if member[1].link-type != "" and member[1].link-type != "bio" %}
+                                    <i class="fa fa-link" style="color: #4085ea"></i>
+                                    <a href="{{ member[1].link }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">{{ member[1].link-type }}</a>
 
-                </div>
-            </div>
-
-            <div class="projects">
-                <h4 id="project">Projects</h4>
-                <div class="scrollable">
-                    {% for project in member[1].projects %}
-                    <div class="project-container">
-                        <div class="project">
-                            <a href="{{ site.url }}{{ site.data.work[project].link }}">
-                                <div class="overlay">
-                                    <p>{{ project }}</p>
-                                </div>
-                                <img src="{{ site.data.work[project].image }}" height="100%">
-                            </a>
-                        </div>
+                                {% elsif member[1].link-type == "bio" %}
+                                    {{ member[1].link }}
+                                {% endif %}
+                            </p>
+                        {% endif %}
                     </div>
-                    {% endfor %}
                 </div>
+
+                {% endif %}
+                {% endfor %}
             </div>
-
-        </div>
-        {% endif %}
-        {% endfor %}
-
     </div>
 </div>

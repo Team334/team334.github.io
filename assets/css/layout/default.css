@@ -157,11 +157,13 @@ nav {
 
     /* Hide nav-items and show menu and logo. */
     #nav .nav-item:not(#icon):not(#logo) {
-        visibility: hidden;
+        display: none;
     }
 
     #icon {
         display: block;
+        position: absolute;
+        right: 10%;
     }
 
     /* Show menu when 'visible' class is appended to #mobile-nav */
