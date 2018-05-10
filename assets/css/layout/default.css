@@ -297,3 +297,33 @@ nav {
 #flickr:hover {
     color: #ff0084;
 }
+
+/* Utilities */
+
+button{
+  background-color: #262626;
+  font-size: 30px;
+  color: white;
+  font-family: 'Pathway Gothic One';
+  border-radius: 5px;
+  height: 125px;
+  width: 250px;
+  cursor: grab;
+}
+button:hover{
+  background-color: #464646;
+  transition: background-color .5s;
+}
+
+.infobar{
+  font-family: 'Pathway Gothic One';
+  text-align: center;
+  width: 100%;
+  font-size: 1.5em;
+  background-color: #262626;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: .25em;
+  text-decoration: underline;
+}
