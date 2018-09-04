@@ -161,9 +161,12 @@ nav {
     }
 
     #icon {
-        display: block;
-        position: absolute;
-        right: 10%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
     }
 
     /* Show menu when 'visible' class is appended to #mobile-nav */
