@@ -157,11 +157,16 @@ nav {
 
     /* Hide nav-items and show menu and logo. */
     #nav .nav-item:not(#icon):not(#logo) {
-        visibility: hidden;
+        display: none;
     }
 
     #icon {
-        display: block;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
     }
 
     /* Show menu when 'visible' class is appended to #mobile-nav */
