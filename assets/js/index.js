@@ -24,8 +24,8 @@ function onYouTubeIframeAPIReady() {
         });
     } else {
         var landingimg = document.createElement("img");
-        landingimg.src = "/assets/img/landingimg.jpg";
-        landingimg.style = "object-fit: cover; width: 100%; height: 100%;"
+        landingimg.setAttribute("src","/assets/img/landingimg.jpg");
+        landingimg.setAttribute("style","object-fit: cover; width: 100%; height: 100%;");
         document.getElementById('landing-video').appendChild(landingimg);
     }
 }
