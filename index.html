@@ -52,63 +52,23 @@ layout: default
         </p>
 
         <div class="photo-gallery">
-            <div class="gallery-row">
-
+            {% for work in site.data.work limit:6 %}
+                {% capture modulo %}{{ forloop.index | modulo: 3 }}{% endcapture %}
+                {% if modulo == '1' %}
+                <div class="gallery-row">
+                {% endif %}
                 <div class="photo-item">
-                    <a href="/work/roboswipe">
+                    <a href="{{ site.url }}{{ work[1].link }}">
                         <div class="overlay">
-                            <p>Robo-Swipe: Attendance App</p>
+                            <p>{{ work[0] }}</p>
                         </div>
-                        <img src="/assets/img/work/roboswipe/banner.jpg">
+                        <img src="{{ work[1].image }}">
                     </a>
                 </div>
-
-                <div class="photo-item">
-                    <a href="/work/robot_2017">
-                        <div class="overlay">
-                            <p>Steamworks 2017 Robot</p>
-                        </div>
-                        <img src="/assets/img/work/robot_2017/banner.jpg">
-                    </a>
+                {% if modulo == '0' or forloop.last %}
                 </div>
-
-                <div class="photo-item">
-                    <a href="/work/recon">
-                        <div class="overlay">
-                            <p>Recon: 2017 Scouting App</p>
-                        </div>
-                        <img src="/assets/img/work/recon/banner.jpg">
-                    </a>
-                </div>
-
-                <div class="photo-item">
-                    <a href="/work/robot_2016">
-                        <div class="overlay">
-                            <p>Stronghold 2016 Robot</p>
-                        </div>
-                        <img src="/assets/img/work/robot_2016/banner.jpg">
-                    </a>
-                </div>
-
-                <div class="photo-item">
-                    <a href="/work/robot_2015">
-                        <div class="overlay">
-                            <p>Recycle Rush 2015 Robot</p>
-                        </div>
-                        <img src="/assets/img/work/robot_2015/banner.jpg">
-                    </a>
-                </div>
-
-                <div class="photo-item">
-                    <a href="/work/robot_2014">
-                        <div class="overlay">
-                            <p>Aerial Assist 2014 Robot</p>
-                        </div>
-                        <img src="/assets/img/work/robot_2014/banner.jpg">
-                    </a>
-                </div>
-
-            </div>
+                {% endif %}
+            {% endfor %}
         </div>
 
         <div style="text-align: right">

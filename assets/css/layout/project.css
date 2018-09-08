@@ -211,6 +211,10 @@ nav {
     font-family: 'Open Sans';
 }
 
+.content p {
+    line-height: 175%;
+}
+
 .project-info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -282,6 +286,12 @@ h4 {
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.hl { /* Highlight */
+    background-color: #ededed;
+    padding: 1px 4px;
+    border-radius: 2px;
 }
 
 @media (max-width: 1200px) {
