@@ -1,102 +1,11 @@
 {
-    "Dominic Yong": {
-        "image": "/assets/img/members/DominicYon.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Steamworks 2017 Robot",
-            "Stronghold 2016 Robot",
-            "Recycle Rush 2015 Robot"
-        ]
-    },
-    "Eric Jiang": {
-        "image": "/assets/img/members/EricJia.jpg",
-        "specialization": "Programming",
-        "link": "https://github.com/Eric4Jiang",
-        "link-type": "Github",
-        "projects": [
-            "Steamworks 2017 Robot",
-            "Stronghold 2016 Robot"
-        ]
-    },
-    "Dan Shafman": {
-        "image": "/assets/img/members/DanSha.jpg",
-        "specialization": "Programming",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Steamworks 2017 Robot",
-            "Stronghold 2016 Robot",
-            "Recycle Rush 2015 Robot"
-        ]
-    },
-    "Justin Woo": {
-        "image": "/assets/img/members/JustinWoo.jpg",
-        "specialization": "Electrical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Steamworks 2017 Robot",
-            "Stronghold 2016 Robot"
-        ]
-    },
-    "Thivya Srikumar": {
-        "image": "/assets/img/members/ThivyaSri.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Steamworks 2017 Robot",
-            "Stronghold 2016 Robot"
-        ]
-    },
-    "Brandon Wood": {
-        "image": "/assets/img/members/BrandonWoo.jpg",
-        "specialization": "Mechanical",
-        "link": "https://github.com/brandonpwood",
-        "link-type": "Github",
-        "projects": [
-            "Steamworks 2017 Robot",
-            "Stronghold 2016 Robot"
-        ]
-    },
-    "Irene Li": {
-        "image": "/assets/img/members/IreneLi.jpg",
-        "specialization": "Electrical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Steamworks 2017 Robot"
-        ]
-    },
-    "Rennah Weng": {
-        "image": "/assets/img/members/RennahWen.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": []
-    },
-    "Dyson Dunkl": {
-        "image": "/assets/img/members/DysonDun.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": []
-    },
-    "Jared Prince": {
-        "image": "/assets/img/members/JaredPri.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": []
-    },
     "Joseph Babbitt": {
         "image": "/assets/img/members/JosephBab.jpg",
         "specialization": "Programming",
         "link": "http://joebabbitt.com",
         "link-type": "Personal",
         "projects": [
+            "Power Up 2018 Robot",
             "Robo-Swipe: Attendance App",
             "Steamworks 2017 Robot",
             "Stronghold 2016 Robot"
@@ -108,6 +17,7 @@
         "link": "",
         "link-type": "",
         "projects": [
+            "Power Up 2018 Robot",
             "Steamworks 2017 Robot",
             "Stronghold 2016 Robot"
         ]
@@ -118,6 +28,7 @@
         "link": "",
         "link-type": "",
         "projects": [
+            "Power Up 2018 Robot",
             "Steamworks 2017 Robot",
             "Stronghold 2016 Robot"
         ]
@@ -128,6 +39,7 @@
         "link": "https://www.linkedin.com/in/senthia-ahmed-9381ab133",
         "link-type": "LinkedIn",
         "projects": [
+            "Power Up 2018 Robot",
             "Steamworks 2017 Robot"
         ]
     },
@@ -137,6 +49,7 @@
         "link": "",
         "link-type": "",
         "projects": [
+            "Power Up 2018 Robot",
             "Steamworks 2017 Robot"
         ]
     },
@@ -152,24 +65,39 @@
         "specialization": "Programming",
         "link": "",
         "link-type": "",
-        "projects": []
+        "projects": [
+            "Power Up 2018 Robot"
+        ]
     },
     "LiHao Lin": {
         "image": "/assets/img/members/LiHaoLin.jpg",
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
-        "projects": []
+        "projects": [
+            "Power Up 2018 Robot"
+        ]
     },
     "Nimra Shakoor": {
         "image": "/assets/img/members/NimraSha.jpg",
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
-        "projects": []
+        "projects": [
+            "Power Up 2018 Robot"
+        ]
     },
     "Ivy Young": {
         "image": "/assets/img/members/IvyYou.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": [
+            "Power Up 2018 Robot"
+        ]
+    },
+    "Jedidiah Pienkny": {
+        "image": "/assets/img/members/JedidiahPie.jpg",
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
@@ -212,15 +140,6 @@
             "Steamworks 2017 Robot"
         ]
     },
-    "Nia Blankson": {
-        "image": "/assets/img/members/NiaBla.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Steamworks 2017 Robot"
-        ]
-    },
     "Ahmad Abdulwadood": {
         "image": "/assets/img/members/AhmadAbd.jpg",
         "specialization": "Mechanical",
@@ -235,7 +154,9 @@
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
-        "projects": []
+        "projects": [
+            "Power Up 2018 Robot"
+        ]
     },
     "Adam Sanandaji": {
         "image": "/assets/img/members/AdamSan.jpg",
@@ -264,55 +185,159 @@
             "Steamworks 2017 Robot"
         ]
     },
-    "Oscar Yong": {
-        "image": "/assets/img/members/OscarYon.jpg",
-        "specialization": "Mechanical",
+    "Solenne Wolfe": {
+        "image": "/assets/img/members/SolenneWol.jpg",
+        "specialization": "Public Relations",
         "link": "",
         "link-type": "",
-        "projects": [
-            "Steamworks 2017 Robot"
-        ]
-    },
-    "Siddharth Martis": {
-        "image": "/assets/img/members/SiddharthMar.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Steamworks 2017 Robot"
-        ]
+        "projects": []
     },
     "George Gonzalez": {
         "image": "/assets/img/members/GeorgeGon.jpg",
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
-        "projects": []
+        "projects": [
+            "Power Up 2018 Robot"
+        ]
     },
     "Galen Tunnicliffe": {
         "image": "/assets/img/members/GalenTun.jpg",
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
-        "projects": []
+        "projects": [
+            "Power Up 2018 Robot"
+        ]
     },
     "Joseph Glusker": {
         "image": "/assets/img/members/JosephGlu.jpg",
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
-        "projects": []
+        "projects": [
+            "Power Up 2018 Robot"
+        ]
     },
     "Silvia Ahmed": {
         "image": "/assets/img/members/SilviaAhm.jpg",
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
-        "projects": []
+        "projects": [
+            "Power Up 2018 Robot"
+        ]
     },
     "Aleksey Panas": {
         "image": "/assets/img/members/AlekseyPan.jpg",
         "specialization": "Programming",
+        "link": "",
+        "link-type": "",
+        "projects": [
+            "Power Up 2018 Robot"
+        ]
+    },
+    "Chloe Wong": {
+        "image": "/assets/img/members/ChloeWon.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Damanpreet Sachdev": {
+        "image": "/assets/img/members/DamanpreetSac.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Ethan Seow": {
+        "image": "/assets/img/members/EthanSeo.jpg",
+        "specialization": "Programming",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Shashi Sugrim": {
+        "image": "/assets/img/members/ShashiSug.jpg",
+        "specialization": "Programming",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Andrew Piasecki": {
+        "image": "/assets/img/members/AndrewPiasecki.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Belinda Lin": {
+        "image": "/assets/img/members/BelindaLin.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Daniel Clare": {
+        "image": "/assets/img/members/DanielCla.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Henry Green": {
+        "image": "/assets/img/members/HenryGre.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Jakhona Ikromjonova": {
+        "image": "/assets/img/members/JakhonaIkr.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "John Niewinski": {
+        "image": "/assets/img/members/JohnNie.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Matteo Pesenti": {
+        "image": "/assets/img/members/MatteoPes.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Nikolaos Gerakaris": {
+        "image": "/assets/img/members/NikolaosGer.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Raphael Mouyal": {
+        "image": "/assets/img/members/RaphaelMou.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Stephan McGlashan": {
+        "image": "/assets/img/members/StephanMcG.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": []
+    },
+    "Winsdon Wong": {
+        "image": "/assets/img/members/WinsdonWon.jpg",
+        "specialization": "Mechanical",
         "link": "",
         "link-type": "",
         "projects": []
@@ -342,6 +367,13 @@
     "Mary Karroqe": {
         "image": "/assets/img/members/alumni/MaryKar.jpg",
         "specialization": "Programming",
+        "alumni": true
+    },
+    "Siddharth Martis": {
+        "image": "/assets/img/members/alumni/SiddharthMar.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
         "alumni": true
     }
 

@@ -28,7 +28,6 @@ layout: default
             <div id="vid-gallery">
                 {% if page.videos %}
                     {% for video in page.videos %}
-                    <h5>Video: <span id="{{video}}info"></span></h5>
                     <div id="plyr{{video}}" style="video object-fit: cover" width="100%" height="100%"></div>
                     {% endfor %}
                 {% endif %}
@@ -59,7 +58,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     function onYouTubePlayerAPIReady() {
         {% for video in page.videos %}
             player{{video}} = new YT.Player('plyr{{video}}', {
-              videoId: '{{video}}?color=white&fs=1&rel=0&showinfo=0&showsearch=0',
+              videoId: '{{video}}?fs=1&rel=0&showinfo=0&showsearch=0',
               height: "75%",
               width: "85%",
               playerVars:{
@@ -75,10 +74,6 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     {% for video in page.videos %}
     function onPlayerReadyv{{video}}(event) {
          vidata = event.target.getVideoData();
-         vidinfo = document.querySelector("#{{video}}info");
-         vidinfo.innerHTML = vidata.title+"<span style='font-size:.4em;'>     -From the "+vidata.author+" Youtube Channel</span>";
-         console.log(vidata)
-
     }
     {% endfor %}
     function onPlayerStateChange(event) {
