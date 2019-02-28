@@ -1,0 +1,215 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="/assets/css/layout/liveblog.css">
+<link rel="shortcut icon" type="image/png" href="{{ site.url }}/assets/img/favicon.png">
+<div class="header content">
+    <div class="header-info">
+        <div class="live">Offline</div>
+        <h2 id="event-title">{{ page.title }}</h2>
+        <div class="event-metadata">
+            <span class="post-date"><i class="fa fa-calendar"></i><span style="font-size: 15">{{ page.date |
+                    date: '%B %d, %Y' }}</span></span> Moderated by:
+            {% for author in page.author %}
+            <div class="author">
+                <img src="{{ site.url }}{{ site.data.team[author].image }}">
+                {{ author }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+        <img class="background-img" style="object-fit: cover" width="100%" height="100%" src="{{page.images[0]}}">
+</div>
+<div class="container">
+    <div class="content">
+        <div class="card">
+            <div class="overview">
+                <div class="title">
+                    <h3 class="section-title">Live from <span id="location"></span>!</h3>
+                    <div id="description">
+                        <div class="flagship" style="float: right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="overview" id="highlights">
+                <div class="title">
+                    <h3 class="section-title"><i class="fa fa-star"></i> Highlights</h3>
+                    <p>Here's a quick recap to get you up to speed!</p>
+                </div>
+                <div id="pins">
+                </div>
+            </div>
+        </div>
+        <div id="stream">
+        </div>
+        <div class="card">
+            <div class="overview">
+                <div class="post">
+                    <span class="post-author">
+                        <span class="author">
+                            <img class="author-img" src="{{ site.url }}{{ site.data.team['Joseph Babbitt'].image }}">
+                            <span class="author-name">Joseph Babbitt</span>
+                        </span>
+                        - <span class="time">12:30:20 EDT</span>
+                    </span><br>
+                    <span class="post-content">
+                        <br> <img style="object-fit: cover" width="100%" src="http://localhost:4000/assets/img/blog/13/3.jpg">
+                        Here's a post with photo!
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyC_lgb2HCIRVHpfb5gO0SEyp7vcQ8aedm8",
+        authDomain: "liveblog-90921.firebaseapp.com",
+        databaseURL: "https://liveblog-90921.firebaseio.com",
+        projectId: "liveblog-90921",
+        storageBucket: "liveblog-90921.appspot.com",
+        messagingSenderId: "586362346563"
+    };
+    firebase.initializeApp(config);
+</script>
+
+<script>
+    var dataUpdate = firebase.database().ref('{{page.event_name}}/Posts');
+    dataUpdate.on('value', function (snapshot) {
+        posts = snapshot.val();
+        addPosts(posts);
+
+        function addPosts(posts) {
+            postList = Object.keys(posts);
+            el = document.querySelector("#stream");
+            el.innerHTML = "";
+            for (post in postList) {
+                p = posts[postList[post]];
+                console.log(postList[post]);
+                dte = new Date(parseInt(postList[post]))
+                el.innerHTML +=
+                    `
+                    <div class="card">
+                        <div class="overview">
+                            <div class="post" id="`+postList[post]+`">
+                                <span class="post-author">
+                                    <span class="author">
+                                        <span class="author-name">`+p.Author+`</span>
+                                    </span>
+                                    <span class="time">`+('0' + dte.getMonth()).slice(-2) +'/'+ ('0' + dte.getDay()).slice(-2) +' - '+ ('0' + dte.getHours()).slice(-2) +':'+ ('0' + dte.getMinutes()).slice(-2) +':'+ ('0' + dte.getSeconds()).slice(-2)+`</span>
+                                    `+((p.Pinned) ? '<a href="#highlights"><span class="tooltip"> <span class="tooltiptext"> Back to Highlights </span> <i class="fa fa-star"></i> </span></a>' : "")+`
+                                </span><br>
+                                <span class="post-content">
+                                    This is a sample post, look how cool!
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+            }
+        }
+    });
+    
+    var metaUpdate = firebase.database().ref('{{page.event_name}}/Metadata');
+    metaUpdate.on('value', function (snapshot) {
+        meta = snapshot.val()
+        console.log(meta);
+        setStatus(meta.Live);
+        setBackground(meta.Background);
+        setLocation(meta.Location);
+        setDescription(meta.Details);
+        setFlagship(meta.Flagship);
+
+
+        function setStatus(isLive) {
+            el = document.querySelector(".live");
+            if (isLive) {
+                el.className += " active";
+                el.innerHTML = "Live";
+            } else {
+                el.className = "live";
+                el.innerHTML = "Offline";
+            }
+        }
+
+        function setBackground(backgroundSrc) {
+            el = document.querySelector(".background-img");
+            el.src = backgroundSrc
+        }
+
+        function setLocation(location) {
+            el = document.querySelector("#location");
+            el.innerHTML = location;
+        }
+
+        function setDescription(description) {
+            el = document.querySelector("#description");
+            el.innerHTML += description;
+        }
+    });
+
+    function setFlagship(flagship) {
+        el = document.querySelector(".flagship");
+        el.innerHTML = flagship;
+    }
+
+    var pinUpdate = firebase.database().ref('{{page.event_name}}/Pinned');
+    pinUpdate.on('value', function (snapshot) {
+        pins = snapshot.val();
+        putPins(pins);
+
+        function putPins(pins) {
+            el = document.querySelector("#pins");
+            pinList = Object.keys(pins);
+            el.innerHTML = "";
+            for (pin in pinList) {
+                el.innerHTML +=
+                    `
+                    <div class="pin">
+                        <a href="#` + pinList[pin] +
+                    `">
+                            <p>` + pins[pinList[pin]] +
+                    `</p>
+                        </a>
+                    </div>
+                    `;
+            }
+        }
+    });
+
+    // Set up page
+
+
+    // Data tree
+    // Event {
+    //     Metadata: {
+    //         Description:
+    //         Details:
+    //         Authors: {
+
+    //         },
+    //         Flagship:
+    //         Start:
+    //         End:
+    //         Location:
+    //         Background:
+    //     }    
+    //     Posts: {
+    //         Time:{
+    //             Type:
+    //             Author:
+    //             Post:
+    //             Starred: TF
+    //             Media (o): 
+
+    //         }
+    //     },
+    // }
+</script>
