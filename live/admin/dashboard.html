@@ -6,58 +6,25 @@ layout: default
 <link rel="shortcut icon" type="image/png" href="{{ site.url }}/assets/img/favicon.png">
 <div class="container">
     <div class="content">
-        <div class="card mod">
-            <center>
-                Choose an event to moderate: <br>
-                <select>
-                    <option>
-                        Test
-                    </option>
-                </select>
-            </center>
-        </div>
-    </div>
-</div>
-<div class="header content">
-    <div class="header-info">
-        <div class="live">Offline</div>
-        <h2 id="event-title">{{ page.title }}</h2>
-        <div class="event-metadata">
-            <span class="post-date"><i class="fa fa-calendar"></i><span style="font-size: 15">{{ page.date |
-                    date: '%B %d, %Y' }}</span></span> Moderated by:
-            {% for author in page.author %}
-            <div class="author">
-                <img src="{{ site.url }}{{ site.data.team[author].image }}">
-                {{ author }}
+        <h3>
+            Event Information:
+        </h3>
+        <label>Background image: </label><input type="text"/><br>
+        <label>Location: </label><input type="text"/><br>
+        <label>Event Brief: </label><textarea></textarea><br>
+        <label>Flagship element: </label><input type="text"/><br>
+        <button style="height:auto; width: auto;">Update info</button>
+        <br>
+        <center><button id="live">LIVE</button></center>
+        <h3>
+            Event Feed:
+        </h3>
+        <div class="chatbox">
+            <span>Posting as: </span><input type="text"/> <span class="event-title">Troy 2019</span>
+            <div style="display:flexbox">
+                <input type="text" class="newMessage">
+                <button style="height:auto; width: auto; font-size: 1em;">Post</button>
             </div>
-            {% endfor %}
-        </div>
-    </div>
-    <img class="background-img" style="object-fit: cover" width="100%" height="100%" src="{{page.images[0]}}">
-</div>
-<div class="container">
-    <div class="content">
-        <div class="card">
-            <div class="overview">
-                <div class="title">
-                    <h3 class="section-title">Live from <span id="location"></span>!</h3>
-                    <div id="description">
-                        <div class="flagship" style="float: right"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="overview" id="highlights">
-                <div class="title">
-                    <h3 class="section-title"><i class="fa fa-star"></i> Highlights</h3>
-                    <p>Here's a quick recap to get you up to speed!</p>
-                </div>
-                <div id="pins">
-                </div>
-            </div>
-        </div>
-        <div id="stream">
         </div>
     </div>
 </div>
@@ -74,6 +41,16 @@ layout: default
     messagingSenderId: "586362346563"
   };
   firebase.initializeApp(config);
+
+  window.params = function(){
+    var params = {};
+    var param_array = window.location.href.split('?')[1].split('&');
+    for(var i in param_array){
+        x = param_array[i].split('=');
+        params[x[0]] = x[1];
+    }
+    return params;
+}();
 </script>
 <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
 <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
@@ -86,10 +63,10 @@ layout: default
         }
     });
 
-
+    EVENT_NAME = window.params.event
 
     //Event  specific
-    var dataUpdate = firebase.database().ref('TestEvent/Posts');
+    var dataUpdate = firebase.database().ref(EVENT_NAME+'/Posts');
     dataUpdate.on('value', function (snapshot) {
         posts = snapshot.val();
         addPosts(posts);
@@ -135,7 +112,8 @@ layout: default
         }
     });
 
-    var metaUpdate = firebase.database().ref('TestEvent/Metadata');
+
+    var metaUpdate = firebase.database().ref(EVENT_NAME+'/Metadata');
     metaUpdate.on('value', function (snapshot) {
         meta = snapshot.val()
         console.log(meta);
@@ -178,7 +156,7 @@ layout: default
         el.innerHTML = flagship;
     }
 
-    var pinUpdate = firebase.database().ref('TestEvent/Pinned');
+    var pinUpdate = firebase.database().ref(EVENT_NAME+'/Pinned');
     pinUpdate.on('value', function (snapshot) {
         pins = snapshot.val();
         putPins(pins);
@@ -204,7 +182,19 @@ layout: default
 </script>
 
 <style>
-    .mod {
-        height: 100px;
+    .chatbox {
+        background-color: #EEEEEE;
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .event-title{
+        float: right;
+    }
+    #live{
+        margin: 20px;
+    }
+    .newMessage{
+        flex: 1;
     }
 </style>

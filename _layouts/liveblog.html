@@ -82,7 +82,7 @@ layout: default
 
 <script>
     var dataUpdate = firebase.database().ref('{{page.event_name}}/Posts');
-    dataUpdate.on('value', function (snapshot) {
+    dataUpdate.once('value').then(function (snapshot) {
         posts = snapshot.val();
         addPosts(posts);
 
@@ -107,7 +107,7 @@ layout: default
                                     `+((p.Pinned) ? '<a href="#highlights"><span class="tooltip"> <span class="tooltiptext"> Back to Highlights </span> <i class="fa fa-star"></i> </span></a>' : "")+`
                                 </span><br>
                                 <span class="post-content">
-                                    This is a sample post, look how cool!
+                                    `+p.Post+`
                                 </span>
                             </div>
                         </div>
@@ -115,6 +115,31 @@ layout: default
                     `;
             }
         }
+    });
+
+    dataUpdate.on('child_added', function(childSnapshot, prevChildKey) {
+        p = childSnapshot.val();
+        el = document.querySelector("#stream");
+        dte = new Date(parseInt(p.ID));
+        el.innerHTML +=
+            `
+            <div class="card">
+                <div class="overview">
+                    <div class="post" id="`+p.ID+`">
+                        <span class="post-author">
+                            <span class="author">
+                                <span class="author-name">`+p.Author+`</span>
+                            </span>
+                            <span class="time">`+('0' + dte.getMonth()).slice(-2) +'/'+ ('0' + dte.getDay()).slice(-2) +' - '+ ('0' + dte.getHours()).slice(-2) +':'+ ('0' + dte.getMinutes()).slice(-2) +':'+ ('0' + dte.getSeconds()).slice(-2)+`</span>
+                            `+((p.Pinned) ? '<a href="#highlights"><span class="tooltip"> <span class="tooltiptext"> Back to Highlights </span> <i class="fa fa-star"></i> </span></a>' : "")+`
+                        </span><br>
+                        <span class="post-content">
+                            `+p.Post+`
+                        </span>
+                    </div>
+                </div>
+            </div>
+            `;
     });
     
     var metaUpdate = firebase.database().ref('{{page.event_name}}/Metadata');
