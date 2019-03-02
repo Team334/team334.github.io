@@ -23,8 +23,14 @@ layout: default
         <img class="background-img" style="object-fit: cover" width="100%" height="100%" src="{{page.images[0]}}">
 </div>
 <div class="container">
+    <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+
     <div class="content">
-        <div class="card">
+        <div id="event-desc" class="card">
             <div class="overview">
                 <div class="title">
                     <h3 class="section-title">Live from <span id="location"></span></h3>
@@ -34,35 +40,35 @@ layout: default
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="content" style="display: flex">
-        <div id="main-col">
-            <div id="stream">
-            </div>
-            <div class="card post-card">
-                <div class="overview">
-                    <div class="post">
-                        <span class="post-author">
-                            <span class="author-name">Samuel Piltch</span>
-                            <span class="time">01.06.19 00:17:05</span>
-                            <br>
-                        <span class="post-content">
-                            <img style="object-fit: cover" width="100%" src="http://localhost:4000/assets/img/blog/13/3.jpg">
-                            Here's a post with photo!
-                        </span>
+        <div style="display: flex">
+            <div id="main-col">
+                <div id="stream">
+                </div>
+                <div class="card post-card">
+                    <div class="overview">
+                        <div class="post">
+                            <span class="post-author">
+                                <span class="author-name">Samuel Piltch</span>
+                                <span class="time">01.06.19 00:17:05</span>
+                                <br>
+                            <span class="post-content">
+                                <img style="object-fit: cover" width="100%" src="http://localhost:4000/assets/img/blog/13/3.jpg">
+                                Here's a post with photo!
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div id="sidebar-col">
-            <div class="card" style="margin-top: 0">
-                <div class="overview" id="highlights">
-                    <div class="title">
-                        <h3 class="section-title">Event Highlights</h3>
-                    </div>
-                    <div id="pins">
+            <div id="sidebar-col">
+                <div class="card" style="margin-top: 0">
+                    <div class="overview" id="highlights">
+                        <div class="title">
+                            <h3 class="section-title">Event Highlights</h3>
+                        </div>
+                        <div id="pins">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,6 +92,8 @@ layout: default
 </script>
 
 <script>
+    var postsLoaded = false, pinsLoaded = false, descLoaded = false;
+
     var dataUpdate = firebase.database().ref('{{page.event_name}}/Posts');
     dataUpdate.once('value').then(function (snapshot) {
         posts = snapshot.val();
@@ -97,7 +105,7 @@ layout: default
             el.innerHTML = "";
             for (post in postList) {
                 p = posts[postList[post]];
-                console.log(postList[post]);
+                // console.log(postList[post]);
                 dte = new Date(parseInt(postList[post]))
                 el.innerHTML +=
                     `
@@ -117,6 +125,8 @@ layout: default
                     </div>
                     `;
             }
+            postsLoaded = true;
+            if (postsLoaded && pinsLoaded && descLoaded) { showLoadedContent() }
         }
     });
 
@@ -146,7 +156,7 @@ layout: default
     var metaUpdate = firebase.database().ref('{{page.event_name}}/Metadata');
     metaUpdate.on('value', function (snapshot) {
         meta = snapshot.val()
-        console.log(meta);
+        // console.log(meta);
         setStatus(meta.Live);
         setBackground(meta.Background);
         setLocation(meta.Location);
@@ -163,6 +173,7 @@ layout: default
                 el.className = "live";
                 el.innerHTML = "Offline";
             }
+            el.style.display = "block";
         }
 
         function setBackground(backgroundSrc) {
@@ -178,6 +189,8 @@ layout: default
         function setDescription(description) {
             el = document.querySelector("#description");
             el.innerHTML += description;
+            descLoaded = true;
+            if (postsLoaded && pinsLoaded && descLoaded) { showLoadedContent() }
         }
     });
 
@@ -207,8 +220,22 @@ layout: default
                     </div>
                     `;
             }
+            pinsLoaded = true;
+            if (postsLoaded && pinsLoaded && descLoaded) { showLoadedContent() }
         }
     });
+
+    function showLoadedContent() {
+        loader = document.querySelector(".spinner");
+        loader.remove()
+
+        el = document.querySelector("#main-col");
+        el.style.display = "block";
+        el = document.querySelector("#sidebar-col");
+        el.style.display = "block";
+        el = document.querySelector("#event-desc");
+        el.style.display = "block";
+    }
 
     // Set up page
 
