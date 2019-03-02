@@ -51,7 +51,8 @@ html {
 }
 
 .live {
-    float: right;
+    position: absolute;
+    right: 0;
     padding: 10px 25px;
     border-radius: 3px;
     color: rgba(0, 0, 0, 0.8);
@@ -86,12 +87,13 @@ html {
 
 .flagship {
     float: right;
-    margin-right: 25px;
+    margin: 0 0 0 10px;
     display: inline;
 }
 
 #event-title {
     padding-left: 20px;
+    margin-top: 0;
 }
 
 .event-metadata {
@@ -104,12 +106,12 @@ html {
 
 #main-col {
     flex: 13;
-    margin: 10px;
+    margin: 10px 10px 10px 1px;
 }
 
 #sidebar-col {
     flex: 7;
-    margin: 10px;
+    margin: 10px 1px 10px 10px;
 }
 
 /* Blog Cards */
@@ -203,18 +205,9 @@ html {
     color: #389dc1;
 }
 
-#stream {
-    margin-top: 30px;
-}
-
 .fa-thumb-tack {
     color: #666666;
-    /* font-weight: bolder; */
-}
-
-.fa-map-pin {
-    color: #338899;
-    /* font-weight: bolder; */
+    font-weight: bolder;
 }
 
 .post-date {

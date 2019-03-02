@@ -23,18 +23,21 @@ layout: default
         <img class="background-img" style="object-fit: cover" width="100%" height="100%" src="{{page.images[0]}}">
 </div>
 <div class="container">
-    <div class="content" style="display: flex">
-        <div id="main-col">
-            <div class="card">
-                <div class="overview">
-                    <div class="title">
-                        <h3 class="section-title">Live from <span id="location"></span></h3>
-                        <div id="description">
-                            <div class="flagship" style="float: right"></div>
-                        </div>
+    <div class="content">
+        <div class="card">
+            <div class="overview">
+                <div class="title">
+                    <h3 class="section-title">Live from <span id="location"></span></h3>
+                    <div id="description">
+                        <div class="flagship" style="float: right"></div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="content" style="display: flex">
+        <div id="main-col">
             <div id="stream">
             </div>
             <div class="card post-card">
@@ -54,7 +57,7 @@ layout: default
         </div>
 
         <div id="sidebar-col">
-            <div class="card">
+            <div class="card" style="margin-top: 0">
                 <div class="overview" id="highlights">
                     <div class="title">
                         <h3 class="section-title">Event Highlights</h3>
