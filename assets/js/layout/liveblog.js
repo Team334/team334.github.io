@@ -88,7 +88,7 @@ metaUpdate.on('value', function (snapshot) {
     el.innerHTML = meta.Location;
 
     el = document.querySelector("#description");
-    el.innerHTML += meta.Brief;
+    el.innerHTML += meta.Details;
     descLoaded = true;
 
     el = document.querySelector(".flagship");
@@ -169,12 +169,12 @@ function populateTBAScores(response) {
             ` + comp_level + ` Match #` + match.match_number + `<br>
             <div class="match-content">
                 <div class="red team">
-                    <span class="teams">` + formatTeamNum(match.alliances.red.team_keys[0]) + formatTeamNum(match.alliances.red.team_keys[1]) + formatTeamNum(match.alliances.red.team_keys[2]) + `</span><br><br>
+                    <span class="teams">` + formatTeamNum(match.alliances.red.team_keys[0]) + formatTeamNum(match.alliances.red.team_keys[1]) + formatTeamNum(match.alliances.red.team_keys[2]) + `</span><br>
                     <span class="score">` + ((match.alliances.red.score != -1) ? match.alliances.red.score : "NA") + `</span>
                 </div>VS.
                 <div class="blue team">
-                    <span class="teams">` + formatTeamNum(match.alliances.blue.team_keys[0]) + formatTeamNum(match.alliances.blue.team_keys[1]) + formatTeamNum(match.alliances.blue.team_keys[2]) + `</span><br><br>
-                    <span class="score winning">` + ((match.alliances.blue.score != -1) ? match.alliances.blue.score : "NA") + `</span>
+                    <span class="teams">` + formatTeamNum(match.alliances.blue.team_keys[0]) + formatTeamNum(match.alliances.blue.team_keys[1]) + formatTeamNum(match.alliances.blue.team_keys[2]) + `</span><br>
+                    <span class="score">` + ((match.alliances.blue.score != -1) ? match.alliances.blue.score : "NA") + `</span>
                 </div>
             </div>
         </div>`;

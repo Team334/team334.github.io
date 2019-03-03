@@ -62,7 +62,7 @@ layout: default
                         <div class="overview" id="highlights">
                             <div class="title all-matches">
                                 <h3 class="section-title">Match Data</h3>
-                                <h6 id="matchp1" style="margin:0;">Powered by: <a href="https://thebluealliance.com/team/334" style="text-decoration: none; color: #389dc1;">The Blue Alliance</a></h6>
+                                <h6 id="matchp1" style="margin: 10px 0;">Powered by: <a href="https://thebluealliance.com/team/334" style="text-decoration: none; color: #389dc1;">The Blue Alliance</a></h6>
                             </div>
                         </div>
                         </div>
@@ -103,7 +103,7 @@ layout: default
     statusreq.onreadystatechange=(e)=>{
         if(statusreq.responseText && statusreq.readyState == 4 && statusreq.status == 200){
             response = JSON.parse(statusreq.responseText);
-            document.querySelector('.all-matches').innerHTML += response.overall_status_str;   
+            document.querySelector('.all-matches').innerHTML += '<p id="TBA-overall">' + response.overall_status_str + '</p>';
         }
     }
     const matchreq = new XMLHttpRequest();
