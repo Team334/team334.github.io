@@ -105,7 +105,7 @@ layout: default
 <script>
 
     const statusreq = new XMLHttpRequest();
-    const statusurl='https://www.thebluealliance.com/api/v3/team/frc334/event/2016nyny/status';
+    const statusurl='https://www.thebluealliance.com/api/v3/team/frc334/event/{{page.event_id}}/status';
     statusreq.open("GET", statusurl);
     statusreq.setRequestHeader('X-TBA-Auth-Key', '2nsVUNsKfMeKvg7XSp04C6VM3uD82da0fVt2ZkpVhSfI8AmM8kZWLwmAdJswRPZc');
     statusreq.send();
@@ -117,7 +117,7 @@ layout: default
     }
 
     const matchreq = new XMLHttpRequest();
-    const matchurl='https://www.thebluealliance.com/api/v3/team/frc334/event/2016nyny/matches/simple';
+    const matchurl='https://www.thebluealliance.com/api/v3/team/frc334/event/{{page.event_id}}/matches/simple';
     matchreq.open("GET", matchurl);
     matchreq.setRequestHeader('X-TBA-Auth-Key', '2nsVUNsKfMeKvg7XSp04C6VM3uD82da0fVt2ZkpVhSfI8AmM8kZWLwmAdJswRPZc');
     matchreq.send();
@@ -152,11 +152,11 @@ layout: default
                     <div class="match-content">
                         <div class="red team">
                             <span class="teams">`+formatTeamNum(match.alliances.red.team_keys[0])+formatTeamNum(match.alliances.red.team_keys[1])+formatTeamNum(match.alliances.red.team_keys[2])+`</span><br><br>
-                            <span class="score">`+match.alliances.red.score+`</span>
+                            <span class="score">`+((match.alliances.red.score != -1) ? match.alliances.red.score : "NA")+`</span>
                         </div>VS.
                         <div class="blue team">
                             <span class="teams">`+formatTeamNum(match.alliances.blue.team_keys[0])+formatTeamNum(match.alliances.blue.team_keys[1])+formatTeamNum(match.alliances.blue.team_keys[2])+`</span><br><br>
-                            <span class="score winning">`+match.alliances.blue.score+`</span>
+                            <span class="score winning">`+((match.alliances.blue.score != -1) ? match.alliances.blue.score : "NA")+`</span>
                         </div>
                     </div>
                 </div>`;

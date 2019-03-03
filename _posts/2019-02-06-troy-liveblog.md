@@ -11,6 +11,7 @@ author:
     - Joseph Babbitt
 archived: 0
 event_name: TestEvent
+event_id: 2018nyny
 
 text: "Check out our live coverage of the New York Finger Lakes regionals all weekend!"
 ---
