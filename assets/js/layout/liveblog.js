@@ -119,7 +119,7 @@ pinUpdate.on('value', function (snapshot) {
 
 function showLoadedContent() {
     loader = document.querySelector(".spinner");
-    loader.remove()
+    if(loader) loader.remove();
 
     el = document.querySelector("#main-col");
     el.style.display = "block";

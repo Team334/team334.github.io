@@ -6,30 +6,47 @@ layout: default
 <link rel="shortcut icon" type="image/png" href="{{ site.url }}/assets/img/favicon.png">
 <div class="container">
     <div class="content">
+        <h3>Your UID is <span id="UID"></span></h3>
         <h3>
             Event Information:
         </h3>
-        <label>Background image: </label><input id="background-img" type="text"/><br>
-        <label>Location: </label><input id="location" type="text"/><br>
-        <label>Event Brief: </label><textarea id="brief"></textarea><br>
-        <label>Flagship element: </label><input id="flagship" type="text"/><br>
-        <button id="updateMeta" style="height:auto; width: auto;" onclick="updateMeta()">Update info</button>
+
+        <label for="inp" class="inp">
+            <input type="text" id="background-img" placeholder="&nbsp;">
+            <span class="label">Background</span>
+            <span class="border"></span>
+        </label>
+        <label for="inp" class="inp">
+            <input type="text" id="location" placeholder="&nbsp;">
+            <span class="label">Location</span>
+            <span class="border"></span>
+        </label>
+        <label for="inp" class="inp">
+            <input type="text" id="brief" placeholder="&nbsp;">
+            <span class="label">Brief</span>
+            <span class="border"></span>
+        </label>
+        <label for="inp" class="inp">
+            <input type="text" id="flagship" placeholder="&nbsp;">
+            <span class="label">Flagship</span>
+            <span class="border"></span>
+        </label>
         <br>
         <center><button id="live" onclick="toggleLiveStatus()">LIVE</button></center>
         <h3>
             Event Feed:
         </h3>
         <div class="chatbox">
-            <span>Posting as: </span><input id="author" type="text"/> <span class="event-title">Troy 2019</span>
+            <span>Posting as: </span><input id="author" type="text" /> <span class="event-title">Troy 2019</span>
             <div class="posts">
-            <div id="p1"></div>
+                <div id="p1"></div>
             </div>
             <div>
-                    <input id="isPinned" type="checkbox"/>
-                    <input type="text" id="pinnedMessage"/>
+                <input id="isPinned" type="checkbox" />
+                <input type="text" id="pinnedMessage" />
             </div>
             <div style="display:flex">
-                <input type="text" id="newMessage"/>
+                <input type="text" id="newMessage" />
                 <button onclick="createNewPost()" style="height:auto; width: auto; font-size: 1em;">Post</button>
             </div>
         </div>
@@ -66,7 +83,7 @@ layout: default
 <script>
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            console.log(user);
+            document.getElementById('UID').innerHTML = user.uid
         } else {
             console.log("fuck we don't have user")
         }
@@ -75,10 +92,11 @@ layout: default
     EVENT_NAME = window.params.event
     document.querySelector('.event-title').innerHTML = EVENT_NAME;
     IS_LIVE = 0;
-    var dataUpdate = firebase.database().ref(EVENT_NAME+'/Posts');
+    var dataUpdate = firebase.database().ref(EVENT_NAME + '/Posts');
+    var pinUpdate = firebase.database().ref(EVENT_NAME + '/Pinned');
 
 
-    dataUpdate.on('child_added', function(childSnapshot, prevChildKey) {
+    dataUpdate.on('child_added', function (childSnapshot, prevChildKey) {
         p = childSnapshot.val();
         el = document.createElement('div')
         el.className = "card post-card";
@@ -89,12 +107,21 @@ layout: default
                 <div class="overview">
                     <div class="post">
                         <span class="post-author">
-                            <span class="author-name">`+p.ID+" - "+p.Author+`</span>
-                            <span class="time">`+('0' + dte.getMonth()).slice(-2) + '.' + ('0' + dte.getDay()).slice(-2) + '.' + ('0' + dte.getYear()).slice(-2) + ' ' + ('0' + dte.getHours()).slice(-2) +':'+ ('0' + dte.getMinutes()).slice(-2) +':'+ ('0' + dte.getSeconds()).slice(-2)+`</span>
-                            `+((p.Pinned) ? '<a title="Back to Highlights" href="#highlights"><i class="fa fa-thumb-tack"></i></span></a>' : "")+`
+                            <span class="author-name">` +
+            p.ID + " - " + p.Author + `</span>
+                            <span class="time">` + ('0' + dte.getMonth())
+            .slice(-2) + '.' + ('0' + dte.getDay()).slice(-2) + '.' + ('0' + dte.getYear()).slice(-2) + ' ' + (
+                '0' + dte.getHours()).slice(-2) + ':' + ('0' + dte.getMinutes()).slice(-2) + ':' + ('0' + dte.getSeconds())
+            .slice(-2) + `</span>
+                            ` + ((p.Pinned) ?
+                '<a title="Back to Highlights" href="#highlights"><i class="fa fa-thumb-tack"></i></span></a>' :
+                "") +
+            `
                         </span><button class="edit" onclick="ActivateEdit(this)" style="height:auto; width: auto; font-size: 1em;">Edit</button><br>
                         <span class="post-content">
-                            `+p.Post+`
+                            ` +
+            p.Post +
+            `
                         </span>
                     </div>
                 </div>
@@ -104,7 +131,7 @@ layout: default
         twttr.widgets.load()
     });
 
-    dataUpdate.on('child_changed', function(childSnapshot, prevChildKey) {
+    dataUpdate.on('child_changed', function (childSnapshot, prevChildKey) {
         p = childSnapshot.val();
         el = document.getElementById(p.ID);
         dte = new Date(parseInt(p.ID));
@@ -113,44 +140,57 @@ layout: default
             <div class="overview">
                 <div class="post">
                     <span class="post-author">
-                        <span class="author-name">`+p.ID+" - "+p.Author+`</span>
-                        <span class="time">`+('0' + dte.getMonth()).slice(-2) + '.' + ('0' + dte.getDay()).slice(-2) + '.' + ('0' + dte.getYear()).slice(-2) + ' ' + ('0' + dte.getHours()).slice(-2) +':'+ ('0' + dte.getMinutes()).slice(-2) +':'+ ('0' + dte.getSeconds()).slice(-2)+`</span>
-                        `+((p.Pinned) ? '<a title="Back to Highlights" href="#highlights"><i class="fa fa-thumb-tack"></i></span></a>' : "")+`
+                        <span class="author-name">` +
+            p.ID + " - " + p.Author + `</span>
+                        <span class="time">` + ('0' + dte.getMonth())
+            .slice(-2) + '.' + ('0' + dte.getDay()).slice(-2) + '.' + ('0' + dte.getYear()).slice(-2) + ' ' + (
+                '0' + dte.getHours()).slice(-2) + ':' + ('0' + dte.getMinutes()).slice(-2) + ':' + ('0' + dte.getSeconds())
+            .slice(-2) + `</span>
+                        ` + ((p.Pinned) ?
+                '<a title="Back to Highlights" href="#highlights"><i class="fa fa-thumb-tack"></i></span></a>' :
+                "") +
+            `
                     </span><button class="edit" onclick="ActivateEdit(this)" style="height:auto; width: auto; font-size: 1em;">Edit</button><br>
                     <span class="post-content">
-                        `+p.Post+`
+                        ` +
+            p.Post + `
                     </span>
                 </div>
             </div>
             `;
-            window.instgrm.Embeds.process();
-            twttr.widgets.load()
+        window.instgrm.Embeds.process();
+        twttr.widgets.load()
     });
 
-    dataUpdate.on('child_removed', function(childSnapshot, prevChildKey) {
+    dataUpdate.on('child_removed', function (childSnapshot, prevChildKey) {
         p = childSnapshot.val();
         el = document.getElementById(p.ID);
         el.remove();
     });
-    function ActivateEdit(el){
+
+    function ActivateEdit(el) {
         content = el.nextSibling.nextSibling.nextSibling.innerHTML;
-        el.nextSibling.nextSibling.nextSibling.innerHTML = '<textarea>'+content+'</textarea><button class="edit" onclick="SubmitEdit(this)" style="height:auto; width: auto; font-size: 1em;">Edit</button><br><br><button class="edit" onclick="DeleteThis(this)" style="height:auto; width: auto; font-size: 1em;">Delete</button>';
+        el.nextSibling.nextSibling.nextSibling.innerHTML = '<textarea>' + content +
+            '</textarea><button class="edit" onclick="SubmitEdit(this)" style="height:auto; width: auto; font-size: 1em;">Edit</button><br><br><button class="edit" onclick="DeleteThis(this)" style="height:auto; width: auto; font-size: 1em;">Delete</button>';
     }
-    function SubmitEdit(el){
+
+    function SubmitEdit(el) {
         content = el.previousSibling.value;
         pid = el.parentElement.parentElement.parentElement.parentElement.id;
         dataUpdate.child(pid).update({
             Post: content,
         })
     }
-    function DeleteThis(el){
+
+    function DeleteThis(el) {
         ref = el.parentElement.parentElement.parentElement.parentElement.id;
         dataUpdate.child(ref).remove();
+        pinUpdate.child(ref).remove();
+
     }
 
-    var pinUpdate = firebase.database().ref(EVENT_NAME+'/Pinned');
-    function createNewPost(){
-        timenow = + new Date();
+    function createNewPost() {
+        timenow = +new Date();
         dataUpdate.child(timenow).set({
             Author: document.getElementById("author").value,
             Pinned: document.getElementById("isPinned").value,
@@ -158,7 +198,7 @@ layout: default
             Post: document.getElementById("newMessage").value,
             type: "text"
         });
-        if(document.getElementById("isPinned")){
+        if (document.getElementById("isPinned")) {
             pinUpdate.child(timenow).set(document.getElementById("pinnedMessage").value);
             document.getElementById('pinnedMessage').value = "";
             document.getElementById('isPinned').value = false
@@ -166,7 +206,7 @@ layout: default
         document.getElementById("newMessage").value = "";
     }
 
-    var metaUpdate = firebase.database().ref(EVENT_NAME+'/Metadata');
+    var metaUpdate = firebase.database().ref(EVENT_NAME + '/Metadata');
     metaUpdate.on('value', function (snapshot) {
         meta = snapshot.val()
         // console.log(meta);
@@ -210,7 +250,8 @@ layout: default
         el = document.getElementById("flagship");
         el.value = flagship;
     }
-    function updateMeta(){
+
+    function updateMeta() {
         metaUpdate.update({
             Background: document.getElementById("background-img").value,
             Details: document.getElementById('brief').value,
@@ -218,15 +259,16 @@ layout: default
             Location: document.getElementById('location').value,
         })
     }
-    function toggleLiveStatus(){
+
+    function toggleLiveStatus() {
         metaUpdate.update({
-            Live: ((IS_LIVE) ? 0: 1)
+            Live: ((IS_LIVE) ? 0 : 1)
         })
     }
 
     Element.prototype.appendAfter = function (element) {
         element.parentNode.insertBefore(this, element.nextSibling);
-    },false;
+    }, false;
 </script>
 
 <style>
@@ -236,38 +278,111 @@ layout: default
         padding: 20px;
         border-radius: 20px;
     }
+
     .posts {
         height: 90%;
         overflow: scroll;
     }
-    .event-title{
+
+    .event-title {
         float: right;
     }
-    #live{
+
+    #live {
         margin: 20px;
     }
-    .newMessage{
+
+    .newMessage {
         flex: 1;
     }
 
-.active {
-    animation-name: live;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    color: white;
-}
-
-@keyframes live {
-    0% {
-        background-color: rgba(200, 0, 0, 0.8)
+    .active {
+        animation-name: live;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        color: white;
     }
 
-    50% {
-        background-color: rgba(255, 0, 0, 0.8)
+    @keyframes live {
+        0% {
+            background-color: rgba(200, 0, 0, 0.8)
+        }
+
+        50% {
+            background-color: rgba(255, 0, 0, 0.8)
+        }
+
+        100% {
+            background-color: rgba(200, 0, 0, 0.8)
+        }
     }
 
-    100% {
-        background-color: rgba(200, 0, 0, 0.8)
+    .inp {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        max-width: 280px;
     }
-}
+
+    .inp .label {
+        position: absolute;
+        top: 16px;
+        left: 0;
+        font-size: 16px;
+        color: #9098a9;
+        font-weight: 500;
+        transform-origin: 0 0;
+        transition: all 0.2s ease;
+    }
+
+    .inp .border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: #07f;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: all 0.15s ease;
+    }
+
+    .inp input {
+        -webkit-appearance: none;
+        width: 100%;
+        border: 0;
+        font-family: inherit;
+        padding: 12px 0;
+        height: 48px;
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 2px solid #c8ccd4;
+        background: none;
+        border-radius: 0;
+        color: #223254;
+        transition: all 0.15s ease;
+    }
+
+    .inp input:hover {
+        background: rgba(34, 50, 84, 0.03);
+    }
+
+    .inp input:not(:placeholder-shown)+span {
+        color: #5a667f;
+        transform: translateY(-26px) scale(0.75);
+    }
+
+    .inp input:focus {
+        background: none;
+        outline: none;
+    }
+
+    .inp input:focus+span {
+        color: #07f;
+        transform: translateY(-26px) scale(0.75);
+    }
+
+    .inp input:focus+span+.border {
+        transform: scaleX(1);
+    }
 </style>

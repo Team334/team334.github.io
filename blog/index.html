@@ -14,7 +14,7 @@ layout: default
             </div>
             <div class="overview">
                 <div class="title">
-                    <h4 class="post-title"><a href="{{site.url}}/{{ post.url }}">{{ post.title }}</a></h4>
+                    <h4 class="post-title"><a href="{{site.url}}{{ post.url }}">{{ post.title }}</a></h4>
                     {% for author in post.author %}
                     <div class="author">
                         <img src="{{ site.url }}{{ site.data.team[author].image }}">
@@ -25,7 +25,7 @@ layout: default
                             date: '%B %d, %Y' }}</span></div>
                 </div>
                 <p class="text"> {{ post.text }} </p>
-                <a class="link" href="{{site.url}}/{{ post.url }}">See more</a>
+                <a class="link" href="{{site.url}}{{ post.url }}">See more</a>
             </div>
         </div>
         {% endfor %}
