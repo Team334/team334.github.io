@@ -101,6 +101,20 @@ nav {
     }
 }
 
+.liveButton {
+    background-color:rgba(255, 0, 0, 0.8);
+    padding: 17px 20px 8px 18px;
+
+}
+
+.liveButton a:hover {
+    color: #FFF!important;
+    border-bottom: 2px solid #FFF!important;
+}
+.liveButton-m {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
 .nav-item:not(#icon) a:hover {
     color: #0972af;
 
