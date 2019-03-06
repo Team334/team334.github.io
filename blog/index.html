@@ -10,19 +10,22 @@ layout: default
         {% for post in paginator.posts %}
         <div class="card">
             <div class="img">
-                <a href="{{site.url}}/{{ post.url }}"><img style="object-fit: cover" width="100%" height="100%" src="{{ post.images[0] }}"></a>
+                <a href="{{site.url}}{{ post.url }}"><img style="object-fit: cover" width="100%" height="100%" src="{{ post.images[0] }}"></a>
             </div>
             <div class="overview">
                 <div class="title">
-                    <h4 class="post-title"><a href="{{site.url}}/{{ post.url }}">{{ post.title }}</a></h4>
+                    <h4 class="post-title"><a href="{{site.url}}{{ post.url }}">{{ post.title }}</a></h4>
+                    {% for author in post.author %}
                     <div class="author">
-                        <img src="{{ site.url }}{{ site.data.team[post.author].image }}">
-                        {{ post.author }}
+                        <img src="{{ site.url }}{{ site.data.team[author].image }}">
+                        {{ author }}
                     </div>
-                    <div class="post-date"><i class="fa fa-calendar"></i><span style="font-size: 15">{{ post.date | date: '%B %d, %Y' }}</span></div>
+                    {% endfor %}<br>
+                    <div class="post-date"><i class="fa fa-calendar"></i><span style="font-size: 15">{{ post.date |
+                            date: '%B %d, %Y' }}</span></div>
                 </div>
                 <p class="text"> {{ post.text }} </p>
-                <a class="link" href="{{site.url}}/{{ post.url }}">See more</a>
+                <a class="link" href="{{site.url}}{{ post.url }}">See more</a>
             </div>
         </div>
         {% endfor %}
