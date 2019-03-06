@@ -2,6 +2,23 @@ var postsLoaded = false,
     pinsLoaded = false,
     descLoaded = false;
 
+
+var connectedRef = firebase.database().ref(".info/connected");
+badge = document.querySelector('.badge'); 
+connectedRef.on("value", function (snap) {
+    if (snap.val() === true) {
+        badge.innerHTML = "Live updates enabled"
+        badge.className = 'badge online';
+        setTimeout(()=>{
+            badge.className = 'badge';
+            badge.display = 'none'
+        },2500)
+    } else {
+        badge.innerHTML = "We can't seem to connect to team servers at this time. You will not receieve live updates. Check your internet connection."
+        badge.className += ' offline';
+    }
+});
+
 //Data Update
 dataUpdate.orderByChild('ID');
 dataUpdate.once('value').then(function (snapshot) {
@@ -16,14 +33,14 @@ dataUpdate.on('child_added', function (childSnapshot) {
     el = document.createElement('div')
     el.className = "card post-card";
     el.id = p.ID;
-    dte = new Date(parseInt(p.ID));
+    dte = (p.Edited) ? new Date(parseInt(p.Edited)) : new Date(parseInt(p.ID));
     el.innerHTML =
         `
             <div class="overview">
                 <div class="post">
                     <span class="post-author">
                         <span class="author-name">` + p.Author + `</span>
-                        <span class="time">` + ('0' + dte.getMonth()).slice(-2) + '.' + ('0' + dte.getDay()).slice(-2) + '.' + ('0' + dte.getYear()).slice(-2) + ' ' + ('0' + dte.getHours()).slice(-2) + ':' + ('0' + dte.getMinutes()).slice(-2) + ':' + ('0' + dte.getSeconds()).slice(-2) + `</span>
+                        <span class="time">` + ('0' + dte.getMonth()).slice(-2) + '.' + ('0' + dte.getDay()).slice(-2) + '.' + ('0' + dte.getYear()).slice(-2) + ' ' + ('0' + dte.getHours()).slice(-2) + ':' + ('0' + dte.getMinutes()).slice(-2) + ':' + ('0' + dte.getSeconds()).slice(-2) + ((p.Edited) ? " (Edited)" : "") + `</span>
                         ` + ((p.Pinned) ? '<a title="Back to Highlights" href="#highlights"><i class="fa fa-thumb-tack"></i></span></a>' : "") + `
                     </span><br>
                     <p class="post-content">
@@ -40,14 +57,14 @@ dataUpdate.on('child_added', function (childSnapshot) {
 dataUpdate.on('child_changed', function (childSnapshot) {
     p = childSnapshot.val();
     el = document.getElementById(p.ID);
-    dte = new Date(parseInt(p.ID));
+    dte = (p.Edited) ? new Date(parseInt(p.Edited)) : new Date(parseInt(p.ID));
     el.innerHTML =
         `
         <div class="overview">
             <div class="post">
                 <span class="post-author">
                     <span class="author-name">` + p.Author + `</span>
-                    <span class="time">` + ('0' + dte.getMonth()).slice(-2) + '.' + ('0' + dte.getDay()).slice(-2) + '.' + ('0' + dte.getYear()).slice(-2) + ' ' + ('0' + dte.getHours()).slice(-2) + ':' + ('0' + dte.getMinutes()).slice(-2) + ':' + ('0' + dte.getSeconds()).slice(-2) + `</span>
+                    <span class="time">` + ('0' + dte.getMonth()).slice(-2) + '.' + ('0' + dte.getDay()).slice(-2) + '.' + ('0' + dte.getYear()).slice(-2) + ' ' + ('0' + dte.getHours()).slice(-2) + ':' + ('0' + dte.getMinutes()).slice(-2) + ':' + ('0' + dte.getSeconds()).slice(-2) + ((p.Edited) ? " (Edited)" : "") + `</span>
                     ` + ((p.Pinned) ? '<a title="Back to Highlights" href="#highlights"><i class="fa fa-thumb-tack"></i></span></a>' : "") + `
                 </span><br>
                 <p class="post-content">
@@ -119,7 +136,7 @@ pinUpdate.on('value', function (snapshot) {
 
 function showLoadedContent() {
     loader = document.querySelector(".spinner");
-    if(loader) loader.remove();
+    if (loader) loader.remove();
 
     el = document.querySelector("#main-col");
     el.style.display = "block";
@@ -183,4 +200,4 @@ function populateTBAScores(response) {
 
 Element.prototype.appendAfter = function (element) {
     element.parentNode.insertBefore(this, element.nextSibling);
-},false;
+}, false;

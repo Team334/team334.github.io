@@ -31,6 +31,8 @@ layout: default
             <span class="label">Flagship</span>
             <span class="border"></span>
         </label>
+        <button id="updateMeta" style="height:auto; width: auto;" onclick="updateMeta()">Update info</button> 
+
         <br>
         <center><button id="live" onclick="toggleLiveStatus()">LIVE</button></center>
         <h3>
@@ -179,6 +181,7 @@ layout: default
         pid = el.parentElement.parentElement.parentElement.parentElement.id;
         dataUpdate.child(pid).update({
             Post: content,
+            Edited: +new Date(),
         })
     }
 

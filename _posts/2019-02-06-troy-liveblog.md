@@ -10,8 +10,8 @@ author:
     - Samuel Piltch
     - Joseph Babbitt
 archived: 0
-event_name: TestEvent
-event_id: 2018nyny
+event_name: Troy2019
+event_id:  2019nytr
 
 text: "Check out our live coverage of the New York Finger Lakes regionals all weekend!"
 ---
