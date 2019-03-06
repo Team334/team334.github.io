@@ -5,7 +5,7 @@ layout: default
 <link rel="stylesheet" href="/assets/css/layout/liveblog.css">
 <link rel="shortcut icon" type="image/png" href="{{ site.url }}/assets/img/favicon.png">
 <div class="badge">
-    We can't seem to connect to team servers at this time. You will not receieve live updates. Check your internet connection.
+    We can't seem to connect to team servers at this time. You will not receive live updates. Check your internet connection.
 </div>
 <div class="header content">
     <div class="header-info">
@@ -38,13 +38,15 @@ layout: default
                 <div class="title">
                     <h3 class="section-title">Live from <span id="location"></span></h3>
                     <div id="description">
-                        <div class="flagship" style="float: right"></div>
+                        <div class="flagship">
+                            <div class="ratio"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div style="display: flex">
+        <div id="main-content" style="display: flex">
             <div id="main-col">
                 <div id="stream">
                     <div id="p1"></div>

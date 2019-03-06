@@ -4,7 +4,7 @@ var postsLoaded = false,
 
 
 var connectedRef = firebase.database().ref(".info/connected");
-badge = document.querySelector('.badge'); 
+badge = document.querySelector('.badge');
 connectedRef.on("value", function (snap) {
     if (snap.val() === true) {
         badge.innerHTML = "Live updates enabled"
@@ -14,7 +14,7 @@ connectedRef.on("value", function (snap) {
             badge.display = 'none'
         },2500)
     } else {
-        badge.innerHTML = "We can't seem to connect to team servers at this time. You will not receieve live updates. Check your internet connection."
+        badge.innerHTML = "We can't seem to connect to team servers at this time. You will not receive live updates. Check your internet connection."
         badge.className += ' offline';
     }
 });
@@ -109,7 +109,7 @@ metaUpdate.on('value', function (snapshot) {
     descLoaded = true;
 
     el = document.querySelector(".flagship");
-    el.innerHTML = meta.Flagship;
+    el.innerHTML += meta.Flagship;
 
     if (postsLoaded && pinsLoaded && descLoaded) {
         showLoadedContent()
