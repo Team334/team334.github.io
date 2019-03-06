@@ -450,6 +450,10 @@ html {
 }
 
 @media (max-width: 950px) {
+    .ig-content {
+        padding: 0;
+    }
+
     #main-content {
         flex-direction: column;
     }

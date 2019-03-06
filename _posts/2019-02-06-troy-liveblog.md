@@ -7,8 +7,8 @@ images:
 
 title: 2019 New York Tech Valley Regional Live Blog
 author:
-    - Samuel Piltch
     - Joseph Babbitt
+    - Samuel Piltch
 archived: 0
 event_name: Troy2019
 event_id:  2019nytr

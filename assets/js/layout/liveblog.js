@@ -9,10 +9,10 @@ connectedRef.on("value", function (snap) {
     if (snap.val() === true) {
         badge.innerHTML = "Live updates enabled"
         badge.className = 'badge online';
-        setTimeout(()=>{
+        setTimeout(() => {
             badge.className = 'badge';
             badge.display = 'none'
-        },2500)
+        }, 2500)
     } else {
         badge.innerHTML = "We can't seem to connect to team servers at this time. You will not receive live updates. Check your internet connection."
         badge.className += ' offline';
@@ -34,13 +34,14 @@ dataUpdate.on('child_added', function (childSnapshot) {
     el.className = "card post-card";
     el.id = p.ID;
     dte = (p.Edited) ? new Date(parseInt(p.Edited)) : new Date(parseInt(p.ID));
+    padding = (p.type == "ig") ? "ig-content" : "";
     el.innerHTML =
         `
-            <div class="overview">
+            <div class="overview ` + padding + `">
                 <div class="post">
                     <span class="post-author">
                         <span class="author-name">` + p.Author + `</span>
-                        <span class="time">` + ('0' + dte.getMonth()).slice(-2) + '.' + ('0' + dte.getDay()).slice(-2) + '.' + ('0' + dte.getYear()).slice(-2) + ' ' + ('0' + dte.getHours()).slice(-2) + ':' + ('0' + dte.getMinutes()).slice(-2) + ':' + ('0' + dte.getSeconds()).slice(-2) + ((p.Edited) ? " (Edited)" : "") + `</span>
+                        <span class="time">` + String(dte).slice(0,24)+String(dte).slice(33) + ((false) ? " (Edited)" : "") + `</span>
                         ` + ((p.Pinned) ? '<a title="Back to Highlights" href="#highlights"><i class="fa fa-thumb-tack"></i></span></a>' : "") + `
                     </span><br>
                     <p class="post-content">
@@ -50,8 +51,15 @@ dataUpdate.on('child_added', function (childSnapshot) {
             </div>
         `;
     el.appendAfter(document.querySelector('#p1'))
-    window.instgrm.Embeds.process();
-    twttr.widgets.load()
+    setTimeout(() => {
+        try {
+            window.instgrm.Embeds.process();
+            twttr.widgets.load()
+        }
+        catch(e) {
+            
+        }
+    }, 1000);
 });
 
 dataUpdate.on('child_changed', function (childSnapshot) {
@@ -64,7 +72,7 @@ dataUpdate.on('child_changed', function (childSnapshot) {
             <div class="post">
                 <span class="post-author">
                     <span class="author-name">` + p.Author + `</span>
-                    <span class="time">` + ('0' + dte.getMonth()).slice(-2) + '.' + ('0' + dte.getDay()).slice(-2) + '.' + ('0' + dte.getYear()).slice(-2) + ' ' + ('0' + dte.getHours()).slice(-2) + ':' + ('0' + dte.getMinutes()).slice(-2) + ':' + ('0' + dte.getSeconds()).slice(-2) + ((p.Edited) ? " (Edited)" : "") + `</span>
+                    <span class="time">` + String(dte).slice(0,24)+String(dte).slice(33) + ((false) ? " (Edited)" : "") + `</span>
                     ` + ((p.Pinned) ? '<a title="Back to Highlights" href="#highlights"><i class="fa fa-thumb-tack"></i></span></a>' : "") + `
                 </span><br>
                 <p class="post-content">
@@ -73,8 +81,15 @@ dataUpdate.on('child_changed', function (childSnapshot) {
             </div>
         </div>
         `;
-    window.instgrm.Embeds.process();
-    twttr.widgets.load()
+    setTimeout(() => {
+        try {
+            window.instgrm.Embeds.process();
+            twttr.widgets.load()
+        }
+        catch(e) {
+
+        }
+    }, 1000);
 });
 
 dataUpdate.on('child_removed', function (childSnapshot) {
@@ -99,17 +114,18 @@ metaUpdate.on('value', function (snapshot) {
     el.style.display = "block";
 
     el = document.querySelector(".background-img");
-    el.src = meta.Background
+    if (el.innerHTML != meta.Background || !descLoaded) el.src = meta.Background
 
     el = document.querySelector("#location");
-    el.innerHTML = meta.Location;
-
-    el = document.querySelector("#description");
-    el.innerHTML += meta.Details;
-    descLoaded = true;
+    if (el.innerHTML != meta.Location || !descLoaded) el.innerHTML = meta.Location;
 
     el = document.querySelector(".flagship");
-    el.innerHTML += meta.Flagship;
+    if (el.innerHTML != meta.Flagship || !descLoaded) el.innerHTML = meta.Flagship;
+
+    el = document.querySelector("#description");
+    if (el.innerHTML != meta.Details || !descLoaded) el.innerHTML = `<div class="flagship"><div class="ratio">`+meta.Flagship+`</div></div>` + meta.Details;
+    descLoaded = true;
+
 
     if (postsLoaded && pinsLoaded && descLoaded) {
         showLoadedContent()
@@ -122,6 +138,7 @@ pinUpdate.on('value', function (snapshot) {
     el = document.querySelector("#pins");
     pinList = Object.keys(pins);
     el.innerHTML = "";
+    pinList.sort((a, b) => a - b);
     for (pin in pinList) {
         el.innerHTML +=
             `

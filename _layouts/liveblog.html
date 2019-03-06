@@ -1,6 +1,26 @@
 ---
 layout: default
 ---
+<meta property="og:type" content="article" />
+{% for author in page.author %}
+<meta property="article:author" content="{{ author }}">
+{% endfor %}
+<meta property="og:url" content="{{ site.url }}/{{page.permalink}}" />
+<meta property="og:title" content="{{page.title}}" />
+<meta property="og:description" content="{{page.text}}" />
+<meta property="og:image" content="{{ site.url }}{{page.images[0]}}" />
+ 
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" value="bthsrobotics.com" />
+<meta name="twitter:title" value="{{page.title}}" />
+<meta name="twitter:description" value="{{page.text}}" />
+<meta name="twitter:image" content="{{ site.url }}{{page.images[0]}}" />
+<meta name="twitter:url" value="{{site.url}}{{page.permalink}}" />
+<!-- <meta name="twitter:label1" value="Opens in Theaters" />
+<meta name="twitter:data1" value="December 1, 2015" />
+<meta name="twitter:label2" value="Or on demand" />
+<meta name="twitter:data2" value="at Hulu.com" /> -->
+
 
 <link rel="stylesheet" href="/assets/css/layout/liveblog.css">
 <link rel="shortcut icon" type="image/png" href="{{ site.url }}/assets/img/favicon.png">

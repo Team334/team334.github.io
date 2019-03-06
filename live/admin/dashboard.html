@@ -45,7 +45,8 @@ layout: default
             </div>
             <div>
                 <input id="isPinned" type="checkbox" />
-                <input type="text" id="pinnedMessage" />
+                <input type="text" id="pinnedMessage" /><br>
+                <input type="text" id="messageType" />
             </div>
             <div style="display:flex">
                 <input type="text" id="newMessage" />
@@ -129,8 +130,6 @@ layout: default
                 </div>
             `;
         el.appendAfter(document.querySelector('#p1'))
-        window.instgrm.Embeds.process();
-        twttr.widgets.load()
     });
 
     dataUpdate.on('child_changed', function (childSnapshot, prevChildKey) {
@@ -160,8 +159,6 @@ layout: default
                 </div>
             </div>
             `;
-        window.instgrm.Embeds.process();
-        twttr.widgets.load()
     });
 
     dataUpdate.on('child_removed', function (childSnapshot, prevChildKey) {
@@ -196,13 +193,14 @@ layout: default
         timenow = +new Date();
         dataUpdate.child(timenow).set({
             Author: document.getElementById("author").value,
-            Pinned: document.getElementById("isPinned").value,
+            Pinned: document.getElementById("isPinned").checked,
             ID: timenow,
             Post: document.getElementById("newMessage").value,
-            type: "text"
+            type: document.getElementById("messageType").value,
         });
-        if (document.getElementById("isPinned")) {
-            pinUpdate.child(timenow).set(document.getElementById("pinnedMessage").value);
+        if (document.getElementById("isPinned").checked) {
+            console.log(document.getElementById("isPinned").checked)
+            if(document.getElementById("isPinned").checked) {pinUpdate.child(timenow).set(document.getElementById("pinnedMessage").value);}
             document.getElementById('pinnedMessage').value = "";
             document.getElementById('isPinned').value = false
         }
@@ -295,8 +293,8 @@ layout: default
         margin: 20px;
     }
 
-    .newMessage {
-        flex: 1;
+    #newMessage {
+        width: 100%;
     }
 
     .active {
