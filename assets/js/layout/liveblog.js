@@ -34,10 +34,10 @@ dataUpdate.on('child_added', function (childSnapshot) {
     el.className = "card post-card";
     el.id = p.ID;
     dte = (p.Edited) ? new Date(parseInt(p.Edited)) : new Date(parseInt(p.ID));
-    padding = (p.type == "ig") ? "ig-content" : "";
+    classes = p.type;
     el.innerHTML =
         `
-            <div class="overview ` + padding + `">
+            <div class="overview ` + classes + `">
                 <div class="post">
                     <span class="post-author">
                         <span class="author-name">` + p.Author + `</span>

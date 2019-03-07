@@ -450,7 +450,12 @@ html {
 }
 
 @media (max-width: 950px) {
-    .ig-content {
+    .yt > div > p > iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .ig {
         padding: 0;
     }
 
