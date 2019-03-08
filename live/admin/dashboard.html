@@ -31,7 +31,7 @@ layout: default
             <span class="label">Flagship</span>
             <span class="border"></span>
         </label>
-        <button id="updateMeta" style="height:auto; width: auto;" onclick="updateMeta()">Update info</button> 
+        <button id="updateMeta" style="height:auto; width: auto;" onclick="updateMeta()">Update info</button>
 
         <br>
         <center><button id="live" onclick="toggleLiveStatus()">LIVE</button></center>
@@ -52,6 +52,11 @@ layout: default
                 <input type="text" id="newMessage" />
                 <button onclick="createNewPost()" style="height:auto; width: auto; font-size: 1em;">Post</button>
             </div>
+        </div>
+        <h3>
+            Add TBA score:
+        </h3>
+        <div id="tba-matches" class="card">
         </div>
     </div>
 </div>
@@ -93,6 +98,8 @@ layout: default
     });
 
     EVENT_NAME = window.params.event
+    var TBA_EVENT;
+    var TBA_RESPONSE;
     document.querySelector('.event-title').innerHTML = EVENT_NAME;
     IS_LIVE = 0;
     var dataUpdate = firebase.database().ref(EVENT_NAME + '/Posts');
@@ -200,7 +207,9 @@ layout: default
         });
         if (document.getElementById("isPinned").checked) {
             console.log(document.getElementById("isPinned").checked)
-            if(document.getElementById("isPinned").checked) {pinUpdate.child(timenow).set(document.getElementById("pinnedMessage").value);}
+            if (document.getElementById("isPinned").checked) {
+                pinUpdate.child(timenow).set(document.getElementById("pinnedMessage").value);
+            }
             document.getElementById('pinnedMessage').value = "";
             document.getElementById('isPinned').value = false
         }
@@ -245,6 +254,21 @@ layout: default
             el = document.getElementById("brief");
             el.value = description;
         }
+
+
+        TBA_EVENT = meta["tba-key"];
+        const matchreq = new XMLHttpRequest();
+        const matchurl = 'https://www.thebluealliance.com/api/v3/team/frc334/event/' + TBA_EVENT +
+            '/matches/simple';
+        matchreq.open("GET", matchurl);
+        matchreq.setRequestHeader('X-TBA-Auth-Key',
+            '2nsVUNsKfMeKvg7XSp04C6VM3uD82da0fVt2ZkpVhSfI8AmM8kZWLwmAdJswRPZc');
+        matchreq.send();
+        matchreq.onreadystatechange = (e) => {
+            if (matchreq.responseText && matchreq.readyState == 4 && matchreq.status == 200) {
+                populateTBAScores(matchreq.responseText);
+            }
+        }
     });
 
     function setFlagship(flagship) {
@@ -269,7 +293,123 @@ layout: default
 
     Element.prototype.appendAfter = function (element) {
         element.parentNode.insertBefore(this, element.nextSibling);
-    }, false;
+    }, false
+
+
+    function populateTBAScores(response) {
+        formatTeamNum = (Snum) => {
+            num = Snum.slice(3, 6);
+            return (num == "334") ? "<b> " + num + " </b>" : " " + num + " "
+        }
+
+        isMatchWon = (match) => {
+            if (match.winning_alliance == "blue") return "blue-won"
+            else if (match.winning_alliance == "red") return "red-won"
+        }
+
+        response = JSON.parse(response);
+        console.log(response);
+
+        var byTime = response.slice(0);
+        byTime.sort(function (a, b) {
+            return a.predicted_time - b.predicted_time;
+        });
+        console.log(byTime);
+        TBA_RESPONSE = byTime;
+        for (match in byTime) {
+            numm = match;
+            match = byTime[match];
+            el = document.createElement("div");
+            el.className = "match";
+            switch (match.comp_level) {
+                case "qm":
+                    comp_level = "Qualifying";
+                    break;
+                case "qf":
+                    comp_level = "Quaterfinal";
+                    break;
+                case "sf":
+                    comp_level = "Semifinal";
+                    break;
+                case "f":
+                    comp_level = "Final";
+                    break;
+                default:
+                    comp_level = "Special";
+                    break;
+            }
+            document.querySelector('#tba-matches').innerHTML +=
+                `<div class="match ` + isMatchWon(match) + `">
+            ` + comp_level + ` Match #` + match.match_number +
+                `<br>
+            <div class="match-content">
+                <div class="red team">
+                    <span class="teams">` +
+                formatTeamNum(match.alliances.red.team_keys[0]) + formatTeamNum(match.alliances.red.team_keys[1]) +
+                formatTeamNum(match.alliances.red.team_keys[2]) +
+                `</span><br>
+                    <span class="score">` + ((match.alliances.red.score != -1) ? match.alliances
+                    .red.score : "NA") +
+                `</span>
+                </div>VS.
+                <div class="blue team">
+                    <span class="teams">` +
+                formatTeamNum(match.alliances.blue.team_keys[0]) + formatTeamNum(match.alliances.blue.team_keys[1]) +
+                formatTeamNum(match.alliances.blue.team_keys[2]) +
+                `</span><br>
+                    <span class="score">` + ((match.alliances.blue.score != -1) ? match.alliances
+                    .blue.score : "NA") +
+                `</span>
+                </div>
+            </div>
+            <button id="addMatch" style="height:auto; width: auto;" onclick="addMatch(` +
+                numm + `)">Add match ` + match.match_number + `</button>
+        </div>`;
+        }
+    }
+
+    function addMatch(matchval) {
+        matchdata = TBA_RESPONSE[matchval]
+        console.log(matchdata);
+        match = matchdata;
+        timenow = parseInt(String(matchdata.actual_time+"000"));
+        dataUpdate.child(timenow).set({
+            Author: "The Blue Alliance.com",
+            Pinned: false,
+            ID: timenow,
+            Post: document.getElementById("newMessage").value + ((document.getElementById("newMessage").value !=
+                    "") ? '<br>' : "") + `<div class="match ` + isMatchWon(match) + `">
+            ` +
+                comp_level + ` Match #` + match.match_number +
+                `<br>
+            <div class="match-content">
+                <div class="red team">
+                    <span class="teams">` +
+                formatTeamNum(match.alliances.red.team_keys[0]) + formatTeamNum(match.alliances.red.team_keys[1]) +
+                formatTeamNum(match.alliances.red.team_keys[2]) +
+                `</span><br>
+                    <span class="score">` + ((match.alliances.red.score != -1) ?
+                    match.alliances
+                    .red.score : "NA") +
+                `</span>
+                </div>VS.
+                <div class="blue team">
+                    <span class="teams">` +
+                formatTeamNum(match.alliances.blue.team_keys[0]) + formatTeamNum(match.alliances.blue.team_keys[
+                    1]) +
+                formatTeamNum(match.alliances.blue.team_keys[2]) +
+                `</span><br>
+                    <span class="score">` + ((match.alliances.blue.score != -1) ?
+                    match.alliances
+                    .blue.score : "NA") +
+                `</span>
+                </div>
+            </div>
+        </div>`,
+            type: 'tba',
+        });
+        document.getElementById("newMessage").value = "";
+    }
 </script>
 
 <style>

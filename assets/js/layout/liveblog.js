@@ -165,7 +165,6 @@ function showLoadedContent() {
 
 
 function populateTBAScores(response) {
-
     formatTeamNum = (Snum) => {
         num = Snum.slice(3, 6);
         return (num == "334") ? "<b> " + num + " </b>" : " " + num + " "
@@ -177,8 +176,14 @@ function populateTBAScores(response) {
     }
 
     response = JSON.parse(response);
-    for (match in response) {
-        match = response[match];
+    console.log(response);
+    var byTime = response.slice(0);
+    byTime.sort(function(a,b) {
+        return a.predicted_time - b.predicted_time;
+    });
+    console.log(byTime);
+    for (match in byTime) {
+        match = byTime[match];
         el = document.createElement("div");
         el.className = "match";
         switch (match.comp_level) {
