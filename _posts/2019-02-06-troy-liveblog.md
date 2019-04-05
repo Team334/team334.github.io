@@ -3,8 +3,7 @@ layout: liveblog
 permalink: live/troy2019
 
 images:
-    - "/assets/img/blog/live/default-background.jpg"
-
+    - "/assets/img/blog/live/troy2019Banner.jpg"
 title: 2019 New York Tech Valley Regional Live Blog
 author:
     - Joseph Babbitt

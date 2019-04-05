@@ -104,10 +104,14 @@ metaUpdate.on('value', function (snapshot) {
     meta = snapshot.val()
 
     el = document.querySelector(".live");
-    if (meta.Live) {
+    if (meta.Live == 1) {
         el.className += " active";
         el.innerHTML = "Live";
-    } else {
+    } else if (meta.Live == -1) {
+        el.className = "live";
+        el.innerHTML = "Event has ended";
+    }
+     else {
         el.className = "live";
         el.innerHTML = "Offline";
     }
