@@ -9,7 +9,8 @@
             "Robo-Swipe: Attendance App",
             "Steamworks 2017 Robot",
             "Stronghold 2016 Robot"
-        ]
+        ],
+        "alumni": true
     },
     "Nikolas Burzynski": {
         "image": "/assets/img/members/NikolasBur.jpg",
@@ -51,7 +52,8 @@
         "projects": [
             "Power Up 2018 Robot",
             "Steamworks 2017 Robot"
-        ]
+        ],
+        "alumni": true
     },
     "Benjamin Everett-Lane": {
         "image": "/assets/img/members/BenjaminEve.jpg",
@@ -67,7 +69,8 @@
         "link-type": "",
         "projects": [
             "Power Up 2018 Robot"
-        ]
+        ],
+        "alumni": true
     },
     "LiHao Lin": {
         "image": "/assets/img/members/LiHaoLin.jpg",
@@ -76,7 +79,8 @@
         "link-type": "",
         "projects": [
             "Power Up 2018 Robot"
-        ]
+        ],
+        "alumni": true
     },
     "Nimra Shakoor": {
         "image": "/assets/img/members/NimraSha.jpg",
@@ -85,7 +89,8 @@
         "link-type": "",
         "projects": [
             "Power Up 2018 Robot"
-        ]
+        ],
+        "alumni": true
     },
     "Ivy Young": {
         "image": "/assets/img/members/IvyYou.jpg",
@@ -94,14 +99,16 @@
         "link-type": "",
         "projects": [
             "Power Up 2018 Robot"
-        ]
+        ],
+        "alumni": true
     },
     "Jedidiah Pienkny": {
         "image": "/assets/img/members/JedidiahPie.jpg",
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
-        "projects": []
+        "projects": [],
+        "alumni": true
     },
     "Samuel Piltch": {
         "image": "/assets/img/members/SamuelPil.jpg",
@@ -111,7 +118,8 @@
         "projects": [
             "Steamworks 2017 Robot",
             "Recon: 2017 Scouting App"
-        ]
+        ],
+        "alumni": true
     },
     "Marieross Navarro": {
         "image": "/assets/img/members/MarierossNav.jpg",
@@ -249,7 +257,8 @@
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
-        "projects": []
+        "projects": [],
+        "alumni": true
     },
     "Ethan Seow": {
         "image": "/assets/img/members/EthanSeo.jpg",
