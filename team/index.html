@@ -7,32 +7,79 @@ layout: default
 <div class="container">
     <div class="content">
             <h2>Our Team</h2>
-
+            
             <div id="member-list">
+
                 {% for member in site.data.team %}
-                {% if member[1].alumni == null %}
+                    {% if member[1].alumni == null %}
+                    
+                        <h3>Mechanical</h3>
+                        {% if member[1].specialization == "Mechanical" %}
+                            <div class="card">
+                                <div class="profile">
+                                    <img id="profile-img" src="{{ member[1].image }}">
+                                    <h4>{{ member[0] }}</h2>
+                                    <h5>{{ member[1].specialization }}</h5>
 
-                <div class="card">
-                    <div class="profile">
-                        <img id="profile-img" src="{{ member[1].image }}">
-                        <h4>{{ member[0] }}</h2>
-                        <h5>{{ member[1].specialization }}</h5>
+                                    {% if member[1].link != "" %}
+                                        <p>
+                                            {% if member[1].link-type != "" and member[1].link-type != "bio" %}
+                                                <i class="fa fa-link" style="color: #4085ea"></i>
+                                                <a href="{{ member[1].link }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">{{ member[1].link-type }}</a>
 
-                        {% if member[1].link != "" %}
-                            <p>
-                                {% if member[1].link-type != "" and member[1].link-type != "bio" %}
-                                    <i class="fa fa-link" style="color: #4085ea"></i>
-                                    <a href="{{ member[1].link }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">{{ member[1].link-type }}</a>
+                                            {% elsif member[1].link-type == "bio" %}
+                                                {{ member[1].link }}
+                                            {% endif %}
+                                        </p>
+                                    {% endif %}
+                                </div>
+                            </div>
 
-                                {% elsif member[1].link-type == "bio" %}
-                                    {{ member[1].link }}
+                        <h3>Programming</h3>
+                        {% elsif member[1].specialization == "Programming" %}
+                        <div class="card">
+                            <div class="profile">
+                                <img id="profile-img" src="{{ member[1].image }}">
+                                <h4>{{ member[0] }}</h2>
+                                <h5>{{ member[1].specialization }}</h5>
+
+                                {% if member[1].link != "" %}
+                                    <p>
+                                        {% if member[1].link-type != "" and member[1].link-type != "bio" %}
+                                            <i class="fa fa-link" style="color: #4085ea"></i>
+                                            <a href="{{ member[1].link }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">{{ member[1].link-type }}</a>
+
+                                        {% elsif member[1].link-type == "bio" %}
+                                            {{ member[1].link }}
+                                        {% endif %}
+                                    </p>
                                 {% endif %}
-                            </p>
-                        {% endif %}
-                    </div>
-                </div>
+                            </div>
+                        </div>
+                        
+                        <h3>Public Relations</h3>
+                        {% elsif member[1].specialization == "Public Relations" %}
+                        <div class="card">
+                            <div class="profile">
+                                <img id="profile-img" src="{{ member[1].image }}">
+                                <h4>{{ member[0] }}</h2>
+                                <h5>{{ member[1].specialization }}</h5>
 
-                {% endif %}
+                                {% if member[1].link != "" %}
+                                    <p>
+                                        {% if member[1].link-type != "" and member[1].link-type != "bio" %}
+                                            <i class="fa fa-link" style="color: #4085ea"></i>
+                                            <a href="{{ member[1].link }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">{{ member[1].link-type }}</a>
+
+                                        {% elsif member[1].link-type == "bio" %}
+                                            {{ member[1].link }}
+                                        {% endif %}
+                                    </p>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                    {% endif %}
                 {% endfor %}
             </div>
     </div>
