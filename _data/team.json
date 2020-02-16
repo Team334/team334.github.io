@@ -10,27 +10,6 @@
             "Stronghold 2016 Robot"
         ]
     },
-    "Brian Ly": {
-        "image": "/assets/img/members/BrianLy.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Power Up 2018 Robot",
-            "Steamworks 2017 Robot",
-            "Stronghold 2016 Robot"
-        ]
-    },
-    "Senthia Ahmed": {
-        "image": "/assets/img/members/SenthiaAhm.jpg",
-        "specialization": "Mechanical",
-        "link": "https://www.linkedin.com/in/senthia-ahmed-9381ab133",
-        "link-type": "LinkedIn",
-        "projects": [
-            "Power Up 2018 Robot",
-            "Steamworks 2017 Robot"
-        ]
-    },
     "Benjamin Everett-Lane": {
         "image": "/assets/img/members/BenjaminEve.jpg",
         "specialization": "Public Relations",
@@ -144,15 +123,6 @@
             "Power Up 2018 Robot"
         ]
     },
-    "Silvia Ahmed": {
-        "image": "/assets/img/members/SilviaAhm.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Power Up 2018 Robot"
-        ]
-    },
     "Aleksey Panas": {
         "image": "/assets/img/members/AlekseyPan.jpg",
         "specialization": "Programming",
@@ -234,13 +204,6 @@
     },
     "Nikolaos Gerakaris": {
         "image": "/assets/img/members/NikolaosGer.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": []
-    },
-    "Raphael Mouyal": {
-        "image": "/assets/img/members/RaphaelMou.jpg",
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
@@ -383,6 +346,47 @@
         "link": "",
         "link-type": "",
         "projects": [],
+        "alumni": true
+    },
+    "Raphael Mouyal": {
+        "image": "/assets/img/members/RaphaelMou.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": [],
+        "alumni": true
+    },
+    "Silvia Ahmed": {
+        "image": "/assets/img/members/SilviaAhm.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": [
+            "Power Up 2018 Robot"
+        ],
+        "alumni": true
+    },
+    "Brian Ly": {
+        "image": "/assets/img/members/BrianLy.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": [
+            "Power Up 2018 Robot",
+            "Steamworks 2017 Robot",
+            "Stronghold 2016 Robot"
+        ],
+        "alumni": true
+    },
+    "Senthia Ahmed": {
+        "image": "/assets/img/members/SenthiaAhm.jpg",
+        "specialization": "Mechanical",
+        "link": "https://www.linkedin.com/in/senthia-ahmed-9381ab133",
+        "link-type": "LinkedIn",
+        "projects": [
+            "Power Up 2018 Robot",
+            "Steamworks 2017 Robot"
+        ],
         "alumni": true
     }
 
