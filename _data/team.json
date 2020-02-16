@@ -1,17 +1,4 @@
 {
-    "Joseph Babbitt": {
-        "image": "/assets/img/members/JosephBab.jpg",
-        "specialization": "Captain",
-        "link": "http://joebabbitt.com",
-        "link-type": "Personal",
-        "projects": [
-            "Power Up 2018 Robot",
-            "Robo-Swipe: Attendance App",
-            "Steamworks 2017 Robot",
-            "Stronghold 2016 Robot"
-        ],
-        "alumni": true
-    },
     "Nikolas Burzynski": {
         "image": "/assets/img/members/NikolasBur.jpg",
         "specialization": "Mechanical",
@@ -44,82 +31,12 @@
             "Steamworks 2017 Robot"
         ]
     },
-    "Saikanam Siam": {
-        "image": "/assets/img/members/SaikanamSia.jpg",
-        "specialization": "Programming",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Power Up 2018 Robot",
-            "Steamworks 2017 Robot"
-        ],
-        "alumni": true
-    },
     "Benjamin Everett-Lane": {
         "image": "/assets/img/members/BenjaminEve.jpg",
         "specialization": "Public Relations",
         "link": "",
         "link-type": "",
         "projects": []
-    },
-    "Patrick Fan": {
-        "image": "/assets/img/members/PatrickFan.jpg",
-        "specialization": "Programming",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Power Up 2018 Robot"
-        ],
-        "alumni": true
-    },
-    "LiHao Lin": {
-        "image": "/assets/img/members/LiHaoLin.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Power Up 2018 Robot"
-        ],
-        "alumni": true
-    },
-    "Nimra Shakoor": {
-        "image": "/assets/img/members/NimraSha.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Power Up 2018 Robot"
-        ],
-        "alumni": true
-    },
-    "Ivy Young": {
-        "image": "/assets/img/members/IvyYou.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [
-            "Power Up 2018 Robot"
-        ],
-        "alumni": true
-    },
-    "Jedidiah Pienkny": {
-        "image": "/assets/img/members/JedidiahPie.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [],
-        "alumni": true
-    },
-    "Samuel Piltch": {
-        "image": "/assets/img/members/SamuelPil.jpg",
-        "specialization": "Programming",
-        "link": "https://samuelpiltch.com",
-        "link-type": "Personal",
-        "projects": [
-            "Steamworks 2017 Robot",
-            "Recon: 2017 Scouting App"
-        ],
-        "alumni": true
     },
     "Marieross Navarro": {
         "image": "/assets/img/members/MarierossNav.jpg",
@@ -252,14 +169,6 @@
         "link-type": "",
         "projects": []
     },
-    "Damanpreet Sachdev": {
-        "image": "/assets/img/members/DamanpreetSac.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
-        "projects": [],
-        "alumni": true
-    },
     "Ethan Seow": {
         "image": "/assets/img/members/EthanSeo.jpg",
         "specialization": "Programming",
@@ -383,6 +292,97 @@
         "specialization": "Mechanical",
         "link": "",
         "link-type": "",
+        "alumni": true
+    },
+    "Joseph Babbitt": {
+        "image": "/assets/img/members/JosephBab.jpg",
+        "specialization": "Captain",
+        "link": "http://joebabbitt.com",
+        "link-type": "Personal",
+        "projects": [
+            "Power Up 2018 Robot",
+            "Robo-Swipe: Attendance App",
+            "Steamworks 2017 Robot",
+            "Stronghold 2016 Robot"
+        ],
+        "alumni": true
+    },
+    "Saikanam Siam": {
+        "image": "/assets/img/members/SaikanamSia.jpg",
+        "specialization": "Programming",
+        "link": "",
+        "link-type": "",
+        "projects": [
+            "Power Up 2018 Robot",
+            "Steamworks 2017 Robot"
+        ],
+        "alumni": true
+    },
+    "Patrick Fan": {
+        "image": "/assets/img/members/PatrickFan.jpg",
+        "specialization": "Programming",
+        "link": "",
+        "link-type": "",
+        "projects": [
+            "Power Up 2018 Robot"
+        ],
+        "alumni": true
+    },
+    "LiHao Lin": {
+        "image": "/assets/img/members/LiHaoLin.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": [
+            "Power Up 2018 Robot"
+        ],
+        "alumni": true
+    },
+    "Nimra Shakoor": {
+        "image": "/assets/img/members/NimraSha.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": [
+            "Power Up 2018 Robot"
+        ],
+        "alumni": true
+    },
+    "Ivy Young": {
+        "image": "/assets/img/members/IvyYou.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": [
+            "Power Up 2018 Robot"
+        ],
+        "alumni": true
+    },
+    "Jedidiah Pienkny": {
+        "image": "/assets/img/members/JedidiahPie.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": [],
+        "alumni": true
+    },
+    "Samuel Piltch": {
+        "image": "/assets/img/members/SamuelPil.jpg",
+        "specialization": "Programming",
+        "link": "https://samuelpiltch.com",
+        "link-type": "Personal",
+        "projects": [
+            "Steamworks 2017 Robot",
+            "Recon: 2017 Scouting App"
+        ],
+        "alumni": true
+    },
+    "Damanpreet Sachdev": {
+        "image": "/assets/img/members/DamanpreetSac.jpg",
+        "specialization": "Mechanical",
+        "link": "",
+        "link-type": "",
+        "projects": [],
         "alumni": true
     }
 
