@@ -37,29 +37,3 @@ layout: default
             </div>
     </div>
 </div>
-                        <div class="card">
-                            <div class="profile">
-                                <img id="profile-img" src="{{ member[1].image }}">
-                                <h4>{{ member[0] }}</h2>
-                                <h5>{{ member[1].specialization }}</h5>
-
-                                {% if member[1].link != "" %}
-                                    <p>
-                                        {% if member[1].link-type != "" and member[1].link-type != "bio" %}
-                                            <i class="fa fa-link" style="color: #4085ea"></i>
-                                            <a href="{{ member[1].link }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">{{ member[1].link-type }}</a>
-
-                                        {% elsif member[1].link-type == "bio" %}
-                                            {{ member[1].link }}
-                                        {% endif %}
-                                    </p>
-                                {% endif %}
-                            </div>
-                        </div>
-                        {% endif %}
-
-                    {% endif %}
-                {% endfor %}
-            </div>
-    </div>
-</div>
