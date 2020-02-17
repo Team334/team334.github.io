@@ -2,8 +2,9 @@
     "Adam Sanandaji": {
         "image": "/assets/img/members/AdamSan.jpg",
         "specialization": "Mechanical",
-        "link": "https://github.com/ImNotAdamSandler",
-        "link-type": "Github",
+        "links": {
+            "GitHub": "https://github.com/ImNotAdamSandler"
+        },
         "projects": [
             "Steamworks 2017 Robot"
         ]
@@ -11,17 +12,15 @@
     "Ahmad Abdulwadood": {
         "image": "/assets/img/members/AhmadAbd.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": [
             "Steamworks 2017 Robot"
         ]
     },
     "Aleksey Panas": {
-    "image": "/assets/img/members/AlekseyPan.jpg",
+        "image": "/assets/img/members/AlekseyPan.jpg",
         "specialization": "Programming",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": [
             "Power Up 2018 Robot"
         ]
@@ -29,29 +28,28 @@
     "Andrew Piasecki": {
         "image": "/assets/img/members/AndrewPiasecki.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Annania Plossl": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Belinda Lin": {
         "image": "/assets/img/members/BelindaLin.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Brett Cohen": {
         "image": "/assets/img/members/BrettCoh.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {
+            "Personal": "https://capcrusaders14405.com",
+            "Instagram": "https://instagram.com/vector_brett"
+        },
         "projects": [
             "Steamworks 2017 Robot"
         ]
@@ -59,36 +57,31 @@
     "Chloe Wong": {
         "image": "/assets/img/members/ChloeWon.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Daniel Clare": {
         "image": "/assets/img/members/DanielCla.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Ethan Seow": {
         "image": "/assets/img/members/EthanSeo.jpg",
         "specialization": "Programming",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Filippos Kypriotis": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Galen Tunnicliffe": {
         "image": "/assets/img/members/GalenTun.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": [
             "Power Up 2018 Robot"
         ]
@@ -96,8 +89,7 @@
     "George Gonzalez": {
         "image": "/assets/img/members/GeorgeGon.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": [
             "Power Up 2018 Robot"
         ]
@@ -105,8 +97,7 @@
     "Halil Turan": {
         "image": "/assets/img/members/HalilTur.jpg",
         "specialization": "Electrical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": [
             "Steamworks 2017 Robot"
         ]
@@ -114,43 +105,40 @@
     "Henry Green": {
         "image": "/assets/img/members/HenryGre.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Jackie Cai": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Jacqueline Choe": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Jakhona Ikromjonova": {
         "image": "/assets/img/members/JakhonaIkr.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "John Niewinski": {
         "image": "/assets/img/members/JohnNie.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {
+            "Instagram": "https://instagram.com/johnniewinski",
+            "Email": "mailto:jniewinski10@gmail.com"
+        },
         "projects": []
     },
     "Joseph Glusker": {
         "image": "/assets/img/members/JosephGlu.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": [
             "Power Up 2018 Robot"
         ]
@@ -158,29 +146,25 @@
     "Kelly Chen": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Programming",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Lily O'Donnell": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
-    "Malachai DeWitt": {
+    "Malachi DeWitt": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Marieross Navarro": {
         "image": "/assets/img/members/MarierossNav.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": [
             "Steamworks 2017 Robot"
         ]
@@ -188,52 +172,48 @@
     "Matteo Pesenti": {
         "image": "/assets/img/members/MatteoPes.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Michael Mrzyk": {
         "image": "/assets/img/members/MichaelMrz.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": [
             "Steamworks 2017 Robot"
         ]
     },
     "Michael Potash": {
         "image": "/assets/img/members/Placeholder.jpg",
-        "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "specialization": "Public Relations",
+        "links": {},
         "projects": []
     },
     "Michael Romashov": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Programming",
-        "link": "",
-        "link-type": "",
+        "links": {
+            "GitHub": "https://github.com/MikeRomaa",
+            "Instagram": "https://instagram.com/mike.romaa"
+        },
         "projects": []
     },
     "Milo Shaklan": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Nikolaos Gerakaris": {
         "image": "/assets/img/members/NikolaosGer.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Patrick Tolpa": {
         "image": "/assets/img/members/PatrickTol.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": [
             "Power Up 2018 Robot"
         ]
@@ -241,29 +221,25 @@
     "Ryan Bernstein": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Sal Mursarra": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Sazzad Ibrahim": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Programming",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Sean Shaheed": {
         "image": "/assets/img/members/SeanSha.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": [
             "Steamworks 2017 Robot"
         ]
@@ -271,29 +247,32 @@
     "Shashi Sugrim": {
         "image": "/assets/img/members/ShashiSug.jpg",
         "specialization": "Programming",
-        "link": "",
-        "link-type": "",
+        "links": {
+            "GitHub": "https://github.com/ShashiSugrim"
+        },
         "projects": []
     },
     "Stephan McGlashan": {
         "image": "/assets/img/members/StephanMcG.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {
+            "Personal": "https://stephmcg.com"
+        },
         "projects": []
     },
     "Thomas Larsen": {
         "image": "/assets/img/members/Placeholder.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {
+            "LinkedIn": "https://www.linkedin.com/in/thomas-larsen-",
+            "Instagram": "https://instagram.com/firesax52"
+        },
         "projects": []
     },
     "Winsdon Wong": {
         "image": "/assets/img/members/WinsdonWon.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
+        "links": {},
         "projects": []
     },
     "Alexandra Gostev": {
@@ -324,15 +303,14 @@
     "Siddharth Martis": {
         "image": "/assets/img/members/alumni/SiddharthMar.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
         "alumni": true
     },
     "Joseph Babbitt": {
         "image": "/assets/img/members/JosephBab.jpg",
         "specialization": "Captain",
-        "link": "http://joebabbitt.com",
-        "link-type": "Personal",
+        "links": {
+            "Personal": "http://joebabbitt.com"
+        },
         "projects": [
             "Power Up 2018 Robot",
             "Robo-Swipe: Attendance App",
@@ -344,8 +322,6 @@
     "Saikanam Siam": {
         "image": "/assets/img/members/SaikanamSia.jpg",
         "specialization": "Programming",
-        "link": "",
-        "link-type": "",
         "projects": [
             "Power Up 2018 Robot",
             "Steamworks 2017 Robot"
@@ -355,8 +331,6 @@
     "Patrick Fan": {
         "image": "/assets/img/members/PatrickFan.jpg",
         "specialization": "Programming",
-        "link": "",
-        "link-type": "",
         "projects": [
             "Power Up 2018 Robot"
         ],
@@ -365,8 +339,6 @@
     "LiHao Lin": {
         "image": "/assets/img/members/LiHaoLin.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
         "projects": [
             "Power Up 2018 Robot"
         ],
@@ -375,8 +347,6 @@
     "Nimra Shakoor": {
         "image": "/assets/img/members/NimraSha.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
         "projects": [
             "Power Up 2018 Robot"
         ],
@@ -385,8 +355,6 @@
     "Ivy Young": {
         "image": "/assets/img/members/IvyYou.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
         "projects": [
             "Power Up 2018 Robot"
         ],
@@ -395,16 +363,15 @@
     "Jedidiah Pienkny": {
         "image": "/assets/img/members/JedidiahPie.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
         "projects": [],
         "alumni": true
     },
     "Samuel Piltch": {
         "image": "/assets/img/members/SamuelPil.jpg",
         "specialization": "Programming",
-        "link": "https://samuelpiltch.com",
-        "link-type": "Personal",
+        "links": {
+            "Personal": "https://samuelpiltch.com"
+        },
         "projects": [
             "Steamworks 2017 Robot",
             "Recon: 2017 Scouting App"
@@ -414,24 +381,18 @@
     "Damanpreet Sachdev": {
         "image": "/assets/img/members/DamanpreetSac.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
         "projects": [],
         "alumni": true
     },
     "Raphael Mouyal": {
         "image": "/assets/img/members/RaphaelMou.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
         "projects": [],
         "alumni": true
     },
     "Silvia Ahmed": {
         "image": "/assets/img/members/SilviaAhm.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
         "projects": [
             "Power Up 2018 Robot"
         ],
@@ -440,8 +401,6 @@
     "Brian Ly": {
         "image": "/assets/img/members/BrianLy.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
         "projects": [
             "Power Up 2018 Robot",
             "Steamworks 2017 Robot",
@@ -452,8 +411,9 @@
     "Senthia Ahmed": {
         "image": "/assets/img/members/SenthiaAhm.jpg",
         "specialization": "Mechanical",
-        "link": "https://www.linkedin.com/in/senthia-ahmed-9381ab133",
-        "link-type": "LinkedIn",
+        "links": {
+            "LinkedIn": "https://linkedin.com/in/senthia-ahmed-9381ab133"
+        },
         "projects": [
             "Power Up 2018 Robot",
             "Steamworks 2017 Robot"
@@ -463,8 +423,6 @@
     "Nikolas Burzynski": {
         "image": "/assets/img/members/NikolasBur.jpg",
         "specialization": "Mechanical",
-        "link": "",
-        "link-type": "",
         "projects": [
             "Power Up 2018 Robot",
             "Steamworks 2017 Robot",
@@ -475,16 +433,12 @@
     "Benjamin Everett-Lane": {
         "image": "/assets/img/members/BenjaminEve.jpg",
         "specialization": "Public Relations",
-        "link": "",
-        "link-type": "",
         "projects": [],
         "alumni": true
     },
     "Solenne Wolfe": {
         "image": "/assets/img/members/SolenneWol.jpg",
         "specialization": "Public Relations",
-        "link": "",
-        "link-type": "",
         "projects": [],
         "alumni": true
     }
