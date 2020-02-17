@@ -20,11 +20,26 @@ layout: default
 
                         {% if member[1].links != "{}" %}
                             <p>
-                                {% for link in member[1].links %}
-                                    <p>{{ link }}</p>
-                                    <!-- <i class="fa fa-link" style="color: #4085ea"></i>
-                                    <a href="{{ member[1].link }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">{{ member[1].link-type }}</a> -->
-                                {% endfor %}
+                                {% if member[1].links.Personal != null %}
+                                <i class="fa fa-link" style="color: #4085ea"></i>
+                                <a href="{{ member[1].links.Personal }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">Personal Website</a>
+                                {% endif %}
+                                {% if member[1].links.GitHub != null %}
+                                <i class="fa fa-github" style="color: #4085ea"></i>
+                                <a href="{{ member[1].links.GutHub }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">GitHub</a>
+                                {% endif %}
+                                {% if member[1].links.Instagram != null %}
+                                <i class="fa fa-instagram" style="color: #4085ea"></i>
+                                <a href="{{ member[1].links.Instagram }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">Instagram</a>
+                                {% endif %}
+                                {% if member[1].links.LinkedIn != null %}
+                                <i class="fa fa-linkedin" style="color: #4085ea"></i>
+                                <a href="{{ member[1].links.LinkedIn }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">LinkedIn</a>
+                                {% endif %}
+                                {% if member[1].links.Email != null %}
+                                <i class="fa fa-envelope" style="color: #4085ea"></i>
+                                <a href="{{ member[1].links.Email }}" style="color: #40A1EA; text-decoration: underline;" target="_blank">Email</a>
+                                {% endif %}
                             </p>
                         {% endif %}
                     </div>
