@@ -2,9 +2,7 @@
     "Adam Sanandaji": {
         "image": "/assets/img/members/AdamSan.jpg",
         "specialization": "Mechanical",
-        "links": {
-            "GitHub": "https://github.com/ImNotAdamSandler"
-        },
+        "links": {},
         "projects": [
             "Steamworks 2017 Robot"
         ]
