@@ -4,7 +4,7 @@ import Link from 'next/link';
 import logo from '../public/media/logo.png';
 
 export const Navbar: React.FC = () => (
-    <div className="fixed w-full top-0 backdrop-blur-lg border-b-2 border-b-slate-500/10">
+    <div className="fixed w-full top-0 backdrop-blur-lg border-b-2 border-b-slate-500/10 z-50">
         <div className="container py-4">
             <div className="flex items-center">
                 <Link href="/" passHref>

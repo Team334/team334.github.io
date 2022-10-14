@@ -26,9 +26,9 @@ export const Ultor: React.FC<HTMLProps<HTMLCanvasElement>> = ({ className }) => 
             for (let i = offset; i < 50; i += 5) {
                 const img = new Image();
                 img.src = `/media/ultor/${(i + 1).toString().padStart(2, '0')}.webp`;
+                img.onload = () => setFrames(loadedFrames);
                 loadedFrames[i] = img;
             }
-            setFrames(loadedFrames);
         }
     }, [mobile, canvasRef.current, frames]);
 
@@ -42,6 +42,7 @@ export const Ultor: React.FC<HTMLProps<HTMLCanvasElement>> = ({ className }) => 
             if (frames[actualFrame]) {
                 ctx?.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
                 ctx?.drawImage(frames[actualFrame], 0, 0, 750, 750);
+                console.log('ctx.drawImage', actualFrame);
             }
         }
     }, [frames, canvasRef.current]);

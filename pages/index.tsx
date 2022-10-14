@@ -53,8 +53,8 @@ const Home: NextPage = () => {
             </div>
 
             <div className="fixed top-0 left-0 w-screen h-screen pointer-events-none">
-                <div className="container h-screen grid justify-end content-center">
-                    <Ultor />
+                <div className="container h-screen grid grid-cols-2 justify-end content-center">
+                    <Ultor className="col-start-2 w-full" />
                 </div>
             </div>
         </div>
