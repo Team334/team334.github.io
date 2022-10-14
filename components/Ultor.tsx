@@ -42,7 +42,6 @@ export const Ultor: React.FC<HTMLProps<HTMLCanvasElement>> = ({ className }) => 
             if (frames[actualFrame]) {
                 ctx?.clearRect(0, 0, canvasRef.current!.width, canvasRef.current!.height);
                 ctx?.drawImage(frames[actualFrame], 0, 0, 750, 750);
-                console.log('ctx.drawImage', actualFrame);
             }
         }
     }, [frames, canvasRef.current]);
