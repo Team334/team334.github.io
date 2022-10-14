@@ -68,7 +68,7 @@ export const Ultor: React.FC<HTMLProps<HTMLCanvasElement>> = ({ className }) => 
             <canvas ref={canvasRef} className={className} width={750} height={750} />
             {!frames && (
                 <div className={classNames('relative', className)}>
-                    <NextImage priority src={firstFrame} alt="Ultor" width={750} height={750} />
+                    <NextImage priority loader={({ src }) => src} src={firstFrame} alt="Ultor" width={750} height={750} />
                 </div>
             )}
         </>

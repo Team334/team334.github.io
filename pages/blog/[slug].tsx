@@ -23,6 +23,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ slug, frontMatter, content }) => (
         <div className="relative h-72 w-full rounded-[1.5rem] overflow-hidden mb-10">
             {frontMatter.cover && (
                 <Image
+                    loader={({ src }) => src}
                     src={`/blog/${frontMatter.cover.filename}`}
                     layout="fill"
                     objectFit="cover"

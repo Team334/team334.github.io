@@ -46,7 +46,7 @@ const Home: NextPage = () => {
                     {mobile && <Image priority src={ultor} alt="Ultor" width={750} height={750} />}
                     <div className="inline-flex items-center mb-8 lg:mb-12">
                         <h1 className="font-display text-3xl lg:text-5xl -mb-4 mr-5">Ultor</h1>
-                        <Image src={logo2022} alt="Ultor" height={88} width={97} />
+                        <Image loader={({ src }) => src} src={logo2022} alt="Ultor" height={88} width={97} />
                     </div>
                     <p className="mb-16">Built for the 2022 season, Ultor features a six-falcon tank drivetrain, turret shooter for hub tracking, and the most stunning design to have ever left our workshop.</p>
                 </div>

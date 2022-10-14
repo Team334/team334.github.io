@@ -9,7 +9,7 @@ export const Navbar: React.FC = () => (
             <div className="flex items-center">
                 <Link href="/" passHref>
                     <a>
-                        <Image src={logo} alt="TechKnights | Team 334" height={71} width={115} />
+                        <Image src={logo} loader={({ src }) => src} alt="TechKnights | Team 334" height={71} width={115} />
                     </a>
                 </Link>
                 <div className="ml-auto flex gap-10 lg:gap-24">
