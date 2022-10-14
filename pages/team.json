@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Timothy Lyons",
+    "department": "mentor",
+    "image": "/media/portraits/placeholder.jpg"
+  },
+  {
+    "name": "Ali Harb",
+    "department": "mentor",
+    "image": "/media/portraits/placeholder.jpg"
+  },
+  {
+    "name": "Milo Shaklan",
+    "department": "mechanical",
+    "image": "/media/portraits/milo-shaklan.jpg"
+  },
+  {
+    "name": "Andrey Korolev",
+    "department": "programming",
+    "image": "/media/portraits/andrey-korolev.jpg"
+  },
+  {
+    "name": "Dia Brar",
+    "department": "programming",
+    "image": "/media/portraits/dia-brar.jpg"
+  },
+  {
+    "name": "Joseph Kenny",
+    "department": "mechanical",
+    "image": "/media/portraits/joseph-kenny.jpg"
+  },
+  {
+    "name": "Rushitha Pendam",
+    "department": "mechanical",
+    "image": "/media/portraits/rushitha-pendam.jpg"
+  },
+  {
+    "name": "Willem Long",
+    "department": "mechanical",
+    "image": "/media/portraits/willem-long.jpg"
+  },
+  {
+    "name": "Max Lin",
+    "department": "mechanical",
+    "image": "/media/portraits/max-lin.jpg"
+  },
+  {
+    "name": "Alexander Reyes",
+    "department": "programming",
+    "image": "/media/portraits/alexander-reyes.jpg"
+  },
+  {
+    "name": "Angel Chen",
+    "department": "programming",
+    "image": "/media/portraits/angel-chen.jpg"
+  },
+  {
+    "name": "Gadin Aggarwal",
+    "department": "mechanical",
+    "image": "/media/portraits/gadin-aggarwal.jpg"
+  },
+  {
+    "name": "Kenneth Odeyemi",
+    "department": "mechanical",
+    "image": "/media/portraits/kenneth-odeyemi.jpg"
+  },
+  {
+    "name": "Muhammadsaid Hamrakulov",
+    "department": "mechanical",
+    "image": "/media/portraits/muhammadsaid-hamrakulov.jpg"
+  },
+  {
+    "name": "William Lam",
+    "department": "mechanical",
+    "image": "/media/portraits/william-lam.jpg"
+  },
+  {
+    "name": "Ollin Mortera",
+    "department": "mechanical",
+    "image": "/media/portraits/ollin-mortera.jpg"
+  },
+  {
+    "name": "Marzuq Mir",
+    "department": "mechanical",
+    "image": "/media/portraits/marzuq-mir.jpg"
+  },
+  {
+    "name": "Filippos Kypriotis",
+    "department": "mechanical",
+    "image": "/media/portraits/filippos-kypriotis.jpg"
+  },
+  {
+    "name": "Maryann Leshaj",
+    "department": "mechanical",
+    "image": "/media/portraits/maryann-leshaj.jpg"
+  },
+  {
+    "name": "Rafic Al-Ajam",
+    "department": "mechanical",
+    "image": "/media/portraits/rafic-al-ajam.jpg"
+  },
+  {
+    "name": "Phineas Fawer",
+    "department": "mechanical",
+    "image": "/media/portraits/phineas-fawer.jpg"
+  },
+  {
+    "name": "Makayla Chan",
+    "department": "mechanical",
+    "image": "/media/portraits/makayla-chan.jpg"
+  },
+  {
+    "name": "Lucas Papamitsakis",
+    "department": "programming",
+    "image": "/media/portraits/lucas-papamitsakis.jpg"
+  },
+  {
+    "name": "Sabina Wolfe",
+    "department": "mechanical",
+    "image": "/media/portraits/sabina-wolfe.jpg"
+  },
+  {
+    "name": "Maryam Syeda",
+    "department": "mechanical",
+    "image": "/media/portraits/maryam-syeda.jpg"
+  },
+  {
+    "name": "Aryan Singh",
+    "department": "mechanical",
+    "image": "/media/portraits/aryan-singh.jpg"
+  },
+  {
+    "name": "Ethan Ponce",
+    "department": "mechanical",
+    "image": "/media/portraits/ethan-ponce.jpg"
+  },
+  {
+    "name": "Kai Lin",
+    "department": "mechanical",
+    "image": "/media/portraits/placeholder.jpg"
+  }
+]
