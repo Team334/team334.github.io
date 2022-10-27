@@ -19,7 +19,7 @@ interface BlogPostProps {
 }
 
 const BlogPost: NextPage<BlogPostProps> = ({ slug, frontMatter, content }) => (
-    <div className="py-36 px-60">
+    <div className="container py-36">
         <div className="relative h-72 w-full rounded-[1.5rem] overflow-hidden mb-10">
             {frontMatter.cover && (
                 <Image

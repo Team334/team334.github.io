@@ -15,7 +15,7 @@ interface BlogHomeProps {
 }
 
 const BlogHome: NextPage<BlogHomeProps> = ({ posts }) => (
-    <div className="py-36 px-60">
+    <div className="container py-36">
         <div className="grid grid-cols-2 gap-4">
             {posts
                 .sort((a, b) => new Date(a.frontMatter.posted) < new Date(b.frontMatter.posted) ? 1 : -1)

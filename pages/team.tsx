@@ -22,7 +22,7 @@ const Team: NextPage = () => {
     ), []);
 
     return (
-        <div className="py-36 px-60">
+        <div className="container py-36">
             <h2 className="mb-10">Mentors</h2>
             <div className="flex flex-wrap gap-10 justify-center">
                 {mentors.sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => <MemberCard key={i} member={member} />)}
