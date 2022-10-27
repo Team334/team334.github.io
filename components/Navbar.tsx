@@ -13,8 +13,11 @@ export const Navbar: React.FC = () => (
                     </a>
                 </Link>
                 <div className="ml-auto flex gap-10 lg:gap-24">
+                    <Link href="/about" passHref>
+                        <a className="text-lg !no-underline">About</a>
+                    </Link>
                     <Link href="/team" passHref>
-                        <a className="text-lg !no-underline ml-auto">Team</a>
+                        <a className="text-lg !no-underline">Team</a>
                     </Link>
                     <Link href="/blog" passHref>
                         <a className="text-lg !no-underline">Blog</a>
