@@ -43,7 +43,7 @@ const Home: NextPage = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 content-center h-screen">
                 <div>
-                    {mobile && <Image priority src={ultor} alt="Ultor" width={750} height={750} />}
+                    {mobile && <Image priority loader={({ src }) => src} src={ultor} alt="Ultor" width={750} height={750} />}
                     <div className="inline-flex items-center mb-8 lg:mb-12">
                         <h1 className="font-display text-3xl lg:text-5xl -mb-4 mr-5">Ultor</h1>
                         <Image loader={({ src }) => src} src={logo2022} alt="Ultor" height={88} width={97} />
