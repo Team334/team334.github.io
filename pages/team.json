@@ -30,11 +30,6 @@
     "image": "/media/portraits/dia-brar.jpg"
   },
   {
-    "name": "Joseph Kenny",
-    "department": "mechanical",
-    "image": "/media/portraits/joseph-kenny.jpg"
-  },
-  {
     "name": "Rushitha Pendam",
     "department": "mechanical",
     "image": "/media/portraits/rushitha-pendam.jpg"
@@ -53,11 +48,6 @@
     "name": "Alexander Reyes",
     "department": "programming",
     "image": "/media/portraits/alexander-reyes.jpg"
-  },
-  {
-    "name": "Angel Chen",
-    "department": "programming",
-    "image": "/media/portraits/angel-chen.jpg"
   },
   {
     "name": "Gadin Aggarwal",
@@ -88,16 +78,6 @@
     "name": "Filippos Kypriotis",
     "department": "mechanical",
     "image": "/media/portraits/filippos-kypriotis.jpg"
-  },
-  {
-    "name": "Maryann Leshaj",
-    "department": "mechanical",
-    "image": "/media/portraits/maryann-leshaj.jpg"
-  },
-  {
-    "name": "Rafic Al-Ajam",
-    "department": "mechanical",
-    "image": "/media/portraits/rafic-al-ajam.jpg"
   },
   {
     "name": "Phineas Fawer",
