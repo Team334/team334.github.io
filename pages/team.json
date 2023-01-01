@@ -115,8 +115,28 @@
     "image": "/media/portraits/ethan-ponce.jpg"
   },
   {
+    "name": "Dashiell Elliott",
+    "department": "programming",
+    "image": "/media/portraits/dashiell-elliott.JPG"
+  },
+  {
+    "name": "Harry Chen",
+    "department": "programming",
+    "image": "/media/portraits/harry-chen.JPG"
+  },
+  {
+    "name": "Mohammad-Ibraheem Mian",
+    "department": "mechanical",
+    "image": "/media/portraits/mohammad-ibraheem-mian.JPG"
+  },
+  {
+    "name": "Sean Goward",
+    "department": "mechanical",
+    "image": "/media/portraits/sean-goward.JPG"
+  },
+  {
     "name": "Kai Lin",
     "department": "mechanical",
-    "image": "/media/portraits/placeholder.jpg"
+    "image": "/media/portraits/kai-lin.JPG"
   }
 ]
