@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { NextPage } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { isMobile } from 'react-device-detect';
 import { Bubble } from '../components/Bubble';
 import { Ultor } from '../components/Ultor';
@@ -35,9 +36,11 @@ const Home: NextPage = () => {
                     <h1 className="font-display text-3xl lg:text-5xl mb-10 lg:mb-16">TechKnights</h1>
                     <p className="mb-5">TechKnights is a FIRST&reg; Robotics Competition team from <a href="https://bths.edu" target="_blank" rel="noreferrer">Brooklyn Technical High School</a> in New York City.</p>
                     <p className="mb-16">Also known as Team 334, our team has a rich history in engineering excellence and putting the power to create in the hands of high school students.</p>
-                    <button className="border-2 border-white rounded-xl bg-none font-bold text-md px-8 py-1">
-                        Learn More
-                    </button>
+                    <Link href="/about">
+                        <button className="border-2 border-white rounded-xl bg-none font-bold text-md px-8 py-1">
+                            Learn More
+                        </button>
+                    </Link>
                 </div>
             </div>
 
