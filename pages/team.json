@@ -2,7 +2,7 @@
   {
     "name": "Timothy Lyons",
     "department": "mentor",
-    "image": "/media/portraits/placeholder.jpg"
+    "image": "/media/portraits/timothy-lyons.jpg"
   },
   {
     "name": "Ali Harb",
@@ -23,6 +23,51 @@
     "name": "Andrey Korolev",
     "department": "programming",
     "image": "/media/portraits/andrey-korolev.jpg"
+  },
+  {
+    "name": "David Lei",
+    "department": "programming",
+    "image": "/media/portraits/david-lei.JPG"
+  },
+  {
+    "name": "Samantha Tan",
+    "department": "programming",
+    "image": "/media/portraits/samantha-tan.JPG"
+  },
+  {
+    "name": "Fatima Moreno",
+    "department": "mechanical",
+    "image": "/media/portraits/fatima-moreno.JPG"
+  },
+  {
+    "name": "Natalie Pang",
+    "department": "mechanical",
+    "image": "/media/portraits/natalie-pang.JPG"
+  },
+  {
+    "name": "Quazi Hossain",
+    "department": "mechanical",
+    "image": "/media/portraits/quazi-hossain.JPG"
+  },
+  {
+    "name": "Kelvin La",
+    "department": "mechanical",
+    "image": "/media/portraits/kelvin-la.JPG"
+  },
+  {
+    "name": "Hazel Davies",
+    "department": "mechanical",
+    "image": "/media/portraits/hazel-davies.JPG"
+  },
+  {
+    "name": "Max Bernstein",
+    "department": "mechanical",
+    "image": "/media/portraits/max-bernstein.JPG"
+  },
+  {
+    "name": "Max Bernstein",
+    "department": "mechanical",
+    "image": "/media/portraits/max-bernstein.JPG"
   },
   {
     "name": "Dia Brar",
