@@ -30,6 +30,11 @@
     "image": "/media/portraits/david-lei.JPG"
   },
   {
+    "name": "Chole Tung",
+    "department": "mechanical",
+    "image": "/media/portraits/chloe-tung.JPG"
+  },
+  {
     "name": "Samantha Tan",
     "department": "programming",
     "image": "/media/portraits/samantha-tan.JPG"
@@ -43,6 +48,11 @@
     "name": "Natalie Pang",
     "department": "mechanical",
     "image": "/media/portraits/natalie-pang.JPG"
+  },
+  {
+    "name": "Elvis Osmanov",
+    "department": "programming",
+    "image": "/media/portraits/elivs-osmanov.JPG"
   },
   {
     "name": "Quazi Hossain",
@@ -130,14 +140,44 @@
     "image": "/media/portraits/makayla-chan.jpg"
   },
   {
+    "name": "Peter Gutkovich",
+    "department": "mechanical",
+    "image": "/media/portraits/peter-gutkovich.JPG"
+  },
+  {
+    "name": "Justin Ng",
+    "department": "mechanical",
+    "image": "/media/portraits/justin-ng.JPG"
+  },
+  {
     "name": "Lucas Papamitsakis",
     "department": "programming",
     "image": "/media/portraits/lucas-papamitsakis.jpg"
   },
   {
+    "name": "Sherry Wang",
+    "department": "programming",
+    "image": "/media/portraits/sherry-wang.JPG"
+  },
+  {
     "name": "Sabina Wolfe",
     "department": "mechanical",
     "image": "/media/portraits/sabina-wolfe.jpg"
+  },
+  {
+    "name": "Valentina Wolfe",
+    "department": "mechanical",
+    "image": "/media/portraits/valentina-wolfe.JPG"
+  },
+  {
+    "name": "Shirley Jiang",
+    "department": "mechanical",
+    "image": "/media/portraits/shirley-jiang.JPG"
+  },
+  {
+    "name": "Waziha Iqbal",
+    "department": "mechanical",
+    "image": "/media/portraits/waziha-iqbal.JPG"
   },
   {
     "name": "Maryam Syeda",
