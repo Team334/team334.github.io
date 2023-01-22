@@ -90,11 +90,6 @@
     "image": "/media/portraits/willem-long.jpg"
   },
   {
-    "name": "Max Lin",
-    "department": "mechanical",
-    "image": "/media/portraits/max-lin.jpg"
-  },
-  {
     "name": "Alexander Reyes",
     "department": "programming",
     "image": "/media/portraits/alexander-reyes.jpg"
@@ -141,8 +136,13 @@
   },
   {
     "name": "Peter Gutkovich",
-    "department": "mechanical",
+    "department": "programming",
     "image": "/media/portraits/peter-gutkovich.JPG"
+  },
+  {
+    "name": "Elvis Osmanov",
+    "department": "programming",
+    "image": "/media/portraits/elvis-osmanov.JPG"
   },
   {
     "name": "Justin Ng",
@@ -183,6 +183,16 @@
     "name": "Maryam Syeda",
     "department": "mechanical",
     "image": "/media/portraits/maryam-syeda.jpg"
+  },
+  {
+    "name": "Leila Di Giacomo",
+    "department": "mechanical",
+    "image": "/media/portraits/leila-di-giacomo.JPG"
+  },
+  {
+    "name": "Matthew Piszcz",
+    "department": "mechanical",
+    "image": "/media/portraits/matthew.piszcz.JPG"
   },
   {
     "name": "Aryan Singh",
