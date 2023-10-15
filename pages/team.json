@@ -1,38 +1,18 @@
 [
   {
-    "name": "Timothy Lyons",
+    "name": "Shaina Doherty",
     "department": "mentor",
-    "image": "/media/portraits/timothy-lyons.JPG"
+    "image": "/media/portraits/shaina-doherty.png"
   },
   {
     "name": "Ali Harb",
     "department": "mentor",
-    "image": "/media/portraits/placeholder.jpg"
+    "image": "/media/portraits/ali.harb.png"
   },
   {
-    "name": "Shaina Doherty",
+    "name": "Marlon Esguerra",
     "department": "mentor",
-    "image": "/media/portraits/placeholder.jpg"
-  },
-  {
-    "name": "Milo Shaklan",
-    "department": "mechanical",
-    "image": "/media/portraits/milo-shaklan.jpg"
-  },
-  {
-    "name": "Andrey Korolev",
-    "department": "programming",
-    "image": "/media/portraits/andrey-korolev.jpg"
-  },
-  {
-    "name": "David Lai",
-    "department": "programming",
-    "image": "/media/portraits/david-lei.JPG"
-  },
-  {
-    "name": "Chloe Tung",
-    "department": "mechanical",
-    "image": "/media/portraits/chloe-tung.JPG"
+    "image": "/media/portraits/marlon-esguerra.png"
   },
   {
     "name": "Samantha Tan",
@@ -70,16 +50,6 @@
     "image": "/media/portraits/max-bernstein.JPG"
   },
   {
-    "name": "Dia Brar",
-    "department": "programming",
-    "image": "/media/portraits/dia-brar.jpg"
-  },
-  {
-    "name": "Rushitha Pendam",
-    "department": "mechanical",
-    "image": "/media/portraits/rushitha-pendam.jpg"
-  },
-  {
     "name": "Willem Long",
     "department": "mechanical",
     "image": "/media/portraits/willem-long.jpg"
@@ -92,7 +62,7 @@
   {
     "name": "Gadin Aggarwal",
     "department": "mechanical",
-    "image": "/media/portraits/gadin-aggarwal.jpg"
+    "image": "/media/portraits/gadin-aggarwal.jpeg"
   },
   {
     "name": "Kenneth Odeyemi",
@@ -113,21 +83,6 @@
     "name": "Marzuq Mir",
     "department": "mechanical",
     "image": "/media/portraits/marzuq-mir.jpg"
-  },
-  {
-    "name": "Filippos Kypriotis",
-    "department": "mechanical",
-    "image": "/media/portraits/filippos-kypriotis.jpg"
-  },
-  {
-    "name": "Phineas Fawer",
-    "department": "mechanical",
-    "image": "/media/portraits/phineas-fawer.jpg"
-  },
-  {
-    "name": "Makayla Chan",
-    "department": "mechanical",
-    "image": "/media/portraits/makayla-chan.jpg"
   },
   {
     "name": "Peter Gutkovich",
@@ -175,11 +130,6 @@
     "image": "/media/portraits/waziha-iqbal.JPG"
   },
   {
-    "name": "Maryam Syeda",
-    "department": "mechanical",
-    "image": "/media/portraits/maryam-syeda.jpg"
-  },
-  {
     "name": "Leila Di Giacomo",
     "department": "mechanical",
     "image": "/media/portraits/leila-di-giacomo.JPG"
@@ -190,21 +140,6 @@
     "image": "/media/portraits/matthew-piszcz.JPG"
   },
   {
-    "name": "Aryan Singh",
-    "department": "programming",
-    "image": "/media/portraits/aryan-singh.jpg"
-  },
-  {
-    "name": "Ethan Ponce",
-    "department": "mechanical",
-    "image": "/media/portraits/ethan-ponce.jpg"
-  },
-  {
-    "name": "Dashiell Elliott",
-    "department": "programming",
-    "image": "/media/portraits/dashiell-elliott.JPG"
-  },
-  {
     "name": "Harry Chen",
     "department": "programming",
     "image": "/media/portraits/harry-chen.JPG"
@@ -213,15 +148,5 @@
     "name": "Mohammad-Ibraheem Mian",
     "department": "mechanical",
     "image": "/media/portraits/mohammad-ibraheem-mian.JPG"
-  },
-  {
-    "name": "Sean Goward",
-    "department": "mechanical",
-    "image": "/media/portraits/sean-goward.JPG"
-  },
-  {
-    "name": "Kai Lin",
-    "department": "mechanical",
-    "image": "/media/portraits/kai-lin.JPG"
   }
 ]
