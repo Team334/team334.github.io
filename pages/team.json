@@ -17,37 +17,32 @@
   {
     "name": "Samantha Tan",
     "department": "programming",
-    "image": "/media/portraits/samantha-tan.JPG"
+    "image": "/media/portraits/samantha-tan.jpg"
   },
   {
     "name": "Fatima Moreno",
     "department": "mechanical",
-    "image": "/media/portraits/fatima-moreno.JPG"
+    "image": "/media/portraits/fatima-moreno.jpg"
   },
   {
     "name": "Natalie Pang",
     "department": "mechanical",
-    "image": "/media/portraits/natalie-pang.JPG"
-  },
-  {
-    "name": "Quazi Hossain",
-    "department": "mechanical",
-    "image": "/media/portraits/quazi-hossain.JPG"
+    "image": "/media/portraits/natalie-pang.jpg"
   },
   {
     "name": "Kelvin La",
     "department": "mechanical",
-    "image": "/media/portraits/kelvin-la.JPG"
+    "image": "/media/portraits/kelvin-la.jpg"
   },
   {
     "name": "Hazel Davies",
     "department": "mechanical",
-    "image": "/media/portraits/hazel-davies.JPG"
+    "image": "/media/portraits/hazel-davies.jpg"
   },
   {
     "name": "Max Bernstein",
     "department": "mechanical",
-    "image": "/media/portraits/max-bernstein.JPG"
+    "image": "/media/portraits/max-bernstein.jpg"
   },
   {
     "name": "Willem Long",
@@ -87,17 +82,17 @@
   {
     "name": "Peter Gutkovich",
     "department": "programming",
-    "image": "/media/portraits/peter-gutkovich.JPG"
+    "image": "/media/portraits/peter-gutkovich.jpg"
   },
   {
     "name": "Elvis Osmanov",
     "department": "programming",
-    "image": "/media/portraits/elvis-osmanov.JPG"
+    "image": "/media/portraits/elvis-osmanov.jpg"
   },
   {
     "name": "Justin Ng",
     "department": "mechanical",
-    "image": "/media/portraits/justin-ng.JPG"
+    "image": "/media/portraits/justin-ng.jpg"
   },
   {
     "name": "Lucas Papamitsakis",
@@ -107,7 +102,7 @@
   {
     "name": "Sherry Wang",
     "department": "programming",
-    "image": "/media/portraits/sherry-wang.JPG"
+    "image": "/media/portraits/sherry-wang.jpg"
   },
   {
     "name": "Sabina Wolfe",
@@ -117,36 +112,156 @@
   {
     "name": "Valentina Wolfe",
     "department": "mechanical",
-    "image": "/media/portraits/valentina-wolfe.JPG"
+    "image": "/media/portraits/valentina-wolfe.jpg"
   },
   {
     "name": "Shirley Jiang",
     "department": "mechanical",
-    "image": "/media/portraits/shirley-jiang.JPG"
-  },
-  {
-    "name": "Waziha Iqbal",
-    "department": "mechanical",
-    "image": "/media/portraits/waziha-iqbal.JPG"
+    "image": "/media/portraits/shirley-jiang.jpg"
   },
   {
     "name": "Leila Di Giacomo",
     "department": "mechanical",
-    "image": "/media/portraits/leila-di-giacomo.JPG"
+    "image": "/media/portraits/leila-di-giacomo.jpg"
   },
   {
     "name": "Matthew Piszcz",
     "department": "mechanical",
-    "image": "/media/portraits/matthew-piszcz.JPG"
+    "image": "/media/portraits/matthew-piszcz.jpg"
   },
   {
     "name": "Harry Chen",
     "department": "programming",
-    "image": "/media/portraits/harry-chen.JPG"
+    "image": "/media/portraits/harry-chen.jpg"
   },
   {
     "name": "Mohammad-Ibraheem Mian",
     "department": "mechanical",
-    "image": "/media/portraits/mohammad-ibraheem-mian.JPG"
+    "image": "/media/portraits/mohammad-ibraheem-mian.jpg"
   }
+  {
+    "name": "Brian Mai",
+    "department": "mechanical",
+    "image": "/media/portraits/brian-mai.jpg"
+  },
+  {
+    "name": "Danny Peng",
+    "department": "mechanical",
+    "image": "/media/portraits/danny-peng.jpg"
+  },
+  {
+    "name": "Elymar Arenas",
+    "department": "mechanical",
+    "image": "/media/portraits/elymar-arenas.jpg"
+  },
+  {
+    "name": "Peleh Liu",
+    "department": "programming",
+    "image": "/media/portraits/peleh-liu.jpg"
+  },
+  {
+    "name": "Johnathan Rojas",
+    "department": "mechanical",
+    "image": "/media/portraits/johnathan-rojas.jpg"
+  },
+  {
+    "name": "Dean Tuminello",
+    "department": "mechanical",
+    "image": "/media/portraits/dean-tuminello.jpg"
+  },
+  {
+    "name": "Husain Baker",
+    "department": "mechanical",
+    "image": "/media/portraits/husain-baker.jpg"
+  },
+  {
+    "name": "Roselind Chen",
+    "department": "mechanical",
+    "image": "/media/portraits/roselind-chen.jpg"
+  },
+  {
+    "name": "Keira Lie",
+    "department": "mechanical",
+    "image": "/media/portraits/keira-lie.jpg"
+  },
+  {
+    "name": "Sophia Liu",
+    "department": "mechanical",
+    "image": "/media/portraits/sophia-liu.jpg"
+  },
+  {
+    "name": "Filip Raczowski",
+    "department": "mechanical",
+    "image": "/media/portraits/filip-raczowski.jpg"
+  },
+  {
+    "name": "Cherine Soewignjo",
+    "department": "programming",
+    "image": "/media/portraits/cherine-soewignjo.jpg"
+  },
+  {
+    "name": "Isabelle Zhang",
+    "department": "mechanical",
+    "image": "/media/portraits/isabelle-zhang.jpg"
+  },
+  {
+    "name": "Ferdinand Afflerbach",
+    "department": "mechanical",
+    "image": "/media/portraits/ferdinand-afflerbach.jpg"
+  },
+  {
+    "name": "Hadi Al Sati",
+    "department": "mechanical",
+    "image": "/media/portraits/hadi-al-sati.jpg"
+  },
+  {
+    "name": "Jia Yi He",
+    "department": "mechanical",
+    "image": "/media/portraits/jia-yi-he.jpg"
+  },
+  {
+    "name": "Derek Pohl",
+    "department": "mechanical",
+    "image": "/media/portraits/derek-pohl.jpg"
+  },
+  {
+    "name": "Seth Simo",
+    "department": "mechanical",
+    "image": "/media/portraits/seth-simo.jpg"
+  },
+  {
+    "name": "Isabelle Yeung",
+    "department": "mechanical",
+    "image": "/media/portraits/isabelle-yeung.jpg"
+  },
+  {
+    "name": "Fiad Muntakim",
+    "department": "media",
+    "image": "/media/portraits/fiad-muntakim.jpg"
+  },
+  {
+    "name": "Maxwell Silver",
+    "department": "media",
+    "image": "/media/portraits/maxwell-silver.jpg"
+  },
+  {
+    "name": "MD Sayad",
+    "department": "media",
+    "image": "/media/portraits/md-sayad.jpg"
+  },
+  {
+    "name": "Shu Ying Zhang",
+    "department": "media",
+    "image": "/media/portraits/shu-ying-zhang.jpg"
+  },
+  {
+    "name": "Lucas Ou",
+    "department": "programming",
+    "image": "/media/portraits/lucas-ou.jpg"
+  },
+  {
+    "name": "Ze Rui Zheng",
+    "department": "programming",
+    "image": "/media/portraits/ze-rui-zheng.jpg"
+  },
 ]
