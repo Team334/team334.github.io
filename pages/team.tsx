@@ -32,8 +32,8 @@ const Team: NextPage = () => {
             <h2 className="mb-10">Mentors</h2>
             <div className="flex flex-wrap gap-10 justify-center">
                 {mentors.sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => <MemberCard key={i} member={member} />)}
-  	    <hr className="my-10 border-slate-700/50" />
 	    </div>
+  	    <hr className="my-10 border-slate-700/50" />
             <h2 className="mb-10">Executives</h2>
             <div className="flex flex-wrap gap-10 justify-center">
                 {lead.sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => <MemberCard key={i} member={member} />)}
