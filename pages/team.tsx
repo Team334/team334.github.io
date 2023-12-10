@@ -4,7 +4,7 @@ import { Member, MemberCard } from '../components/MemberCard';
 import roster from './team.json';
 
 const Team: NextPage = () => {
-    const { mentors, mechanical, programming } = useMemo(() => (
+    const { mentors, mechanical, programming, media } = useMemo(() => (
         roster.reduce((prev, curr: Member) => {
             if (curr.department === 'mechanical') {
                 prev.mechanical.push(curr);
@@ -12,12 +12,15 @@ const Team: NextPage = () => {
                 prev.programming.push(curr);
             } else if (curr.department === 'mentor') {
                 prev.mentors.push(curr);
-            }
+            } else if (curr.department === 'media') {
+                prev.media.push(curr);
+	    }
             return prev;
         }, {
             mechanical: [] as Member[],
             programming: [] as Member[],
             mentors: [] as Member[],
+	    media: [] as Member[],
         })
     ), []);
 
@@ -36,6 +39,11 @@ const Team: NextPage = () => {
             <h2 className="mb-10">Programming</h2>
             <div className="flex flex-wrap gap-10 justify-center">
                 {programming.sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => <MemberCard key={i} member={member} />)}
+            </div>
+            <hr className="my-10 border-slate-700/50" />
+            <h2 className="mb-10">Media</h2>
+            <div className="flex flex-wrap gap-10 justify-center">
+                {media.sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => <MemberCard key={i} member={member} />)}
             </div>
         </div>
     );
