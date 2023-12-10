@@ -16,7 +16,7 @@
   },
   {
     "name": "Samantha Tan",
-    "department": "media",
+    "department": "lead",
     "image": "/media/portraits/samantha-tan.jpg"
   },
   {
@@ -51,17 +51,17 @@
   },
   {
     "name": "Alexander Reyes",
-    "department": "programming",
+    "department": "lead",
     "image": "/media/portraits/alexander-reyes.jpg"
   },
   {
     "name": "Gadin Aggarwal",
-    "department": "mechanical",
+    "department": "lead",
     "image": "/media/portraits/gadin-aggarwal.jpeg"
   },
   {
     "name": "Kenneth Odeyemi",
-    "department": "mechanical",
+    "department": "lead",
     "image": "/media/portraits/kenneth-odeyemi.jpg"
   },
   {
@@ -76,7 +76,7 @@
   },
   {
     "name": "Marzuq Mir",
-    "department": "mechanical",
+    "department": "lead",
     "image": "/media/portraits/marzuq-mir.jpg"
   },
   {
@@ -106,12 +106,12 @@
   },
   {
     "name": "Sabina Wolfe",
-    "department": "mechanical",
+    "department": "lead",
     "image": "/media/portraits/sabina-wolfe.jpg"
   },
   {
     "name": "Valentina Wolfe",
-    "department": "media",
+    "department": "lead",
     "image": "/media/portraits/valentina-wolfe.jpg"
   },
   {
@@ -121,12 +121,12 @@
   },
   {
     "name": "Leila Di Giacomo",
-    "department": "mechanical",
+    "department": "lead",
     "image": "/media/portraits/leila-di-giacomo.jpg"
   },
   {
     "name": "Matthew Piszcz",
-    "department": "mechanical",
+    "department": "lead",
     "image": "/media/portraits/matthew-piszcz.jpg"
   },
   {
