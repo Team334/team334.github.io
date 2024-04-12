@@ -2,47 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    h1 {
-        @apply text-4xl font-bold mb-3;
-    }
-    h2 {
-        @apply text-3xl font-bold mb-3;
-    }
-    h3 {
-        @apply text-2xl font-bold mb-3;
-    }
-    h4 {
-        @apply text-xl font-bold mb-3;
-    }
-    h5 {
-        @apply text-lg font-bold mb-3;
-    }
-    h6 {
-        @apply font-bold mb-3;
-    }
-    a {
-        @apply underline underline-offset-1 decoration-1;
-    }
+
+@font-face {
+    font-family: '--main';
+    src: url("../public/fonts/Richardson Brand Accelerator.otf");
 }
 
 @font-face {
-    font-family: Oxanium;
-    font-weight: 200 800;
-    font-style: normal;
-    src: url('/fonts/oxanium-vrb.ttf') format('truetype');
+    font-family: '--secondary';
+    src: url("../public/fonts/oxanium-vrb.ttf");
 }
 
-@font-face {
-    font-family: 'Richardson Brand Accelerator';
-    font-weight: bold;
-    font-style: oblique;
-    src: url('/fonts/richardson-brand-accelerator.ttf') format('truetype');
+.main {
+    font-family: '--main', 'sans-serif';
 }
 
-:root {
-    color-scheme: dark;
-    background-color: #02040D;
-    color: white;
-    font-size: 0.95em;
+.secondary {
+    font-family: '--secondary', 'sans-serif';
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 0 0% 3.9%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 0 0% 3.9%;
+        --foreground: 0 0% 98%;
+
+        --card: 0 0% 3.9%;
+        --card-foreground: 0 0% 98%;
+
+        --popover: 0 0% 3.9%;
+        --popover-foreground: 0 0% 98%;
+
+        --primary: 0 0% 98%;
+        --primary-foreground: 0 0% 9%;
+
+        --secondary: 0 0% 14.9%;
+        --secondary-foreground: 0 0% 98%;
+
+        --muted: 0 0% 14.9%;
+        --muted-foreground: 0 0% 63.9%;
+
+        --accent: 0 0% 14.9%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 0 0% 14.9%;
+        --input: 0 0% 14.9%;
+        --ring: 0 0% 83.1%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+* {
+    scroll-behavior: smooth;
 }
