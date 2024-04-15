@@ -32,7 +32,7 @@
     "@react-aria/ssr": "^3.9.2",
     "@react-aria/visually-hidden": "^3.8.10",
     "@react-three/drei": "^9.105.3",
-    "@react-three/fiber": "^8.16.1",
+    "@react-three/fiber": "^8.16.2",
     "@splinetool/react-spline": "^2.2.6",
     "@types/node": "20.12.7",
     "@types/react": "18.2.77",
