@@ -46,7 +46,7 @@
     "cmdk": "^1.0.0",
     "embla-carousel-react": "^8.0.2",
     "eslint": "8.57.0",
-    "eslint-config-next": "14.2.0",
+    "eslint-config-next": "14.2.1",
     "framer-motion": "^11.0.28",
     "gray-matter": "^4.0.3",
     "intl-messageformat": "^10.5.11",
