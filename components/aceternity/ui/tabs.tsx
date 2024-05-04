@@ -56,7 +56,7 @@ const Tabs = React.memo(({
         <>
             <div
                 className={cn(
-                    "box-border border-shadow-lg flex flex-row items-center justify-center [perspective:1000px] relative sm:overflow-visible no-visible-scrollbar max-w-full w-full rounded-[3.5rem] shadow mx-auto dark:bg-[#191915] bg-[#e5e5e5] ",
+                    "box-border border-shadow-lg flex flex-row items-center justify-center [perspective:1000px] relative sm:overflow-visible no-visible-scrollbar max-w-full w-full rounded-[3.5rem] shadow mx-auto bg-[#191915] ",
                     containerClassName
                 )}
             >
@@ -81,13 +81,13 @@ const Tabs = React.memo(({
                                 layoutId="clickedbutton"
                                 transition={{type: "spring", bounce: 0.3, duration: 0.6}}
                                 className={cn(
-                                    "absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full ",
+                                    "absolute inset-0 bg-zinc-800 rounded-full ",
                                     activeTabClassName
                                 )}
                             />
                         )}
 
-                        <span className="relative block text-black dark:text-white secondary">
+                        <span className="relative block text-white secondary">
               {tab.title}
             </span>
                     </button>

@@ -1,13 +1,14 @@
+"use client"
+
 import React, {useEffect, useMemo, useRef, useState} from "react";
 import {motion, useScroll, useSpring, useTransform} from "framer-motion";
 import Image from "next/legacy/image";
-import {Link as NextuiLink} from "@nextui-org/link";
 import Link from "next/link";
 import {TextGenerateEffect} from "@/components/aceternity/ui/autotype";
 import {GithubIcon, HeartFilledIcon, InstagramIcon, TBAIcon, YoutubeIcon} from "@/components/icons";
-import {button as buttonStyles} from "@nextui-org/theme";
 import {siteConfig} from "@/config/site";
 import {Skeleton} from "@/components/shadcn/ui/skeleton";
+import {Button} from "@/components/shadcn/ui/button";
 
 
 const springConfig = {stiffness: 120, damping: 20, bounce: 25, mass: 0.1};
@@ -35,7 +36,7 @@ const ProductCard = React.memo(({product, translate}: {
                 y: -20
             }}
             key={product.title}
-            className="group/product h-60 w-[13rem] md:h-96 md:w-[30rem] relative flex-shrink-0"
+            className="group/product min-h-50 w-[13rem] md:w-[30rem] relative flex-shrink-0"
         >
             {loading ? (
                 <Skeleton className="w-full h-full"/>
@@ -83,24 +84,9 @@ const HeroParallax = React.memo(({products}: {
     const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
     const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
 
-    const containerHeight = useMemo(() => {
-        const minHeight = 2150;
-        const screenHeight = window.innerHeight;
-        const isMobile = window.innerWidth <= 768;
-
-        let adjustedHeight = minHeight;
-        if (isMobile) {
-            adjustedHeight -= 450;
-        }
-
-        return Math.max(adjustedHeight, screenHeight);
-    }, []);
-
-
     return (
         <div ref={ref}
-             style={{height: containerHeight}}
-             className="py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-auto">
+             className="h-[130rem] py-40 -mb-32 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-auto">
             <Header/>
             <motion.div style={{rotateX, rotateZ, translateY, opacity}} className="">
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
@@ -123,55 +109,71 @@ HeroParallax.displayName = 'HeroParallax';
 const Header = () => {
     return (
         <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full z-30 left-0 top-0">
-            <h1 className="text-[2rem] md:text-7xl font-bold dark:text-white">
-                <TextGenerateEffect words={"We are the"}/>
-                <TextGenerateEffect words={"Techknights"} className={"main"}/>
+            <h1 className="text-[2rem] md:text-7xl font-bold text-white">
+                <TextGenerateEffect words={"We are the Techknights"} className={"main"}/>
             </h1>
-            <p className="text-base md:text-xl mt-8 dark:text-neutral-200">
+            <p className="text-base md:text-xl mt-8 text-neutral-200">
                 The TechKnights is a FIRST® Robotics Competition Team from Brooklyn Technical
                 High School in Downtown Brooklyn, NY.
             </p>
-            <div className="flex flex-row gap-3 mt-5 opacity-1">
-                <NextuiLink
-                    isExternal
-                    className={buttonStyles({variant: "solid", radius: "full", color: "success"})}
-                    href={siteConfig.links.instagram}
-                >
-                    <InstagramIcon size={20}/>
-                    <b>Instagram</b>
-                </NextuiLink>
-                <NextuiLink
-                    isExternal
-                    className={buttonStyles({variant: "solid", radius: "full", color: "danger"})}
-                    href={siteConfig.links.youtube}
-                >
-                    <YoutubeIcon width={24} height={24}/>
-                    <b>Youtube</b>
-                </NextuiLink>
-                <NextuiLink
-                    isExternal
-                    className={buttonStyles({variant: "solid", radius: "full", color: "secondary"})}
-                    href={siteConfig.links.github}
-                >
-                    <GithubIcon size={20}/>
-                    <b>Github</b>
-                </NextuiLink>
-                <NextuiLink
-                    isExternal
-                    className={buttonStyles({variant: "solid", radius: "full", color: "warning"})}
-                    href={siteConfig.links.blueAlliance}
-                >
-                    <TBAIcon width={24} height={24}/>
-                    <b>Blue Alliance</b>
-                </NextuiLink>
-                <NextuiLink
-                    isExternal
-                    className={buttonStyles({variant: "solid", radius: "full", color: "primary"})}
-                    href={siteConfig.links.donate}
-                >
-                    <HeartFilledIcon width={24} height={24} className="text-danger m-auto" />
-                    <b>Donate</b>
-                </NextuiLink>
+            <div className="flex flex-col md:flex-row gap-3 mt-5 opacity-1">
+              <div className="flex flex-col md:flex-row gap-3">
+                  <Button>
+                    <Link
+                      target={"_blank"}
+                      href={siteConfig.links.instagram}
+                      className={"flex flex-row gap-1"}
+                    >
+                      <InstagramIcon size={20} />
+                      <b>Instagram</b>
+                    </Link>
+                  </Button>
+                  <Button>
+                      <Link
+                          target={"_blank"}
+                          href={siteConfig.links.youtube}
+                          className={"flex flex-row gap-1"}
+                      >
+                      <YoutubeIcon width={24} height={24} />
+                      <b>Youtube</b>
+                    </Link>
+                  </Button>
+                  <Button>
+                      <Link
+                          target={"_blank"}
+                          href={siteConfig.links.github}
+                          className={"flex flex-row gap-1"}
+                      >
+                      <GithubIcon size={20} />
+                      <b>Github</b>
+                    </Link>
+                  </Button>
+              </div>
+              <div className="flex flex-col md:flex-row gap-3">
+                  <Button>
+                      <Link
+                          target={"_blank"}
+                          href={siteConfig.links.blueAlliance}
+                          className={"flex flex-row gap-1"}
+                      >
+                      <TBAIcon width={24} height={24} />
+                      <b>Blue Alliance</b>
+                    </Link>
+                  </Button>
+
+                  <Button>
+                      <Link
+                          target={"_blank"}
+                          href={siteConfig.links.donate}
+                          className={"flex flex-row gap-1"}
+                      >
+                        <div className="flex items-center gap-1">
+                            <HeartFilledIcon width={24} height={24} className="text-danger" />
+                            <b>Donate</b>
+                        </div>
+                    </Link>
+                  </Button>
+              </div>
             </div>
         </div>
     );

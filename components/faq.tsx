@@ -61,22 +61,22 @@ export default function Faq() {
     return (
         <div className="container my-12 mx-auto md:px-6 xl:px-24">
             <section className="mb-10">
-                <Accordion type="single" collapsible className="w-[1000px] p-3">
+                <Accordion type="single" collapsible className="p-3">
                     {faqs.map((faq, index) => (
                         <AccordionItem key={index} value={`faq-${index + 1}`}>
-                            <AccordionTrigger className={"text-base md:text-xl dark:text-neutral-200"}>
+                            <AccordionTrigger className={"text-base md:text-xl text-neutral-200"}>
                                 <b>{faq.question}</b>
                             </AccordionTrigger>
-                            <AccordionContent className={"text-base md:text-lg dark:text-neutral-200"}>
+                            <AccordionContent className={"text-base md:text-lg text-neutral-200"}>
                                 {faq.answer}
                             </AccordionContent>
                         </AccordionItem>
                     ))}
                     <AccordionItem value={`faq-help`}>
-                        <AccordionTrigger className={"text-base md:text-xl dark:text-neutral-200"}>
+                        <AccordionTrigger className={"text-base md:text-xl text-neutral-200"}>
                             <b>I have some other questions. How can I contact the team?</b>
                         </AccordionTrigger>
-                        <AccordionContent className={"text-base md:text-lg dark:text-neutral-200"}>
+                        <AccordionContent className={"text-base md:text-lg text-neutral-200"}>
                             <div className="grid grid-cols-2 gap-4 mt-4">
                                 <div>
                                     <h3 className="font-lg main">STUDENTS</h3>

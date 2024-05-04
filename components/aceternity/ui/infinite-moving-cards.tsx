@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import {Card, CardBody, CardHeader} from "@nextui-org/card";
-import {Image} from "@nextui-org/react";
+import {Card, CardHeader, CardContent} from "@/components/shadcn/ui/card";
+import Image from "next/image"
 import Marquee from "react-fast-marquee";
 
 export const InfiniteMovingCards = React.memo(({items}: { items: { link: string; title: string; url: string; }[] }) => {
@@ -13,9 +13,9 @@ export const InfiniteMovingCards = React.memo(({items}: { items: { link: string;
                         <Card
                             className="w-[400px] max-w-full h-[325px] flex-shrink max-h-full text-center border border-slate-700 rounded-lg shadow">
                             <CardHeader className="pb-0 pt-2 px-4 flex-col">
-                                <h1 className="text-base md:text-xl mt-8 dark:text-neutral-200">{item.title}</h1>
+                                <h1 className="text-base md:text-xl mt-8 text-neutral-200">{item.title}</h1>
                             </CardHeader>
-                            <CardBody className="py-2 flex justify-center items-center">
+                            <CardContent className="py-2 flex justify-center items-center">
                                 <Image
                                     alt={item.title}
                                     src={item.link}
@@ -24,7 +24,7 @@ export const InfiniteMovingCards = React.memo(({items}: { items: { link: string;
                                     loading="lazy"
                                     className="rounded-xl"
                                 />
-                            </CardBody>
+                            </CardContent>
                         </Card>
                     </Link>
                 </div>

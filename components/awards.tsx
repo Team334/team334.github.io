@@ -1,6 +1,6 @@
 "use client"
 
-import {Image} from "@nextui-org/react";
+import Image from "next/image"
 import React from "react";
 
 export const AwardBanner = React.memo(({
