@@ -22,7 +22,7 @@ export default function DonatePage() {
                 <p className="text-base md:text-xl my-3 text-neutral-200 p-2">
                     Our team appreciates both in-kind and monetary donation
                 </p>
-                <div className="grid grid-cols-2 gap-4 mt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                     <div className={"grid place-items-center"}>
                         <h1 className="text-2xl main">Online Donation</h1>
                         <hr className="align-middle border-gray-200 my-2 w-[60%] overflow-x-hidden m-auto"/>
