@@ -6,7 +6,7 @@ import Marquee from "react-fast-marquee";
 
 export const InfiniteMovingCards = React.memo(({items}: { items: { link: string; title: string; url: string; }[] }) => {
     return (
-        <Marquee speed={200} className={"z-0"}>
+        <Marquee speed={75} className={"z-0"}>
             {items.map((item, _) => (
                 <div className={"container px-3 py-5"} key={item.title}>
                     <Link href={item.url} target={"_blank"} passHref>

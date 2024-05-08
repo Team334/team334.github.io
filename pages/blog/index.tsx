@@ -21,7 +21,7 @@ const BlogHome = ({ posts }) => {
                             href={`/blog/${post.slug}`}
                             key={post.slug}
                         >
-                            <Card className="w-[330px]">
+                            <Card className="w-[330px] border-solid border-4 hover:border-double">
                                 <CardHeader>
                                     <CardTitle className={"text-center main"}>{post.title}</CardTitle>
                                 </CardHeader>
@@ -30,13 +30,12 @@ const BlogHome = ({ posts }) => {
                                         <Image
                                             alt={"blogImage"}
                                             src={`${post.coverImage}`}
-                                            className={"justify-self-center rounded-lg"}
+                                            className={"justify-self-center rounded-xl"}
                                             width={"330"}
                                             height={"20"}
                                         />
                                     </div>
-                                    {/* <hr className="align-middle border-gray-200 my-2 w-full overflow-x-hidden m-auto"/> */}
-                                    <p className={"text-gray-500 mt-3"}>{post.excerpt.length > 70 ? post.excerpt.slice(0, 70) + "..." : post.excerpt}</p>
+                                    <p className={"text-gray-300 mt-3"}>{post.excerpt.length > 70 ? post.excerpt.slice(0, 70) + "..." : post.excerpt}</p>
                                 </CardContent>
                                 <CardFooter className="flex justify-between">
                                     <div className={"flex flex-row items-center text-center gap-2"}>

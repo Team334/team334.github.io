@@ -9,14 +9,6 @@ import {siteConfig} from "@/config/site";
 export default function DonatePage() {
     return (
         <div className={"overflow-x-hidden"}>
-            <BackgroundGradientAnimation>
-                <div
-                    className="absolute z-50 inset-0 flex items-center justify-center text-white text-bold px-4 pointer-events-none text-2xl text-center md:text-4xl lg:text-7xl flex-col space-y-3">
-                    <p className="bg-clip-text main text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20 z-30">
-                        How to Donate
-                    </p>
-                </div>
-            </BackgroundGradientAnimation>
             <div className="text-center mt-10 align-middle p-2">
                 <h1 className="text-[2.9rem] md:text-7xl text-bold text-white secondary">How to donate?</h1>
                 <p className="text-base md:text-xl my-3 text-neutral-200 p-2">
