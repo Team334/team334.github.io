@@ -1,10 +1,6 @@
-import { BackgroundGradientAnimation } from "@/components/aceternity/ui/bg-gradient";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {HeartFilledIcon} from "@/components/icons";
-import {Button} from "@/components/shadcn/ui/button";
-import {siteConfig} from "@/config/site";
 
 export default function DonatePage() {
     return (

@@ -1,124 +1,49 @@
 "use client"
 
-import React, {useEffect, useMemo, useRef, useState} from "react";
-import {motion, useScroll, useSpring, useTransform} from "framer-motion";
-import Image from "next/legacy/image";
+import React from "react";
 import Link from "next/link";
 import {TextGenerateEffect} from "@/components/aceternity/ui/autotype";
 import {GithubIcon, HeartFilledIcon, InstagramIcon, TBAIcon, YoutubeIcon} from "@/components/icons";
 import {siteConfig} from "@/config/site";
-import {Skeleton} from "@/components/shadcn/ui/skeleton";
 import {Button} from "@/components/shadcn/ui/button";
+import Image from "next/legacy/image";
 
-
-const springConfig = {stiffness: 120, damping: 20, bounce: 25, mass: 0.1};
-
-const ProductCard = React.memo(({product, translate}: {
-    product: { title: string; description: string; link: string; thumbnail: string; };
-    translate: any;
-}) => {
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 1000);
-
-        return () => clearTimeout(timer);
-    }, []);
+const Hero = () => {
 
     return (
-        <motion.div
-            style={{
-                x: translate
-            }}
-            whileHover={{
-                y: -20
-            }}
-            key={product.title}
-            className="group/product min-h-50 w-[13rem] md:w-[30rem] relative flex-shrink-0"
-        >
-            {loading ? (
-                <Skeleton className="w-full h-full"/>
-            ) : (
-                <>
-                    <Link
-                        href={product.link}
-                        target="_blank"
-                        className="block group-hover/product:shadow-2xl"
-                    >
-                        <Image
-                            src={product.thumbnail}
-                            height="600"
-                            width="1000"
-                            className="object-scale-down object-center absolute h-full w-full inset-0"
-                            alt={product.title}
-                            loading="lazy"
-                        />
-                    </Link>
-                    <div
-                        className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-                    <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-                        <b>{product.title}</b> - {product.description}
-                    </h2>
-                </>
-            )}
-        </motion.div>
-    );
-});
-
-ProductCard.displayName = 'ProductCard';
-
-const HeroParallax = React.memo(({products}: {
-    products: { title: string; description: string; link: string; thumbnail: string; }[]
-}) => {
-    const firstRow = useMemo(() => products.slice(0, 5), [products]);
-    const secondRow = useMemo(() => products.slice(5, 10), [products]);
-    const ref = useRef(null);
-    const {scrollYProgress} = useScroll({target: ref, offset: ["start start", "end start"]});
-
-    const translateX = useSpring(useTransform(scrollYProgress, [0, 1], [0, 1000]), springConfig);
-    const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 1], [0, -1000]), springConfig);
-    const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), springConfig);
-    const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.2, 1]), springConfig);
-    const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
-    const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
-
-    return (
-        <div ref={ref}
-             className="h-[130rem] py-40 -mb-32 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] will-change-auto">
-            <Header/>
-            <motion.div style={{rotateX, rotateZ, translateY, opacity}} className="">
-                <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-                    {firstRow.map((product, index) => (
-                        <ProductCard product={product} translate={translateX} key={index}/>
-                    ))}
-                </motion.div>
-                <motion.div className="flex flex-row mb-20 space-x-20 ">
-                    {secondRow.map((product, index) => (
-                        <ProductCard product={product} translate={translateXReverse} key={index}/>
-                    ))}
-                </motion.div>
-            </motion.div>
+        <div
+            className="h-screen mb-10 overflow-hidden antialiased relative">
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src={"/team2024-1.jpg"}
+                    alt={"team image"}
+                    className={"w-full h-full object-cover"}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                />
+            </div>
+            <div className="absolute inset-0 z-10">
+                <Header/>
+            </div>
         </div>
     );
-});
+};
 
-HeroParallax.displayName = 'HeroParallax';
 
 const Header = () => {
     return (
-        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full z-30 left-0 top-0">
-            <h1 className="text-[2rem] md:text-7xl font-bold text-white">
-                <TextGenerateEffect words={"We are the Techknights"} className={"main"}/>
+        <div className="text-center max-w-7xl relative mx-auto py-12 md:py-22 px-4 w-full z-30 left-0 top-0">
+            <h1 className="text-[2.15rem] md:text-7xl font-bold text-black">
+                <TextGenerateEffect words={"We are the Techknights"} className={"main text-white"}/>
             </h1>
-            <p className="text-base md:text-xl mt-8 text-neutral-200">
+            <p className="text-base md:text-xl mt-8 text-white font-bold">
                 The TechKnights is a FIRST® Robotics Competition Team from Brooklyn Technical
                 High School in Downtown Brooklyn, NY.
             </p>
-            <div className="flex flex-col md:flex-row gap-3 mt-5 opacity-1">
-              <div className="flex flex-col md:flex-row gap-3">
-                  <Button>
+            <div className="flex flex-col md:flex-row gap-2 mt-5 opacity-1 justify-center">
+              <div className="flex flex-row gap-2">
+                  <Button className={"bg-[#e03a66] rounded-full transition-colors ease-in-out duration-300 hover:bg-[#be5b89]"}>
                     <Link
                       target={"_blank"}
                       href={siteConfig.links.instagram}
@@ -128,7 +53,7 @@ const Header = () => {
                       <b>Instagram</b>
                     </Link>
                   </Button>
-                  <Button>
+                  <Button className={"bg-[#e02f2f] rounded-full transition-colors ease-in-out duration-300 hover:bg-[#bf1d1d]"}>
                       <Link
                           target={"_blank"}
                           href={siteConfig.links.youtube}
@@ -138,7 +63,7 @@ const Header = () => {
                       <b>Youtube</b>
                     </Link>
                   </Button>
-                  <Button>
+                  <Button className={"bg-[#010409] rounded-full transition-colors ease-in-out duration-300 hover:bg-[#071c3f]"}>
                       <Link
                           target={"_blank"}
                           href={siteConfig.links.github}
@@ -149,8 +74,8 @@ const Header = () => {
                     </Link>
                   </Button>
               </div>
-              <div className="flex flex-col md:flex-row gap-3">
-                  <Button>
+              <div className="flex flex-row gap-3 justify-center">
+                  <Button className={"bg-[#4555a5] rounded-full transition-colors ease-in-out duration-300 hover:bg-[#374484]"}>
                       <Link
                           target={"_blank"}
                           href={siteConfig.links.blueAlliance}
@@ -161,7 +86,7 @@ const Header = () => {
                     </Link>
                   </Button>
 
-                  <Button>
+                  <Button className={"bg-[#E34D75] rounded-full transition-colors ease-in-out duration-300 hover:bg-[#B53D5D]"}>
                       <Link
                           target={"_blank"}
                           href={siteConfig.links.donate}
@@ -179,4 +104,4 @@ const Header = () => {
     );
 };
 
-export {HeroParallax};
+export {Hero};

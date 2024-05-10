@@ -28,8 +28,8 @@ export default function App({ Component, pageProps }: AppProps) {
         </Head>
         <Component {...pageProps} />
         <footer className="relative bottom-0 w-full flex py-3 p-6 text-start">
-          <div className={"secondary container items-start justify-start md:ml-12"}>
-            <span className={"font-bold"}>©1998-2024 TechKnights</span>
+          <div className={"mb-10 secondary container items-start justify-start md:ml-12 gap-1 flex flex-col md:flex-row"}>
+            <span className={"font-bold"}>©1998-2024</span><p className={"text-primary"}>TechKnights</p>
           </div>
           <Link
               target={"_blank"}
