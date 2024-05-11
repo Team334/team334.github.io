@@ -41,8 +41,8 @@ const Header = () => {
                 The TechKnights is a FIRST® Robotics Competition Team from Brooklyn Technical
                 High School in Downtown Brooklyn, NY.
             </p>
-            <div className="flex flex-col md:flex-row gap-2 mt-5 opacity-1 justify-center">
-              <div className="flex flex-row gap-2">
+            <div className="flex flex-col md:flex-row md:min-w-fit gap-2 mt-5 opacity-1 justify-center">
+              <div className="flex flex-row gap-2 justify-center">
                   <Button className={"bg-[#e03a66] rounded-full transition-colors ease-in-out duration-300 hover:bg-[#be5b89]"}>
                     <Link
                       target={"_blank"}
