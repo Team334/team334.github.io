@@ -2,7 +2,7 @@
 import {AnimatePresence, motion} from "framer-motion";
 import React, {useEffect, useState} from "react";
 
-export const ImagesSlider = ({
+export const ImagesSlider = React.memo(({
                                  images,
                                  children,
                                  overlay = true,
@@ -143,4 +143,6 @@ export const ImagesSlider = ({
             )}
         </div>
     );
-};
+});
+
+ImagesSlider.displayName = "ImagesSlider"

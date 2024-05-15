@@ -48,6 +48,8 @@ export default function DonatePage() {
                                     <br/>
                                     P.O. Box 26608
                                     <br/>
+                                    Brooklyn, NY 11202-6608
+                                    <br />
                                     Attn: Techknights Robotics Donation
                                 </p>
                                 <p className={"secondary text-lg text-red-300"}>

@@ -6,7 +6,8 @@ import {TextGenerateEffect} from "@/components/aceternity/ui/autotype";
 import {GithubIcon, HeartFilledIcon, InstagramIcon, TBAIcon, YoutubeIcon} from "@/components/icons";
 import {siteConfig} from "@/config/site";
 import {Button} from "@/components/shadcn/ui/button";
-import Image from "next/legacy/image";
+import Image from "next/image";
+
 
 const Hero = () => {
 
@@ -21,6 +22,7 @@ const Hero = () => {
                     layout="fill"
                     objectFit="cover"
                     objectPosition="center"
+                    priority={true}
                 />
             </div>
             <div className="absolute inset-0 z-10">
@@ -88,8 +90,7 @@ const Header = () => {
 
                   <Button className={"bg-[#E34D75] rounded-full transition-colors ease-in-out duration-300 hover:bg-[#B53D5D]"}>
                       <Link
-                          target={"_blank"}
-                          href={siteConfig.links.donate}
+                          href={"/donate"}
                           className={"flex flex-row gap-1"}
                       >
                         <div className="flex items-center gap-1">
