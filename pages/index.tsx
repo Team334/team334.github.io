@@ -240,6 +240,7 @@ export default function Home() {
               <ul className="mt-2 space-y-2">
                 <li className={"secondary"}><b>Matthew Piszcz</b> - Matthewp403@nycstudents.net</li>
                 <li className={"secondary"}><b>Gadin Aggarwal</b> - gadina@nycstudents.net</li>
+                <li className={"secondary"}><b>Ze Rui Zheng</b> - zeruiz@nycstudents.net</li>
               </ul>
             </div>
             <div>
@@ -247,6 +248,7 @@ export default function Home() {
               <ul className="mt-2 space-y-2">
                 <li className={"secondary"}><b>Ms. Shaina Doherty</b> - SDoherty2@schools.nyc.gov</li>
                 <li className={"secondary"}><b>Mr. Marlon Esguerra</b> - MEsguerra@schools.nyc.gov</li>
+                <li className={"secondary"}><b>Mr. Harb</b> - aharb@schools.nyc.go</li>
               </ul>
             </div>
           </div>
