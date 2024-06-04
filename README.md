@@ -45,7 +45,7 @@ First of all, thank you for taking your time to look over the code and trying ma
 
 ## Deploying with Github Actions
 1. Enable Github Pages using Github Actions
-2. If the workflow, [`Deploy Next.js site to Pages`](https://github.com/team334.) doesn't run you can run it manually.
+2. If the workflow, [`Deploy Next.js site to Pages`]([https://github.com/team334.](https://github.com/Team334/team334.github.io/blob/main/.github/workflows/nextjs.yml)) doesn't run you can run it manually.
 
 ## Learn More
 
