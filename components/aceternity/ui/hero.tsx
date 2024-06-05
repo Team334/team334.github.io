@@ -22,7 +22,6 @@ const Hero = () => {
                     layout="fill"
                     objectFit="cover"
                     objectPosition="center"
-                    priority={true}
                 />
             </div>
             <div className="absolute inset-0 z-10">
