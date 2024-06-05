@@ -19,9 +19,9 @@ const Hero = () => {
                     src={"/team2024-1.jpg"}
                     alt={"team image"}
                     className={"w-full h-full object-cover"}
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="center"
+                    fill
+                    fetchPriority="high"
+                    style={{objectFit:"cover", objectPosition: "center"}}
                 />
             </div>
             <div className="absolute inset-0 z-10">
