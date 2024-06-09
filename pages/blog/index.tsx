@@ -6,8 +6,11 @@ import {TextGenerateEffect} from "@/components/aceternity/ui/autotype";
 import {getAllPosts, Post} from "@/components/markdown"
 import {GetStaticProps} from "next";
 
-const BlogHome = ({ posts }) => {
+interface BlogHomeProps {
+    posts: Post[];
+}
 
+const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
 
     return (
         <div className="p-5">

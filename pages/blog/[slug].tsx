@@ -25,7 +25,6 @@ import rehypeStringify from "rehype-stringify";
 // import dart from 'react-syntax-highlighter/dist/esm/languages/prism/dart';
 import {GetStaticPaths, GetStaticProps} from "next";
 import {getPostBySlug, getPostSlugs, Post} from "@/components/markdown";
-//
 // SyntaxHighlighter.registerLanguage('tsx', tsx);
 // SyntaxHighlighter.registerLanguage('js', js);
 // SyntaxHighlighter.registerLanguage('py', py);
@@ -36,8 +35,11 @@ import {getPostBySlug, getPostSlugs, Post} from "@/components/markdown";
 // SyntaxHighlighter.registerLanguage('dart', dart);
 
 
-const PostPage = ({post}) => {
+type PostPageProps = {
+    post: Post | undefined;
+};
 
+const PostPage: React.FC<PostPageProps> = ({ post }) => {
     if (!post) {
         return notFound();
     }
