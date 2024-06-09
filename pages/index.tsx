@@ -238,7 +238,7 @@ export default function Home() {
             <div>
               <h3 className="font-lg main">STUDENTS</h3>
               <ul className="mt-2 space-y-2">
-                <li className={"secondary"}><b>Matthew Piszcz</b> - Matthewp403@nycstudents.net</li>
+                <li className={"secondary"}><b>Valentina Wolfe</b> - ValentinaW2@nycstudents.net</li>
                 <li className={"secondary"}><b>Gadin Aggarwal</b> - gadina@nycstudents.net</li>
                 <li className={"secondary"}><b>Ze Rui Zheng</b> - zeruiz@nycstudents.net</li>
               </ul>
