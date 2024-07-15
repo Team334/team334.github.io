@@ -22,7 +22,7 @@
     "framer-motion": "^11.2.10",
     "gray-matter": "^4.0.3",
     "mini-svg-data-uri": "^1.4.4",
-    "next": "14.2.3",
+    "next": "14.2.5",
     "plaiceholder": "^3.0.0",
     "radix-ui": "^1.0.1",
     "react": "^18",
