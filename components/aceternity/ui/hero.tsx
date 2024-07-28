@@ -36,10 +36,10 @@ const Header = () => {
     return (
         <div className="text-center max-w-7xl relative mx-auto py-12 md:py-22 px-4 w-full z-30 left-0 top-0">
             <h1 className="text-[2.15rem] md:text-7xl font-bold text-black">
-                <TextGenerateEffect words={"We are the Techknights"} className={"main text-white"}/>
+                <TextGenerateEffect words={"Team 334"} className={"main"}/>
             </h1>
-            <p className="text-base md:text-xl mt-8 text-white font-bold">
-                The TechKnights is a FIRST® Robotics Competition Team from Brooklyn Technical
+            <p className="text-base md:text-xl mt-8 text-[#16c6e2] font-bold">
+                Team 334 is a FIRST® Robotics Competition Team from Brooklyn Technical
                 High School in Downtown Brooklyn, NY.
             </p>
             <div className="flex flex-col md:flex-row md:min-w-fit gap-2 mt-5 opacity-1 justify-center">

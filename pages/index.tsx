@@ -229,7 +229,7 @@ export default function Home() {
             </div>
           </motion.h1>
         </LampContainer>
-        <div className="text-center h-[40vh] md:h-[20vh] my-24 align-middle">
+        <div className="p-2 text-center h-[40vh] md:h-[20vh] mb-[13rem] align-middle">
           <h1 className="text-[2.9rem] md:text-7xl font-bold text-white secondary">Have a Question?</h1>
           <p className="text-base md:text-xl my-3 text-neutral-200 p-2">
             You can reach out to us by email
@@ -241,6 +241,7 @@ export default function Home() {
                 <li className={"secondary"}><b>Valentina Wolfe</b> - ValentinaW2@nycstudents.net</li>
                 <li className={"secondary"}><b>Gadin Aggarwal</b> - gadina@nycstudents.net</li>
                 <li className={"secondary"}><b>Ze Rui Zheng</b> - zeruiz@nycstudents.net</li>
+                <li className={"secondary"}><b>Samantha Tan</b> - samanthat155@nycstudents.net</li>
               </ul>
             </div>
             <div>
