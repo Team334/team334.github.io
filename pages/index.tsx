@@ -242,6 +242,7 @@ export default function Home() {
                 <li className={"secondary"}><b>Gadin Aggarwal</b> - gadina@nycstudents.net</li>
                 <li className={"secondary"}><b>Ze Rui Zheng</b> - zeruiz@nycstudents.net</li>
                 <li className={"secondary"}><b>Samantha Tan</b> - samanthat155@nycstudents.net</li>
+                <li className={"secondary"}><b>Elvis Osmanov</b> - elviso10@nycstudents.net</li>
               </ul>
             </div>
             <div>
