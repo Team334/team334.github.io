@@ -1,59 +1,60 @@
-"use client"
-import {Member, MemberCard} from "@/components/member-card";
-import React from "react";
-import {TextGenerateEffect} from "@/components/aceternity/ui/autotype";
+import { useMemo } from 'react';
+import { NextPage } from 'next';
+import { Member, MemberCard } from '../components/MemberCard';
+import roster from './team.json';
 
-interface Roster {
-    [key: string]: Member;
-}
-
-// @ts-ignore
-const roster: Roster = require('./team.json');
-const departments: {
-    [key: string]:
-        { name: string; image: string, department: string }[]
-} = {};
-
-
-export default function TeamPage() {
-    // Prevent duplication
-    Object.keys(departments).forEach(key => delete departments[key]);
-
-    Object.keys(roster).reduce((acc, member) => {
-        const department = roster[member].department;
-        if (!departments[department]) {
-            departments[department] = [];
-        }
-        if (!departments[department].some(existingMember => existingMember.name === member)) {
-            departments[department].push({name: member, image: roster[member].image, department: department});
-        }
-        return acc;
-    }, {});
-
-    const addSIfNeeded = (word: string): string => {
-        if (word === "Executive" || word === "Mentor") {
-            return word + "s";
-        }
-        return word;
-    };
-
+const Team: NextPage = () => {
+    const { mentors, mechanical, programming, media, lead } = useMemo(() => (
+        roster.reduce((prev, curr: Member) => {
+            if (curr.department === 'mechanical') {
+                prev.mechanical.push(curr);
+            } else if (curr.department === 'programming') {
+                prev.programming.push(curr);
+            } else if (curr.department === 'mentor') {
+                prev.mentors.push(curr);
+            } else if (curr.department === 'media') {
+                prev.media.push(curr);
+	    } else if (curr.department === 'lead') {
+                prev.lead.push(curr);
+	    }
+            return prev;
+        }, {
+            mechanical: [] as Member[],
+            programming: [] as Member[],
+            mentors: [] as Member[],
+	    media: [] as Member[],
+	    lead: [] as Member[],
+        })
+    ), []);
 
     return (
-        <div>
-            <h1 className="underline font-bold text-center text-5xl md:text-6xl main py-20 p-3">Our Team Members</h1>
-
-            {Object.keys(departments).map((department, index) => (
-                <div key={index}>
-                    <TextGenerateEffect words={addSIfNeeded(department)}
-                                        className={"font-bold text-3xl md:text-4xl text-center main py-4 mb-10"}/>
-                    <div className="flex flex-wrap gap-10 justify-center">
-                        {departments[department].sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => (
-                            <MemberCard key={i} member={member}/>
-                        ))}
-                    </div>
-                    <hr className="my-10 border-slate-700/50"/>
-                </div>
-            ))}
+        <div className="container py-36">
+            <h2 className="mb-10">Mentors</h2>
+            <div className="flex flex-wrap gap-10 justify-center">
+                {mentors.sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => <MemberCard key={i} member={member} />)}
+	    </div>
+  	    <hr className="my-10 border-slate-700/50" />
+            <h2 className="mb-10">Executives</h2>
+            <div className="flex flex-wrap gap-10 justify-center">
+                {lead.sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => <MemberCard key={i} member={member} />)}
+            </div>
+            <hr className="my-10 border-slate-700/50" />
+            <h2 className="mb-10">Mechanical</h2>
+            <div className="flex flex-wrap gap-10 justify-center">
+                {mechanical.sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => <MemberCard key={i} member={member} />)}
+            </div>
+            <hr className="my-10 border-slate-700/50" />
+            <h2 className="mb-10">Programming</h2>
+            <div className="flex flex-wrap gap-10 justify-center">
+                {programming.sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => <MemberCard key={i} member={member} />)}
+            </div>
+            <hr className="my-10 border-slate-700/50" />
+            <h2 className="mb-10">Media</h2>
+            <div className="flex flex-wrap gap-10 justify-center">
+                {media.sort((a, b) => a.name < b.name ? -1 : 1).map((member, i) => <MemberCard key={i} member={member} />)}
+            </div>
         </div>
     );
-}
+};
+
+export default Team;
