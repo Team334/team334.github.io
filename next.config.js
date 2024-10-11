@@ -1,22 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",
-    reactStrictMode: true,
-    images: {
-        loader: "custom"
-    },
-    async headers() {
-        return [
-            {
-                source: '/:all*(jpg|png)',
-                locale: false,
-                headers: [{
-                    key: 'Cache-Control',
-                    value: 'public, max-age=15552000 , must-revalidate',
-                }],
-            },
-        ];
-    },
-};
+  output: "export",
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+  modularizeImports: {
+      "react-icons/?(((\\w*)?/?)*)": {
+          transform: "@react-icons/all-files/{{ matches.[1] }}/{{ member }}",
+          skipDefaultConversion: true
+      }
+  },
+  reactStrictMode: false
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
