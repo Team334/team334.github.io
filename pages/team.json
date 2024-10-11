@@ -32,7 +32,7 @@
     "image": "/team/hazel-davies.JPG"
   },
   "Max Bernstein": {
-    "department": "Mechanical",
+    "department": "Executive",
     "image": "/team/max-bernstein.jpg"
   },
   "Gadin Aggarwal": {
@@ -52,11 +52,11 @@
     "image": "/team/ollintzin-mortera.jpg"
   },
   "Peter Gutkovich": {
-    "department": "Programming",
+    "department": "Executive",
     "image": "/team/peter-gutkovich.jpg"
   },
   "Elvis Osmanov": {
-    "department": "Programming",
+    "department": "Executive",
     "image": "/team/elvis-osmanov.jpg"
   },
   "Justin Ng": {
@@ -95,12 +95,8 @@
     "department": "Mechanical",
     "image": "/team/johnathan-rojas.jpg"
   },
-  "Dean Tuminello": {
-    "department": "Mechanical",
-    "image": "/team/dean-tuminello.jpg"
-  },
   "Husain Baker": {
-    "department": "Mechanical",
+    "department": "Executive",
     "image": "/team/husain-baker.jpg"
   },
   "Rosalind Chen": {
