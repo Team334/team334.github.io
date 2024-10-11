@@ -35,14 +35,6 @@
     "department": "Mechanical",
     "image": "/team/max-bernstein.jpg"
   },
-  "Willem Long": {
-    "department": "Mechanical",
-    "image": "/team/willem-long.jpg"
-  },
-  "Alexander Reyes": {
-    "department": "Executive",
-    "image": "/team/alexander-reyes.jpg"
-  },
   "Gadin Aggarwal": {
     "department": "Executive",
     "image": "/team/gadin-aggarwal.jpeg"
@@ -59,10 +51,6 @@
     "department": "Executive",
     "image": "/team/ollintzin-mortera.jpg"
   },
-  "Marzuq Mir": {
-    "department": "Executive",
-    "image": "/team/marzuq-mir.jpg"
-  },
   "Peter Gutkovich": {
     "department": "Programming",
     "image": "/team/peter-gutkovich.jpg"
@@ -75,17 +63,9 @@
     "department": "Mechanical",
     "image": "/team/justin-ng.jpg"
   },
-  "Lucas Papamitsakis": {
-    "department": "Programming",
-    "image": "/team/lucas-papamitsakis.jpg"
-  },
   "Sherry Wang": {
     "department": "Mechanical",
     "image": "/team/sherry-wang.jpg"
-  },
-  "Sabina Wolfe": {
-    "department": "Executive",
-    "image": "/team/sabina-wolfe.jpg"
   },
   "Valentina Wolfe": {
     "department": "Executive",
@@ -99,25 +79,9 @@
     "department": "Executive",
     "image": "/team/leila-di-giacomo.jpg"
   },
-  "Matthew Piszcz": {
-    "department": "Executive",
-    "image": "/team/matthew-piszcz.jpg"
-  },
   "Harry Chen": {
     "department": "Programming",
     "image": "/team/harry-chen.jpg"
-  },
-  "Mohammad-Ibraheem Mian": {
-    "department": "Mechanical",
-    "image": "/team/mohammad-ibraheem-mian.jpg"
-  },
-  "Brian Mai": {
-    "department": "Mechanical",
-    "image": "/team/brian-mai.jpg"
-  },
-  "Danny Peng": {
-    "department": "Mechanical",
-    "image": "/team/danny-peng.jpg"
   },
   "Elymar Arenas": {
     "department": "Mechanical",
@@ -202,10 +166,6 @@
   "Shu Ying Zhang": {
     "department": "Media",
     "image": "/team/shu-ying-zhang.jpg"
-  },
-  "Lucas Ou": {
-    "department": "Programming",
-    "image": "/team/lucas-ou.jpg"
   },
   "Ze Rui Zheng": {
     "department": "Programming",
