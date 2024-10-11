@@ -604,8 +604,6 @@ export default function AboutPage() {
                 </ImagesSlider>
             </div>
             <div className={"w-full justify-center text-center items-center p-5"}>
-                <h1 className={"main"}>Awards</h1>
-                <hr className="align-middle border-gray-500 my-2 w-[40%] overflow-x-hidden m-auto"/>
                 <div className={"flex flex-wrap mt-10 gap-7 items-center justify-center"}>
                     {Awards.map((award, index) => (
                         <AwardBanner
