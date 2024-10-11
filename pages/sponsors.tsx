@@ -18,6 +18,12 @@ export default function SponsorPage() {
             description: "The Brooklyn Tech Alumni Foundation mobilizes Tech graduates to support the nation's premier high school for science, technology, engineering and mathematics"
         },
         {
+            image: "/sponsors/intuitive-foundation.png",
+            title: "Intuitive Foundation",
+            url: "https://www.intuitive-foundation.org/",
+            description: "The Intuitive Foundation is dedicated to reducing the global burden of disease and suffering through philanthropy, research and education."
+        },
+        {
             image: "/sponsors/arament.png",
             title: "Arament Research, Development and Engineering Center",
             url: "",
@@ -42,12 +48,6 @@ export default function SponsorPage() {
             description: "The Gene Haas Foundation was established in 1999, by Gene Haas, founder and owner of Haas Automation, Inc., to support the needs of the local community, through grants to such local charities as the Boys and Girls Clubs, Food Share, Rescue Mission, and others."
         },
         {
-            image: "/sponsors/ike-heller.png",
-            title: "Ike Heller",
-            url: "",
-            description: ""
-        },
-        {
             image: "/sponsors/quotebeam.png",
             title: "QuoteBeam",
             url: "https://quotebeam.com",
@@ -58,7 +58,13 @@ export default function SponsorPage() {
             title: "Whimsy Tech",
             url: "https://whimsytech.com",
             description: "#TeamWhimsy"
-        }
+        },
+        {
+            image: "/sponsors/ike-heller.png",
+            title: "Ike Heller",
+            url: "",
+            description: ""
+        },
     ];
 
     return (
