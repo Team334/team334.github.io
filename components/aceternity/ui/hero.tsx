@@ -34,11 +34,11 @@ const Hero = () => {
 
 const Header = () => {
     return (
-        <div className="text-center max-w-7xl relative mx-auto py-12 md:py-22 px-4 w-full z-30 left-0 top-0">
+        <div className="text-center max-w-7xl relative mx-auto px-4 w-full z-30 left-0 top-0">
             <h1 className="text-[2.15rem] md:text-7xl font-bold text-black">
-                <TextGenerateEffect words={"Team 334"} className={"main"}/>
+                <TextGenerateEffect words={"Team 334"} className={"main text-black"}/>
             </h1>
-            <p className="text-base md:text-xl mt-8 text-[#16c6e2] font-bold">
+            <p className="text-base md:text-xl text-white font-bold">
                 Team 334 is a FIRST® Robotics Competition Team from Brooklyn Technical
                 High School in Downtown Brooklyn, NY.
             </p>
