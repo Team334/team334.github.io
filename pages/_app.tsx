@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Link
               target={"_blank"}
               className="main flex justify-items-end gap-1 text-current"
-              href="https://cherraie.me/"
+              href="https://cherriae.github.io/"
               title="Team 334"
           >
             <span className={"secondary"}>Made by</span>
