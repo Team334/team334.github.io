@@ -17,19 +17,15 @@
   },
   "Fatima Moreno": {
     "department": "Mechanical",
-    "image": "/team/fatima-moreno.JPG"
+    "image": "/team/Fatima Morena.JPG"
   },
   "Kelvin La": {
     "department": "Mechanical",
     "image": "/team/kelvin-la.jpg"
   },
-  "Hazel Davies": {
-    "department": "Mechanical",
-    "image": "/team/hazel-davies.JPG"
-  },
   "Max Bernstein": {
     "department": "Executive",
-    "image": "/team/max-bernstein.jpg"
+    "image": "/team/Max Bernstein.JPG"
   },
   "Gadin Aggarwal": {
     "department": "Executive",
@@ -37,35 +33,35 @@
   },
   "Kenneth Odeyemi": {
     "department": "Executive",
-    "image": "/team/kenneth-odeyemi.jpg"
+    "image": "/team/Kenneth Odyemi.JPG"
   },
   "William Lam": {
     "department": "Mechanical",
-    "image": "/team/william-lam.jpg"
+    "image": "/team/William Lam.JPG"
   },
   "Ollintzin Mortera": {
     "department": "Executive",
-    "image": "/team/ollintzin-mortera.jpg"
+    "image": "/team/Ollintzin Mortera.JPG"
   },
   "Peter Gutkovich": {
     "department": "Executive",
-    "image": "/team/peter-gutkovich.jpg"
+    "image": "/team/Peter Gutkovich.JPG"
   },
   "Elvis Osmanov": {
     "department": "Executive",
-    "image": "/team/elvis-osmanov.jpg"
+    "image": "/team/Elvis Osmanov.JPG"
   },
   "Justin Ng": {
     "department": "Mechanical",
-    "image": "/team/justin-ng.jpg"
+    "image": "/team/Justin Ng.JPG"
   },
   "Sherry Wang": {
     "department": "Mechanical",
-    "image": "/team/sherry-wang.jpg"
+    "image": "/team/Sherry Wang.JPG"
   },
   "Valentina Wolfe": {
     "department": "Executive",
-    "image": "/team/valentina-wolfe.jpg"
+    "image": "/team/Valentina Wolfe.JPG"
   },
   "Shirley Jiang": {
     "department": "Mechanical",
@@ -77,11 +73,11 @@
   },
   "Harry Chen": {
     "department": "Programming",
-    "image": "/team/harry-chen.jpg"
+    "image": "/team/Harry Chen.JPG"
   },
   "Elymar Arenas": {
     "department": "Mechanical",
-    "image": "/team/elymar-arenas.jpg"
+    "image": "/team/Elymar Arenas.JPG"
   },
   "Peleh Liu": {
     "department": "Programming",
@@ -89,7 +85,7 @@
   },
   "Johnathan Rojas": {
     "department": "Mechanical",
-    "image": "/team/johnathan-rojas.jpg"
+    "image": "/team/Johnathan Rojas.JPG"
   },
   "Husain Baker": {
     "department": "Executive",
@@ -97,15 +93,15 @@
   },
   "Rosalind Chen": {
     "department": "Mechanical",
-    "image": "/team/rosalind-chen.jpg"
+    "image": "/team/Rosalind Chen.JPG"
   },
   "Keira Lie": {
     "department": "Mechanical",
-    "image": "/team/keira-lie.jpg"
+    "image": "/team/Keira Lie.JPG"
   },
   "Sophia Liu": {
     "department": "Mechanical",
-    "image": "/team/sophia-liu.jpg"
+    "image": "/team/Sophia Liu.JPG"
   },
   "Filip Raczkowski": {
     "department": "Mechanical",
@@ -113,43 +109,39 @@
   },
   "Dean Tuminello": {
     "department": "Mechanical",
-    "image": "/team/dean-tuminello.jpg"
+    "image": "/team/Dean Tuminello.JPG"
   },
   "Cherine Soewignjo": {
     "department": "Programming",
-    "image": "/team/cherine-soewignjo.jpg"
+    "image": "/team/Cherine Soewignjo.JPG"
   },
   "Isabelle Zhang": {
     "department": "Mechanical",
-    "image": "/team/isabelle-zhang.jpg"
+    "image": "/team/Isabelle Zhang .JPG"
   },
   "Ferdinand Afflerbach": {
-    "department": "Mechanical",
-    "image": "/team/ferdinand-afflerbach.jpg"
+    "department": "CAD",
+    "image": "/team/Ferdinand Afflerbach.JPG"
   },
   "Hadi Al Sati": {
     "department": "Executive",
-    "image": "/team/hadi-al-sati.jpg"
+    "image": "/team/Hadi Al Sati.JPG"
   },
   "Jia Yi He": {
     "department": "Mechanical",
-    "image": "/team/jia-yi-he.jpg"
+    "image": "/team/Jia Yi  He.JPG"
   },
   "Derek Pohl": {
     "department": "Mechanical",
-    "image": "/team/derek-pohl.jpg"
+    "image": "/team/Derek Pohl.JPG"
   },
   "Seth Simo": {
-    "department": "Mechanical",
-    "image": "/team/seth-simo.jpg"
-  },
-  "Isabelle Yeung": {
-    "department": "Mechanical",
-    "image": "/team/isabelle-yeung.jpg"
+    "department": "CAD",
+    "image": "/team/Seth Simo.JPG"
   },
   "Fiad Muntakim": {
     "department": "Media",
-    "image": "/team/fiad-muntakim.jpg"
+    "image": "/team/Fiad Muntakim.JPG"
   },
   "Maxwell Silver": {
     "department": "Mechanical",
@@ -161,10 +153,102 @@
   },
   "Shu Ying Zhang": {
     "department": "Media",
-    "image": "/team/shu-ying-zhang.jpg"
+    "image": "/team/Shu Ying Zhang.JPG"
   },
   "Ze Rui Zheng": {
     "department": "Programming",
     "image": "/team/ze-rui-zheng.jpg"
+  },
+  "Amridin Mukhamedov": {
+      "department": "Programming",
+      "image": "/team/Amridin Mukhamedov.JPG"
+  },
+  "Aryan Singh": {
+      "department": "Mechanical",
+      "image": "/team/Aryan Singh.JPG"
+  },
+  "Chloe Nebel": {
+      "department": "Media",
+      "image": "/team/Chloe Nebel.JPG"
+  },
+  "Danial Armiyaev": {
+      "department": "Programming",
+      "image": "/team/Danial Armiyaev.JPG"
+  },
+
+  "Drilyon Rinchen": {
+      "department": "Mechanical",
+      "image": "/team/Drilyon Rinchen.JPG"
+  },
+  "Elijah Sandley": {
+      "department": "Media",
+      "image": "/team/Elijah Sandley.JPG"
+  },
+  
+  "Kahaan Shah": {
+      "department": "Mechanical",
+      "image": "/team/placeholder.jpg"
+  },
+  "Aaro": {
+      "department": "CAD",
+      "image": "/team/placeholder.jpg"  
+  },
+  "Ethan Do": {
+      "department": "CAD",
+      "image": "/team/Ethan Do.JPG"
+  },
+  "Eva Taylor": {
+      "department": "Electrical",
+      "image": "/team/Eva Taylor.JPG"
+  },
+  "Evan Smoot": {
+      "department": "Mechanical",
+      "image": "/team/Evan Smoot.JPG"
+  },
+  "Jasen Chen": {
+      "department": "Mechanical",
+      "image": "/team/Jasen Chen.JPG"
+  },
+  "Karla Garcia": {
+      "department": "Media",
+      "image": "/team/Karla Garcia.JPG"
+  },
+  "Katie Maliphol": {
+      "department": "Mechanical",
+      "image": "/team/Katie Maliphol.JPG"
+  },
+  "Leo RobinHunter": {
+      "department": "Electrical",
+      "image": "/team/Leo RobinHunter.JPG"
+  },
+
+  "Melike Carrozza": {
+      "department": "Electrical",
+      "image": "/team/Melike carrozza.JPG"
+  },
+  "Miracle Nakhla": {
+      "department": "Electrical",
+      "image": "/team/Miracle Nakhla.JPG"
+  },
+  "Reina Turley": {
+      "department": "CAD",
+      "image": "/team/Reina Turley.JPG"
+  },
+
+  "Ryan Zhu": {
+      "department": "Programming",
+      "image": "/team/Ryan Zhu.JPG"
+  },
+  "Stephanie Li": {
+      "department": "CAD",
+      "image": "/team/Stephanie Li.JPG"
+  },
+  "Zade Krakower": {
+      "department": "Electrical",
+      "image": "/team/Zade Krakower.JPG"
+  },
+  "Zoe Chebar": {
+      "department": "Electrical",
+      "image": "/team/Zoe Chebar.JPG"
   }
 }
