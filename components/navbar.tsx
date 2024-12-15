@@ -7,7 +7,6 @@ import {
     NavbarMenuItem,
     NavbarMenuToggle,
 } from "@nextui-org/navbar";
-import {Button} from "@nextui-org/button";
 import {Link} from "@nextui-org/link";
 import {Image, NavbarMenu} from "@nextui-org/react";
 import {link as linkStyles} from "@nextui-org/theme";
