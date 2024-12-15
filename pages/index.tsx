@@ -161,7 +161,7 @@ export default function Home() {
           </motion.h1>
         </LampContainer> */}
 
-        <div className="p-2 text-center h-[40vh] md:h-[20vh] mb-[5rem] align-middle">
+        <div className="relative p-2 text-center h-[40vh] md:h-[20vh] mb-[20rem] align-middle mt-[200px]">
           <h1 className="text-[2.9rem] md:text-7xl font-bold text-white secondary">Have a Question?</h1>
           <p className="text-base md:text-xl my-3 text-neutral-200 p-2">
             You can reach out to us by email
