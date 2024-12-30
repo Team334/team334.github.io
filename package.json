@@ -45,7 +45,7 @@
     "tailwind-variants": "^0.2.1",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.167.0",
-    "three-globe": "^2.31.0"
+    "three-globe": "^2.39.1"
   },
   "devDependencies": {
     "@types/node": "^20",
