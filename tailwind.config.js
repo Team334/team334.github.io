@@ -52,9 +52,14 @@ const config = {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        'sm': 'calc(var(--radius) - 4px)',
+        'md': 'calc(var(--radius) - 2px)',
+        'lg': 'var(--radius)',
+        'large': '12px',
+        'xl': '16px',
+        '2xl': '20px',
+        'medium': '8px',
+        'small': '4px',
       },
       keyframes: {
         "accordion-down": {
@@ -145,7 +150,26 @@ const config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      }
+      },
+      fontSize: {
+        'tiny': '0.75rem',      // 12px
+        'small': '0.875rem',    // 14px
+        'base': '1rem',         // 16px
+        'medium': '1.125rem',   // 18px
+        'large': '1.25rem',     // 20px
+        'xl': '1.5rem',         // 24px
+        '2xl': '2rem',          // 32px
+      },
+      borderWidth: {
+        DEFAULT: '1px',
+        '0': '0',
+        '2': '2px',
+        '4': '4px',
+        '8': '8px',
+        'small': '1px',
+        'medium': '2px',
+        'large': '3px'
+      },
     },
   },
   plugins: [

@@ -1,68 +1,39 @@
 .markdown {
-    /* Base styles */
-    @apply text-lg leading-relaxed;
+    @apply text-gray-100;
 }
 
-.markdown p,
-.markdown ul,
-.markdown ol,
-.markdown blockquote {
-    /* Margin for paragraphs, lists, and blockquotes */
-    @apply my-6;
+.markdown h1 {
+    @apply text-3xl font-bold mb-4 text-gray-100;
 }
 
 .markdown h2 {
-    /* Heading 2 styles */
-    @apply text-3xl mt-12 mb-4 leading-snug;
+    @apply text-2xl font-semibold mb-3 text-gray-200;
 }
 
-.markdown h3 {
-    /* Heading 3 styles */
-    @apply text-2xl mt-8 mb-4 leading-snug;
+.markdown p {
+    @apply mb-4 leading-relaxed text-gray-300;
 }
 
-/* Additional styles for different heading levels if needed */
-
-.markdown h4 {
-    /* Heading 4 styles */
-    @apply text-xl mt-6 mb-3 leading-snug;
-}
-
-.markdown h5 {
-    /* Heading 5 styles */
-    @apply text-lg mt-4 mb-3 leading-snug;
-}
-
-.markdown h6 {
-    /* Heading 6 styles */
-    @apply text-base mt-3 mb-2 leading-snug;
-}
-
-/* Styles for links */
-.markdown a {
-    @apply text-blue-500 underline;
-}
-
-.markdown a:hover {
-    @apply hover:text-blue-700;
-}
-
-/* Code block styles */
-.markdown pre {
-    @apply p-4 my-6 rounded;
-}
-
-/* Inline code styles */
 .markdown code {
-    @apply px-2 py-1 rounded;
+    @apply px-2 py-1 bg-gray-700 rounded text-sm font-mono text-gray-200;
 }
 
-/* List item styles */
-.markdown li {
-    @apply mb-2;
+.markdown pre {
+    @apply p-4 bg-gray-700 rounded-lg overflow-x-auto mb-4;
 }
 
-/* Blockquote styles */
 .markdown blockquote {
-    @apply border-l-4 pl-4 italic;
+    @apply border-l-4 border-gray-600 pl-4 italic text-gray-400;
+}
+
+.markdown ul {
+    @apply list-disc list-inside mb-4 text-gray-300;
+}
+
+.markdown ol {
+    @apply list-decimal list-inside mb-4 text-gray-300;
+}
+
+.markdown a {
+    @apply text-blue-400 hover:text-blue-300 underline;
 }
