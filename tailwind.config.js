@@ -119,6 +119,14 @@ const config = {
             transform: "translateY(-50%)",
           },
         },
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0"
+          },
+          to: {
+            backgroundPosition: "-200% 0"
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -132,12 +140,18 @@ const config = {
         "third": "moveInCircle 40s linear infinite",
         "fourth": "moveHorizontal 40s ease infinite",
         "fifth": "moveInCircle 20s ease infinite",
+        shimmer: "shimmer 2s linear infinite"
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      }
     },
   },
   plugins: [
     require('@tailwindcss/typography'),
     require("tailwindcss-animate"),
+    require('tailwind-scrollbar'),
     function ({addBase, matchUtilities, theme}) {
       matchUtilities(
           {

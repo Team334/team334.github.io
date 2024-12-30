@@ -1,13 +1,104 @@
 "use client"
 import React from "react";
-import {Hero} from "@/components/aceternity/ui/hero";
+import {ImagesSlider} from "@/components/aceternity/ui/page-hero";
 import {InfiniteMovingCards} from "@/components/aceternity/ui/infinite-moving-cards";
-import YouTubePlayer from "@/components/youtube";
-import {Tabs} from "@/components/aceternity/ui/tabs";
-import {LampContainer} from "@/components/aceternity/ui/lamp";
 import {motion} from "framer-motion";
+import {AwardBanner} from "@/components/awards";
 
 export default function Home() {
+  const images = [
+    "/team2024.jpg",
+    "/team2022.png",
+    "/team2020.jpg",
+    "/team2019-2.jpg",
+    "/team2019.jpg",
+  ];
+
+  // Awards from about.tsx
+  const Awards = [
+    {
+      title: "Finalist",
+      year: "2023",
+      comp: "NYC Regional"
+    },
+    {
+      title: "Finalist",
+      year: "2023",
+      comp: "Long Island Regional"
+  },
+  {
+      title: "Excellence in Engineering Award",
+      year: "2019",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Judges' Award",
+      year: "2019",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Industrial Design Award",
+      year: "2016",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Winner",
+      year: "2014",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Creativity Award",
+      year: "2014",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Industrial Design Award",
+      year: "2013",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Creativity Award",
+      year: "2012",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Gracious Professionalism Award",
+      year: "2008",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Engineering Inspiration Award",
+      year: "2007",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Sportsmanship Award",
+      year: "2006",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Engineering Inspiration Award",
+      year: "2005",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Engineering Inspiration Award",
+      year: "2004",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Chairman's Award",
+      year: "2003",
+      comp: "NYC Regional"
+  },
+  {
+      title: "Rookie All-Star",
+      year: "1999",
+      comp: "Philadelphia Alliance Regional"
+  },
+  ];
+
+  // Existing sponsors array
   const sponsors = [
     {
       title: "FIRST",
@@ -56,135 +147,121 @@ export default function Home() {
     },
   ];
 
-
-  // const tabs = [
-  //   {
-  //     title: "Week 1",
-  //     value: "week1",
-  //     content: (
-  //         <div
-  //             className="w-full  relative h-full rounded-2xl p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-  //           <h1 className={"text-black"}>Week 1 Recap</h1>
-  //           <YouTubePlayer videoId={"vGIsE0y7tVQ"}/>
-  //         </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "Week 2",
-  //     value: "week2",
-  //     content: (
-  //         <div
-  //             className="w-full  relative h-full rounded-2xl p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-  //           <h1 className={"text-black"}>Week 2 Recap</h1>
-  //           <YouTubePlayer videoId={"k9-qFX8pPWc"}/>
-  //         </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "Week 3",
-  //     value: "week3",
-  //     content: (
-  //         <div
-  //             className="w-full  relative h-full rounded-2xl p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-  //           <h1 className={"text-black"}>Week 3 Recap</h1>
-  //           <YouTubePlayer videoId={"kMeeyb-l-0U"}/>
-  //         </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "Week 4",
-  //     value: "week4",
-  //     content: (
-  //         <div
-  //             className="w-full  relative h-full rounded-2xl p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-  //           <h1 className={"text-black"}>Week 4 Recap</h1>
-  //           <YouTubePlayer videoId={"3xwtSjaZoUM"}/>
-  //         </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "Week 5",
-  //     value: "week5",
-  //     content: (
-  //         <div
-  //             className="w-full  relative h-full rounded-2xl p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-  //           <h1 className={"text-black"}>Week 5 Recap</h1>
-  //           <YouTubePlayer videoId={"bjL-mn2fMTc"}/>
-  //         </div>
-  //     ),
-  //   },
-  //   {
-  //     title: "Week 6",
-  //     value: "week6",
-  //     content: (
-  //         <div
-  //             className="w-full  relative h-full rounded-2xl p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-  //           <h1 className={"text-black"}>Week 6 Recap</h1>
-  //           <YouTubePlayer videoId={"KSeID8Ug1Os"}/>
-  //         </div>
-  //     ),
-  //   },
-  // ]
-
   return (
-      <section>
-        <Hero/>
-        <div className="text-center h-[70vh] my-3">
-          <h1 className="text-[2.9rem] md:text-7xl font-bold text-white main">Sponsors</h1>
-          <p className="text-base md:text-xl my-3 text-neutral-200 p-2">
-            Thank you to all our sponsors and families who supported this. We couldn't make our robot without
-            your help!
-          </p>
-          <InfiniteMovingCards items={sponsors}/>
-        </div>
-
-        {/* <LampContainer>
-          <motion.h1
-              initial={{opacity: 0.5, y: 100}}
-              whileInView={{opacity: 1, y: 0}}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center tracking-tight text-transparent w-full"
+    <section className="overflow-hidden">
+      {/* Hero Section */}
+      <div className="relative h-[85vh] w-full -top-[4rem]">
+        <ImagesSlider className="object-cover" images={images}>
+          <motion.div
+            initial={{opacity: 0, y: -80}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.6}}
+            className="z-50 flex flex-col justify-center items-center px-4"
           >
-            <div>
-              <h1 className="text-[2.9rem] md:text-7xl font-bold text-white main p-2 text-center">Season Recaps</h1>
-              <p className="text-base md:text-xl my-3 text-neutral-200 p-2 text-center">Here are all our 2024
-                Season recaps.</p>
-            </div>
-            <div
-                className="relative flex flex-col w-full h-[70vh] justify-center">
-              <Tabs tabs={tabs}/>
-            </div>
-          </motion.h1>
-        </LampContainer> */}
+            <motion.p 
+              className="font-bold text-4xl sm:text-6xl md:text-8xl text-center bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400 py-4 main"
+              initial={{scale: 0.5}}
+              animate={{scale: 1}}
+              transition={{delay: 0.2, type: "spring", stiffness: 200}}
+            >
+              TechKnights 334
+            </motion.p>
+          </motion.div>
+        </ImagesSlider>
+      </div>
 
-        <div className="p-2 text-center h-[40vh] md:h-[20vh] mb-[5rem] align-middle">
-          <h1 className="text-[2.9rem] md:text-7xl font-bold text-white secondary">Have a Question?</h1>
-          <p className="text-base md:text-xl my-3 text-neutral-200 p-2">
+      {/* Sponsors Section */}
+      <div className="py-12 md:py-20 bg-black/50 backdrop-blur-sm px-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold main text-center mb-6 md:mb-10">Our Sponsors</h2>
+        <InfiniteMovingCards items={sponsors}/>
+      </div>
+
+      {/* Awards and Who We Are Section */}
+      <div className="flex flex-col md:flex-row gap-8 md:gap-12 p-4 md:p-8 my-12 md:my-20 max-w-8xl mx-auto">
+        {/* Awards Section  */}
+        <motion.div 
+          className="w-full md:w-1/2"
+          initial={{opacity: 0, x: -50}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 0.5}}
+          viewport={{once: true}}
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold main mb-6 md:mb-8 text-center">Our Achievements</h2>
+          <div className="h-[400px] md:h-[520px] overflow-y-auto pr-2 md:pr-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 p-2 md:p-4">
+              {Awards.map((award, index) => (
+                <AwardBanner
+                  key={index}
+                  title={award.title}
+                  year={award.year}
+                  comp={award.comp}
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Who We Are Section*/}
+        <motion.div 
+          className="w-full md:w-1/2"
+          initial={{opacity: 0, x: 50}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 0.5}}
+          viewport={{once: true}}
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold main mb-6 md:mb-8 text-center">Who We Are</h2>
+          <div className="h-[400px] md:h-[500px] overflow-y-auto pr-2 md:pr-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300">
+            <p className="secondary text-base md:text-lg leading-relaxed px-2 md:px-4">
+              We are a team that consists of 50-60 students which come nearly every day to work on the
+              robot during the build season and compete against teams all over the world. After 10th period,
+              we meet at the wonderful Ike Heller
+              <br /><br />
+              During our preseason, we exchange information between the previous members, and the newcomers,
+              ensuring that our build season occurs flawlessly. We host events and tryouts for students at our
+              school to have an opportunity to join the team. During our offseason, we begin planning ahead
+              for next year's preseason and work on projects around the lab. We also host Future Vision
+              events, in which middle schools from all across Brooklyn come to visit the school. We teach them
+              about FIRST and engineering, while also letting them drive our robot.
+            </p>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Contact Section */}
+      <motion.div 
+        className="py-12 md:py-20 bg-black/50 backdrop-blur-sm"
+        initial={{opacity: 0, y: 50}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{duration: 0.5}}
+        viewport={{once: true}}
+      >
+        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
+          <h2 className="text-3xl md:text-6xl font-bold text-white secondary text-center mb-4 md:mb-6">
+            Have a Question?
+          </h2>
+          <p className="text-lg md:text-xl text-center text-neutral-200 mb-8 md:mb-12">
             You can reach out to us by email
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div>
-              <h3 className="font-lg main">STUDENTS</h3>
-              <ul className="mt-2 space-y-2">
-                <li className={"secondary"}><b>Samantha Tan</b> - samanthat155@nycstudents.net</li>
-                <li className={"secondary"}><b>Valentina Wolfe</b> - ValentinaW2@nycstudents.net</li>
-                <li className={"secondary"}><b>Gadin Aggarwal</b> - gadina@nycstudents.net</li>
+              <h3 className="font-lg main text-xl mb-3">STUDENTS</h3>
+              <ul className="mt-2 space-y-3">
+                <li className="secondary text-sm md:text-base"><b>Samantha Tan</b> - samanthat155@nycstudents.net</li>
+                <li className="secondary text-sm md:text-base"><b>Valentina Wolfe</b> - ValentinaW2@nycstudents.net</li>
+                <li className="secondary text-sm md:text-base"><b>Gadin Aggarwal</b> - gadina@nycstudents.net</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-lg main">MENTORS</h3>
-              <ul className="mt-2 space-y-2">
-                <li className={"secondary"}><b>Ms. Shaina Doherty</b> - SDoherty2@schools.nyc.gov</li>
-                <li className={"secondary"}><b>Mr. Marlon Esguerra</b> - MEsguerra@schools.nyc.gov</li>
-                <li className={"secondary"}><b>Mr. Ali Harb</b> - aharb@schools.nyc.gov</li>
+              <h3 className="font-lg main text-xl mb-3">MENTORS</h3>
+              <ul className="mt-2 space-y-3">
+                <li className="secondary text-sm md:text-base"><b>Ms. Shaina Doherty</b> - SDoherty2@schools.nyc.gov</li>
+                <li className="secondary text-sm md:text-base"><b>Mr. Marlon Esguerra</b> - MEsguerra@schools.nyc.gov</li>
+                <li className="secondary text-sm md:text-base"><b>Mr. Ali Harb</b> - aharb@schools.nyc.gov</li>
               </ul>
             </div>
           </div>
         </div>
-      </section>
-  )
+      </motion.div>
+    </section>
+  );
 }

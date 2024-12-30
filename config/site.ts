@@ -18,11 +18,6 @@ export const siteConfig: SiteConfig = {
     description: "The 334th Team in FIRST Robotics Competition",
     navItems: [
         {
-            label: "About",
-            href: "/about",
-            color: "foreground"
-        },
-        {
             label: "Team",
             href: "/team",
             color: "foreground"

@@ -4,10 +4,10 @@ import Link from "next/link";
 import Head from "next/head";
 import {Navbar} from "@/components/navbar";
 
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
-      <main>
+    <main className="min-h-screen bg-gradient-to-b from-background to-background/80 antialiased">
+      <div className="relative flex flex-col min-h-screen">
         <Navbar />
         <Head>
           <title>TechKnights | Team 334</title>
@@ -26,21 +26,25 @@ export default function App({ Component, pageProps }: AppProps) {
 
           <meta name="viewport" content="initial-scale=1, width=device-width"/>
         </Head>
-        <Component {...pageProps} />
-        <footer className="relative bottom-0 w-full flex py-3 p-6 text-start">
-          <div className={"mb-10 secondary container items-start justify-start md:ml-12 gap-1 flex flex-col md:flex-row"}>
-            <span className={"font-bold"}>©1998-2024</span><p className={"text-primary"}>TechKnights</p>
+        <div className="flex-grow">
+          <Component {...pageProps} />
+        </div>
+        <footer className="relative w-full flex py-3 p-6 text-start border-t border-gray-800">
+          <div className="mb-10 secondary container items-start justify-start md:ml-12 gap-1 flex flex-col md:flex-row">
+            <span className="font-bold">©1998-2024</span>
+            <p className="text-primary">TechKnights</p>
           </div>
           <Link
-              target={"_blank"}
-              className="main flex justify-items-end gap-1 text-current"
-              href="https://cherriae.github.io/"
-              title="Team 334"
+            target="_blank"
+            className="main flex justify-items-end gap-1 text-current"
+            href="https://cherriae.github.io/"
+            title="Team 334"
           >
-            <span className={"secondary"}>Made by</span>
+            <span className="secondary">Made by</span>
             <p className="text-primary">Ze Rui Zheng</p>
           </Link>
         </footer>
-      </main>
-  )
+      </div>
+    </main>
+  );
 }

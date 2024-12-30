@@ -1,49 +1,62 @@
 "use client";
-import {useEffect} from "react";
-import {motion, stagger, useAnimate} from "framer-motion";
-import {cn} from "@/components/cn";
+import { useEffect, useRef } from "react";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
+import { cn } from "@/components/cn";
 
 export const TextGenerateEffect = ({
-                                       words,
-                                       className,
-                                   }: {
+    words,
+    className,
+    delay = 0.2,
+    duration = 2,
+}: {
     words: string;
     className?: string;
+    delay?: number;
+    duration?: number;
 }) => {
     const [scope, animate] = useAnimate();
-    let wordsArray = words.split(" ");
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+    const wordsArray = words.split(" ");
+
     useEffect(() => {
-        animate(
-            "span",
-            {
-                opacity: 1,
-            },
-            {
-                duration: 2,
-                delay: stagger(0.2),
-            }
-        );
-    }, [scope.current]);
+        if (isInView) {
+            animate(
+                "span",
+                {
+                    opacity: 1,
+                    y: 0,
+                },
+                {
+                    duration,
+                    delay: stagger(delay),
+                }
+            );
+        }
+    }, [isInView, animate, delay, duration]);
 
     const renderWords = () => {
         return (
             <motion.div ref={scope}>
-                {wordsArray.map((word, idx) => {
-                    return (
-                        <motion.span
-                            key={word + idx}
-                            className="opacity-0"
-                        >
-                            {word}{" "}
-                        </motion.span>
-                    );
-                })}
+                {wordsArray.map((word, idx) => (
+                    <motion.span
+                        key={word + idx}
+                        className="opacity-0 inline-block"
+                        style={{ 
+                            transform: "translateY(20px)",
+                            display: "inline-block",
+                            marginRight: "0.25em" 
+                        }}
+                    >
+                        {word}
+                    </motion.span>
+                ))}
             </motion.div>
         );
     };
 
     return (
-        <div className={cn("font-bold", className)}>
+        <div ref={ref} className={cn("font-bold", className)}>
             <div className="mt-4">
                 {renderWords()}
             </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import {Button} from "@/components/shadcn/ui/button";
+import {motion} from "framer-motion";
 
 export default function SponsorPage() {
     const sponsors = [
@@ -68,39 +69,123 @@ export default function SponsorPage() {
     ];
 
     return (
-        <div className="p-8 text-center">
-            <div className="text-4xl md:text-7xl font-bold text-white text-center main">
-                Our Sponsors
+        <motion.div 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: 0.5}}
+            className="min-h-screen py-16 px-4 md:px-8"
+        >
+            {/* Hero Section */}
+            <motion.div 
+                initial={{y: -20}}
+                animate={{y: 0}}
+                transition={{duration: 0.6}}
+                className="text-center max-w-4xl mx-auto mb-16"
+            >
+                <h1 className="text-5xl md:text-7xl font-bold main bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
+                    Our Sponsors
+                </h1>
+                <p className="mt-6 text-xl md:text-2xl text-gray-400 secondary">
+                    We are grateful for the support of these amazing organizations that make our work possible
+                </p>
+            </motion.div>
+
+            {/* Sponsors Grid */}
+            <div className="max-w-7xl mx-auto">
+                <div className="grid gap-8 md:gap-12">
+                    {sponsors.map((sponsor, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{opacity: 0, y: 20}}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{duration: 0.5, delay: index * 0.1}}
+                            viewport={{once: true}}
+                            className="group relative bg-black/20 backdrop-blur-sm rounded-2xl overflow-hidden"
+                        >
+                            <div className="flex flex-col md:flex-row items-center p-6 md:p-8 relative z-10">
+                                {/* Logo Section */}
+                                <div className="w-full md:w-1/4 flex justify-center md:justify-start mb-6 md:mb-0">
+                                    <motion.div
+                                        whileHover={{scale: 1.05}}
+                                        transition={{duration: 0.2}}
+                                    >
+                                        <Image
+                                            src={sponsor.image}
+                                            alt={sponsor.title}
+                                            width={200}
+                                            height={200}
+                                            className="object-contain"
+                                        />
+                                    </motion.div>
+                                </div>
+
+                                {/* Content Section */}
+                                <div className="w-full md:w-3/4 md:pl-8">
+                                    <h2 className="text-2xl md:text-3xl font-bold main mb-4">
+                                        {sponsor.title}
+                                    </h2>
+                                    <p className="text-gray-300 secondary text-lg mb-6">
+                                        {sponsor.description}
+                                    </p>
+                                    {sponsor.url && sponsor.url !== "" && (
+                                        <Link href={sponsor.url} target="_blank" rel="noopener noreferrer">
+                                            <Button
+                                                variant="outline"
+                                                size="lg"
+                                                className="hover:bg-white/20 text-white transition-all duration-300"
+                                            >
+                                                Learn More →
+                                            </Button>
+                                        </Link>
+                                    )}
+                                </div>
+                            </div>
+                            
+                            {/* Decorative Elements */}
+                            <div className="absolute inset-0 border border-white/10 rounded-2xl pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent 
+                                          opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                        </motion.div>
+                    ))}
+                </div>
             </div>
-            <div className="font-extralight text-base md:text-4xl text-neutral-200 py-4">
-                This page is dedicated to our all of sponsors! We couldn't make our robot without your help!
+
+            {/* Call to Action */}
+            <motion.div 
+                initial={{opacity: 0, y: 20}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{duration: 0.5}}
+                viewport={{once: true}}
+                className="text-center mt-20 p-8 bg-black/20 backdrop-blur-sm rounded-2xl max-w-3xl mx-auto"
+            >
+                <h2 className="text-3xl md:text-4xl font-bold main mb-4">
+                    Interested in Sponsoring?
+                </h2>
+                <p className="text-gray-300 secondary text-lg mb-6">
+                    Join our mission to inspire the next generation of engineers and innovators
+                </p>
+                <p className="text-xl text-center text-neutral-200 mb-12">
+            You can reach out to us by email
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-lg main">STUDENTS</h3>
+              <ul className="mt-2 space-y-2">
+                <li className={"secondary"}><b>Samantha Tan</b> - samanthat155@nycstudents.net</li>
+                <li className={"secondary"}><b>Valentina Wolfe</b> - ValentinaW2@nycstudents.net</li>
+                <li className={"secondary"}><b>Gadin Aggarwal</b> - gadina@nycstudents.net</li>
+              </ul>
             </div>
-            <div className="space-y-8">
-                {sponsors.map((sponsor, index) => (
-                    <div key={index}
-                         className="flex flex-col md:flex-row items-center justify-center md:justify-start space-y-5 md:space-y-0 md:space-x-4 h-auto md:h-64">
-                        <Image
-                            src={sponsor.image}
-                            alt={sponsor.title}
-                            width={158}
-                            height={158}
-                            className="md:ml-[8rem]"
-                        />
-                        <div className="flex flex-col justify-center items-center align-middle w-full">
-                            <h2 className="text-[2.1rem] secondary underline">{sponsor.title}</h2>
-                            <p className="mb-2 text-lg text-slate-300">{sponsor.description}</p>
-                            {sponsor.url && (
-                                <Link href={sponsor.url} target="_blank">
-                                    <Button
-                                        className="inline-block px-4 py-2 rounded-xl bg-gray-200 w-64 mt-5 text-black hover:bg-gray-400">
-                                        Learn more
-                                    </Button>
-                                </Link>
-                            )}
-                        </div>
-                    </div>
-                ))}
+            <div>
+              <h3 className="font-lg main">MENTORS</h3>
+              <ul className="mt-2 space-y-2">
+                <li className={"secondary"}><b>Ms. Shaina Doherty</b> - SDoherty2@schools.nyc.gov</li>
+                <li className={"secondary"}><b>Mr. Marlon Esguerra</b> - MEsguerra@schools.nyc.gov</li>
+                <li className={"secondary"}><b>Mr. Ali Harb</b> - aharb@schools.nyc.gov</li>
+              </ul>
             </div>
-        </div>
+          </div>  
+            </motion.div>
+        </motion.div>
     );
 }
