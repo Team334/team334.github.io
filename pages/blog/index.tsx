@@ -145,7 +145,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                         duration: 0.8,
                         ease: "easeInOut",
                     }}
-                    className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center tracking-tight text-transparent w-full"
+                    className="h-screen mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center tracking-tight text-transparent w-full"
                 >
                     <div>
                     <h1 className="text-[2.9rem] md:text-7xl font-bold text-white main p-2 text-center">Season Recaps</h1>
