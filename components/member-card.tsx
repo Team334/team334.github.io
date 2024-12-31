@@ -13,15 +13,15 @@ interface MemberProps {
 
 export const MemberCard: React.FC<MemberProps> = React.memo(({member}) => (
     <div className="w-36 flex flex-col">
-        <div className="relative w-full h-36 mb-3">
+        <div className="relative aspect-square w-full">
             <Image
-                unoptimized
-                loader={({src}) => src}
                 src={member.image}
                 alt={member.name}
-                className="rounded-full object-cover"
                 fill
-                sizes="100vw" />
+                sizes="(max-width: 768px) 100vw, 256px"
+                className="object-cover rounded-xl"
+                priority={false}
+            />
         </div>
         <p className="text-center mb-0 text-base md:text-medium text-neutral-200 secondary">{member.name}</p>
     </div>

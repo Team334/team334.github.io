@@ -1,7 +1,6 @@
 "use client"
 import {Member, MemberCard} from "@/components/member-card";
 import React, {useState, useEffect} from "react";
-import {TextGenerateEffect} from "@/components/aceternity/ui/autotype";
 import {motion, AnimatePresence} from "framer-motion";
 import {Skeleton} from "@/components/shadcn/ui/skeleton";
 
@@ -132,52 +131,50 @@ export default function TeamPage() {
                 </div>
             </motion.div>
 
-            {/* Member Cards Section */}
+            {/* Member Cards Section - Modified */}
             <motion.div className="max-w-7xl mx-auto px-4">
-                <AnimatePresence mode="wait">
-                    {Object.keys(filteredDepartments).length === 0 ? (
-                        <motion.div 
-                            key="no-results"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="text-center py-20"
+                {Object.keys(filteredDepartments).length === 0 ? (
+                    <motion.div 
+                        key="no-results"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="text-center py-20"
+                    >
+                        <p className="text-2xl text-gray-500 secondary">No members found</p>
+                        <button 
+                            onClick={() => {setSearchQuery(""); setSelectedDepartment("All");}}
+                            className="mt-4 px-6 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
                         >
-                            <p className="text-2xl text-gray-500 secondary">No members found</p>
-                            <button 
-                                onClick={() => {setSearchQuery(""); setSelectedDepartment("All");}}
-                                className="mt-4 px-6 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-all"
-                            >
-                                Clear Filters
-                            </button>
-                        </motion.div>
-                    ) : (
-                        Object.keys(filteredDepartments).map((department, index) => (
+                            Clear Filters
+                        </button>
+                    </motion.div>
+                ) : (
+                    <AnimatePresence>
+                        {Object.keys(filteredDepartments).map((department) => (
                             <motion.div 
                                 key={department}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
-                                transition={{ delay: index * 0.1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.3 }}
                                 className="mb-16"
                             >
-                                <TextGenerateEffect 
-                                    words={department === "Executive" || department === "Mentor" ? `${department}s` : department}
+                                <h2 
                                     className="text-3xl md:text-4xl font-bold text-center main 
                                               bg-clip-text text-transparent bg-gradient-to-r 
                                               from-white via-gray-300 to-white mb-10"
-                                />
-                                <motion.div 
-                                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center"
                                 >
+                                    {department === "Executive" || department === "Mentor" ? `${department}s` : department}
+                                </h2>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
                                     {filteredDepartments[department]
                                         .sort((a, b) => a.name.localeCompare(b.name))
                                         .map((member, i) => (
                                             <motion.div
-                                                key={i}
+                                                key={member.name}
                                                 initial={{ opacity: 0 }}
                                                 animate={{ opacity: 1 }}
-                                                transition={{ delay: i * 0.1 }}
+                                                transition={{ delay: i * 0.05 }}
                                             >
                                                 {imagesLoading ? (
                                                     <div className="w-full">
@@ -190,12 +187,12 @@ export default function TeamPage() {
                                                 )}
                                             </motion.div>
                                         ))}
-                                </motion.div>
+                                </div>
                                 <div className="mt-16 border-t border-white/10"/>
                             </motion.div>
-                        ))
-                    )}
-                </AnimatePresence>
+                        ))}
+                    </AnimatePresence>
+                )}
             </motion.div>
         </motion.div>
     );

@@ -9,6 +9,8 @@ const nextConfig = {
         hostname: "**",
       },
     ],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   modularizeImports: {
       "react-icons/?(((\\w*)?/?)*)": {
@@ -16,7 +18,15 @@ const nextConfig = {
           skipDefaultConversion: true
       }
   },
-  reactStrictMode: false
+  reactStrictMode: true,
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+  },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 }
 
 module.exports = nextConfig

@@ -16,14 +16,15 @@ export const InfiniteMovingCards = React.memo(({items}: { items: { link: string;
                                 <h1 className="text-base md:text-xl mt-8 text-neutral-200">{item.title}</h1>
                             </CardHeader>
                             <CardContent className="py-2 flex justify-center items-center">
-                                <Image
-                                    alt={item.title}
-                                    src={item.link}
-                                    height={190}
-                                    width={190}
-                                    loading="lazy"
-                                    className="rounded-xl"
-                                />
+                                <div className="relative w-[190px] h-[190px]">
+                                    <Image
+                                        alt={item.title}
+                                        src={item.link}
+                                        fill
+                                        style={{ objectFit: 'contain' }}
+                                        className="rounded-xl"
+                                    />
+                                </div>
                             </CardContent>
                         </Card>
                     </Link>

@@ -26,38 +26,38 @@ export const ImagesSlider = React.memo(({
     const [loadedImages, setLoadedImages] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    // Optimize image preloading with batch loading
     useEffect(() => {
+        let mounted = true;
+
         const preloadImages = async () => {
             try {
-                // Load images in batches of 3
-                const batchSize = 3;
-                const loaded: string[] = [];
-                
-                for (let i = 0; i < images.length; i += batchSize) {
-                    const batch = images.slice(i, i + batchSize);
-                    const loadPromises = batch.map(src => {
-                        return new Promise((resolve, reject) => {
-                            const img = new Image();
-                            img.src = src;
-                            img.onload = () => resolve(src);
-                            img.onerror = reject;
-                        });
+                const loadPromises = images.map(src => {
+                    return new Promise((resolve, reject) => {
+                        const img = new Image();
+                        img.src = src;
+                        img.onload = () => resolve(src);
+                        img.onerror = reject;
                     });
+                });
 
-                    const loadedBatch = await Promise.all(loadPromises);
-                    loaded.push(...loadedBatch as string[]);
+                const loaded = await Promise.all(loadPromises);
+                if (mounted) {
+                    setLoadedImages(loaded as string[]);
+                    setIsLoading(false);
                 }
-
-                setLoadedImages(loaded);
-                setIsLoading(false);
             } catch (error) {
                 console.error("Failed to load images:", error);
-                setIsLoading(false);
+                if (mounted) {
+                    setIsLoading(false);
+                }
             }
         };
 
         preloadImages();
+
+        return () => {
+            mounted = false;
+        };
     }, [images]);
 
     // Optimize animation performance
@@ -113,8 +113,8 @@ export const ImagesSlider = React.memo(({
 
     if (isLoading) {
         return (
-            <div className="h-screen w-full flex items-center justify-center">
-                <div className="animate-pulse bg-gray-800 h-full w-full" />
+            <div className="h-full w-full flex items-center justify-center bg-black/20 backdrop-blur-sm">
+                <div className="animate-pulse text-xl text-neutral-400">Loading images...</div>
             </div>
         );
     }

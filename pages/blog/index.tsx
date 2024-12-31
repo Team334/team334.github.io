@@ -24,7 +24,10 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
             <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
                 <h1 className="text-black mb-4">Week 1 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer videoId="vGIsE0y7tVQ" />
+                    <YouTubePlayer 
+                        videoId="vGIsE0y7tVQ"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         ),
@@ -36,7 +39,10 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
             <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
                 <h1 className="text-black mb-4">Week 2 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer videoId="k9-qFX8pPWc" />
+                    <YouTubePlayer 
+                        videoId="k9-qFX8pPWc"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         ),
@@ -48,7 +54,10 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
             <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
                 <h1 className="text-black mb-4">Week 3 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer videoId="kMeeyb-l-0U" />
+                    <YouTubePlayer 
+                        videoId="kMeeyb-l-0U"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         ),
@@ -60,7 +69,10 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
             <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
                 <h1 className="text-black mb-4">Week 4 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer videoId="3xwtSjaZoUM" />
+                    <YouTubePlayer 
+                        videoId="3xwtSjaZoUM"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         ),
@@ -72,7 +84,10 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
             <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
                 <h1 className="text-black mb-4">Week 5 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer videoId="bjL-mn2fMTc" />
+                    <YouTubePlayer 
+                        videoId="bjL-mn2fMTc"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         ),
@@ -84,7 +99,10 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
             <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
                 <h1 className="text-black mb-4">Week 6 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer videoId="KSeID8Ug1Os" />
+                    <YouTubePlayer 
+                        videoId="KSeID8Ug1Os"
+                        loading="lazy"
+                    />
                 </div>
             </div>
         ),
@@ -118,7 +136,12 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
             </motion.div>
 
             {/* Blog Grid */}
-            <div className="max-w-7xl mx-auto mb-24">
+            <motion.div 
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="max-w-7xl mx-auto mb-24"
+            >
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {posts
                         .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -127,8 +150,8 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                                 key={post.slug}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.05 }}
+                                viewport={{ once: true, amount: 0.1 }}
                             >
                                 <Link href={`/blog/${post.slug}`}>
                                     <Card className="group h-full bg-black/20 backdrop-blur-sm border-white/10 hover:border-white/20 transition-all duration-300">
@@ -148,13 +171,14 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                                         </CardContent>
                                         <CardFooter className="flex items-center justify-between">
                                             <div className="flex items-center space-x-3">
-                                                <Image
-                                                    alt={post.author.name}
-                                                    src={post.author.picture}
-                                                    width={32}
-                                                    height={32}
-                                                    className="rounded-full"
-                                                />
+                                                <div className="relative w-8 h-8">
+                                                    <Image
+                                                        alt={post.author.name}
+                                                        src={post.author.picture}
+                                                        fill
+                                                        className="rounded-full object-cover"
+                                                    />
+                                                </div>
                                                 <span className="secondary text-sm">{post.author.name}</span>
                                             </div>
                                             <span className="secondary text-sm">{formatDate(post.date)}</span>
@@ -164,14 +188,15 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                             </motion.div>
                         ))}
                 </div>
-            </div>
+            </motion.div>
 
             {/* Season Recaps Section */}
             <LampContainer>
                 <motion.div
-                    initial={{ opacity: 0, y: 100 }}
+                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true, amount: 0.1 }}
                     className="w-full"
                 >
                     <h2 className="text-4xl md:text-6xl font-bold main text-center mb-6">
