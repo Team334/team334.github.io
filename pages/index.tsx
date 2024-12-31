@@ -171,8 +171,7 @@ export default function Home() {
       </div>
 
       {/* Sponsors Section */}
-      <div className="py-12 md:py-20 bg-black/50 backdrop-blur-sm px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold main text-center mb-6 md:mb-10">Our Sponsors</h2>
+      <div className="py-12 md:py-20 px-4">
         <InfiniteMovingCards items={sponsors}/>
       </div>
 

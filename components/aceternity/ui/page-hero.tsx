@@ -11,7 +11,7 @@ export const ImagesSlider = React.memo(({
     className,
     autoplay = true,
     direction = "up",
-    interval = 3000,
+    interval = 5000,
 }: {
     images: string[];
     children: React.ReactNode;
@@ -26,30 +26,30 @@ export const ImagesSlider = React.memo(({
     const [loadedImages, setLoadedImages] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const handleImageNavigation = useCallback((direction: 'next' | 'prev') => {
-        setCurrentIndex(prevIndex => {
-            if (direction === 'next') {
-                return prevIndex + 1 === images.length ? 0 : prevIndex + 1;
-            }
-            return prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1;
-        });
-    }, [images.length]);
-
-    // Preload images
+    // Optimize image preloading with batch loading
     useEffect(() => {
         const preloadImages = async () => {
             try {
-                const loadPromises = images.map(src => {
-                    return new Promise((resolve, reject) => {
-                        const img = new Image();
-                        img.src = src;
-                        img.onload = () => resolve(src);
-                        img.onerror = reject;
+                // Load images in batches of 3
+                const batchSize = 3;
+                const loaded: string[] = [];
+                
+                for (let i = 0; i < images.length; i += batchSize) {
+                    const batch = images.slice(i, i + batchSize);
+                    const loadPromises = batch.map(src => {
+                        return new Promise((resolve, reject) => {
+                            const img = new Image();
+                            img.src = src;
+                            img.onload = () => resolve(src);
+                            img.onerror = reject;
+                        });
                     });
-                });
 
-                const loaded = await Promise.all(loadPromises);
-                setLoadedImages(loaded as string[]);
+                    const loadedBatch = await Promise.all(loadPromises);
+                    loaded.push(...loadedBatch as string[]);
+                }
+
+                setLoadedImages(loaded);
                 setIsLoading(false);
             } catch (error) {
                 console.error("Failed to load images:", error);
@@ -60,19 +60,44 @@ export const ImagesSlider = React.memo(({
         preloadImages();
     }, [images]);
 
-    // Handle keyboard navigation and autoplay
+    // Optimize animation performance
+    const slideVariants = {
+        initial: {
+            scale: 0.8,  // Reduced scale change
+            opacity: 0,
+            rotateX: 30,  // Reduced rotation
+        },
+        visible: {
+            scale: 1,
+            rotateX: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.8,  // Increased duration
+                ease: [0.4, 0.0, 0.2, 1], // Optimized easing
+            },
+        },
+        exit: {
+            opacity: 0,
+            y: direction === "up" ? "-100%" : "100%",
+            transition: { duration: 0.8 },  // Increased duration
+        },
+    };
+
+    // Use requestAnimationFrame for smoother transitions
+    const handleImageNavigation = useCallback((direction: 'next' | 'prev') => {
+        requestAnimationFrame(() => {
+            setCurrentIndex(prevIndex => {
+                if (direction === 'next') {
+                    return prevIndex + 1 === images.length ? 0 : prevIndex + 1;
+                }
+                return prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1;
+            });
+        });
+    }, [images.length]);
+
     useEffect(() => {
-        const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === "ArrowRight") {
-              handleImageNavigation('next');
-            } else if (event.key === "ArrowLeft") {
-                     handleImageNavigation('prev');
-                   }
-        };
-
-        window.addEventListener("keydown", handleKeyDown);
-
         let autoplayInterval: NodeJS.Timeout | undefined;
+        
         if (autoplay && !isLoading) {
             autoplayInterval = setInterval(() => {
                 handleImageNavigation('next');
@@ -80,34 +105,11 @@ export const ImagesSlider = React.memo(({
         }
 
         return () => {
-            window.removeEventListener("keydown", handleKeyDown);
             if (autoplayInterval) {
-              clearInterval(autoplayInterval);
+                clearInterval(autoplayInterval);
             }
         };
     }, [autoplay, handleImageNavigation, interval, isLoading]);
-
-    const slideVariants = {
-        initial: {
-            scale: 0,
-            opacity: 0,
-            rotateX: 45,
-        },
-        visible: {
-            scale: 1,
-            rotateX: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5,
-                ease: [0.645, 0.045, 0.355, 1.0],
-            },
-        },
-        exit: {
-            opacity: 1,
-            y: direction === "up" ? "-150%" : "150%",
-            transition: { duration: 1 },
-        },
-    };
 
     if (isLoading) {
         return (
@@ -119,7 +121,7 @@ export const ImagesSlider = React.memo(({
 
     return (
         <div
-            className={`h-screen w-full flex items-center justify-center ${className}`}
+            className={cn("h-screen w-full flex items-center justify-center relative overflow-hidden", className)}
             style={{ perspective: "1000px" }}
         >
             {children}
@@ -137,6 +139,11 @@ export const ImagesSlider = React.memo(({
                     variants={slideVariants}
                     className="absolute inset-0 h-screen w-full object-cover object-center"
                     alt={`Slide ${currentIndex + 1}`}
+                    loading="lazy"
+                    style={{
+                        willChange: 'transform',  // Optimize for animations
+                        backfaceVisibility: 'hidden',  // Prevent flickering
+                    }}
                 />
             </AnimatePresence>
         </div>
