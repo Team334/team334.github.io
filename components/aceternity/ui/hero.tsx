@@ -19,7 +19,7 @@ const Hero = () => {
                 transition={{ duration: 0.7 }}
             >
                 <Image
-                    src="/team2024-1.jpg"
+                    src="/team2024-1.webp"
                     alt="Team 334"
                     className="w-full h-full object-cover"
                     fill

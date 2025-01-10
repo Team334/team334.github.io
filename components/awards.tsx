@@ -14,10 +14,10 @@ export const AwardBanner = React.memo(({
 
 }) => {
     return (
-        <div className="w-[150px] h-[240px] bg-[url('/award-banner.png')]">
+        <div className="w-[150px] h-[240px] bg-[url('/award-banner.webp')]">
             <div className="h-full flex flex-col items-center p-3 pb-6 gap-2">
                 <Image
-                    src="/logos/first.png"
+                    src="/logos/first.webp"
                     alt="FIRST"
                     width={76}
                     height={76}

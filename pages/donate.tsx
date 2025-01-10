@@ -60,7 +60,7 @@ export default function DonatePage() {
                                     </p>
                                 </div>
                                 <Image
-                                    src="/donation.png"
+                                    src="/donation.webp"
                                     alt="Donation instructions"
                                     width={800}
                                     height={400}

@@ -5,11 +5,11 @@ import {motion} from "framer-motion";
 import {AwardBanner} from "@/components/awards";
 
 const images = [
-  "/team2024.jpg",
-  "/team2022.png",
-  "/team2020.jpg",
-  "/team2019-2.jpg",
-  "/team2019.jpg",
+  "/team2024.webp",
+  "/team2022.webp",
+  "/team2020.webp",
+  "/team2019-2.webp",
+  "/team2019.webp",
 ];
 
 const Awards = [
@@ -98,47 +98,47 @@ const Awards = [
 const sponsors = [
   {
     title: "FIRST",
-    link: "/logos/first.png",
+    link: "/logos/first.webp",
     url: "https://www.firstinspires.org/"
   },
   {
     title: "Brooklyn Tech Alumni Foundation",
-    link: "/sponsors/alumni-foundation.png",
+    link: "/sponsors/alumni-foundation.webp",
     url: "https://bthsalumni.org/"
   },
   {
     title: "Arament Research, Development and Engineering Center",
-    link: "/sponsors/arament.png",
+    link: "/sponsors/arament.webp",
     url: "/"
   },
   {
     title: "Con Edison",
-    link: "/sponsors/con-edison.png",
+    link: "/sponsors/con-edison.webp",
     url: "https://www.coned.com/en/"
   },
   {
     title: "DoD STEM",
-    link: "/sponsors/dodstem.png",
+    link: "/sponsors/dodstem.webp",
     url: "https://dodstem.us/"
   },
   {
     title: "Gene HAAS Foundation",
-    link: "/sponsors/haas-foundation.png",
+    link: "/sponsors/haas-foundation.webp",
     url: "https://ghaasfoundation.org/content/ghf/en/home.html"
   },
   {
     title: "Ike Heller",
-    link: "/sponsors/ike-heller.png",
+    link: "/sponsors/ike-heller.webp",
     url: "/"
   },
   {
     title: "QuoteBeam",
-    link: "/sponsors/quotebeam.png",
+    link: "/sponsors/quotebeam.webp",
     url: "https://quotebeam.com/"
   },
   {
     title: "Whimsy Tech",
-    link: "/sponsors/whimsy-tech.png",
+    link: "/sponsors/whimsy-tech.webp",
     url: "https://www.whimsytech.net/"
   },
 ];

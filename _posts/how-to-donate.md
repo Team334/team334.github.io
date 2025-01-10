@@ -1,11 +1,11 @@
 ---
 title: "How to Donate or help the team?"
 excerpt: "Learn how to donate and help the team out!"
-coverImage: "/team2022.png"
+coverImage: "/team2022.webp"
 date: "2024-04-2"
 author:
   name: Jerry
-  picture: "/team/ze-rui-zheng.jpg"
+  picture: "/team/ze-rui-zheng.webp"
 ogImage:
   url: "/logo.png"
 ---
@@ -19,7 +19,7 @@ Online donations can be made at [https://bthsalumni.org/donate](https://bthsalum
 
 > Select *`Robotics`* under `Designation`
 
-![How to donate](/donation.png)
+![How to donate](/donation.webp)
 
 ## Checks
 Checks can be mailed to:
