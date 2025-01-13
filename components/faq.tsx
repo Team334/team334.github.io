@@ -49,10 +49,6 @@ export default function Faq() {
             answer: "Yes! We ask parents volunteer to bring in food for our very hardworking and hungry team members. Additionally, donations and being there to support us is a great way for a parent to get involved.",
         },
         {
-            question: "Is it mandatory that I be and stay at every meeting?",
-            answer: "Yes, It is strongly encouraged. ",
-        },
-        {
             question: "I have other activities, can I still be on the team?",
             answer: "This is taken on a case on case basis. You’d have to talk to the coaches.",
         },
@@ -76,28 +72,33 @@ export default function Faq() {
                         <AccordionTrigger className={"text-base md:text-xl text-neutral-200"}>
                             <b>I have some other questions. How can I contact the team?</b>
                         </AccordionTrigger>
-                        <AccordionContent className={"text-base md:text-lg text-neutral-200"}>
-                            <div className="grid grid-cols-2 gap-4 mt-4">
-                                <div>
-                                    <h3 className="font-lg main">STUDENTS</h3>
-                                    <ul className="mt-2 space-y-2">
-                                        <li className={"secondary"}><b>Matthew Piszcz</b> - Matthewp403@nycstudents.net
-                                        </li>
-                                        <li className={"secondary"}><b>Gadin Aggarwal</b> - gadina@nycstudents.net</li>
-                                    </ul>
+                        <AccordionContent className={"text-base md:text-lg text-neutral-200"}>       
+                                <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
+                                    <h2 className="text-3xl md:text-6xl font-bold text-white secondary text-center mb-4 md:mb-6">
+                                        Have a Question?
+                                    </h2>
+                                    <p className="text-lg md:text-xl text-center text-neutral-200 mb-8 md:mb-12">
+                                        You can reach out to us by email
+                                    </p>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                                        <div>
+                                        <h3 className="font-lg main text-xl mb-3">STUDENTS</h3>
+                                        <ul className="mt-2 space-y-3">
+                                            <li className="secondary text-sm md:text-base"><b>Samantha Tan</b> - samanthat155@nycstudents.net</li>
+                                            <li className="secondary text-sm md:text-base"><b>Valentina Wolfe</b> - ValentinaW2@nycstudents.net</li>
+                                            <li className="secondary text-sm md:text-base"><b>Gadin Aggarwal</b> - gadina@nycstudents.net</li>
+                                        </ul>
+                                        </div>
+                                        <div>
+                                        <h3 className="font-lg main text-xl mb-3">MENTORS</h3>
+                                        <ul className="mt-2 space-y-3">
+                                            <li className="secondary text-sm md:text-base"><b>Ms. Shaina Doherty</b> - SDoherty2@schools.nyc.gov</li>
+                                            <li className="secondary text-sm md:text-base"><b>Mr. Marlon Esguerra</b> - MEsguerra@schools.nyc.gov</li>
+                                            <li className="secondary text-sm md:text-base"><b>Mr. Ali Harb</b> - aharb@schools.nyc.gov</li>
+                                        </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 className="font-lg main">MENTORS</h3>
-                                    <ul className="mt-2 space-y-2">
-                                        <li className={"secondary"}><b>Ms. Shaina Doherty</b> -
-                                            SDoherty2@schools.nyc.gov
-                                        </li>
-                                        <li className={"secondary"}><b>Mr. Marlon Esguerra</b> -
-                                            MEsguerra@schools.nyc.gov
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

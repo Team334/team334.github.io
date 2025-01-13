@@ -44,7 +44,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
     };
 
     return (
-        <div className="min-h-screen py-16 px-4 md:px-8">
+        <div className="min-h-screen px-4 md:px-8">
             {/* Season Recaps Section */}
             <LampContainer>
                 <motion.div
@@ -58,7 +58,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                         Season Recaps
                     </h2>
                     <p className="text-xl text-gray-400 secondary text-center mb-12">
-                        Watch our weekly progress throughout the 2025 season
+                        Watch our weekly progress throughout the 2025 season, REEFSCAPE
                     </p>
                     <div className="relative w-full h-[70vh]">
                         <Tabs tabs={tabs} />
