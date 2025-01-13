@@ -12,7 +12,7 @@ export default function Faq() {
         },
         {
             question: "What does this robot do? Is this battlebots?",
-            answer: "This is NOT battlebots, as much as it would be cool to make our own battlebot, the robot we make year to year is a lot different. The purpose of our bot can change vastly, and its design by default. Check out how different competitions can be year to year with these links (insert 2024 and 2023 kickoff FIRST videos)",
+            answer: "This is NOT battlebots, as much as it would be cool to make our own battlebot, the robot we make year to year is a lot different. The purpose of our bot can change vastly, and its design by default",
         },
         {
             question: "How much time do I have to dedicate to this?",

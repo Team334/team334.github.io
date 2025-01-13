@@ -25,88 +25,13 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                 <h1 className="text-black mb-4">Week 1 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
                     <YouTubePlayer 
-                        videoId="vGIsE0y7tVQ"
+                        videoId="T5QlrC06WXw"
                         loading="lazy"
                     />
                 </div>
             </div>
         ),
-        },
-        {
-        title: "Week 2",
-        value: "week2",
-        content: (
-            <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-                <h1 className="text-black mb-4">Week 2 Recap</h1>
-                <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer 
-                        videoId="k9-qFX8pPWc"
-                        loading="lazy"
-                    />
-                </div>
-            </div>
-        ),
-        },
-        {
-        title: "Week 3",
-        value: "week3",
-        content: (
-            <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-                <h1 className="text-black mb-4">Week 3 Recap</h1>
-                <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer 
-                        videoId="kMeeyb-l-0U"
-                        loading="lazy"
-                    />
-                </div>
-            </div>
-        ),
-        },
-        {
-        title: "Week 4",
-        value: "week4",
-        content: (
-            <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-                <h1 className="text-black mb-4">Week 4 Recap</h1>
-                <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer 
-                        videoId="3xwtSjaZoUM"
-                        loading="lazy"
-                    />
-                </div>
-            </div>
-        ),
-        },
-        {
-        title: "Week 5",
-        value: "week5",
-        content: (
-            <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-                <h1 className="text-black mb-4">Week 5 Recap</h1>
-                <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer 
-                        videoId="bjL-mn2fMTc"
-                        loading="lazy"
-                    />
-                </div>
-            </div>
-        ),
-        },
-        {
-        title: "Week 6",
-        value: "week6",
-        content: (
-            <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
-                <h1 className="text-black mb-4">Week 6 Recap</h1>
-                <div className="h-[calc(100%-4rem)]">
-                    <YouTubePlayer 
-                        videoId="KSeID8Ug1Os"
-                        loading="lazy"
-                    />
-                </div>
-            </div>
-        ),
-        },
+        }
     ]
 
     // Helper function to format dates consistently
@@ -120,6 +45,27 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
 
     return (
         <div className="min-h-screen py-16 px-4 md:px-8">
+            {/* Season Recaps Section */}
+            <LampContainer>
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    className="w-full"
+                >
+                    <h2 className="text-4xl md:text-6xl font-bold main text-center mb-6">
+                        Season Recaps
+                    </h2>
+                    <p className="text-xl text-gray-400 secondary text-center mb-12">
+                        Watch our weekly progress throughout the 2025 season
+                    </p>
+                    <div className="relative w-full h-[70vh]">
+                        <Tabs tabs={tabs} />
+                    </div>
+                </motion.div>
+            </LampContainer>
+
             {/* Hero Section */}
             <motion.div 
                 initial={{ opacity: 0, y: -20 }}
@@ -189,27 +135,6 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                         ))}
                 </div>
             </motion.div>
-
-            {/* Season Recaps Section */}
-            <LampContainer>
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    className="w-full"
-                >
-                    <h2 className="text-4xl md:text-6xl font-bold main text-center mb-6">
-                        Season Recaps
-                    </h2>
-                    <p className="text-xl text-gray-400 secondary text-center mb-12">
-                        Watch our weekly progress throughout the 2024 season
-                    </p>
-                    <div className="relative w-full h-[70vh]">
-                        <Tabs tabs={tabs} />
-                    </div>
-                </motion.div>
-            </LampContainer>
         </div>
     );
 }

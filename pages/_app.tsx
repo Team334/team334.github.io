@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </div>
         <footer className="relative w-full flex py-3 p-6 text-start border-t border-gray-800">
           <div className="mb-10 secondary container items-start justify-start md:ml-12 gap-1 flex flex-col md:flex-row">
-            <span className="font-bold">©1998-2024</span>
+            <span className="font-bold">©1998-2025</span>
             <p className="text-primary">TechKnights</p>
           </div>
           <Link
