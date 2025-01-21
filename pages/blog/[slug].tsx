@@ -43,13 +43,14 @@ const PostPage: React.FC<PostPageProps> = ({post}) => {
                     transition={{delay: 0.3}}
                     className="flex items-center justify-center space-x-4"
                 >
-                    <Image
-                        alt={post.author.name}
-                        src={post.author.picture}
-                        className="rounded-full"
-                        width={40}
-                        height={40}
-                    />
+                    <div className="relative w-8 h-8">
+                        <Image
+                            alt={post.author.name}
+                            src={post.author.picture}
+                            fill
+                            className="rounded-full object-cover"
+                        />
+                    </div>
                     <span className="main text-lg">{post.author.name}</span>
                     <span className="text-gray-400">•</span>
                     <time className="secondary text-gray-400">
