@@ -2,7 +2,7 @@
 title: "Castle FRC Scouting App"
 excerpt: "Announcing our scouting app, Castle!"
 coverImage: "/blog_imgs/castle.png"
-date: "2024-04-2"
+date: "2025-01-31"
 author:
   name: Jerry
   picture: "/team/ze-rui-zheng.webp"
