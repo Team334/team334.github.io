@@ -143,9 +143,17 @@ const sponsors = [
   },
 ];
 
+const rotatingWords = [
+  "Are 334",
+  "Inspire",
+  "Build",
+  "Innovate",
+];
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [isClient, setIsClient] = useState(false);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
     setIsClient(true);
@@ -153,6 +161,14 @@ export default function Home() {
       setIsLoading(false);
     }, 100);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 2000);
+    
+    return () => clearInterval(interval);
   }, []);
 
   // Early return with loading state
@@ -176,14 +192,29 @@ export default function Home() {
               transition={{duration: 0.6}}
               className="z-50 flex flex-col justify-center items-center px-4"
             >
-              <motion.p 
-                className="font-bold text-4xl sm:text-6xl md:text-8xl text-center bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400 py-4 main"
-                initial={{scale: 0.5}}
-                animate={{scale: 1}}
-                transition={{delay: 0.2, type: "spring", stiffness: 200}}
-              >
-                TechKnights 334
-              </motion.p>
+                <motion.p 
+                  className="font-bold text-4xl sm:text-6xl md:text-8xl text-center bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400 py-4 main"
+                  initial={{scale: 0.5}}
+                  animate={{scale: 1}}
+                  transition={{delay: 0.2, type: "spring", stiffness: 200}}
+                >
+                  TechKnights
+                </motion.p>
+                <div className="flex flex-col items-center gap-2">
+                <div className="flex items-center gap-2 text-2xl sm:text-3xl md:text-4xl mb-2 secondary">
+                  <span className="text-white">We</span>
+                  <motion.span
+                    key={rotatingWords[currentWordIndex]}
+                    initial={{opacity: 0, y: 20}}
+                    animate={{opacity: 1, y: 0}}
+                    exit={{opacity: 0, y: -20}}
+                    transition={{duration: 0.5}}
+                    className="text-blue-400 font-semibold"
+                  >
+                    {rotatingWords[currentWordIndex]}
+                  </motion.span>
+                </div>
+              </div>
             </motion.div>
           </ImagesSlider>
         </div>
@@ -231,18 +262,44 @@ export default function Home() {
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold main mb-6 md:mb-8 text-center">Who We Are</h2>
               <div className="h-[400px] md:h-[500px] overflow-y-auto pr-2 md:pr-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300">
-                <p className="secondary text-base md:text-lg leading-relaxed px-2 md:px-4">
-                  We are a team that consists of 50-60 students which come nearly every day to work on the
-                  robot during the build season and compete against teams all over the world. After 10th period,
-                  we meet at the wonderful Ike Heller
-                  <br /><br />
-                  During our preseason, we exchange information between the previous members, and the newcomers,
-                  ensuring that our build season occurs flawlessly. We host events and tryouts for students at our
-                  school to have an opportunity to join the team. During our offseason, we begin planning ahead
-                  for next year's preseason and work on projects around the lab. We also host Future Vision
-                  events, in which middle schools from all across Brooklyn come to visit the school. We teach them
-                  about FIRST and engineering, while also letting them drive our robot.
-                </p>
+                <div className="flex flex-col gap-6 px-2 md:px-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 my-8">
+                  <div className="text-center">
+                    <h3 className="text-4xl font-bold text-blue-400">63</h3>
+                    <p className="text-gray-300">Students</p>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-4xl font-bold text-blue-400">5</h3>
+                    <p className="text-gray-300">Mentors</p>
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-4xl font-bold text-blue-400">50+</h3>
+                    <p className="text-gray-300">Alumni</p>
+                  </div>
+                </div>
+                  
+                  <p className="secondary text-base md:text-lg leading-relaxed">
+                    Brooklyn Technical High School's Robotics Team, TechKnights (FRC Team 334) is a robotics team 
+                    that has been inspiring and educating students since 1999. Our team brings together passionate 
+                    students who work collaboratively to design, build, and program robots for the FIRST Robotics 
+                    Competition. Through hands-on experience, we develop crucial skills in engineering, 
+                    programming, and project management.
+                  </p>
+                  <div className="mt-4">
+                    <h3 className="text-xl font-bold main mb-3">Open Alliance 2024-2025</h3>
+                    <p className="secondary text-base md:text-lg leading-relaxed">
+                      We believe in sharing knowledge and promoting collaboration. Check out our build thread on Chief Delphi where we share our progress and insights:
+                    </p>
+                    <a 
+                      href="https://www.chiefdelphi.com/t/frc-334-techknights-2024-25-build-thread-open-alliance/476058"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-2 text-blue-400 hover:text-blue-300 transition-colors"
+                    >
+                      View our Open Alliance Build Thread →
+                    </a>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
