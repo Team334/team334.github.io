@@ -154,6 +154,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [isClient, setIsClient] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isAchievementsOpen, setIsAchievementsOpen] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -238,16 +239,37 @@ export default function Home() {
               viewport={{once: true}}
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold main mb-6 md:mb-8 text-center">Our Achievements</h2>
-              <div className="h-[400px] md:h-[520px] overflow-y-auto pr-2 md:pr-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 p-2 md:p-4">
-                  {Awards.map((award, index) => (
-                    <AwardBanner
-                      key={index}
-                      title={award.title}
-                      year={award.year}
-                      comp={award.comp}
-                    />
-                  ))}
+              <div className="md:block">
+                <button 
+                  onClick={() => setIsAchievementsOpen(!isAchievementsOpen)}
+                  className="w-full flex items-center justify-between p-4 text-lg font-semibold md:hidden"
+                >
+                  <span className="secondary text-xl p-2">Achievements</span>
+                  <svg 
+                    className={`w-6 h-6 transition-transform ${isAchievementsOpen ? 'rotate-180' : ''}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                
+                <div className={`${isAchievementsOpen ? 'block' : 'hidden'} md:block`}>
+                  <div className="h-[400px] md:h-[550px] overflow-y-auto pr-2 md:pr-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300 flex flex-col items-center">
+                    <div className="flex flex-col items-center gap-6 px-2 md:px-4 w-full py-8">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 p-2 md:p-4">
+                        {Awards.map((award, index) => (
+                          <AwardBanner
+                            key={index}
+                            title={award.title}
+                            year={award.year}
+                            comp={award.comp}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -278,14 +300,14 @@ export default function Home() {
                   </div>
                 </div>
                   
-                  <p className="secondary text-base md:text-lg leading-relaxed">
+                  <p className="secondary text-base md:text-lg leading-relaxed text-center md:text-left">
                     Brooklyn Technical High School's Robotics Team, TechKnights (FRC Team 334) is a robotics team 
                     that has been inspiring and educating students since 1999. Our team brings together passionate 
                     students who work collaboratively to design, build, and program robots for the FIRST Robotics 
                     Competition. Through hands-on experience, we develop crucial skills in engineering, 
                     programming, and project management.
                   </p>
-                  <div className="mt-4">
+                  <div className="mt-4 text-center md:text-left">
                     <h3 className="text-xl font-bold main mb-3">Open Alliance 2024-2025</h3>
                     <p className="secondary text-base md:text-lg leading-relaxed">
                       We believe in sharing knowledge and promoting collaboration. Check out our build thread on Chief Delphi where we share our progress and insights:
