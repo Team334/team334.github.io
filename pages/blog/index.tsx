@@ -77,6 +77,21 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
             </div>
         ),
         },
+        {
+            title: "Week 5",
+            value: "week5",
+            content: (
+                <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
+                    <h1 className="text-black mb-4">Week 5 Recap</h1>
+                    <div className="h-[calc(100%-4rem)]">
+                        <YouTubePlayer 
+                            videoId="OVkef60RHQA"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            ),
+            },
     ]
 
     // Helper function to format dates consistently
