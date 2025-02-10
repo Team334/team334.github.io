@@ -287,7 +287,7 @@ export default function Home() {
                 <div className="flex flex-col gap-6 px-2 md:px-4">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-8 my-8">
                   <div className="text-center">
-                    <h3 className="text-4xl font-bold text-blue-400">63</h3>
+                    <h3 className="text-4xl font-bold text-blue-400">59</h3>
                     <p className="text-gray-300">Students</p>
                   </div>
                   <div className="text-center">
