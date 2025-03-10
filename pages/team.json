@@ -15,6 +15,10 @@
     "department": "Mentor",
     "image": "/team/Mr. Collado.webp"
   },
+  "Ms. Albury" : {
+    "department": "Mentor",
+    "image": "/team/Ms. Albury.jpg"
+  },
   "Samantha Tan": {
     "department": "Executive",
     "image": "/team/Samantha Tan.webp"
@@ -132,7 +136,7 @@
     "image": "/team/Hadi Al Sati.webp"
   },
   "Jia Yi He": {
-    "department": "Mechanical",
+    "department": "Executive",
     "image": "/team/Jia Yi  He.webp"
   },
   "Derek Pohl": {
