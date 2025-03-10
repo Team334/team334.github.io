@@ -194,7 +194,7 @@ export default function Home() {
               className="z-50 flex flex-col justify-center items-center px-4"
             >
                 <motion.p 
-                  className="font-bold text-4xl sm:text-6xl md:text-8xl text-center bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-400 py-4 main"
+                  className="font-bold text-4xl sm:text-6xl md:text-7xl text-center text-white py-4 main"
                   initial={{scale: 0.5}}
                   animate={{scale: 1}}
                   transition={{delay: 0.2, type: "spring", stiffness: 200}}
