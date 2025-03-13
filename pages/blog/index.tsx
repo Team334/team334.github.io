@@ -70,7 +70,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                 <h1 className="text-black mb-4">Week 4 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
                     <YouTubePlayer 
-                        videoId="Qc_T-5c1kFg"
+                        videoId="j4SlMXF2JDs"
                         loading="lazy"
                     />
                 </div>
