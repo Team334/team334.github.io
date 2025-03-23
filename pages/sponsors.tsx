@@ -19,6 +19,12 @@ export default function SponsorPage() {
             description: "The Brooklyn Tech Alumni Foundation mobilizes Tech graduates to support the nation's premier high school for science, technology, engineering and mathematics"
         },
         {
+            image: "/sponsors/Educademy.png",
+            title: "Educademy",
+            url: "https://www.educademy.org/about/",
+            description: "We provide higher-order thinking, processing, and learning experiences around significant issues, themes, and ideas across different areas of study. Our mission is to promote educational excellence for all."
+        },
+        {
             image: "/sponsors/intuitive-foundation.webp",
             title: "Intuitive Foundation",
             url: "https://www.intuitive-foundation.org/",
