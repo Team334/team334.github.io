@@ -14,6 +14,11 @@ const images = [
 
 const Awards = [
   {
+    title: "Judges Award",
+    year: "2025",
+    comp: "NYC Regional"
+  },
+  {
     title: "Finalist",
     year: "2023",
     comp: "NYC Regional"
@@ -301,11 +306,7 @@ export default function Home() {
                 </div>
                   
                   <p className="secondary text-base md:text-lg leading-relaxed text-center md:text-left">
-                    Brooklyn Technical High School's Robotics Team, TechKnights (FRC Team 334) is a robotics team 
-                    that has been inspiring and educating students since 1999. Our team brings together passionate 
-                    students who work collaboratively to design, build, and program robots for the FIRST Robotics 
-                    Competition. Through hands-on experience, we develop crucial skills in engineering, 
-                    programming, and project management.
+                    Dedicated to building since 1998, we are the TechKnights, Brooklyn Technical High School’s FIRST Robotics Competition (FRC) team. Meeting daily, we come together to tackle the new challenge posed by the international FIRST organization in a 6-week competition season devoted to learning and innovating. Including members from all backgrounds is a pivotal aspect of our team, bringing a diverse range of new members to our lab’s doors every year, and pushing the bounds of growth for the team. Composed of 50 engineers, the TechKnights develop designs through CAD that we go on to manufacture in-house, then create proprietary code for, synthesizing the work of every student across five distinct divisions into one, competition-ready robot.
                   </p>
                   <div className="mt-4 text-center md:text-left">
                     <h3 className="text-xl font-bold main mb-3">Open Alliance 2024 &#8208;  2025</h3>
@@ -340,14 +341,14 @@ export default function Home() {
               </h2>
               <p className="text-lg md:text-xl text-center text-neutral-200 mb-8 md:mb-12">
                 You can reach out to us by email
+                <h3 className="font-bold secondary text-lg mb-3">techrobotics334@gmail.com</h3>
+
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                <div>
+              <div>
                   <h3 className="font-lg main text-xl mb-3">STUDENTS</h3>
                   <ul className="mt-2 space-y-3">
                     <li className="secondary text-sm md:text-base"><b>Samantha Tan</b> - samanthat155@nycstudents.net</li>
-                    <li className="secondary text-sm md:text-base"><b>Valentina Wolfe</b> - ValentinaW2@nycstudents.net</li>
-                    <li className="secondary text-sm md:text-base"><b>Gadin Aggarwal</b> - gadina@nycstudents.net</li>
                   </ul>
                 </div>
                 <div>
