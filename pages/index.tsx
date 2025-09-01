@@ -290,34 +290,48 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold main mb-6 md:mb-8 text-center">Who We Are</h2>
               <div className="h-[400px] md:h-[500px] overflow-y-auto pr-2 md:pr-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300">
                 <div className="flex flex-col gap-6 px-2 md:px-4">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 my-8">
-                  <div className="text-center">
-                    <h3 className="text-4xl font-bold text-blue-400">59</h3>
-                    <p className="text-gray-300">Students</p>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-8 my-8">
+                    <div className="text-center">
+                      <h3 className="text-4xl font-bold text-blue-400">59</h3>
+                      <p className="text-gray-300">Students</p>
+                    </div>
+                    <div className="text-center">
+                      <h3 className="text-4xl font-bold text-blue-400">5</h3>
+                      <p className="text-gray-300">Mentors</p>
+                    </div>
+                    <div className="text-center">
+                      <h3 className="text-4xl font-bold text-blue-400">50+</h3>
+                      <p className="text-gray-300">Alumni</p>
+                    </div>
                   </div>
-                  <div className="text-center">
-                    <h3 className="text-4xl font-bold text-blue-400">5</h3>
-                    <p className="text-gray-300">Mentors</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-4xl font-bold text-blue-400">50+</h3>
-                    <p className="text-gray-300">Alumni</p>
-                  </div>
-                </div>
-                  
+
                   <p className="secondary text-base md:text-lg leading-relaxed text-center md:text-left">
-                    Dedicated to building since 1998, we are the TechKnights, Brooklyn Technical High School’s FIRST Robotics Competition (FRC) team. Meeting daily, we come together to tackle the new challenge posed by the international FIRST organization in a 6-week competition season devoted to learning and innovating. Including members from all backgrounds is a pivotal aspect of our team, bringing a diverse range of new members to our lab’s doors every year, and pushing the bounds of growth for the team. Composed of 50 engineers, the TechKnights develop designs through CAD that we go on to manufacture in-house, then create proprietary code for, synthesizing the work of every student across five distinct divisions into one, competition-ready robot.
+                    Dedicated to building since 1998, we are the TechKnights, Brooklyn Technical High School’s FIRST
+                    Robotics Competition (FRC) team. Meeting daily, we come together to tackle the new challenge posed
+                    by the international FIRST organization in a 6-week competition season devoted to learning and
+                    innovating. Including members from all backgrounds is a pivotal aspect of our team, bringing a
+                    diverse range of new members to our lab’s doors every year, and pushing the bounds of growth for the
+                    team. Composed of 50 engineers, the TechKnights develop designs through CAD that we go on to
+                    manufacture in-house, then create proprietary code for, synthesizing the work of every student
+                    across five distinct divisions into one, competition-ready robot.
                   </p>
+                  <div className="mt-4 text-center md:text-left">
+                    <h3 className="text-xl font-bold main mb-3">Mission Statement</h3>
+                    <p className="secondary text-base md:text-lg leading-relaxed">
+                      Our mission is to inspire our community by fostering an inclusive environment where students can actively engage in every facet of STEM. By spreading the goals of FIRST (For Inspiration and Recognition of Science and Technology), we aim to empower students with both knowledge and hands-on experience in real-world engineering challenges. Through this journey, we strive to ignite a passion for lifelong learning and innovation, equipping our students to excel as future leaders in the world of STEM.
+                    </p>
+                  </div>
                   <div className="mt-4 text-center md:text-left">
                     <h3 className="text-xl font-bold main mb-3">Open Alliance 2024 &#8208;  2025</h3>
                     <p className="secondary text-base md:text-lg leading-relaxed">
-                      We believe in sharing knowledge and promoting collaboration. Check out our build thread on Chief Delphi where we share our progress and insights:
+                      We believe in sharing knowledge and promoting collaboration. Check out our build thread on Chief
+                      Delphi where we share our progress and insights:
                     </p>
-                    <a 
-                      href="https://www.chiefdelphi.com/t/frc-334-techknights-2024-25-build-thread-open-alliance/476058"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-2 text-blue-400 hover:text-blue-300 transition-colors"
+                    <a
+                        href="https://www.chiefdelphi.com/t/frc-334-techknights-2024-25-build-thread-open-alliance/476058"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-2 text-blue-400 hover:text-blue-300 transition-colors"
                     >
                       View our Open Alliance Build Thread →
                     </a>
@@ -328,12 +342,12 @@ export default function Home() {
           </div>
 
           {/* Contact Section */}
-          <motion.div 
-            className="py-12 md:py-20 bg-black/50 backdrop-blur-sm"
-            initial={{opacity: 0, y: 50}}
-            whileInView={{opacity: 1, y: 0}}
-            transition={{duration: 0.5}}
-            viewport={{once: true}}
+          <motion.div
+              className="py-12 md:py-20 bg-black/50 backdrop-blur-sm"
+              initial={{opacity: 0, y: 50}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 0.5}}
+              viewport={{once: true}}
           >
             <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
               <h2 className="text-3xl md:text-6xl font-bold text-white secondary text-center mb-4 md:mb-6">
