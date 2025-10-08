@@ -11,7 +11,7 @@ interface Roster {
 // @ts-ignore
 const roster: Roster = require('./team.json');
 const departments: {
-    [key: string]: { name: string; image: string, department: string }[]
+    [key: string]: { name: string; image: string, department: string, role?: string }[]
 } = {};
 
 export default function TeamPage() {
@@ -21,19 +21,17 @@ export default function TeamPage() {
     const [imagesLoaded, setImagesLoaded] = useState(0);
     const totalImages = Object.keys(roster).length;
 
-    // Process departments immediately
-    Object.keys(roster).reduce((acc, member) => {
-        const {department} = roster[member];
-        if (!departments[department]) {
-            departments[department] = [];
-        }
-        if (!departments[department].some(existingMember => existingMember.name === member)) {
-            departments[department].push({name: member, image: roster[member].image, department: department});
-        }
-        return acc;
-    }, {});
-
-    useEffect(() => {
+// Process departments immediately
+Object.keys(roster).reduce((acc, member) => {
+    const {department, role} = roster[member];
+    if (!departments[department]) {
+        departments[department] = [];
+    }
+    if (!departments[department].some(existingMember => existingMember.name === member)) {
+        departments[department].push({name: member, image: roster[member].image, department: department, role: role});
+    }
+    return acc;
+}, {});    useEffect(() => {
         // Preload images in the background
         const imagePromises = Object.values(roster).map(member => {
             return new Promise((resolve) => {
