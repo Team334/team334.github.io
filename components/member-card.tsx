@@ -5,6 +5,7 @@ export type Member = {
     name: string;
     department: string;
     image: string;
+    role?: string;
 }
 
 interface MemberProps {
@@ -24,6 +25,9 @@ export const MemberCard: React.FC<MemberProps> = React.memo(({member}) => (
             />
         </div>
         <p className="text-center mb-0 text-base md:text-medium text-neutral-200 secondary">{member.name}</p>
+        {member.role && (
+            <p className="text-center mt-1 text-sm text-gray-400 secondary italic">{member.role}</p>
+        )}
     </div>
 ));
 

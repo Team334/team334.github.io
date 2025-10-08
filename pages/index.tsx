@@ -3,6 +3,7 @@ import {ImagesSlider} from "@/components/aceternity/ui/page-hero";
 import {InfiniteMovingCards} from "@/components/aceternity/ui/infinite-moving-cards";
 import {motion} from "framer-motion";
 import {AwardBanner} from "@/components/awards";
+import {HeadingBanner} from "@/components/heading-banner";
 
 const images = [
   "/team2024.webp",
@@ -188,9 +189,10 @@ export default function Home() {
 
   return (
     <section className="overflow-hidden">
+      <HeadingBanner />
       <Suspense fallback={<div>Loading...</div>}>
         {/* Hero Section */}
-        <div className="relative h-[85vh] w-full -top-[4rem]">
+        <div className="relative h-[85vh] w-full -top-[1rem]">
           <ImagesSlider className="object-cover" images={images}>
             <motion.div
               initial={{opacity: 0, y: -80}}
