@@ -189,7 +189,7 @@ export default function Home() {
 
   return (
     <section className="overflow-hidden">
-      <HeadingBanner />
+      {/* <HeadingBanner /> */}
       <Suspense fallback={<div>Loading...</div>}>
         {/* Hero Section */}
         <div className="relative h-[85vh] w-full -top-[1rem]">
