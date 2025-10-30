@@ -23,33 +23,9 @@
     "department": "Executive",
     "image": "/team/Samantha Tan.webp"
   },
-  "Fatima Moreno": {
-    "department": "Mechanical",
-    "image": "/team/Fatima Morena.webp"
-  },
-  "Kelvin La": {
-    "department": "Mechanical",
-    "image": "/team/kelvin-la.webp"
-  },
   "Max Bernstein": {
     "department": "Executive",
     "image": "/team/Max Bernstein.webp"
-  },
-  "Gadin Aggarwal": {
-    "department": "Executive",
-    "image": "/team/gadin-aggarwal.webp"
-  },
-  "Kenneth Odeyemi": {
-    "department": "Executive",
-    "image": "/team/Kenneth Odyemi.webp"
-  },
-  "William Lam": {
-    "department": "Mechanical",
-    "image": "/team/William Lam.webp"
-  },
-  "Ollintzin Mortera": {
-    "department": "Executive",
-    "image": "/team/Ollintzin Mortera.webp"
   },
   "Peter Gutkovich": {
     "department": "Executive",
@@ -67,34 +43,6 @@
     "department": "Mechanical",
     "image": "/team/Sherry Wang.webp"
   },
-  "Valentina Wolfe": {
-    "department": "Executive",
-    "image": "/team/Valentina Wolfe.webp"
-  },
-  "Shirley Jiang": {
-    "department": "Mechanical",
-    "image": "/team/shirley-jiang.webp"
-  },
-  "Leila Di Giacomo": {
-    "department": "Mechanical",
-    "image": "/team/leila-di-giacomo.webp"
-  },
-  "Harry Chen": {
-    "department": "Programming",
-    "image": "/team/Harry Chen.webp"
-  },
-  "Elymar Arenas": {
-    "department": "Executive",
-    "image": "/team/Elymar Arenas.webp"
-  },
-  "Peleh Liu": {
-    "department": "Programming",
-    "image": "/team/peleh-liu.webp"
-  },
-  "Johnathan Rojas": {
-    "department": "Mechanical",
-    "image": "/team/Johnathan Rojas.webp"
-  },
   "Husain Baker": {
     "department": "Executive",
     "image": "/team/husain-baker.webp"
@@ -104,7 +52,7 @@
     "image": "/team/Rosalind Chen.webp"
   },
   "Keira Lie": {
-    "department": "Mechanical",
+    "department": "Executive",
     "image": "/team/Keira Lie.webp"
   },
   "Sophia Liu": {
@@ -112,15 +60,11 @@
     "image": "/team/Sophia Liu.webp"
   },
   "Filip Raczkowski": {
-    "department": "Mechanical",
+    "department": "Executive",
     "image": "/team/filip-raczowski.webp"
   },
-  "Dean Tuminello": {
-    "department": "Mechanical",
-    "image": "/team/Dean Tuminello.webp"
-  },
   "Cherine Soewignjo": {
-    "department": "Programming",
+    "department": "Executive",
     "image": "/team/Cherine Soewignjo.webp"
   },
   "Isabelle Zhang": {
@@ -141,22 +85,15 @@
   },
   "Derek Pohl": {
     "department": "Mechanical",
-    "image": "/team/Derek Pohl.webp"
+    "image": "/team/Derek Pohl.webp",
+    "role": "Snack Attack"
   },
   "Seth Simo": {
     "department": "CAD",
     "image": "/team/Seth Simo.webp"
   },
-  "Fiad Muntakim": {
-    "department": "Media",
-    "image": "/team/Fiad Muntakim.webp"
-  },
-  "Maxwell Silver": {
-    "department": "Mechanical",
-    "image": "/team/maxwell-silver.webp"
-  },
   "MD Sayad": {
-    "department": "Media",
+    "department": "Executive",
     "image": "/team/md-sayad.webp"
   },
   "Shu Ying Zhang": {
@@ -165,21 +102,13 @@
   },
   "Ze Rui Zheng": {
     "department": "Programming",
-    "image": "/team/ze-rui-zheng.webp"
+    "image": "/team/ze-rui-zheng.webp",
+    "role": "FRC Software Programmer & Website Manager"
   },
   "Amridin Mukhamedov": {
       "department": "Programming",
       "image": "/team/Amridin Mukhamedov.webp"
   },
-  "Chloe Nebel": {
-      "department": "Media",
-      "image": "/team/Chloe Nebel.webp"
-  },
-  "Danial Armiyaev": {
-      "department": "Programming",
-      "image": "/team/Danial Armiyaev.webp"
-  },
-
   "Drilyon Rinchen": {
       "department": "Mechanical",
       "image": "/team/Drilyon Rinchen.webp"
@@ -213,10 +142,6 @@
       "department": "Mechanical",
       "image": "/team/Jasen Chen.webp"
   },
-  "Karla Garcia": {
-      "department": "Media",
-      "image": "/team/Karla Garcia.webp"
-  },
   "Katie Maliphol": {
       "department": "Mechanical",
       "image": "/team/Katie Maliphol.webp"
@@ -225,7 +150,6 @@
       "department": "Electrical",
       "image": "/team/Leo RobinHunter.webp"
   },
-
   "Melike Carrozza": {
       "department": "Electrical",
       "image": "/team/Melike carrozza.webp"
@@ -234,7 +158,6 @@
       "department": "CAD",
       "image": "/team/Reina Turley.webp"
   },
-
   "Ryan Zhu": {
       "department": "Programming",
       "image": "/team/Ryan Zhu.webp"
