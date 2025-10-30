@@ -36,7 +36,7 @@
     "image": "/team/Elvis Osmanov.webp"
   },
   "Justin Ng": {
-    "department": "Mechanical",
+    "department": "Executive",
     "image": "/team/Justin Ng.webp"
   },
   "Sherry Wang": {
@@ -77,7 +77,8 @@
   },
   "Hadi Al Sati": {
     "department": "Executive",
-    "image": "/team/Hadi Al Sati.webp"
+    "image": "/team/Hadi Al Sati.webp",
+    "role": "🐐"
   },
   "Jia Yi He": {
     "department": "Executive",
@@ -86,7 +87,6 @@
   "Derek Pohl": {
     "department": "Mechanical",
     "image": "/team/Derek Pohl.webp",
-    "role": "Snack Attack"
   },
   "Seth Simo": {
     "department": "CAD",
