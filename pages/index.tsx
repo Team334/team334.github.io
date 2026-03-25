@@ -324,7 +324,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="mt-4 text-center md:text-left">
-                    <h3 className="text-xl font-bold main mb-3">Open Alliance 2024 &#8208;  2025</h3>
+                    <h3 className="text-xl font-bold main mb-3">Open Alliance 2025 &#8208;  2026</h3>
                     <p className="secondary text-base md:text-lg leading-relaxed">
                       We believe in sharing knowledge and promoting collaboration. Check out our build thread on Chief
                       Delphi where we share our progress and insights:

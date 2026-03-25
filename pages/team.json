@@ -1,4 +1,20 @@
 {
+  "Mr C": {
+    "department": "Mentor",
+    "image": "/team/Mr C.webp"
+  },
+  "Mr E": {
+    "department": "Mentor",
+    "image": "/team/Mr E.webp"
+  },
+  "Mr Harb": {
+    "department": "Mentor",
+    "image": "/team/Mr Harb.webp"
+  },
+  "Ms D": {
+    "department": "Mentor",
+    "image": "/team/Ms D.webp"
+  },
   "Aaro": {
     "department": "Mechanical",
     "image": "/team/Aaro.webp"
@@ -115,27 +131,11 @@
   },
   "Md": {
     "department": "Executive",
-    "image": "/team/Md.webp"
+    "image": "/team/MD.webp"
   },
   "Melike": {
     "department": "Executive",
     "image": "/team/Melike.webp"
-  },
-  "Mr C": {
-    "department": "Mentor",
-    "image": "/team/Mr C.webp"
-  },
-  "Mr E": {
-    "department": "Mentor",
-    "image": "/team/Mr E.webp"
-  },
-  "Mr Harb": {
-    "department": "Mentor",
-    "image": "/team/Mr Harb.webp"
-  },
-  "Ms D": {
-    "department": "Mentor",
-    "image": "/team/Ms D.webp"
   },
   "Peter": {
     "department": "Executive",
