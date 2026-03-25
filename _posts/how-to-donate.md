@@ -5,7 +5,7 @@ coverImage: "/team2022.webp"
 date: "2024-04-2"
 author:
   name: Jerry
-  picture: "/team/ze-rui-zheng.webp"
+  picture: "/team/Jerry.webp"
 ogImage:
   url: "/logo.png"
 ---

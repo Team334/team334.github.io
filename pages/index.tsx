@@ -330,7 +330,7 @@ export default function Home() {
                       Delphi where we share our progress and insights:
                     </p>
                     <a
-                        href="https://www.chiefdelphi.com/t/frc-334-techknights-2024-25-build-thread-open-alliance/476058"
+                        href="https://www.chiefdelphi.com/t/frc-334-techknights-2026-build-thread-open-alliance/510072"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block mt-2 text-blue-400 hover:text-blue-300 transition-colors"

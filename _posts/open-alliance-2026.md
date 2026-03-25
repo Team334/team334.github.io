@@ -1,17 +1,17 @@
 ---
-title: "Open Alliance"
+title: "Open Alliance 2026"
 excerpt: "Our open alliance post on cheif delphi!"
 coverImage: "/blog_imgs/oa.png"
-date: "2025-01-21"
+date: "2026-01-8"
 author:
-  name: Husain
-  picture: "/team/husain-baker.webp"
+  name: Hadi
+  picture: "/team/Hadi.webp"
 ogImage:
   url: "/blog_imgs/oa.png"
 ---
 
-## We are happy to announce our 2025 Open Alliance 
-**You can visit our open alliance page [here](https://www.chiefdelphi.com/t/frc-334-techknights-2024-25-build-thread-open-alliance/476058)!!!**
+## We are happy to announce our 2026 Open Alliance 
+**You can visit our open alliance page [here](https://www.chiefdelphi.com/t/frc-334-techknights-2026-build-thread-open-alliance/510072)!!!**
 
 
 ## Team Links
@@ -23,4 +23,3 @@ ogImage:
 |YouTube Channel| https://www.youtube.com/@TechKnights334 |
 |Github | https://www.github.com/team334/ |
 
-> Post Credits: Gadin, Husain, Samantha

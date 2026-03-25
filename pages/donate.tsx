@@ -95,6 +95,18 @@ export default function DonatePage() {
                             <h2 className="text-3xl font-bold main mb-6 text-center">Mail a Check</h2>
                             <div className="space-y-6">
                                 <p className="secondary text-lg text-center">
+                                    Direct Deposit of check payable to Friends of Brooklyn Techknights 334 Robotics Inc.
+                                </p>
+                                <div className="bg-black/30 rounded-xl p-6 space-y-4">
+                                    <div className="secondary text-lg">
+                                        <p>JPMorgan Chase Bank</p>
+                                        <p>Account No: 931088907</p>
+                                        <p>ACH Routing No: 021000021</p>
+                                        <p>OR Zelle ID: bthsrobofriends@gmail.com</p>
+                                    </div>
+                                </div>
+                                
+                                <p className="secondary text-lg text-center">
                                     Send your contribution via check to our foundation
                                 </p>
                                 <div className="bg-black/30 rounded-xl p-6 space-y-4">

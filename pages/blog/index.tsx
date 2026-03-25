@@ -18,6 +18,21 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
     
     const tabs = [
         {
+        title: "Kickoff",
+        value: "kickoff",
+        content: (
+            <div className="w-full relative h-full rounded-2xl p-6 md:p-10 text-xl md:text-4xl main font-bold bg-[#f2f2f2]">
+                <h1 className="text-black mb-4">Kickoff</h1>
+                <div className="h-[calc(100%-4rem)]">
+                    <YouTubePlayer 
+                        videoId="jKRlFbIvuAI"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        ),
+        },
+        {
         title: "Week 1",
         value: "week1",
         content: (
@@ -25,7 +40,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                 <h1 className="text-black mb-4">Week 1 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
                     <YouTubePlayer 
-                        videoId="T5QlrC06WXw"
+                        videoId="SK1SjC7vwYk"
                         loading="lazy"
                     />
                 </div>
@@ -40,7 +55,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                 <h1 className="text-black mb-4">Week 2 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
                     <YouTubePlayer 
-                        videoId="hW77z1hqZ7s"
+                        videoId="bNTBTtnKY3Y"
                         loading="lazy"
                     />
                 </div>
@@ -55,7 +70,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                 <h1 className="text-black mb-4">Week 3 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
                     <YouTubePlayer 
-                        videoId="Qc_T-5c1kFg"
+                        videoId="K-HZVt-w51g"
                         loading="lazy"
                     />
                 </div>
@@ -70,7 +85,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                 <h1 className="text-black mb-4">Week 4 Recap</h1>
                 <div className="h-[calc(100%-4rem)]">
                     <YouTubePlayer 
-                        videoId="j4SlMXF2JDs"
+                        videoId="FtENcmM6QQc"
                         loading="lazy"
                     />
                 </div>
@@ -85,7 +100,7 @@ const BlogHome: React.FC<BlogHomeProps> = ({ posts }) => {
                     <h1 className="text-black mb-4">Week 5 Recap</h1>
                     <div className="h-[calc(100%-4rem)]">
                         <YouTubePlayer 
-                            videoId="OVkef60RHQA"
+                            videoId="t_7vD2z0CYs"
                             loading="lazy"
                         />
                     </div>

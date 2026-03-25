@@ -1,109 +1,35 @@
 {
-  "Ms. D": {
-    "department": "Mentor",
-    "image": "/team/Ms D.webp"
-  },
-  "Mr. Harb": {
-    "department": "Mentor",
-    "image": "/team/Mr Harb.webp"
-  },
-  "Mr. E": {
-    "department": "Mentor",
-    "image": "/team/Mr E.webp"
-  },
-  "Mr. C": {
-    "department": "Mentor",
-    "image": "/team/Mr C.webp"
-  },
-  "Ms. Albury": {
-    "department": "Mentor",
-    "image": "/team/Ms Albury.jpg"
-  },
-  "Samantha": {
-    "department": "Executive",
-    "image": "/team/Samantha.webp"
-  },
-  "Max": {
-    "department": "Executive",
-    "image": "/team/Max.webp"
-  },
-  "Peter": {
-    "department": "Executive",
-    "image": "/team/Peter.webp"
-  },
-  "Elvis": {
-    "department": "Executive",
-    "image": "/team/Elvis.webp"
-  },
-  "Justin": {
-    "department": "Executive",
-    "image": "/team/Justin.webp"
-  },
-  "Sherry": {
+  "Aaro": {
     "department": "Mechanical",
-    "image": "/team/Sherry.webp"
+    "image": "/team/Aaro.webp"
   },
-  "Husain": {
-    "department": "Executive",
-    "image": "/team/Husain.webp"
-  },
-  "Rosalind": {
-    "department": "Mechanical",
-    "image": "/team/Rosalind.webp"
-  },
-  "Keira": {
-    "department": "Executive",
-    "image": "/team/Keira.webp"
-  },
-  "Sophia": {
-    "department": "Mechanical",
-    "image": "/team/Sophia.webp"
-  },
-  "Filip": {
-    "department": "Executive",
-    "image": "/team/Filip.webp"
-  },
-  "Cherine": {
-    "department": "Executive",
-    "image": "/team/Cherine.webp"
-  },
-  "Isabelle": {
-    "department": "Mechanical",
-    "image": "/team/Isabelle.webp"
-  },
-  "Ferdinand": {
-    "department": "CAD",
-    "image": "/team/Ferdinand.webp"
-  },
-  "Hadi": {
-    "department": "Executive",
-    "image": "/team/Hadi.webp",
-    "role": "GOAT"
-  },
-  "Derek": {
-    "department": "Mechanical",
-    "image": "/team/Derek.webp"
-  },
-  "Seth": {
-    "department": "CAD",
-    "image": "/team/Seth.webp"
-  },
-  "MD": {
-    "department": "Executive",
-    "image": "/team/MD.webp"
-  },
-  "Shu Ying": {
+  "Ada": {
     "department": "Media",
-    "image": "/team/Shu Ying.webp"
+    "image": "/team/Ada.webp"
   },
-  "Ze Rui": {
-    "department": "Programming",
-    "image": "/team/Ze Rui.webp",
-    "role": "FRC Software Programmer & Website Manager"
+  "Alma": {
+    "department": "Media",
+    "image": "/team/Alma.webp"
   },
   "Amridin": {
     "department": "Programming",
     "image": "/team/Amridin.webp"
+  },
+  "Angela": {
+    "department": "Media",
+    "image": "/team/Angela.webp"
+  },
+  "Azalea": {
+    "department": "Programming",
+    "image": "/team/Azalea.webp"
+  },
+  "Cherine": {
+    "department": "Mechanical",
+    "image": "/team/Cherine.webp"
+  },
+  "Derek": {
+    "department": "Mechanical",
+    "image": "/team/Derek.webp"
   },
   "Drilyon": {
     "department": "Mechanical",
@@ -113,64 +39,154 @@
     "department": "Media",
     "image": "/team/Elijah.webp"
   },
-  "Kahaan": {
-    "department": "Mechanical",
-    "image": "/team/Kahaan.webp"
-  },
-  "Aaro": {
-    "department": "CAD",
-    "image": "/team/placeholder.webp"
+  "Elvis": {
+    "department": "Executive",
+    "image": "/team/Elvis.webp"
   },
   "Ethan": {
-    "department": "CAD",
+    "department": "Mechanical",
     "image": "/team/Ethan.webp"
   },
   "Eva": {
-    "department": "Electrical",
+    "department": "Media",
     "image": "/team/Eva.webp"
   },
   "Evan": {
     "department": "Mechanical",
     "image": "/team/Evan.webp"
   },
-  "Jasen": {
+  "Ferdinand": {
     "department": "Mechanical",
-    "image": "/team/Jasen.webp"
+    "image": "/team/Ferdinand.webp"
+  },
+  "Franco": {
+    "department": "Programming",
+    "image": "/team/Franco.webp"
+  },
+  "Hadi": {
+    "department": "Executive",
+    "image": "/team/Hadi.webp",
+    "role": "GOAT"
+  },
+  "Husain": {
+    "department": "Executive",
+    "image": "/team/Husain.webp"
+  },
+  "Jason": {
+    "department": "Mechanical",
+    "image": "/team/Jason.webp"
+  },
+  "Jerry": {
+    "department": "Executive",
+    "image": "/team/Jerry.webp",
+    "role": "FRC Software Programmer & Website Manager"
+  },
+  "Justin": {
+    "department": "Executive",
+    "image": "/team/Justin.webp"
+  },
+  "Kahaan": {
+    "department": "Mechanical",
+    "image": "/team/Kahaan.webp"
   },
   "Katie": {
     "department": "Mechanical",
     "image": "/team/Katie.webp"
   },
+  "Keira": {
+    "department": "Executive",
+    "image": "/team/Keira.webp"
+  },
+  "Kfir": {
+    "department": "Programming",
+    "image": "/team/Kfir.webp"
+  },
   "Leo": {
-    "department": "Electrical",
+    "department": "Mechanical",
     "image": "/team/Leo.webp"
   },
+  "Maddeline": {
+    "department": "Media",
+    "image": "/team/Maddeline.webp"
+  },
+  "Max": {
+    "department": "Executive",
+    "image": "/team/Max.webp"
+  },
+  "Md": {
+    "department": "Executive",
+    "image": "/team/Md.webp"
+  },
   "Melike": {
-    "department": "Electrical",
+    "department": "Executive",
     "image": "/team/Melike.webp"
   },
+  "Mr C": {
+    "department": "Mentor",
+    "image": "/team/Mr C.webp"
+  },
+  "Mr E": {
+    "department": "Mentor",
+    "image": "/team/Mr E.webp"
+  },
+  "Mr Harb": {
+    "department": "Mentor",
+    "image": "/team/Mr Harb.webp"
+  },
+  "Ms D": {
+    "department": "Mentor",
+    "image": "/team/Ms D.webp"
+  },
+  "Peter": {
+    "department": "Executive",
+    "image": "/team/Peter.webp"
+  },
+  "Phillip": {
+    "department": "Executive",
+    "image": "/team/Phillip.webp"
+  },
   "Reina": {
-    "department": "CAD",
+    "department": "Mechanical",
     "image": "/team/Reina.webp"
+  },
+  "Rosalind": {
+    "department": "Mechanical",
+    "image": "/team/Rosalind.webp"
   },
   "Ryan": {
     "department": "Programming",
     "image": "/team/Ryan.webp"
   },
-  "Stephanie": {
-    "department": "CAD",
-    "image": "/team/Stephanie.webp"
+  "Samantha": {
+    "department": "Executive",
+    "image": "/team/Samantha.webp"
+  },
+  "Seth": {
+    "department": "Mechanical",
+    "image": "/team/Seth.webp"
+  },
+  "Sherry": {
+    "department": "Executive",
+    "image": "/team/Sherry.webp"
+  },
+  "Sophia": {
+    "department": "Mechanical",
+    "image": "/team/Sophia.webp"
+  },
+  "Steph": {
+    "department": "Mechanical",
+    "image": "/team/Steph.webp"
   },
   "Zade": {
-    "department": "Electrical",
+    "department": "Media",
     "image": "/team/Zade.webp"
   },
-  "Zoe": {
-    "department": "Electrical",
-    "image": "/team/Zoe.webp"
+  "Zeen": {
+    "department": "Programming",
+    "image": "/team/Zeen.webp"
   },
-  "Alma": {
-    "department": "Media",
-    "image": "/team/Alma.webp"
+  "Zoe": {
+    "department": "Executive",
+    "image": "/team/Zoe.webp"
   }
 }

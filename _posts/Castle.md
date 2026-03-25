@@ -5,7 +5,7 @@ coverImage: "/blog_imgs/castle.png"
 date: "2025-01-31"
 author:
   name: Jerry
-  picture: "/team/ze-rui-zheng.webp"
+  picture: "/team/Jerry.webp"
 ogImage:
   url: "/blog_imgs/castle.png"
 ---
