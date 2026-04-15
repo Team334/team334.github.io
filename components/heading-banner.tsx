@@ -27,17 +27,17 @@ export function HeadingBanner() {
               >
                 📢
               </motion.div>
-              <span className="font-bold text-lg">Tryouts Announcement!</span>
+              <span className="font-bold text-lg">Help Team 334 Goal To Go To Worlds!!</span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-1 sm:gap-4 text-center">
               <span className="text-sm sm:text-base">
-                Join the TechKnights! Tryouts are happening now.
+                Help us fund our trip to the FIRST Worlds competition!
               </span>
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfD1IV7jSP3xN7ICn42X0ZvbHa3hUnmJzX0H7mQ1TH--LO_jA/viewform"
+                href="https://gofund.me/samantha-wife-14apr"
                 className="inline-flex items-center gap-1 bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold hover:bg-blue-50 transition-colors"
               >
-                Learn More →
+                Send Us To Worlds →
               </a>
             </div>
           </div>
